@@ -155,7 +155,7 @@
 the data it uses.  This data includes pickle files representing documents,
 search indices, and node data that is used to track where comments and other
 things are in a document.  To do this you will need to create an instance of the
-<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> class and call its <code class="xref py py-meth docutils literal notranslate"><span class="pre">build()</span></code> method:</p>
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> class and call its <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.build" title="sphinxcontrib.websupport.WebSupport.build"><code class="xref py py-meth docutils literal notranslate"><span class="pre">build()</span></code></a> method:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.websupport</span> <span class="kn">import</span> <span class="n">WebSupport</span>
 
 <span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="n">srcdir</span><span class="o">=</span><span class="s1">&#39;/path/to/rst/sources/&#39;</span><span class="p">,</span>
@@ -188,7 +188,7 @@ by creating a <a class="reference internal" href="api.html#sphinxcontrib.websupp
 </pre></div>
 </div>
 <p>You’ll only need one of these for each set of documentation you will be working
-with.  You can then call its <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code> method to access
+with.  You can then call its <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a> method to access
 individual documents:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">contents</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">get_document</span><span class="p">(</span><span class="s1">&#39;contents&#39;</span><span class="p">)</span>
 </pre></div>
@@ -267,7 +267,7 @@ whether a user is logged in and then retrieves a document is:</p>
 <p>The first thing to notice is that the <em>docname</em> is just the request path.  This
 makes accessing the correct document easy from a single view.  If the user is
 authenticated, then the username and moderation status are passed along with the
-docname to <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code>.  The web support package will then
+docname to <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a>.  The web support package will then
 add this data to the <code class="docutils literal notranslate"><span class="pre">COMMENT_OPTIONS</span></code> that are used in the template.</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
@@ -288,7 +288,7 @@ keyword argument when creating the web support object:</p>
 <p>To use the search form built-in to the Sphinx sidebar, create a function to
 handle requests to the URL ‘search’ relative to the documentation root.  The
 user’s search query will be in the GET parameters, with the key <cite>q</cite>.  Then use
-the <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code> method to
+the <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_search_results" title="sphinxcontrib.websupport.WebSupport.get_search_results"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code></a> method to
 retrieve search results. In <a class="reference external" href="https://flask.palletsprojects.com/">Flask</a> that
 would be like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">)</span>
@@ -299,8 +299,8 @@ would be like this:</p>
 </pre></div>
 </div>
 <p>Note that we used the same template to render our search results as we did to
-render our documents.  That’s because <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code>
-returns a context dict in the same format that <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code>
+render our documents.  That’s because <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_search_results" title="sphinxcontrib.websupport.WebSupport.get_search_results"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code></a>
+returns a context dict in the same format that <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a>
 does.</p>
 </section>
 <section id="comments-proposals">
@@ -308,7 +308,7 @@ does.</p>
 <p>Now that this is done it’s time to define the functions that handle the AJAX
 calls from the script.  You will need three functions.  The first function is
 used to add a new comment, and will call the web support method
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code>:</p>
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.add_comment" title="sphinxcontrib.websupport.WebSupport.add_comment"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/add_comment&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">add_comment</span><span class="p">():</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
@@ -327,7 +327,7 @@ request. If the comment is being attached directly to a node, <code class="docut
 will be empty. If the comment is a child of another comment, then <code class="docutils literal notranslate"><span class="pre">node_id</span></code>
 will be empty. Then next function handles the retrieval of comments for a
 specific node, and is aptly named
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">get_data()</span></code>:</p>
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_data" title="sphinxcontrib.websupport.WebSupport.get_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_data()</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/get_comments&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">get_comments</span><span class="p">():</span>
     <span class="n">username</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="kc">None</span>
@@ -337,7 +337,7 @@ specific node, and is aptly named
     <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The final function that is needed will call <code class="xref py py-meth docutils literal notranslate"><span class="pre">process_vote()</span></code>,
+<p>The final function that is needed will call <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.process_vote" title="sphinxcontrib.websupport.WebSupport.process_vote"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_vote()</span></code></a>,
 and will handle user votes on comments:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/process_vote&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">process_vote</span><span class="p">():</span>
@@ -354,7 +354,7 @@ and will handle user votes on comments:</p>
 </section>
 <section id="comment-moderation">
 <h2>Comment Moderation<a class="headerlink" href="#comment-moderation" title="永久链接至标题">¶</a></h2>
-<p>By default, all comments added through <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code> are
+<p>By default, all comments added through <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.add_comment" title="sphinxcontrib.websupport.WebSupport.add_comment"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code></a> are
 automatically displayed.  If you wish to have some form of moderation, you can
 pass the <code class="docutils literal notranslate"><span class="pre">displayed</span></code> keyword argument:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">comment</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">add_comment</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="s1">&#39;node_id&#39;</span><span class="p">,</span>

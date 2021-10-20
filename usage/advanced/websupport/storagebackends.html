@@ -155,7 +155,7 @@ pass that as the <cite>storage</cite> keyword argument when you create the
 documentation of the <a class="reference internal" href="#sphinxcontrib.websupport.storage.StorageBackend" title="sphinxcontrib.websupport.storage.StorageBackend"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageBackend</span></code></a> class below.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib.websupport.storage.</span></span><span class="sig-name descname"><span class="pre">StorageBackend</span></span><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib.websupport.storage.</span></span><span class="sig-name descname"><span class="pre">StorageBackend</span></span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend" title="永久链接至目标">¶</a></dt>
 <dd><p>Defines an interface for storage backends.</p>
 </dd></dl>
 
@@ -165,6 +165,134 @@ sphinx.websupport.storage.</p>
 </div>
 <section id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="永久链接至标题">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.pre_build">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">pre_build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.pre_build"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.pre_build" title="永久链接至目标">¶</a></dt>
+<dd><p>Called immediately before the build process begins. Use this
+to prepare the StorageBackend for the addition of nodes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.add_node">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">add_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">document</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.add_node"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.add_node" title="永久链接至目标">¶</a></dt>
+<dd><p>Add a node to the StorageBackend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – a unique id for the comment.</p></li>
+<li><p><strong>document</strong> – the name of the document the node belongs to.</p></li>
+<li><p><strong>source</strong> – the source files name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.post_build">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">post_build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.post_build"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.post_build" title="永久链接至目标">¶</a></dt>
+<dd><p>Called after a build has completed. Use this to finalize the
+addition of nodes if needed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.add_comment">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">add_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proposal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moderator</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.add_comment"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.add_comment" title="永久链接至目标">¶</a></dt>
+<dd><p>Called when a comment is being added.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – the text of the comment</p></li>
+<li><p><strong>displayed</strong> – whether the comment should be displayed</p></li>
+<li><p><strong>username</strong> – the name of the user adding the comment</p></li>
+<li><p><strong>time</strong> – a date object with the time the comment was added</p></li>
+<li><p><strong>proposal</strong> – the text of the proposal the user made</p></li>
+<li><p><strong>node_id</strong> – the id of the node that the comment is being added to</p></li>
+<li><p><strong>parent_id</strong> – the id of the comment’s parent comment.</p></li>
+<li><p><strong>moderator</strong> – whether the user adding the comment is a moderator</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.delete_comment">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">delete_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moderator</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.delete_comment"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.delete_comment" title="永久链接至目标">¶</a></dt>
+<dd><p>Delete a comment.</p>
+<p>Raises <code class="xref py py-class docutils literal notranslate"><span class="pre">UserNotAuthorizedError</span></code>
+if moderator is False and <cite>username</cite> doesn’t match the username
+on the comment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>comment_id</strong> – The id of the comment being deleted.</p></li>
+<li><p><strong>username</strong> – The username of the user requesting the deletion.</p></li>
+<li><p><strong>moderator</strong> – Whether the user is a moderator.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.get_data">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moderator</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.get_data"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.get_data" title="永久链接至目标">¶</a></dt>
+<dd><p>Called to retrieve all data for a node. This should return a
+dict with two keys, <em>source</em> and <em>comments</em> as described by
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a>’s
+<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_data" title="sphinxcontrib.websupport.WebSupport.get_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_data()</span></code></a> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_id</strong> – The id of the node to get data for.</p></li>
+<li><p><strong>username</strong> – The name of the user requesting the data.</p></li>
+<li><p><strong>moderator</strong> – Whether the requestor is a moderator.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.process_vote">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">process_vote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.process_vote"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.process_vote" title="永久链接至目标">¶</a></dt>
+<dd><p>Process a vote that is being cast. <cite>value</cite> will be either -1, 0,
+or 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>comment_id</strong> – The id of the comment being voted on.</p></li>
+<li><p><strong>username</strong> – The username of the user casting the vote.</p></li>
+<li><p><strong>value</strong> – The value of the vote being cast.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.update_username">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">update_username</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.update_username"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.update_username" title="永久链接至目标">¶</a></dt>
+<dd><p>If a user is allowed to change their username this method should
+be called so that there is not stagnate data in the storage system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>old_username</strong> – The username being changed.</p></li>
+<li><p><strong>new_username</strong> – What the username is being changed to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphinxcontrib.websupport.storage.StorageBackend.accept_comment">
+<span class="sig-prename descclassname"><span class="pre">StorageBackend.</span></span><span class="sig-name descname"><span class="pre">accept_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comment_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/storage.html#StorageBackend.accept_comment"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.storage.StorageBackend.accept_comment" title="永久链接至目标">¶</a></dt>
+<dd><p>Called when a moderator accepts a comment. After the method is
+called the comment should be displayed to all users.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>comment_id</strong> – The id of the comment being accepted.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
