@@ -41,7 +41,7 @@ jobs:
       # 构建 Sphinx 文档
       - name: Build the book
         run: |
-          cp locale/ -rf draft/doc/
+          cp zh_CN/ -rf draft/doc/locale/zh_CN
           cd draft/doc
           make gettext
           make -e SPHINXOPTS="-Dlanguage='zh_CN'" html

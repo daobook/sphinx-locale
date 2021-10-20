@@ -18,7 +18,7 @@
 # sanstyle -i https://pypi.org/simple/ 
 # Flask-Caching
 # redis
-Sphinx
+Sphinx==4.2
 myst-parser
 sphinxcontrib-mermaid
 linkify-it-py
