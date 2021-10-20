@@ -27,7 +27,7 @@ jobs:
       # 安装依赖包
       - name: Install dependencies
         run: |
-          pip install sphinx-rtd-theme
+          pip install -r requirements.txt
           python setup.py install
           conda install ipykernel
           python -m ipykernel install --user --name ai --display-name "ai"
