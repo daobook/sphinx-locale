@@ -34,14 +34,14 @@ jobs:
       # 安装 HTML 主题 & 国际化
       - name: Install theme
         run: |
-          git clone https://github.com/sphinx-doc/sphinx.git draft
           git clone https://github.com/xinetzone/xin-css.git draft/doc/_static/xin-css
           git clone https://github.com/xinetzone/w3css.git draft/doc/_static/w3css
 
       # 构建 Sphinx 文档
       - name: Build the book
         run: |
-          cp zh_CN/ -rf draft/doc/locale/zh_CN
+          git clone https://github.com/sphinx-doc/sphinx.git draft
+          cp locales/ -rf draft/doc/locale/
           cd draft/doc
           make gettext
           make -e SPHINXOPTS="-Dlanguage='zh_CN'" html
