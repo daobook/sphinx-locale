@@ -1,1 +1,1 @@
-# sphinx-locale
+# Sphinx 国际化
