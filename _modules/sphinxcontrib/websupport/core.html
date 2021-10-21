@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,14 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinxcontrib/websupport/core.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -73,29 +74,29 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">模块代码</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinxcontrib.websupport.core</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -108,7 +109,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>Source code for sphinxcontrib.websupport.core</h1><div class="highlight"><pre>
+  <h1>sphinxcontrib.websupport.core 源代码</h1><div class="highlight"><pre>
 <span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinxcontrib.websupport.core</span>
@@ -147,7 +148,7 @@
     <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>  <span class="c1"># NOQA</span>
 
 
-<div class="viewcode-block" id="WebSupport"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport">[docs]</a><span class="k">class</span> <span class="nc">WebSupport</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="WebSupport"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport">[文档]</a><span class="k">class</span> <span class="nc">WebSupport</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The main API class for the web support package. All interactions</span>
 <span class="sd">    with the web support package should occur through this class.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -229,7 +230,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">results_template</span> <span class="o">=</span> \
             <span class="bp">self</span><span class="o">.</span><span class="n">template_env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">&#39;searchresults.html&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="WebSupport.build"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="WebSupport.build"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.build">[文档]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Build the documentation. Places the data into the `outdir`</span>
 <span class="sd">        directory. Use it like this::</span>
 
@@ -263,7 +264,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">_globalcontext</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_globalcontext</span>
 
-<div class="viewcode-block" id="WebSupport.get_document"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.get_document">[docs]</a>    <span class="k">def</span> <span class="nf">get_document</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docname</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">moderator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="WebSupport.get_document"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.get_document">[文档]</a>    <span class="k">def</span> <span class="nf">get_document</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docname</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">moderator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Load and return a document from a pickle. The document will</span>
 <span class="sd">        be a dict object which can be used to render a template::</span>
 
@@ -324,7 +325,7 @@
         <span class="n">document</span><span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">comment_opts</span> <span class="o">+</span> <span class="n">comment_meta</span> <span class="o">+</span> <span class="n">document</span><span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">document</span></div>
 
-<div class="viewcode-block" id="WebSupport.get_search_results"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.get_search_results">[docs]</a>    <span class="k">def</span> <span class="nf">get_search_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+<div class="viewcode-block" id="WebSupport.get_search_results"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.get_search_results">[文档]</a>    <span class="k">def</span> <span class="nf">get_search_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Perform a search for the query `q`, and create a set</span>
 <span class="sd">        of search results. Then render the search results as html and</span>
 <span class="sd">        return a context dict like the one created by</span>
@@ -350,7 +351,7 @@
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">document</span></div>
 
-<div class="viewcode-block" id="WebSupport.get_data"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.get_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_id</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">moderator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="WebSupport.get_data"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.get_data">[文档]</a>    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_id</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">moderator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get the comments and source associated with `node_id`. If</span>
 <span class="sd">        `username` is given vote information will be included with the</span>
 <span class="sd">        returned comments. The default CommentBackend returns a dict with</span>
@@ -413,7 +414,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">delete_comment</span><span class="p">(</span><span class="n">comment_id</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">moderator</span><span class="p">)</span>
 
-<div class="viewcode-block" id="WebSupport.add_comment"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.add_comment">[docs]</a>    <span class="k">def</span> <span class="nf">add_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">parent_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">displayed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<div class="viewcode-block" id="WebSupport.add_comment"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.add_comment">[文档]</a>    <span class="k">def</span> <span class="nf">add_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">parent_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">displayed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                     <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">proposal</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                     <span class="n">moderator</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Add a comment to a node or another comment. Returns the comment</span>
@@ -454,7 +455,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">moderation_callback</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">comment</span></div>
 
-<div class="viewcode-block" id="WebSupport.process_vote"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.process_vote">[docs]</a>    <span class="k">def</span> <span class="nf">process_vote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">comment_id</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="WebSupport.process_vote"><a class="viewcode-back" href="../../../usage/advanced/websupport/api.html#sphinxcontrib.websupport.WebSupport.process_vote">[文档]</a>    <span class="k">def</span> <span class="nf">process_vote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">comment_id</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Process a user&#39;s vote. The web support package relies</span>
 <span class="sd">        on the API user to perform authentication. The API user will</span>
 <span class="sd">        typically receive a comment_id and value from a form, and then</span>
@@ -587,23 +588,23 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >模块代码</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinxcontrib.websupport.core</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

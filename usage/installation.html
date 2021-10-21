@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,15 +14,16 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/usage/installation.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="reStructuredText" href="restructuredtext/index.html" />
-    <link rel="prev" title="Getting Started" href="quickstart.html" />
+    <link rel="prev" title="快速上手" href="quickstart.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -76,30 +77,30 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="restructuredtext/index.html" title="reStructuredText"
-             accesskey="N">next</a> |</li>
+             accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="quickstart.html" title="Getting Started"
-             accesskey="P">previous</a> |</li>
+          <a href="quickstart.html" title="快速上手"
+             accesskey="P">上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Using Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">使用 Sphinx</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installing Sphinx</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../contents.html">Table of Contents</a></h3>
+  <h3><a href="../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Installing Sphinx</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
@@ -130,25 +131,25 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
+  <h4>上一个主题</h4>
   <p class="topless"><a href="quickstart.html"
-                        title="previous chapter">Getting Started</a></p>
-  <h4>Next topic</h4>
+                        title="上一章">快速上手</a></p>
+  <h4>下一个主题</h4>
   <p class="topless"><a href="restructuredtext/index.html"
-                        title="next chapter">reStructuredText</a></p>
+                        title="下一章">reStructuredText</a></p>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="../_sources/usage/installation.rst.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">显示源代码</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -162,28 +163,28 @@
           <div class="body" role="main">
             
   <section id="installing-sphinx">
-<h1>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
+<h1>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="永久链接至标题">¶</a></h1>
+<div class="contents local topic" id="id1">
 <ul class="simple">
-<li><p><a class="reference internal" href="#overview" id="id17">Overview</a></p></li>
-<li><p><a class="reference internal" href="#linux" id="id18">Linux</a></p></li>
-<li><p><a class="reference internal" href="#macos" id="id19">macOS</a></p></li>
-<li><p><a class="reference internal" href="#windows" id="id20">Windows</a></p></li>
-<li><p><a class="reference internal" href="#installation-from-pypi" id="id21">Installation from PyPI</a></p></li>
-<li><p><a class="reference internal" href="#docker" id="id22">Docker</a></p></li>
-<li><p><a class="reference internal" href="#installation-from-source" id="id23">Installation from source</a></p></li>
+<li><p><a class="reference internal" href="#overview" id="id18">Overview</a></p></li>
+<li><p><a class="reference internal" href="#linux" id="id19">Linux</a></p></li>
+<li><p><a class="reference internal" href="#macos" id="id20">macOS</a></p></li>
+<li><p><a class="reference internal" href="#windows" id="id21">Windows</a></p></li>
+<li><p><a class="reference internal" href="#installation-from-pypi" id="id22">Installation from PyPI</a></p></li>
+<li><p><a class="reference internal" href="#docker" id="id23">Docker</a></p></li>
+<li><p><a class="reference internal" href="#installation-from-source" id="id24">Installation from source</a></p></li>
 </ul>
 </div>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
 <p>Sphinx is written in <a class="reference external" href="https://docs.python-guide.org/">Python</a> and supports Python 3.6+. It builds upon the
 shoulders of many third-party libraries such as <a class="reference external" href="https://docutils.sourceforge.io/">Docutils</a> and <a class="reference external" href="https://jinja.palletsprojects.com/">Jinja</a>,
 which are installed when Sphinx is installed.</p>
 </section>
 <section id="linux">
-<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h2>
 <section id="debian-ubuntu">
-<h3>Debian/Ubuntu<a class="headerlink" href="#debian-ubuntu" title="Permalink to this headline">¶</a></h3>
+<h3>Debian/Ubuntu<a class="headerlink" href="#debian-ubuntu" title="永久链接至标题">¶</a></h3>
 <p>Install either <code class="docutils literal notranslate"><span class="pre">python3-sphinx</span></code> using <strong class="command">apt-get</strong>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>apt-get install python3-sphinx
 </pre></div>
@@ -191,7 +192,7 @@ which are installed when Sphinx is installed.</p>
 <p>If it not already present, this will install Python for you.</p>
 </section>
 <section id="rhel-centos">
-<h3>RHEL, CentOS<a class="headerlink" href="#rhel-centos" title="Permalink to this headline">¶</a></h3>
+<h3>RHEL, CentOS<a class="headerlink" href="#rhel-centos" title="永久链接至标题">¶</a></h3>
 <p>Install <code class="docutils literal notranslate"><span class="pre">python-sphinx</span></code> using <strong class="command">yum</strong>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>yum install python-sphinx
 </pre></div>
@@ -199,7 +200,7 @@ which are installed when Sphinx is installed.</p>
 <p>If it not already present, this will install Python for you.</p>
 </section>
 <section id="other-distributions">
-<h3>Other distributions<a class="headerlink" href="#other-distributions" title="Permalink to this headline">¶</a></h3>
+<h3>Other distributions<a class="headerlink" href="#other-distributions" title="永久链接至标题">¶</a></h3>
 <p>Most Linux distributions have Sphinx in their package repositories.  Usually
 the package is called <code class="docutils literal notranslate"><span class="pre">python3-sphinx</span></code>, <code class="docutils literal notranslate"><span class="pre">python-sphinx</span></code> or <code class="docutils literal notranslate"><span class="pre">sphinx</span></code>.  Be
 aware that there are at least two other packages with <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> in their name:
@@ -208,18 +209,18 @@ a speech recognition toolkit (<em>CMU Sphinx</em>) and a full-text search databa
 </section>
 </section>
 <section id="macos">
-<h2>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
+<h2>macOS<a class="headerlink" href="#macos" title="永久链接至标题">¶</a></h2>
 <p>Sphinx can be installed using <a class="reference external" href="https://brew.sh/">Homebrew</a>, <a class="reference external" href="https://www.macports.org/">MacPorts</a>, or as part of
 a Python distribution such as <a class="reference external" href="https://www.anaconda.com/download/#macos">Anaconda</a>.</p>
 <section id="homebrew">
-<h3>Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h3>
+<h3>Homebrew<a class="headerlink" href="#homebrew" title="永久链接至标题">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>brew install sphinx-doc
 </pre></div>
 </div>
 <p>For more information, refer to the <a class="reference external" href="https://formulae.brew.sh/formula/sphinx-doc">package overview</a>.</p>
 </section>
 <section id="macports">
-<h3>MacPorts<a class="headerlink" href="#macports" title="Permalink to this headline">¶</a></h3>
+<h3>MacPorts<a class="headerlink" href="#macports" title="永久链接至标题">¶</a></h3>
 <p>Install either <code class="docutils literal notranslate"><span class="pre">python3x-sphinx</span></code> using <strong class="command">port</strong>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo port install py38-sphinx
 </pre></div>
@@ -232,18 +233,18 @@ a Python distribution such as <a class="reference external" href="https://www.an
 <p>For more information, refer to the <a class="reference external" href="https://www.macports.org/ports.php?by=library&amp;substr=py38-sphinx">package overview</a>.</p>
 </section>
 <section id="anaconda">
-<h3>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h3>
+<h3>Anaconda<a class="headerlink" href="#anaconda" title="永久链接至标题">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda install sphinx
 </pre></div>
 </div>
 </section>
 </section>
 <section id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<h2>Windows<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h2>
 <p>Sphinx can be install using <a class="reference external" href="https://chocolatey.org/">Chocolatey</a> or
 <a class="reference internal" href="#windows-other-method"><span class="std std-ref">installed manually</span></a>.</p>
 <section id="chocolatey">
-<h3>Chocolatey<a class="headerlink" href="#chocolatey" title="Permalink to this headline">¶</a></h3>
+<h3>Chocolatey<a class="headerlink" href="#chocolatey" title="永久链接至标题">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>choco install sphinx
 </pre></div>
 </div>
@@ -252,7 +253,7 @@ before running this.</p>
 <p>For more information, refer to the <a class="reference external" href="https://chocolatey.org/packages/sphinx/">chocolatey page</a>.</p>
 </section>
 <section id="other-methods">
-<span id="windows-other-method"></span><h3>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">¶</a></h3>
+<span id="windows-other-method"></span><h3>Other Methods<a class="headerlink" href="#other-methods" title="永久链接至标题">¶</a></h3>
 <p>Most Windows users do not have Python installed by default, so we begin with
 the installation of Python itself.  To check if you already have Python
 installed, open the <em>Command Prompt</em> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">⊞Win</kbd>-<kbd class="kbd docutils literal notranslate">r</kbd></kbd> and type <strong class="command">cmd</strong>).
@@ -267,7 +268,7 @@ information.</p>
 </section>
 </section>
 <section id="installation-from-pypi">
-<span id="install-pypi"></span><h2>Installation from PyPI<a class="headerlink" href="#installation-from-pypi" title="Permalink to this headline">¶</a></h2>
+<span id="install-pypi"></span><h2>Installation from PyPI<a class="headerlink" href="#installation-from-pypi" title="永久链接至标题">¶</a></h2>
 <p>Sphinx packages are published on the <a class="reference external" href="https://pypi.org/project/Sphinx/">Python Package Index</a>.  The preferred tool for installing
 packages from <em>PyPI</em> is <strong class="command">pip</strong>.  This tool is provided with all modern
 versions of Python.</p>
@@ -291,7 +292,7 @@ the <code class="docutils literal notranslate"><span class="pre">--pre</span></c
 </pre></div>
 </div>
 <section id="using-virtual-environments">
-<h3>Using virtual environments<a class="headerlink" href="#using-virtual-environments" title="Permalink to this headline">¶</a></h3>
+<h3>Using virtual environments<a class="headerlink" href="#using-virtual-environments" title="永久链接至标题">¶</a></h3>
 <p>When installing Sphinx using pip,
 it is highly recommended to use <em>virtual environments</em>,
 which isolate the installed packages from the system packages,
@@ -303,7 +304,7 @@ use the following command.</p>
 </div>
 <p>You can read more about them in the <a class="reference external" href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">Python Packaging User Guide</a>.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">警告</p>
 <p>Note that in some Linux distributions, such as Debian and Ubuntu,
 this might require an extra installation step as follows.</p>
 <blockquote>
@@ -315,7 +316,7 @@ this might require an extra installation step as follows.</p>
 </section>
 </section>
 <section id="docker">
-<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
+<h2>Docker<a class="headerlink" href="#docker" title="永久链接至标题">¶</a></h2>
 <p>Docker images for Sphinx are published on the <a class="reference external" href="https://hub.docker.com/">Docker Hub</a>.  There are two kind
 of images:</p>
 <ul class="simple">
@@ -325,12 +326,12 @@ of images:</p>
 <p>Former one is used for standard usage of Sphinx, and latter one is mainly used for
 PDF builds using LaTeX.  Please choose one for your purpose.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">注解</p>
 <p>sphinxdoc/sphinx-latexpdf contains TeXLive packages. So the image is very large
 (over 2GB!).</p>
 </div>
 <div class="admonition hint">
-<p class="admonition-title">Hint</p>
+<p class="admonition-title">提示</p>
 <p>When using docker images, please use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command to invoke sphinx
 commands.  For example, you can use following command to create a Sphinx
 project:</p>
@@ -345,7 +346,7 @@ project:</p>
 <p>For more details, please read <a class="reference external" href="https://hub.docker.com/repository/docker/sphinxdoc/sphinx">README file</a> of docker images.</p>
 </section>
 <section id="installation-from-source">
-<h2>Installation from source<a class="headerlink" href="#installation-from-source" title="Permalink to this headline">¶</a></h2>
+<h2>Installation from source<a class="headerlink" href="#installation-from-source" title="永久链接至标题">¶</a></h2>
 <p>You can install Sphinx directly from a clone of the <a class="reference external" href="https://github.com/sphinx-doc/sphinx">Git repository</a>.  This
 can be done either by cloning the repo and installing from the local clone, on
 simply installing directly via <strong class="command">git</strong>.</p>
@@ -371,29 +372,29 @@ simply installing directly via <strong class="command">git</strong>.</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="restructuredtext/index.html" title="reStructuredText"
-             >next</a> |</li>
+             >下一页</a> |</li>
         <li class="right" >
-          <a href="quickstart.html" title="Getting Started"
-             >previous</a> |</li>
+          <a href="quickstart.html" title="快速上手"
+             >上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >Using Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >使用 Sphinx</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Installing Sphinx</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,13 +14,14 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="Roles" href="roles.html" />
     <link rel="prev" title="reStructuredText" href="index.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -76,31 +77,31 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="roles.html" title="Roles"
-             accesskey="N">next</a> |</li>
+             accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="index.html" title="reStructuredText"
-             accesskey="P">previous</a> |</li>
+             accesskey="P">上一页</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Using Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >使用 Sphinx</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">reStructuredText</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">reStructuredText Primer</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../contents.html">Table of Contents</a></h3>
+  <h3><a href="../../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">reStructuredText Primer</a><ul>
 <li><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
@@ -131,25 +132,25 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
+  <h4>上一个主题</h4>
   <p class="topless"><a href="index.html"
-                        title="previous chapter">reStructuredText</a></p>
-  <h4>Next topic</h4>
+                        title="上一章">reStructuredText</a></p>
+  <h4>下一个主题</h4>
   <p class="topless"><a href="roles.html"
-                        title="next chapter">Roles</a></p>
+                        title="下一章">Roles</a></p>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="../../_sources/usage/restructuredtext/basics.rst.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">显示源代码</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -163,27 +164,27 @@
           <div class="body" role="main">
             
   <section id="restructuredtext-primer">
-<span id="rst-primer"></span><h1>reStructuredText Primer<a class="headerlink" href="#restructuredtext-primer" title="Permalink to this headline">¶</a></h1>
+<span id="rst-primer"></span><h1>reStructuredText Primer<a class="headerlink" href="#restructuredtext-primer" title="永久链接至标题">¶</a></h1>
 <p>reStructuredText is the default plaintext markup language used by Sphinx.  This
 section is a brief introduction to reStructuredText (reST) concepts and syntax,
 intended to provide authors with enough information to author documents
 productively.  Since reST was designed to be a simple, unobtrusive markup
 language, this will not take too long.</p>
 <div class="admonition seealso">
-<p class="admonition-title">See also</p>
+<p class="admonition-title">参见</p>
 <p>The authoritative <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText User Documentation</a>.  The “ref” links in this
 document link to the description of the individual constructs in the reST
 reference.</p>
 </div>
 <section id="paragraphs">
-<h2>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h2>
+<h2>Paragraphs<a class="headerlink" href="#paragraphs" title="永久链接至标题">¶</a></h2>
 <p>The paragraph (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs">ref</a>) is the most basic block in a reST
 document.  Paragraphs are simply chunks of text separated by one or more blank
 lines.  As in Python, indentation is significant in reST, so all lines of the
 same paragraph must be left-aligned to the same level of indentation.</p>
 </section>
 <section id="inline-markup">
-<span id="rst-inline-markup"></span><h2>Inline markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
+<span id="rst-inline-markup"></span><h2>Inline markup<a class="headerlink" href="#inline-markup" title="永久链接至标题">¶</a></h2>
 <p>The standard reST inline markup is quite simple: use</p>
 <ul class="simple">
 <li><p>one asterisk: <code class="docutils literal notranslate"><span class="pre">*text*</span></code> for emphasis (italics),</p></li>
@@ -204,7 +205,7 @@ backslash escaped space to work around that: <code class="docutils literal notra
 roles. Refer to <a class="reference internal" href="#rst-roles-alt"><span class="std std-ref">Roles</span></a> for more information.</p>
 </section>
 <section id="lists-and-quote-like-blocks">
-<h2>Lists and Quote-like blocks<a class="headerlink" href="#lists-and-quote-like-blocks" title="Permalink to this headline">¶</a></h2>
+<h2>Lists and Quote-like blocks<a class="headerlink" href="#lists-and-quote-like-blocks" title="永久链接至标题">¶</a></h2>
 <p>List markup (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists">ref</a>) is natural: just place an asterisk at
 the start of a paragraph and indent properly.  The same goes for numbered
 lists; they can also be autonumbered using a <code class="docutils literal notranslate"><span class="pre">#</span></code> sign:</p>
@@ -259,7 +260,7 @@ them more than the surrounding paragraphs.</p>
 </ul>
 </section>
 <section id="literal-blocks">
-<span id="rst-literal-blocks"></span><h2>Literal blocks<a class="headerlink" href="#literal-blocks" title="Permalink to this headline">¶</a></h2>
+<span id="rst-literal-blocks"></span><h2>Literal blocks<a class="headerlink" href="#literal-blocks" title="永久链接至标题">¶</a></h2>
 <p>Literal code blocks (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks">ref</a>) are introduced by ending a
 paragraph with the special marker <code class="docutils literal notranslate"><span class="pre">::</span></code>.  The literal block must be indented
 (and, like all paragraphs, separated from the surrounding ones by blank
@@ -291,7 +292,7 @@ using the <a class="reference internal" href="../configuration.html#confval-high
 block-by-block basis. These directives are discussed later.</p>
 </section>
 <section id="doctest-blocks">
-<span id="rst-doctest-blocks"></span><h2>Doctest blocks<a class="headerlink" href="#doctest-blocks" title="Permalink to this headline">¶</a></h2>
+<span id="rst-doctest-blocks"></span><h2>Doctest blocks<a class="headerlink" href="#doctest-blocks" title="永久链接至标题">¶</a></h2>
 <p>Doctest blocks (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks">ref</a>) are interactive Python sessions
 cut-and-pasted into docstrings. They do not require the
 <a class="reference internal" href="#rst-literal-blocks"><span class="std std-ref">literal blocks</span></a> syntax. The doctest block must end
@@ -302,7 +303,7 @@ with a blank line and should <em>not</em> end with an unused prompt:</p>
 </div>
 </section>
 <section id="tables">
-<span id="rst-tables"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<span id="rst-tables"></span><h2>Tables<a class="headerlink" href="#tables" title="永久链接至标题">¶</a></h2>
 <p>For <em>grid tables</em> (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables">ref</a>), you have to “paint” the cell
 grid yourself.  They look like this:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>+------------------------+------------+----------+----------+
@@ -332,14 +333,14 @@ True   True   True
 <em>explicit markup block</em>. Refer to <a class="reference internal" href="directives.html#table-directives"><span class="std std-ref">Tables</span></a> for more information.</p>
 </section>
 <section id="hyperlinks">
-<h2>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Permalink to this headline">¶</a></h2>
+<h2>Hyperlinks<a class="headerlink" href="#hyperlinks" title="永久链接至标题">¶</a></h2>
 <section id="external-links">
-<h3>External links<a class="headerlink" href="#external-links" title="Permalink to this headline">¶</a></h3>
+<h3>External links<a class="headerlink" href="#external-links" title="永久链接至标题">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">`Link</span> <span class="pre">text</span> <span class="pre">&lt;https://domain.invalid/&gt;`_</span></code> for inline web links.  If the
 link text should be the web address, you don’t need special markup at all, the
 parser finds links and mail addresses in ordinary text.</p>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
+<p class="admonition-title">重要</p>
 <p>There must be a space between the link text and the opening &lt; for the URL.</p>
 </div>
 <p>You can also separate the link and the target definition (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-targets">ref</a>), like this:</p>
@@ -350,13 +351,13 @@ parser finds links and mail addresses in ordinary text.</p>
 </div>
 </section>
 <section id="internal-links">
-<h3>Internal links<a class="headerlink" href="#internal-links" title="Permalink to this headline">¶</a></h3>
+<h3>Internal links<a class="headerlink" href="#internal-links" title="永久链接至标题">¶</a></h3>
 <p>Internal linking is done via a special reST role provided by Sphinx, see the
 section on specific markup, <a class="reference internal" href="roles.html#ref-role"><span class="std std-ref">Cross-referencing arbitrary locations</span></a>.</p>
 </section>
 </section>
 <section id="sections">
-<span id="rst-sections"></span><h2>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
+<span id="rst-sections"></span><h2>Sections<a class="headerlink" href="#sections" title="永久链接至标题">¶</a></h2>
 <p>Section headers (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#sections">ref</a>) are created by underlining (and
 optionally overlining) the section title with a punctuation character, at least
 as long as the text:</p>
@@ -382,7 +383,7 @@ documentation), and use a deeper nesting level, but keep in mind that most
 target formats (HTML, LaTeX) have a limited supported nesting depth.</p>
 </section>
 <section id="field-lists">
-<span id="rst-field-lists"></span><h2>Field Lists<a class="headerlink" href="#field-lists" title="Permalink to this headline">¶</a></h2>
+<span id="rst-field-lists"></span><h2>Field Lists<a class="headerlink" href="#field-lists" title="永久链接至标题">¶</a></h2>
 <p>Field lists (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#field-lists">ref</a>) are sequences of fields marked up like
 this:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:fieldname:</span> Field content
@@ -404,7 +405,7 @@ at the beginning of documents.  Refer to <a class="reference internal" href="fie
 information.</p>
 </section>
 <section id="roles">
-<span id="rst-roles-alt"></span><h2>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
+<span id="rst-roles-alt"></span><h2>Roles<a class="headerlink" href="#roles" title="永久链接至标题">¶</a></h2>
 <p>A role or “custom interpreted text role” (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#roles">ref</a>) is an inline
 piece of explicit markup. It signifies that the enclosed text should be
 interpreted in a specific way.  Sphinx uses this to provide semantic markup and
@@ -423,7 +424,7 @@ materials</p></li>
 <p>Refer to <a class="reference internal" href="roles.html"><span class="doc">Roles</span></a> for roles added by Sphinx.</p>
 </section>
 <section id="explicit-markup">
-<h2>Explicit Markup<a class="headerlink" href="#explicit-markup" title="Permalink to this headline">¶</a></h2>
+<h2>Explicit Markup<a class="headerlink" href="#explicit-markup" title="永久链接至标题">¶</a></h2>
 <p>“Explicit markup” (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#explicit-markup-blocks">ref</a>) is used in reST for
 most constructs that need special handling, such as footnotes,
 specially-highlighted paragraphs, comments, and generic directives.</p>
@@ -434,7 +435,7 @@ normal paragraphs.  This may all sound a bit complicated, but it is intuitive
 enough when you write it.)</p>
 </section>
 <section id="directives">
-<span id="rst-directives"></span><h2>Directives<a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h2>
+<span id="rst-directives"></span><h2>Directives<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
 <p>A directive (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#directives">ref</a>) is a generic block of explicit markup.
 Along with roles, it is one of the extension mechanisms of reST, and Sphinx
 makes heavy use of it.</p>
@@ -499,7 +500,7 @@ relative to the source directory</p></li>
 </li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">警告</p>
 <p>Do <em>not</em> use the directives <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#sectnum">sectnum</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#header">header</a> and
 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#footer">footer</a>.</p>
 </div>
@@ -542,7 +543,7 @@ In the latter the indent was fixed by the content itself to seven spaces, thus
 it does not start with a space.</p>
 </section>
 <section id="images">
-<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<h2>Images<a class="headerlink" href="#images" title="永久链接至标题">¶</a></h2>
 <p>reST supports an image directive (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">ref</a>), used like so:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> gnu.png
    (options)
@@ -574,17 +575,17 @@ latter.  Supported image types and choosing priority are defined at
 <a class="reference internal" href="../builders/index.html"><span class="doc">Builders</span></a>.</p>
 <p>Note that image file names should not contain spaces.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 0.4: </span>Added the support for file names ending in an asterisk.</p>
+<p><span class="versionmodified changed">在 0.4 版更改: </span>Added the support for file names ending in an asterisk.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 0.6: </span>Image paths can now be absolute.</p>
+<p><span class="versionmodified changed">在 0.6 版更改: </span>Image paths can now be absolute.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 1.5: </span>latex target supports pixels (default is <code class="docutils literal notranslate"><span class="pre">96px=1in</span></code>).</p>
+<p><span class="versionmodified changed">在 1.5 版更改: </span>latex target supports pixels (default is <code class="docutils literal notranslate"><span class="pre">96px=1in</span></code>).</p>
 </div>
 </section>
 <section id="footnotes">
-<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="永久链接至标题">¶</a></h2>
 <p>For footnotes (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes">ref</a>), use <code class="docutils literal notranslate"><span class="pre">[#name]_</span></code> to mark the footnote
 location, and add the footnote body at the bottom of the document after a
 “Footnotes” rubric heading, like so:</p>
@@ -600,7 +601,7 @@ location, and add the footnote body at the bottom of the document after a
 footnotes without names (<code class="docutils literal notranslate"><span class="pre">[#]_</span></code>).</p>
 </section>
 <section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
+<h2>Citations<a class="headerlink" href="#citations" title="永久链接至标题">¶</a></h2>
 <p>Standard reST citations (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations">ref</a>) are supported, with the
 additional feature that they are “global”, i.e. all citations can be referenced
 from all files.  Use them like so:</p>
@@ -613,7 +614,7 @@ from all files.  Use them like so:</p>
 numeric or begins with <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
 </section>
 <section id="substitutions">
-<h2>Substitutions<a class="headerlink" href="#substitutions" title="Permalink to this headline">¶</a></h2>
+<h2>Substitutions<a class="headerlink" href="#substitutions" title="永久链接至标题">¶</a></h2>
 <p>reST supports “substitutions” (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions">ref</a>), which
 are pieces of text and/or markup referred to in the text by <code class="docutils literal notranslate"><span class="pre">|name|</span></code>.  They
 are defined like footnotes with explicit markup blocks, like this:</p>
@@ -636,7 +637,7 @@ as a standalone document.)</p>
 <p>Sphinx defines some default substitutions, see <a class="reference internal" href="roles.html#default-substitutions"><span class="std std-ref">Substitutions</span></a>.</p>
 </section>
 <section id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<h2>Comments<a class="headerlink" href="#comments" title="永久链接至标题">¶</a></h2>
 <p>Every explicit markup block which isn’t a valid markup construct (like the
 footnotes above) is regarded as a comment (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#comments">ref</a>).  For
 example:</p>
@@ -653,7 +654,7 @@ example:</p>
 </div>
 </section>
 <section id="html-metadata">
-<span id="html-meta"></span><h2>HTML Metadata<a class="headerlink" href="#html-metadata" title="Permalink to this headline">¶</a></h2>
+<span id="html-meta"></span><h2>HTML Metadata<a class="headerlink" href="#html-metadata" title="永久链接至标题">¶</a></h2>
 <p>The <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">meta</span></code> directive (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#meta">ref</a>) allows specifying the HTML
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">metadata element</a> of a Sphinx documentation page.  For example, the
 directive:</p>
@@ -685,14 +686,14 @@ configurations:</p>
 </ul>
 </section>
 <section id="source-encoding">
-<h2>Source encoding<a class="headerlink" href="#source-encoding" title="Permalink to this headline">¶</a></h2>
+<h2>Source encoding<a class="headerlink" href="#source-encoding" title="永久链接至标题">¶</a></h2>
 <p>Since the easiest way to include special characters like em dashes or copyright
 signs in reST is to directly write them as Unicode characters, one has to
 specify an encoding.  Sphinx assumes source files to be encoded in UTF-8 by
 default; you can change this with the <a class="reference internal" href="../configuration.html#confval-source_encoding"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_encoding</span></code></a> config value.</p>
 </section>
 <section id="gotchas">
-<h2>Gotchas<a class="headerlink" href="#gotchas" title="Permalink to this headline">¶</a></h2>
+<h2>Gotchas<a class="headerlink" href="#gotchas" title="永久链接至标题">¶</a></h2>
 <p>There are some problems one commonly runs into while authoring reST documents:</p>
 <ul class="simple">
 <li><p><strong>Separation of inline markup:</strong> As said above, inline markup spans must be
@@ -720,30 +721,30 @@ directive will be shadowed.  Therefore, Sphinx re-exports it as
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="roles.html" title="Roles"
-             >next</a> |</li>
+             >下一页</a> |</li>
         <li class="right" >
           <a href="index.html" title="reStructuredText"
-             >previous</a> |</li>
+             >上一页</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Using Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >使用 Sphinx</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >reStructuredText</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">reStructuredText Primer</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

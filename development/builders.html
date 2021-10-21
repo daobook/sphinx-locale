@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,13 +14,14 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/development/builders.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="HTML theme development" href="theming.html" />
     <link rel="prev" title="Developing autodoc extension for IntEnum" href="tutorials/autodoc_ext.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -76,20 +77,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="theming.html" title="HTML theme development"
-             accesskey="N">next</a> |</li>
+             accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="tutorials/autodoc_ext.html" title="Developing autodoc extension for IntEnum"
-             accesskey="P">previous</a> |</li>
+             accesskey="P">上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -99,7 +100,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../contents.html">Table of Contents</a></h3>
+  <h3><a href="../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Configuring builders</a><ul>
 <li><a class="reference internal" href="#discover-builders-by-entry-point">Discover builders by entry point</a></li>
@@ -107,25 +108,25 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
+  <h4>上一个主题</h4>
   <p class="topless"><a href="tutorials/autodoc_ext.html"
-                        title="previous chapter">Developing autodoc extension for IntEnum</a></p>
-  <h4>Next topic</h4>
+                        title="上一章">Developing autodoc extension for IntEnum</a></p>
+  <h4>下一个主题</h4>
   <p class="topless"><a href="theming.html"
-                        title="next chapter">HTML theme development</a></p>
+                        title="下一章">HTML theme development</a></p>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="../_sources/development/builders.rst.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">显示源代码</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -139,11 +140,11 @@
           <div class="body" role="main">
             
   <section id="configuring-builders">
-<h1>Configuring builders<a class="headerlink" href="#configuring-builders" title="Permalink to this headline">¶</a></h1>
+<h1>Configuring builders<a class="headerlink" href="#configuring-builders" title="永久链接至标题">¶</a></h1>
 <section id="discover-builders-by-entry-point">
-<h2>Discover builders by entry point<a class="headerlink" href="#discover-builders-by-entry-point" title="Permalink to this headline">¶</a></h2>
+<h2>Discover builders by entry point<a class="headerlink" href="#discover-builders-by-entry-point" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.6.</span></p>
+<p><span class="versionmodified added">1.6 新版功能.</span></p>
 </div>
 <p><a class="reference internal" href="../glossary.html#term-builder"><span class="xref std std-term">builder</span></a> extensions can be discovered by means of <a class="reference external" href="https://setuptools.readthedocs.io/en/latest/setuptools.html#dynamic-discovery-of-services-and-plugins">entry points</a> so
 that they do not have to be listed in the <a class="reference internal" href="../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> configuration
@@ -177,20 +178,20 @@ for ‘mybuilder’ can be defined in the extension’s <code class="docutils li
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="theming.html" title="HTML theme development"
-             >next</a> |</li>
+             >下一页</a> |</li>
         <li class="right" >
           <a href="tutorials/autodoc_ext.html" title="Developing autodoc extension for IntEnum"
-             >previous</a> |</li>
+             >上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -199,7 +200,7 @@ for ‘mybuilder’ can be defined in the extension’s <code class="docutils li
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

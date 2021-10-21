@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Using Sphinx &#8212; Sphinx documentation</title>
+    <title>使用 Sphinx &#8212; Sphinx documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -14,15 +14,16 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/usage/index.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Getting Started" href="quickstart.html" />
-    <link rel="prev" title="Sphinx documentation contents" href="../contents.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="快速上手" href="quickstart.html" />
+    <link rel="prev" title="Sphinx 文档目录" href="../contents.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -76,47 +77,47 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
-          <a href="quickstart.html" title="Getting Started"
-             accesskey="N">next</a> |</li>
+          <a href="quickstart.html" title="快速上手"
+             accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="../contents.html" title="Sphinx documentation contents"
-             accesskey="P">previous</a> |</li>
+          <a href="../contents.html" title="Sphinx 文档目录"
+             accesskey="P">上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-        <li class="nav-item nav-item-this"><a href="">Using Sphinx</a></li> 
+        <li class="nav-item nav-item-this"><a href="">使用 Sphinx</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
+  <h4>上一个主题</h4>
   <p class="topless"><a href="../contents.html"
-                        title="previous chapter">Sphinx documentation contents</a></p>
-  <h4>Next topic</h4>
+                        title="上一章">Sphinx 文档目录</a></p>
+  <h4>下一个主题</h4>
   <p class="topless"><a href="quickstart.html"
-                        title="next chapter">Getting Started</a></p>
+                        title="下一章">快速上手</a></p>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="../_sources/usage/index.rst.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">显示源代码</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -130,23 +131,20 @@
           <div class="body" role="main">
             
   <section id="using-sphinx">
-<h1>Using Sphinx<a class="headerlink" href="#using-sphinx" title="Permalink to this headline">¶</a></h1>
-<p>This guide serves to demonstrate how one can get started with Sphinx and covers
-everything from installing Sphinx and configuring your first Sphinx project to
-using some of the advanced features Sphinx provides out-of-the-box. If you are
-looking for guidance on extending Sphinx, refer to <a class="reference internal" href="../development/index.html"><span class="doc">Extending Sphinx</span></a>.</p>
+<h1>使用 Sphinx<a class="headerlink" href="#using-sphinx" title="永久链接至标题">¶</a></h1>
+<p>本指南用于演示如何开始使用 Sphinx，涵盖从安装 Sphinx 和配置您的第一个 Sphinx 项目到使用 Sphinx 提供的开箱即用的一些高级功能的所有内容。如果您正在寻找有关扩展 Sphinx 的指南，请参阅 <a class="reference internal" href="../development/index.html"><span class="doc">Extending Sphinx</span></a>。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#setting-up-the-documentation-sources">Setting up the documentation sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#defining-document-structure">Defining document structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#adding-content">Adding content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#running-the-build">Running the build</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#documenting-objects">Documenting objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#basic-configuration">Basic configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速上手</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#setting-up-the-documentation-sources">设置文档源目录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#defining-document-structure">定义文档结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#adding-content">添加内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#running-the-build">运行 build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#documenting-objects">文档对象</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#basic-configuration">基本配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#autodoc">Autodoc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#intersphinx">Intersphinx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#more-topics-to-be-covered">More topics to be covered</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#intersphinx">跨 Sphinx 引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#more-topics-to-be-covered">其他常用功能举例</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installing Sphinx</a><ul>
@@ -238,28 +236,28 @@ looking for guidance on extending Sphinx, refer to <a class="reference internal"
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
-          <a href="quickstart.html" title="Getting Started"
-             >next</a> |</li>
+          <a href="quickstart.html" title="快速上手"
+             >下一页</a> |</li>
         <li class="right" >
-          <a href="../contents.html" title="Sphinx documentation contents"
-             >previous</a> |</li>
+          <a href="../contents.html" title="Sphinx 文档目录"
+             >上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-        <li class="nav-item nav-item-this"><a href="">Using Sphinx</a></li> 
+        <li class="nav-item nav-item-this"><a href="">使用 Sphinx</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

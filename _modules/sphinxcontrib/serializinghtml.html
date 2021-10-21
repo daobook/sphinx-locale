@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,14 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinxcontrib/serializinghtml.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -73,29 +74,29 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">模块代码</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinxcontrib.serializinghtml</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -108,7 +109,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>Source code for sphinxcontrib.serializinghtml</h1><div class="highlight"><pre>
+  <h1>sphinxcontrib.serializinghtml 源代码</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinxcontrib.serializinghtml</span>
 <span class="sd">    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
@@ -143,7 +144,7 @@
 <span class="n">LAST_BUILD_FILENAME</span> <span class="o">=</span> <span class="s1">&#39;last_build&#39;</span>
 
 
-<div class="viewcode-block" id="SerializingHTMLBuilder"><a class="viewcode-back" href="../../usage/builders/index.html#sphinxcontrib.serializinghtml.SerializingHTMLBuilder">[docs]</a><span class="k">class</span> <span class="nc">SerializingHTMLBuilder</span><span class="p">(</span><span class="n">StandaloneHTMLBuilder</span><span class="p">):</span>
+<div class="viewcode-block" id="SerializingHTMLBuilder"><a class="viewcode-back" href="../../usage/builders/index.html#sphinxcontrib.serializinghtml.SerializingHTMLBuilder">[文档]</a><span class="k">class</span> <span class="nc">SerializingHTMLBuilder</span><span class="p">(</span><span class="n">StandaloneHTMLBuilder</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An abstract builder that serializes the generated HTML.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -240,7 +241,7 @@
         <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="n">LAST_BUILD_FILENAME</span><span class="p">),</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="PickleHTMLBuilder"><a class="viewcode-back" href="../../usage/builders/index.html#sphinxcontrib.serializinghtml.PickleHTMLBuilder">[docs]</a><span class="k">class</span> <span class="nc">PickleHTMLBuilder</span><span class="p">(</span><span class="n">SerializingHTMLBuilder</span><span class="p">):</span>
+<div class="viewcode-block" id="PickleHTMLBuilder"><a class="viewcode-back" href="../../usage/builders/index.html#sphinxcontrib.serializinghtml.PickleHTMLBuilder">[文档]</a><span class="k">class</span> <span class="nc">PickleHTMLBuilder</span><span class="p">(</span><span class="n">SerializingHTMLBuilder</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A Builder that dumps the generated HTML into pickle files.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -257,7 +258,7 @@
     <span class="n">searchindex_filename</span> <span class="o">=</span> <span class="s1">&#39;searchindex.pickle&#39;</span></div>
 
 
-<div class="viewcode-block" id="JSONHTMLBuilder"><a class="viewcode-back" href="../../usage/builders/index.html#sphinxcontrib.serializinghtml.JSONHTMLBuilder">[docs]</a><span class="k">class</span> <span class="nc">JSONHTMLBuilder</span><span class="p">(</span><span class="n">SerializingHTMLBuilder</span><span class="p">):</span>
+<div class="viewcode-block" id="JSONHTMLBuilder"><a class="viewcode-back" href="../../usage/builders/index.html#sphinxcontrib.serializinghtml.JSONHTMLBuilder">[文档]</a><span class="k">class</span> <span class="nc">JSONHTMLBuilder</span><span class="p">(</span><span class="n">SerializingHTMLBuilder</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A builder that dumps the generated HTML into JSON files.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -293,23 +294,23 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >模块代码</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinxcontrib.serializinghtml</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

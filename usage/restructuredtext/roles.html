@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,13 +14,14 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="Directives" href="directives.html" />
     <link rel="prev" title="reStructuredText Primer" href="basics.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -76,31 +77,31 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="directives.html" title="Directives"
-             accesskey="N">next</a> |</li>
+             accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="basics.html" title="reStructuredText Primer"
-             accesskey="P">previous</a> |</li>
+             accesskey="P">上一页</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Using Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >使用 Sphinx</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">reStructuredText</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Roles</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../contents.html">Table of Contents</a></h3>
+  <h3><a href="../../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Roles</a><ul>
 <li><a class="reference internal" href="#cross-referencing-syntax">Cross-referencing syntax</a><ul>
@@ -120,25 +121,25 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
+  <h4>上一个主题</h4>
   <p class="topless"><a href="basics.html"
-                        title="previous chapter">reStructuredText Primer</a></p>
-  <h4>Next topic</h4>
+                        title="上一章">reStructuredText Primer</a></p>
+  <h4>下一个主题</h4>
   <p class="topless"><a href="directives.html"
-                        title="next chapter">Directives</a></p>
+                        title="下一章">Directives</a></p>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="../../_sources/usage/restructuredtext/roles.rst.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">显示源代码</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -152,11 +153,11 @@
           <div class="body" role="main">
             
   <section id="roles">
-<h1>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h1>
+<h1>Roles<a class="headerlink" href="#roles" title="永久链接至标题">¶</a></h1>
 <p>Sphinx uses interpreted text roles to insert semantic markup into documents.
 They are written as <code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code>.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">注解</p>
 <p>The default role (<code class="docutils literal notranslate"><span class="pre">`content`</span></code>) has no special meaning by default.  You are
 free to use it for anything you like, e.g. variable names; use the
 <a class="reference internal" href="../configuration.html#confval-default_role"><code class="xref std std-confval docutils literal notranslate"><span class="pre">default_role</span></code></a> config value to set it to a known role – the
@@ -165,7 +166,7 @@ Python objects are very useful for this.</p>
 </div>
 <p>See <a class="reference internal" href="domains.html"><span class="doc">Domains</span></a> for roles added by domains.</p>
 <section id="cross-referencing-syntax">
-<span id="xref-syntax"></span><h2>Cross-referencing syntax<a class="headerlink" href="#cross-referencing-syntax" title="Permalink to this headline">¶</a></h2>
+<span id="xref-syntax"></span><h2>Cross-referencing syntax<a class="headerlink" href="#cross-referencing-syntax" title="永久链接至标题">¶</a></h2>
 <p>Cross-references are generated by many semantic interpreted text roles.
 Basically, you only need to write <code class="docutils literal notranslate"><span class="pre">:role:`target`</span></code>, and a link will be
 created to the item named <em>target</em> of the type indicated by <em>role</em>.  The link’s
@@ -186,12 +187,12 @@ tool-tip on mouse-hover) will always be the full target name.</p>
 </li>
 </ul>
 <section id="cross-referencing-anything">
-<span id="any-role"></span><h3>Cross-referencing anything<a class="headerlink" href="#cross-referencing-anything" title="Permalink to this headline">¶</a></h3>
+<span id="any-role"></span><h3>Cross-referencing anything<a class="headerlink" href="#cross-referencing-anything" title="永久链接至标题">¶</a></h3>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-any">
-<span class="sig-name descname"><span class="pre">:any:</span></span><a class="headerlink" href="#role-any" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:any:</span></span><a class="headerlink" href="#role-any" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
-<p><span class="versionmodified added">New in version 1.3.</span></p>
+<p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
 <p>This convenience role tries to do its best to find a valid target for its
 reference text.</p>
@@ -227,7 +228,7 @@ found, all object types of intersphinx inventories are also searched.</p>
 
 </section>
 <section id="cross-referencing-objects">
-<h3>Cross-referencing objects<a class="headerlink" href="#cross-referencing-objects" title="Permalink to this headline">¶</a></h3>
+<h3>Cross-referencing objects<a class="headerlink" href="#cross-referencing-objects" title="永久链接至标题">¶</a></h3>
 <p>These roles are described with their respective domains:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="domains.html#python-roles"><span class="std std-ref">Python</span></a></p></li>
@@ -238,10 +239,10 @@ found, all object types of intersphinx inventories are also searched.</p>
 </ul>
 </section>
 <section id="cross-referencing-arbitrary-locations">
-<span id="ref-role"></span><h3>Cross-referencing arbitrary locations<a class="headerlink" href="#cross-referencing-arbitrary-locations" title="Permalink to this headline">¶</a></h3>
+<span id="ref-role"></span><h3>Cross-referencing arbitrary locations<a class="headerlink" href="#cross-referencing-arbitrary-locations" title="永久链接至标题">¶</a></h3>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-ref">
-<span class="sig-name descname"><span class="pre">:ref:</span></span><a class="headerlink" href="#role-ref" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:ref:</span></span><a class="headerlink" href="#role-ref" title="永久链接至目标">¶</a></dt>
 <dd><p>To support cross-referencing to arbitrary locations in any document, the
 standard reST labels are used.  For this to work label names must be unique
 throughout the entire documentation.  There are two ways in which you can
@@ -280,7 +281,7 @@ but you must give the link an explicit title, using this syntax:
 <code class="docutils literal notranslate"><span class="pre">:ref:`Link</span> <span class="pre">title</span> <span class="pre">&lt;label-name&gt;`</span></code>.</p></li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">注解</p>
 <p>Reference labels must start with an underscore. When referencing a label,
 the underscore must be omitted (see examples above).</p>
 </div>
@@ -292,14 +293,14 @@ for all builders that support cross-references.</p>
 
 </section>
 <section id="cross-referencing-documents">
-<h3>Cross-referencing documents<a class="headerlink" href="#cross-referencing-documents" title="Permalink to this headline">¶</a></h3>
+<h3>Cross-referencing documents<a class="headerlink" href="#cross-referencing-documents" title="永久链接至标题">¶</a></h3>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 0.6.</span></p>
+<p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 <p>There is also a way to directly link to documents:</p>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-doc">
-<span class="sig-name descname"><span class="pre">:doc:</span></span><a class="headerlink" href="#role-doc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:doc:</span></span><a class="headerlink" href="#role-doc" title="永久链接至目标">¶</a></dt>
 <dd><p>Link to the specified document; the document name can be specified in
 absolute or relative fashion.  For example, if the reference
 <code class="docutils literal notranslate"><span class="pre">:doc:`parrot`</span></code> occurs in the document <code class="docutils literal notranslate"><span class="pre">sketches/index</span></code>, then the link
@@ -311,13 +312,13 @@ refers to <code class="docutils literal notranslate"><span class="pre">sketches/
 
 </section>
 <section id="referencing-downloadable-files">
-<h3>Referencing downloadable files<a class="headerlink" href="#referencing-downloadable-files" title="Permalink to this headline">¶</a></h3>
+<h3>Referencing downloadable files<a class="headerlink" href="#referencing-downloadable-files" title="永久链接至标题">¶</a></h3>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 0.6.</span></p>
+<p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-download">
-<span class="sig-name descname"><span class="pre">:download:</span></span><a class="headerlink" href="#role-download" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:download:</span></span><a class="headerlink" href="#role-download" title="永久链接至目标">¶</a></dt>
 <dd><p>This role lets you link to files within your source tree that are not reST
 documents that can be viewed, but files that can be downloaded.</p>
 <p>When you use this role, the referenced file is automatically marked for
@@ -344,17 +345,17 @@ have this role:</p>
 
 </section>
 <section id="cross-referencing-figures-by-figure-number">
-<h3>Cross-referencing figures by figure number<a class="headerlink" href="#cross-referencing-figures-by-figure-number" title="Permalink to this headline">¶</a></h3>
+<h3>Cross-referencing figures by figure number<a class="headerlink" href="#cross-referencing-figures-by-figure-number" title="永久链接至标题">¶</a></h3>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.3.</span></p>
+<p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 1.5: </span><cite>numref</cite> role can also refer sections.
+<p><span class="versionmodified changed">在 1.5 版更改: </span><cite>numref</cite> role can also refer sections.
 And <cite>numref</cite> allows <cite>{name}</cite> for the link text.</p>
 </div>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-numref">
-<span class="sig-name descname"><span class="pre">:numref:</span></span><a class="headerlink" href="#role-numref" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:numref:</span></span><a class="headerlink" href="#role-numref" title="永久链接至目标">¶</a></dt>
 <dd><p>Link to the specified figures, tables, code-blocks and sections; the standard
 reST labels are used.  When you use this role, it will insert a reference to
 the figure with link text by its figure number like “Fig. 1.1”.</p>
@@ -370,33 +371,33 @@ so this role inserts not a reference but the label or the link text.</p>
 
 </section>
 <section id="cross-referencing-other-items-of-interest">
-<h3>Cross-referencing other items of interest<a class="headerlink" href="#cross-referencing-other-items-of-interest" title="Permalink to this headline">¶</a></h3>
+<h3>Cross-referencing other items of interest<a class="headerlink" href="#cross-referencing-other-items-of-interest" title="永久链接至标题">¶</a></h3>
 <p>The following roles do possibly create a cross-reference, but do not refer to
 objects:</p>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-envvar">
-<span class="sig-name descname"><span class="pre">:envvar:</span></span><a class="headerlink" href="#role-envvar" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:envvar:</span></span><a class="headerlink" href="#role-envvar" title="永久链接至目标">¶</a></dt>
 <dd><p>An environment variable.  Index entries are generated.  Also generates a link
 to the matching <a class="reference internal" href="domains.html#directive-envvar" title="envvar directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">envvar</span></code></a> directive, if it exists.</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-token">
-<span class="sig-name descname"><span class="pre">:token:</span></span><a class="headerlink" href="#role-token" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:token:</span></span><a class="headerlink" href="#role-token" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of a grammar token (used to create links between
 <a class="reference internal" href="directives.html#directive-productionlist" title="productionlist directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">productionlist</span></code></a> directives).</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-keyword">
-<span class="sig-name descname"><span class="pre">:keyword:</span></span><a class="headerlink" href="#role-keyword" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:keyword:</span></span><a class="headerlink" href="#role-keyword" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of a keyword in Python.  This creates a link to a reference label
 with that name, if it exists.</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-option">
-<span class="sig-name descname"><span class="pre">:option:</span></span><a class="headerlink" href="#role-option" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:option:</span></span><a class="headerlink" href="#role-option" title="永久链接至目标">¶</a></dt>
 <dd><p>A command-line option to an executable program.  This generates a link to
 a <a class="reference internal" href="domains.html#directive-option" title="option directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">option</span></code></a> directive, if it exists.</p>
 </dd></dl>
@@ -405,7 +406,7 @@ a <a class="reference internal" href="domains.html#directive-option" title="opti
 <a class="reference internal" href="directives.html#glossary-directive"><span class="std std-ref">glossary</span></a>:</p>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-term">
-<span class="sig-name descname"><span class="pre">:term:</span></span><a class="headerlink" href="#role-term" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:term:</span></span><a class="headerlink" href="#role-term" title="永久链接至目标">¶</a></dt>
 <dd><p>Reference to a term in a glossary.  A glossary is created using the
 <code class="docutils literal notranslate"><span class="pre">glossary</span></code> directive containing a definition list with terms and
 definitions.  It does not have to be in the same file as the <code class="docutils literal notranslate"><span class="pre">term</span></code> markup,
@@ -418,10 +419,10 @@ during build.</p>
 </section>
 </section>
 <section id="math">
-<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<h2>Math<a class="headerlink" href="#math" title="永久链接至标题">¶</a></h2>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-math">
-<span class="sig-name descname"><span class="pre">:math:</span></span><a class="headerlink" href="#role-math" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:math:</span></span><a class="headerlink" href="#role-math" title="永久链接至目标">¶</a></dt>
 <dd><p>Role for inline math.  Use like this:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Since Pythagoras, we know that <span class="na">:math:</span><span class="nv">`a^2 + b^2 = c^2`</span>.
 </pre></div>
@@ -430,43 +431,43 @@ during build.</p>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-eq">
-<span class="sig-name descname"><span class="pre">:eq:</span></span><a class="headerlink" href="#role-eq" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:eq:</span></span><a class="headerlink" href="#role-eq" title="永久链接至目标">¶</a></dt>
 <dd><p>Same as <a class="reference internal" href="domains.html#role-math-numref" title="math:numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">math:numref</span></code></a>.</p>
 </dd></dl>
 
 </section>
 <section id="other-semantic-markup">
-<h2>Other semantic markup<a class="headerlink" href="#other-semantic-markup" title="Permalink to this headline">¶</a></h2>
+<h2>Other semantic markup<a class="headerlink" href="#other-semantic-markup" title="永久链接至标题">¶</a></h2>
 <p>The following roles don’t do anything special except formatting the text in a
 different style:</p>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-abbr">
-<span class="sig-name descname"><span class="pre">:abbr:</span></span><a class="headerlink" href="#role-abbr" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:abbr:</span></span><a class="headerlink" href="#role-abbr" title="永久链接至目标">¶</a></dt>
 <dd><p>An abbreviation.  If the role content contains a parenthesized explanation,
 it will be treated specially: it will be shown in a tool-tip in HTML, and
 output only once in LaTeX.</p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">:abbr:`LIFO</span> <span class="pre">(last-in,</span> <span class="pre">first-out)`</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 0.6.</span></p>
+<p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-command">
-<span class="sig-name descname"><span class="pre">:command:</span></span><a class="headerlink" href="#role-command" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:command:</span></span><a class="headerlink" href="#role-command" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of an OS-level command, such as <code class="docutils literal notranslate"><span class="pre">rm</span></code>.</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-dfn">
-<span class="sig-name descname"><span class="pre">:dfn:</span></span><a class="headerlink" href="#role-dfn" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:dfn:</span></span><a class="headerlink" href="#role-dfn" title="永久链接至目标">¶</a></dt>
 <dd><p>Mark the defining instance of a term in the text.  (No index entries are
 generated.)</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-file">
-<span class="sig-name descname"><span class="pre">:file:</span></span><a class="headerlink" href="#role-file" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:file:</span></span><a class="headerlink" href="#role-file" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of a file or directory.  Within the contents, you can use curly
 braces to indicate a “variable” part, for example:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">... is installed in :file:`/usr/lib/python2.{x}/site-packages` ...</span>
@@ -478,15 +479,15 @@ indicate that it is to be replaced by the Python minor version.</p>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-guilabel">
-<span class="sig-name descname"><span class="pre">:guilabel:</span></span><a class="headerlink" href="#role-guilabel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:guilabel:</span></span><a class="headerlink" href="#role-guilabel" title="永久链接至目标">¶</a></dt>
 <dd><p>Labels presented as part of an interactive user interface should be marked
 using <code class="docutils literal notranslate"><span class="pre">guilabel</span></code>.  This includes labels from text-based interfaces such as
-those created using <a class="reference external" href="https://docs.python.org/3/library/curses.html#module-curses" title="(in Python v3.10)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">curses</span></code></a> or other text-based libraries.  Any label
+those created using <a class="reference external" href="https://docs.python.org/3/library/curses.html#module-curses" title="(在 Python v3.10)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">curses</span></code></a> or other text-based libraries.  Any label
 used in the interface should be marked with this role, including button
 labels, window titles, field names, menu and menu selection names, and even
 values in selection lists.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 1.0: </span>An accelerator key for the GUI label can be included using an ampersand;
+<p><span class="versionmodified changed">在 1.0 版更改: </span>An accelerator key for the GUI label can be included using an ampersand;
 this will be stripped and displayed underlined in the output (example:
 <code class="docutils literal notranslate"><span class="pre">:guilabel:`&amp;Cancel`</span></code>).  To include a literal ampersand, double it.</p>
 </div>
@@ -494,7 +495,7 @@ this will be stripped and displayed underlined in the output (example:
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-kbd">
-<span class="sig-name descname"><span class="pre">:kbd:</span></span><a class="headerlink" href="#role-kbd" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:kbd:</span></span><a class="headerlink" href="#role-kbd" title="永久链接至目标">¶</a></dt>
 <dd><p>Mark a sequence of keystrokes.  What form the key sequence takes may depend
 on platform- or application-specific conventions.  When there are no
 relevant conventions, the names of modifier keys should be spelled out, to
@@ -506,7 +507,7 @@ marked as <code class="docutils literal notranslate"><span class="pre">:kbd:`Con
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-mailheader">
-<span class="sig-name descname"><span class="pre">:mailheader:</span></span><a class="headerlink" href="#role-mailheader" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:mailheader:</span></span><a class="headerlink" href="#role-mailheader" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of an RFC 822-style mail header.  This markup does not imply that
 the header is being used in an email message, but can be used to refer to
 any header of the same “style.”  This is also used for headers defined by
@@ -518,13 +519,13 @@ example: <code class="docutils literal notranslate"><span class="pre">:mailheade
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-makevar">
-<span class="sig-name descname"><span class="pre">:makevar:</span></span><a class="headerlink" href="#role-makevar" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:makevar:</span></span><a class="headerlink" href="#role-makevar" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of a <strong class="command">make</strong> variable.</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-manpage">
-<span class="sig-name descname"><span class="pre">:manpage:</span></span><a class="headerlink" href="#role-manpage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:manpage:</span></span><a class="headerlink" href="#role-manpage" title="永久链接至目标">¶</a></dt>
 <dd><p>A reference to a Unix manual page including the section, e.g.
 <code class="docutils literal notranslate"><span class="pre">:manpage:`ls(1)`</span></code>. Creates a hyperlink to an external site rendering the
 manpage if <a class="reference internal" href="../configuration.html#confval-manpages_url"><code class="xref std std-confval docutils literal notranslate"><span class="pre">manpages_url</span></code></a> is defined.</p>
@@ -532,7 +533,7 @@ manpage if <a class="reference internal" href="../configuration.html#confval-man
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-menuselection">
-<span class="sig-name descname"><span class="pre">:menuselection:</span></span><a class="headerlink" href="#role-menuselection" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:menuselection:</span></span><a class="headerlink" href="#role-menuselection" title="永久链接至目标">¶</a></dt>
 <dd><p>Menu selections should be marked using the <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> role.  This is
 used to mark a complete sequence of menu selections, including selecting
 submenus and choosing a specific operation, or any subsequence of such a
@@ -551,24 +552,24 @@ dialog, the indicator should be omitted from the selection name.</p>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-mimetype">
-<span class="sig-name descname"><span class="pre">:mimetype:</span></span><a class="headerlink" href="#role-mimetype" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:mimetype:</span></span><a class="headerlink" href="#role-mimetype" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of a MIME type, or a component of a MIME type (the major or minor
 portion, taken alone).</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-newsgroup">
-<span class="sig-name descname"><span class="pre">:newsgroup:</span></span><a class="headerlink" href="#role-newsgroup" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:newsgroup:</span></span><a class="headerlink" href="#role-newsgroup" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of a Usenet newsgroup.</p>
 </dd></dl>
 
 <div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
+<p class="admonition-title">待处理</p>
 <p>Is this not part of the standard domain?</p>
 </div>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-program">
-<span class="sig-name descname"><span class="pre">:program:</span></span><a class="headerlink" href="#role-program" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:program:</span></span><a class="headerlink" href="#role-program" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of an executable program.  This may differ from the file name for
 the executable for some platforms.  In particular, the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> (or other)
 extension should be omitted for Windows programs.</p>
@@ -576,13 +577,13 @@ extension should be omitted for Windows programs.</p>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-regexp">
-<span class="sig-name descname"><span class="pre">:regexp:</span></span><a class="headerlink" href="#role-regexp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:regexp:</span></span><a class="headerlink" href="#role-regexp" title="永久链接至目标">¶</a></dt>
 <dd><p>A regular expression. Quotes should not be included.</p>
 </dd></dl>
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-samp">
-<span class="sig-name descname"><span class="pre">:samp:</span></span><a class="headerlink" href="#role-samp" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:samp:</span></span><a class="headerlink" href="#role-samp" title="永久链接至目标">¶</a></dt>
 <dd><p>A piece of literal text, such as code.  Within the contents, you can use
 curly braces to indicate a “variable” part, as in <a class="reference internal" href="#role-file" title="file role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">file</span></code></a>.  For
 example, in <code class="docutils literal notranslate"><span class="pre">:samp:`print</span> <span class="pre">1+{variable}`</span></code>, the part <code class="docutils literal notranslate"><span class="pre">variable</span></code> would be
@@ -590,7 +591,7 @@ emphasized.</p>
 <p>If you don’t need the “variable part” indication, use the standard
 <code class="docutils literal notranslate"><span class="pre">``code``</span></code> instead.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 1.8: </span>Allowed to escape curly braces with backslash</p>
+<p><span class="versionmodified changed">在 1.8 版更改: </span>Allowed to escape curly braces with backslash</p>
 </div>
 </dd></dl>
 
@@ -598,7 +599,7 @@ emphasized.</p>
 <p>The following roles generate external links:</p>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-pep">
-<span class="sig-name descname"><span class="pre">:pep:</span></span><a class="headerlink" href="#role-pep" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:pep:</span></span><a class="headerlink" href="#role-pep" title="永久链接至目标">¶</a></dt>
 <dd><p>A reference to a Python Enhancement Proposal.  This generates appropriate
 index entries. The text “PEP <em>number</em>” is generated; in the HTML output,
 this text is a hyperlink to an online copy of the specified PEP.  You can
@@ -607,7 +608,7 @@ link to a specific section by saying <code class="docutils literal notranslate">
 
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-rfc">
-<span class="sig-name descname"><span class="pre">:rfc:</span></span><a class="headerlink" href="#role-rfc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">:rfc:</span></span><a class="headerlink" href="#role-rfc" title="永久链接至目标">¶</a></dt>
 <dd><p>A reference to an Internet Request for Comments.  This generates appropriate
 index entries. The text “RFC <em>number</em>” is generated; in the HTML output,
 this text is a hyperlink to an online copy of the specified RFC.  You can
@@ -618,7 +619,7 @@ link to a specific section by saying <code class="docutils literal notranslate">
 the standard reST markup for that purpose.</p>
 </section>
 <section id="substitutions">
-<span id="default-substitutions"></span><h2>Substitutions<a class="headerlink" href="#substitutions" title="Permalink to this headline">¶</a></h2>
+<span id="default-substitutions"></span><h2>Substitutions<a class="headerlink" href="#substitutions" title="永久链接至标题">¶</a></h2>
 <p>The documentation system provides three substitutions that are defined by
 default. They are set in the build configuration file.</p>
 <dl class="describe">
@@ -656,30 +657,30 @@ the date set in the build configuration file.  Normally has the format
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="directives.html" title="Directives"
-             >next</a> |</li>
+             >下一页</a> |</li>
         <li class="right" >
           <a href="basics.html" title="reStructuredText Primer"
-             >previous</a> |</li>
+             >上一页</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Using Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >使用 Sphinx</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >reStructuredText</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Roles</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

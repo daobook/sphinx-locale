@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,14 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinx/directives.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -73,29 +74,29 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">模块代码</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.directives</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -108,7 +109,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>Source code for sphinx.directives</h1><div class="highlight"><pre>
+  <h1>sphinx.directives 源代码</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinx.directives</span>
 <span class="sd">    ~~~~~~~~~~~~~~~~~</span>
@@ -158,7 +159,7 @@
         <span class="k">return</span> <span class="n">value</span>
 
 
-<div class="viewcode-block" id="ObjectDescription"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription">[docs]</a><span class="k">class</span> <span class="nc">ObjectDescription</span><span class="p">(</span><span class="n">SphinxDirective</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<div class="viewcode-block" id="ObjectDescription"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription">[文档]</a><span class="k">class</span> <span class="nc">ObjectDescription</span><span class="p">(</span><span class="n">SphinxDirective</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Directive to describe a class, function or similar object.  Not used</span>
 <span class="sd">    directly, but subclassed (in domain-specific directives) to add custom</span>
@@ -196,7 +197,7 @@
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_doc_field_type_map</span>
 
-<div class="viewcode-block" id="ObjectDescription.get_signatures"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.get_signatures">[docs]</a>    <span class="k">def</span> <span class="nf">get_signatures</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<div class="viewcode-block" id="ObjectDescription.get_signatures"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.get_signatures">[文档]</a>    <span class="k">def</span> <span class="nf">get_signatures</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieve the signatures to document from the directive arguments.  By</span>
 <span class="sd">        default, signatures are given as arguments, one per line.</span>
@@ -208,7 +209,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="ObjectDescription.handle_signature"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.handle_signature">[docs]</a>    <span class="k">def</span> <span class="nf">handle_signature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<div class="viewcode-block" id="ObjectDescription.handle_signature"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.handle_signature">[文档]</a>    <span class="k">def</span> <span class="nf">handle_signature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parse the signature *sig* into individual nodes and append them to</span>
 <span class="sd">        *signode*. If ValueError is raised, parsing is aborted and the whole</span>
@@ -220,7 +221,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">ValueError</span></div>
 
-<div class="viewcode-block" id="ObjectDescription.add_target_and_index"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.add_target_and_index">[docs]</a>    <span class="k">def</span> <span class="nf">add_target_and_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ObjectDescription.add_target_and_index"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.add_target_and_index">[文档]</a>    <span class="k">def</span> <span class="nf">add_target_and_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add cross-reference IDs and entries to self.indexnode, if applicable.</span>
 
@@ -228,14 +229,14 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span>  <span class="c1"># do nothing by default</span></div>
 
-<div class="viewcode-block" id="ObjectDescription.before_content"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.before_content">[docs]</a>    <span class="k">def</span> <span class="nf">before_content</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ObjectDescription.before_content"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.before_content">[文档]</a>    <span class="k">def</span> <span class="nf">before_content</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called before parsing content. Used to set information about the current</span>
 <span class="sd">        directive context on the build environment.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="ObjectDescription.transform_content"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.transform_content">[docs]</a>    <span class="k">def</span> <span class="nf">transform_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contentnode</span><span class="p">:</span> <span class="n">addnodes</span><span class="o">.</span><span class="n">desc_content</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ObjectDescription.transform_content"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.transform_content">[文档]</a>    <span class="k">def</span> <span class="nf">transform_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contentnode</span><span class="p">:</span> <span class="n">addnodes</span><span class="o">.</span><span class="n">desc_content</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called after creating the content through nested parsing,</span>
 <span class="sd">        but before the ``object-description-transform`` event is emitted,</span>
@@ -244,14 +245,14 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="ObjectDescription.after_content"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.after_content">[docs]</a>    <span class="k">def</span> <span class="nf">after_content</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ObjectDescription.after_content"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.after_content">[文档]</a>    <span class="k">def</span> <span class="nf">after_content</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called after parsing content. Used to reset information about the</span>
 <span class="sd">        current directive context on the build environment.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="ObjectDescription.run"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Node</span><span class="p">]:</span>
+<div class="viewcode-block" id="ObjectDescription.run"><a class="viewcode-back" href="../../extdev/domainapi.html#sphinx.directives.ObjectDescription.run">[文档]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Node</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Main directive entry function, called by docutils upon encountering the</span>
 <span class="sd">        directive.</span>
@@ -411,23 +412,23 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >模块代码</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.directives</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

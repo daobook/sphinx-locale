@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,13 +14,14 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/development/theming.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Sphinx documentation"
+          title="在 Sphinx documentation 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="Man Pages" href="../man/index.html" />
     <link rel="prev" title="Configuring builders" href="builders.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -76,20 +77,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="../man/index.html" title="Man Pages"
-             accesskey="N">next</a> |</li>
+             accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="builders.html" title="Configuring builders"
-             accesskey="P">previous</a> |</li>
+             accesskey="P">上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -99,7 +100,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../contents.html">Table of Contents</a></h3>
+  <h3><a href="../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">HTML theme development</a><ul>
 <li><a class="reference internal" href="#creating-themes">Creating themes</a></li>
@@ -116,25 +117,25 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
+  <h4>上一个主题</h4>
   <p class="topless"><a href="builders.html"
-                        title="previous chapter">Configuring builders</a></p>
-  <h4>Next topic</h4>
+                        title="上一章">Configuring builders</a></p>
+  <h4>下一个主题</h4>
   <p class="topless"><a href="../man/index.html"
-                        title="next chapter">Man Pages</a></p>
+                        title="下一章">Man Pages</a></p>
   <div role="note" aria-label="source link">
-    <h3>This Page</h3>
+    <h3>本页</h3>
     <ul class="this-page-menu">
       <li><a href="../_sources/development/theming.rst.txt"
-            rel="nofollow">Show Source</a></li>
+            rel="nofollow">显示源代码</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="转向" />
     </form>
     </div>
 </div>
@@ -148,12 +149,12 @@
           <div class="body" role="main">
             
   <section id="html-theme-development">
-<h1>HTML theme development<a class="headerlink" href="#html-theme-development" title="Permalink to this headline">¶</a></h1>
+<h1>HTML theme development<a class="headerlink" href="#html-theme-development" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 0.6.</span></p>
+<p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">注解</p>
 <p>This document provides information about creating your own theme. If you
 simply wish to use a pre-existing HTML themes, refer to
 <a class="reference internal" href="../usage/theming.html"><span class="doc">HTML Theming</span></a>.</p>
@@ -166,12 +167,12 @@ the theme’s look and feel.</p>
 <p>Themes are meant to be project-unaware, so they can be used for different
 projects without change.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">注解</p>
 <p>See <a class="reference internal" href="../extdev/index.html#dev-extensions"><span class="std std-ref">Developing extensions for Sphinx</span></a> for more information that may
 be helpful in developing themes.</p>
 </div>
 <section id="creating-themes">
-<h2>Creating themes<a class="headerlink" href="#creating-themes" title="Permalink to this headline">¶</a></h2>
+<h2>Creating themes<a class="headerlink" href="#creating-themes" title="永久链接至标题">¶</a></h2>
 <p>Themes take the form of either a directory or a zipfile (whose name is the
 theme name), containing the following:</p>
 <ul class="simple">
@@ -219,11 +220,11 @@ These options can be overridden by the user in <a class="reference internal" hre
 and are accessible from all templates as <code class="docutils literal notranslate"><span class="pre">theme_&lt;name&gt;</span></code>.</p></li>
 </ul>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.7: </span>sidebar settings</p>
+<p><span class="versionmodified added">1.7 新版功能: </span>sidebar settings</p>
 </div>
 </section>
 <section id="distribute-your-theme-as-a-python-package">
-<span id="distribute-your-theme"></span><h2>Distribute your theme as a Python package<a class="headerlink" href="#distribute-your-theme-as-a-python-package" title="Permalink to this headline">¶</a></h2>
+<span id="distribute-your-theme"></span><h2>Distribute your theme as a Python package<a class="headerlink" href="#distribute-your-theme-as-a-python-package" title="永久链接至标题">¶</a></h2>
 <p>As a way to distribute your theme, you can use Python package.  Python package
 brings to users easy setting up ways.</p>
 <p>To distribute your theme as a Python package, please define an entry point
@@ -250,17 +251,17 @@ function to register your themes using <code class="docutils literal notranslate
 <p>If your theme package contains two or more themes, please call
 <code class="docutils literal notranslate"><span class="pre">add_html_theme()</span></code> twice or more.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.2: </span>‘sphinx_themes’ entry_points feature.</p>
+<p><span class="versionmodified added">1.2 新版功能: </span>‘sphinx_themes’ entry_points feature.</p>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 1.6: </span><code class="docutils literal notranslate"><span class="pre">sphinx_themes</span></code> entry_points has been deprecated.</p>
+<p><span class="versionmodified deprecated">1.6 版后已移除: </span><code class="docutils literal notranslate"><span class="pre">sphinx_themes</span></code> entry_points has been deprecated.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.6: </span><code class="docutils literal notranslate"><span class="pre">sphinx.html_themes</span></code> entry_points feature.</p>
+<p><span class="versionmodified added">1.6 新版功能: </span><code class="docutils literal notranslate"><span class="pre">sphinx.html_themes</span></code> entry_points feature.</p>
 </div>
 </section>
 <section id="templating">
-<h2>Templating<a class="headerlink" href="#templating" title="Permalink to this headline">¶</a></h2>
+<h2>Templating<a class="headerlink" href="#templating" title="永久链接至标题">¶</a></h2>
 <p>The <a class="reference internal" href="../templating.html"><span class="doc">guide to templating</span></a> is helpful if you want to write your
 own templates.  What is important to keep in mind is the order in which Sphinx
 searches for templates:</p>
@@ -274,7 +275,7 @@ name as an explicit directory: <code class="docutils literal notranslate"><span 
 user <code class="docutils literal notranslate"><span class="pre">templates_path</span></code> template, you can still use the “exclamation mark”
 syntax as described in the templating document.</p>
 <section id="static-templates">
-<span id="theming-static-templates"></span><h3>Static templates<a class="headerlink" href="#static-templates" title="Permalink to this headline">¶</a></h3>
+<span id="theming-static-templates"></span><h3>Static templates<a class="headerlink" href="#static-templates" title="永久链接至标题">¶</a></h3>
 <p>Since theme options are meant for the user to configure a theme more easily,
 without having to write a custom stylesheet, it is necessary to be able to
 template static files as well as HTML files.  Therefore, Sphinx supports
@@ -288,7 +289,7 @@ is built with the classic theme, the output directory will contain a
 <code class="docutils literal notranslate"><span class="pre">_static/classic.css</span></code> file where all template tags have been processed.</p>
 </section>
 <section id="use-custom-page-metadata-in-html-templates">
-<h3>Use custom page metadata in HTML templates<a class="headerlink" href="#use-custom-page-metadata-in-html-templates" title="Permalink to this headline">¶</a></h3>
+<h3>Use custom page metadata in HTML templates<a class="headerlink" href="#use-custom-page-metadata-in-html-templates" title="永久链接至标题">¶</a></h3>
 <p>Any key / value pairs in <a class="reference internal" href="../usage/restructuredtext/field-lists.html"><span class="doc">field lists</span></a>
 that are placed <em>before</em> the page’s title will be available to the Jinja
 template when building the page within the <a class="reference internal" href="../templating.html#meta" title="meta"><code class="xref py py-data docutils literal notranslate"><span class="pre">meta</span></code></a> attribute. For example,
@@ -309,7 +310,7 @@ if a page had the following text before its first title:</p>
 terminology) to ensure that using it in this way is valid.</p>
 </section>
 <section id="defining-custom-template-functions">
-<h3>Defining custom template functions<a class="headerlink" href="#defining-custom-template-functions" title="Permalink to this headline">¶</a></h3>
+<h3>Defining custom template functions<a class="headerlink" href="#defining-custom-template-functions" title="永久链接至标题">¶</a></h3>
 <p>Sometimes it is useful to define your own function in Python that you wish to
 then use in a template. For example, if you’d like to insert a template value
 with logic that depends on the user’s configuration in the project, or if you’d
@@ -328,7 +329,7 @@ connected to the <a class="reference internal" href="../extdev/appapi.html#sphin
 use within Jinja. The template function should return a string or Python objects
 (lists, dictionaries) with strings inside that Jinja uses in the templating process</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">注解</p>
 <p>The template function will have access to all of the variables that
 are passed to the registration function.</p>
 </div>
@@ -357,7 +358,7 @@ function as a callback for <a class="reference internal" href="../extdev/appapi.
 </div>
 </section>
 <section id="add-your-own-static-files-to-the-build-assets">
-<h3>Add your own static files to the build assets<a class="headerlink" href="#add-your-own-static-files-to-the-build-assets" title="Permalink to this headline">¶</a></h3>
+<h3>Add your own static files to the build assets<a class="headerlink" href="#add-your-own-static-files-to-the-build-assets" title="永久链接至标题">¶</a></h3>
 <p>If you are packaging your own build assets with an extension
 (e.g., a CSS or JavaScript file), you need to ensure that they are placed
 in the <code class="docutils literal notranslate"><span class="pre">_static/</span></code> folder of HTML outputs. To do so, you may copy them directly
@@ -377,7 +378,7 @@ Here is some sample code to accomplish this:</p>
 </div>
 </section>
 <section id="inject-javascript-based-on-user-configuration">
-<h3>Inject JavaScript based on user configuration<a class="headerlink" href="#inject-javascript-based-on-user-configuration" title="Permalink to this headline">¶</a></h3>
+<h3>Inject JavaScript based on user configuration<a class="headerlink" href="#inject-javascript-based-on-user-configuration" title="永久链接至标题">¶</a></h3>
 <p>If your extension makes use of JavaScript, it can be useful to allow users
 to control its behavior using their Sphinx configuration. However, this can
 be difficult to do if your JavaScript comes in the form of a static library
@@ -447,20 +448,20 @@ shared.</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
+      <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
         <li class="right" >
           <a href="../man/index.html" title="Man Pages"
-             >next</a> |</li>
+             >下一页</a> |</li>
         <li class="right" >
           <a href="builders.html" title="Configuring builders"
-             >previous</a> |</li>
+             >上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -469,7 +470,7 @@ shared.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>
