@@ -103,7 +103,7 @@
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Markdown</a><ul>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#configuration">配置</a></li>
 </ul>
 </li>
 </ul>
@@ -141,34 +141,26 @@
             
   <section id="markdown">
 <span id="id1"></span><h1>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h1>
-<p><a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> is a lightweight markup language with a simplistic plain text
-formatting syntax.  It exists in many syntactically different <em>flavors</em>.  To
-support Markdown-based documentation, Sphinx can use <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-Parser</a>.
-MyST-Parser is a Docutils bridge to <a class="reference external" href="https://github.com/executablebooks/markdown-it-py">markdown-it-py</a>, a Python package for
-parsing the <a class="reference external" href="https://commonmark.org/">CommonMark</a> Markdown flavor.</p>
+<p><a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> 是一种轻量级的标记语言，具有简单的纯文本格式化语法。它在句法上有许多不同的风格。为了支持基于 Markdown 的文档，Sphinx 可以使用 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-Parser</a>。MyST-Parser 是Docutils 与 <a class="reference external" href="https://github.com/executablebooks/markdown-it-py">markdown-it-py</a> 的桥梁，这是一个用于解析 <a class="reference external" href="https://commonmark.org/">CommonMark</a> Markdown 风格 的 Python 包。</p>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
-<p>To configure your Sphinx project for Markdown support, proceed as follows:</p>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<p>要配置 Sphinx 项目以获得 Markdown 支持，请执行以下操作：</p>
 <ol class="arabic">
-<li><p>Install the Markdown parser <em>MyST-Parser</em>:</p>
+<li><p>安装 Markdown 分析器  <em>MyST-Parser</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">myst</span><span class="o">-</span><span class="n">parser</span>
 </pre></div>
 </div>
 </li>
-<li><p>Add <em>myst_parser</em> to the
-<a class="reference internal" href="configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">list</span> <span class="pre">of</span> <span class="pre">configured</span> <span class="pre">extensions</span></code></a>:</p>
+<li><p>将 <em>myst_parser</em> 添加到 <a class="reference internal" href="configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">配置的扩展列表</span></code></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>MyST-Parser requires Sphinx 2.1 or newer.</p>
+<p>MyST-Parser 需要 Sphinx 2.1 或更新版本。</p>
 </div>
 </li>
-<li><p>If you want to use Markdown files with extensions other than <code class="docutils literal notranslate"><span class="pre">.md</span></code>, adjust
-the <a class="reference internal" href="configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a> variable.  The following example configures
-Sphinx to parse all files with the extensions <code class="docutils literal notranslate"><span class="pre">.md</span></code> and <code class="docutils literal notranslate"><span class="pre">.txt</span></code> as
-Markdown:</p>
+<li><p>如果你想使用扩展名不是 <cite>.md</cite> 的 Markdown 文件，调整 <a class="reference internal" href="configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a> 变量。下面的例子将 Sphinx 配置为将所有扩展名为 <cite>.md</cite> 和 <cite>.txt</cite> 的文件解析为 Markdown</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
     <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
@@ -177,9 +169,7 @@ Markdown:</p>
 </pre></div>
 </div>
 </li>
-<li><p>You can further configure <em>MyST-Parser</em> to allow custom syntax that
-standard <em>CommonMark</em> doesn’t support.  Read more in the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html">MyST-Parser
-documentation</a>.</p></li>
+<li><p>你可以进一步配置 <em>MyST-Parser</em> 以允许标准 CommonMark 不支持的自定义语法。在 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html">MyST-Parser 文档</a> 中阅读更多内容。</p></li>
 </ol>
 </section>
 </section>

@@ -22,8 +22,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="reStructuredText Primer" href="basics.html" />
-    <link rel="prev" title="Installing Sphinx" href="../installation.html" />
+    <link rel="next" title="reStructuredText 入门" href="basics.html" />
+    <link rel="prev" title="安装 Sphinx" href="../installation.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -86,10 +86,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="basics.html" title="reStructuredText Primer"
+          <a href="basics.html" title="reStructuredText 入门"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="../installation.html" title="Installing Sphinx"
+          <a href="../installation.html" title="安装 Sphinx"
              accesskey="P">上一页</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
@@ -102,10 +102,10 @@
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="../installation.html"
-                        title="上一章">Installing Sphinx</a></p>
+                        title="上一章">安装 Sphinx</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="basics.html"
-                        title="下一章">reStructuredText Primer</a></p>
+                        title="下一章">reStructuredText 入门</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -133,60 +133,56 @@
             
   <section id="restructuredtext">
 <span id="rst-index"></span><h1>reStructuredText<a class="headerlink" href="#restructuredtext" title="永久链接至标题">¶</a></h1>
-<p>reStructuredText (reST) is the default plaintext markup language used by both
-Docutils and Sphinx. Docutils provides the basic reStructuredText syntax, while
-Sphinx extends this to support additional functionality.</p>
-<p>The below guides go through the most important aspects of reST. For the
-authoritative reStructuredText reference, refer to the <a class="reference external" href="https://docutils.sourceforge.io/rst.html">docutils
-documentation</a>.</p>
+<p>reStructuredText（reST）是 Docutils 和 Sphinx 都使用的默认纯文本标记语言。Docutils 提供基本的 reStructuredText 语法，而 Sphinx 扩展了这个语法以支持额外的功能。</p>
+<p>下面的指南介绍了 reST 的最重要方面。对于权威的 reStructuredText 参考，请阅读 <a class="reference external" href="https://docutils.sourceforge.io/rst.html">Docutils 文档</a>。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="basics.html">reStructuredText Primer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#paragraphs">Paragraphs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#inline-markup">Inline markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#lists-and-quote-like-blocks">Lists and Quote-like blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#literal-blocks">Literal blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#doctest-blocks">Doctest blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#tables">Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#hyperlinks">Hyperlinks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#sections">Sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#field-lists">Field Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#roles">Roles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#explicit-markup">Explicit Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#directives">Directives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#images">Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#footnotes">Footnotes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#citations">Citations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#substitutions">Substitutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#comments">Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#html-metadata">HTML Metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#source-encoding">Source encoding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#gotchas">Gotchas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">reStructuredText 入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#paragraphs">段落</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#inline-markup">行内标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#lists-and-quote-like-blocks">列表和类似于语录的块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#literal-blocks">文字块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#doctest-blocks">Doctest 块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#tables">表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#hyperlinks">超链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#sections">章节</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#field-lists">字段列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#roles">角色</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#explicit-markup">显式标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#directives">指令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#images">图片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#footnotes">脚注</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#citations">引文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#substitutions">替换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#comments">注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#html-metadata">HTML 元数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#source-encoding">源编码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#gotchas">陷阱</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="roles.html">Roles</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="roles.html#cross-referencing-syntax">Cross-referencing syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roles.html#math">Math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roles.html#other-semantic-markup">Other semantic markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roles.html#substitutions">Substitutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roles.html">角色</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roles.html#cross-referencing-syntax">交叉引用语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roles.html#math">数学</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roles.html#other-semantic-markup">其他语义标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roles.html#substitutions">替换</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="directives.html">Directives</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="directives.html#table-of-contents">Table of contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="directives.html#paragraph-level-markup">Paragraph-level markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="directives.html#showing-code-examples">Showing code examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="directives.html#glossary">Glossary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="directives.html#meta-information-markup">Meta-information markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="directives.html#index-generating-markup">Index-generating markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directives.html">指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="directives.html#table-of-contents">目录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directives.html#paragraph-level-markup">段落级标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directives.html#showing-code-examples">显示代码示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directives.html#glossary">术语</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directives.html#meta-information-markup">元信息标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directives.html#index-generating-markup">索引生成标记</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directives.html#including-content-based-on-tags">Including content based on tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directives.html#tables">Tables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directives.html#math">Math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directives.html#grammar-production-displays">Grammar production displays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="field-lists.html">Field Lists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="field-lists.html#file-wide-metadata">File-wide metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="field-lists.html#special-metadata-fields">Special metadata fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="field-lists.html">字段列表</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="field-lists.html#file-wide-metadata">整个文件的元数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="field-lists.html#special-metadata-fields">特殊元数据字段</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="domains.html">Domains</a><ul>
@@ -222,10 +218,10 @@ documentation</a>.</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="basics.html" title="reStructuredText Primer"
+          <a href="basics.html" title="reStructuredText 入门"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="../installation.html" title="Installing Sphinx"
+          <a href="../installation.html" title="安装 Sphinx"
              >上一页</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>

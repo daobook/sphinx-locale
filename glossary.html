@@ -145,7 +145,7 @@
    Content of the directive.
 </pre></div>
 </div>
-<p>参阅 <a class="reference internal" href="usage/restructuredtext/basics.html#rst-directives"><span class="std std-ref">Directives</span></a> 了解更多信息。</p>
+<p>参阅 <a class="reference internal" href="usage/restructuredtext/basics.html#rst-directives"><span class="std std-ref">指令</span></a> 了解更多信息。</p>
 </dd>
 <dt id="term-document-name">文档名<a class="headerlink" href="#term-document-name" title="Permalink to this term">¶</a></dt><dd><p>由于 reST 源文件可以有不同的扩展名（有些人喜欢 <code class="docutils literal notranslate"><span class="pre">.txt</span></code>，有些人喜欢 <code class="docutils literal notranslate"><span class="pre">.rst</span></code> —扩展名可以配置为：<a class="reference internal" href="usage/configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a>），并且不同的操作系统有不同的路径分隔符，因此 Sphinx 对它们进行了抽象：<em class="dfn">文档名</em> 总是相对于：<a class="reference internal" href="#term-source-directory"><span class="xref std std-term">源目录</span></a>，扩展名被剥离，路径分隔符转换为斜杠。所有的值、参数和引用“文档”的都需要这样的文档名。</p>
 <p>文档名的示例有 <code class="docutils literal notranslate"><span class="pre">index</span></code>, <code class="docutils literal notranslate"><span class="pre">library/zipfile</span></code> 或 <code class="docutils literal notranslate"><span class="pre">reference/datamodel/types</span></code>。请注意，没有前导或尾随斜杠。</p>
@@ -167,7 +167,7 @@
 </dd>
 <dt id="term-RemoveInSphinxXXXWarning">清除 Sphinx 的警告<a class="headerlink" href="#term-RemoveInSphinxXXXWarning" title="Permalink to this term">¶</a></dt><dd><p>在 Sphinx XXX 版本中，警告的功能将被删除。它通常是由 Sphinx 扩展引起的，它使用了不推荐使用的扩展。另请参阅 <a class="reference internal" href="man/sphinx-build.html#when-deprecation-warnings-are-displayed"><span class="std std-ref">Deprecation Warnings</span></a>。</p>
 </dd>
-<dt id="term-role">角色<a class="headerlink" href="#term-role" title="Permalink to this term">¶</a></dt><dd><p>允许标记一段文本的 reStructuredText 标记元素。与指令一样，角色也是可扩展的。基本语法如下：<code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code>。有关详细信息，请参见 <a class="reference internal" href="usage/restructuredtext/basics.html#rst-inline-markup"><span class="std std-ref">Inline markup</span></a> 。</p>
+<dt id="term-role">角色<a class="headerlink" href="#term-role" title="Permalink to this term">¶</a></dt><dd><p>允许标记一段文本的 reStructuredText 标记元素。与指令一样，角色也是可扩展的。基本语法如下：<code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code>。有关详细信息，请参见 <a class="reference internal" href="usage/restructuredtext/basics.html#rst-inline-markup"><span class="std std-ref">行内标记</span></a> 。</p>
 </dd>
 <dt id="term-source-directory">源目录<a class="headerlink" href="#term-source-directory" title="Permalink to this term">¶</a></dt><dd><p>该目录，包括其子目录，包含一个 Sphinx 项目的所有源文件。</p>
 </dd>
