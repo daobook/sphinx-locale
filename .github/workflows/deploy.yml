@@ -43,8 +43,9 @@ jobs:
         run: |
           cp -rf zh_CN/ draft/doc/locale
           cd draft/doc
+          export SPHINXINTL_LANGUAGE=zh_CN
           make gettext
-          make -e SPHINXOPTS="-Dlanguage='zh_CN'" html
+          make html
 
       # 部署 HTML 到 gh-pages 分支
       - name: GitHub Pages action
