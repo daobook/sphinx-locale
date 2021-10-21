@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,13 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="sphinx.ext.coverage – Collect doc coverage stats" href="coverage.html" />
     <link rel="prev" title="sphinx.ext.autosectionlabel – Allow reference sections using its title" href="autosectionlabel.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -77,20 +76,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="coverage.html" title="sphinx.ext.coverage – Collect doc coverage stats"
-             accesskey="N">下一页</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – Allow reference sections using its title"
-             accesskey="P">上一页</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
@@ -101,7 +100,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../contents.html">目录</a></h3>
+  <h3><a href="../../contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – Generate autodoc summaries</a><ul>
 <li><a class="reference internal" href="#sphinx-autogen-generate-autodoc-stub-pages"><strong class="program">sphinx-autogen</strong> – generate autodoc stub pages</a></li>
@@ -111,25 +110,25 @@
 </li>
 </ul>
 
-  <h4>上一个主题</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="autosectionlabel.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a></p>
-  <h4>下一个主题</h4>
+                        title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="coverage.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – Collect doc coverage stats</a></p>
+                        title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – Collect doc coverage stats</a></p>
   <div role="note" aria-label="source link">
-    <h3>本页</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="../../_sources/usage/extensions/autosummary.rst.txt"
-            rel="nofollow">显示源代码</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -143,9 +142,9 @@
           <div class="body" role="main">
             
   <section id="module-sphinx.ext.autosummary">
-<span id="sphinx-ext-autosummary-generate-autodoc-summaries"></span><h1><a class="reference internal" href="#module-sphinx.ext.autosummary" title="sphinx.ext.autosummary: Generate autodoc summaries"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code></a> – Generate autodoc summaries<a class="headerlink" href="#module-sphinx.ext.autosummary" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-autosummary-generate-autodoc-summaries"></span><h1><a class="reference internal" href="#module-sphinx.ext.autosummary" title="sphinx.ext.autosummary: Generate autodoc summaries"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code></a> – Generate autodoc summaries<a class="headerlink" href="#module-sphinx.ext.autosummary" title="Permalink to this headline">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">0.6 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 0.6.</span></p>
 </div>
 <p>This extension generates function/method/attribute summary lists, similar to
 those output e.g. by Epydoc and other API doc generation tools.  This is
@@ -166,7 +165,7 @@ from command line.</p>
 </ol>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-autosummary">
-<span class="sig-name descname"><span class="pre">..</span> <span class="pre">autosummary::</span></span><a class="headerlink" href="#directive-autosummary" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">autosummary::</span></span><a class="headerlink" href="#directive-autosummary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Insert a table that contains links to documented items, and a short summary
 blurb (the first sentence of the docstring) for each of them.</p>
 <p>The <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> directive can also optionally serve as a
@@ -221,7 +220,7 @@ directory. If no argument is given, output is placed in the same directory
 as the file that contains the directive.</p>
 <p>You can also use <code class="docutils literal notranslate"><span class="pre">caption</span></code> option to give a caption to the toctree.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.1 新版功能: </span>caption option added.</p>
+<p><span class="versionmodified added">New in version 3.1: </span>caption option added.</p>
 </div>
 </li>
 <li><p>If you don’t want the <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> to show function signatures in
@@ -246,7 +245,7 @@ For example,</p>
 <a class="reference internal" href="../configuration.html#confval-templates_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">templates_path</span></code></a> to generate the pages for all entries
 listed. See <a class="reference internal" href="#customizing-templates">Customizing templates</a> below.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">1.0 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
 </li>
 <li><p>You can specify the <code class="docutils literal notranslate"><span class="pre">recursive</span></code> option to generate documents for
@@ -259,14 +258,14 @@ For example,</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">3.1 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 3.1.</span></p>
 </div>
 </li>
 </ul>
 </dd></dl>
 
 <section id="sphinx-autogen-generate-autodoc-stub-pages">
-<h2><strong class="program">sphinx-autogen</strong> – generate autodoc stub pages<a class="headerlink" href="#sphinx-autogen-generate-autodoc-stub-pages" title="永久链接至标题">¶</a></h2>
+<h2><strong class="program">sphinx-autogen</strong> – generate autodoc stub pages<a class="headerlink" href="#sphinx-autogen-generate-autodoc-stub-pages" title="Permalink to this headline">¶</a></h2>
 <p>The <strong class="program">sphinx-autogen</strong> script can be used to conveniently generate stub
 documentation pages for items included in <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> listings.</p>
 <p>For example, the command</p>
@@ -288,90 +287,90 @@ directories specified in the <code class="docutils literal notranslate"><span cl
 <p>For more information, refer to the <a class="reference internal" href="../../man/sphinx-autogen.html"><span class="doc">sphinx-autogen documentation</span></a></p>
 </section>
 <section id="generating-stub-pages-automatically">
-<h2>Generating stub pages automatically<a class="headerlink" href="#generating-stub-pages-automatically" title="永久链接至标题">¶</a></h2>
+<h2>Generating stub pages automatically<a class="headerlink" href="#generating-stub-pages-automatically" title="Permalink to this headline">¶</a></h2>
 <p>If you do not want to create stub pages with <strong class="program">sphinx-autogen</strong>, you can
 also use these config values:</p>
 <dl class="std confval">
 <dt class="sig sig-object std" id="confval-autosummary_context">
-<span class="sig-name descname"><span class="pre">autosummary_context</span></span><a class="headerlink" href="#confval-autosummary_context" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">autosummary_context</span></span><a class="headerlink" href="#confval-autosummary_context" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dictionary of values to pass into the template engine’s context for
 autosummary stubs files.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.1 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 3.1.</span></p>
 </div>
 </dd></dl>
 
 <dl class="std confval">
 <dt class="sig sig-object std" id="confval-autosummary_generate">
-<span class="sig-name descname"><span class="pre">autosummary_generate</span></span><a class="headerlink" href="#confval-autosummary_generate" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">autosummary_generate</span></span><a class="headerlink" href="#confval-autosummary_generate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean indicating whether to scan all found documents for autosummary
 directives, and to generate stub pages for each. It is enabled by default.</p>
 <p>Can also be a list of documents for which stub pages should be generated.</p>
 <p>The new files will be placed in the directories specified in the
 <code class="docutils literal notranslate"><span class="pre">:toctree:</span></code> options of the directives.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 2.3 版更改: </span>Emits <a class="reference internal" href="autodoc.html#event-autodoc-skip-member"><code class="xref std std-event docutils literal notranslate"><span class="pre">autodoc-skip-member</span></code></a> event as <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a>
+<p><span class="versionmodified changed">Changed in version 2.3: </span>Emits <a class="reference internal" href="autodoc.html#event-autodoc-skip-member"><code class="xref std std-event docutils literal notranslate"><span class="pre">autodoc-skip-member</span></code></a> event as <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a>
 does.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 4.0 版更改: </span>Enabled by default.</p>
+<p><span class="versionmodified changed">Changed in version 4.0: </span>Enabled by default.</p>
 </div>
 </dd></dl>
 
 <dl class="std confval">
 <dt class="sig sig-object std" id="confval-autosummary_generate_overwrite">
-<span class="sig-name descname"><span class="pre">autosummary_generate_overwrite</span></span><a class="headerlink" href="#confval-autosummary_generate_overwrite" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">autosummary_generate_overwrite</span></span><a class="headerlink" href="#confval-autosummary_generate_overwrite" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, autosummary overwrites existing files by generated stub pages.
 Defaults to true (enabled).</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.0 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 3.0.</span></p>
 </div>
 </dd></dl>
 
 <dl class="std confval">
 <dt class="sig sig-object std" id="confval-autosummary_mock_imports">
-<span class="sig-name descname"><span class="pre">autosummary_mock_imports</span></span><a class="headerlink" href="#confval-autosummary_mock_imports" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">autosummary_mock_imports</span></span><a class="headerlink" href="#confval-autosummary_mock_imports" title="Permalink to this definition">¶</a></dt>
 <dd><p>This value contains a list of modules to be mocked up.  See
 <a class="reference internal" href="autodoc.html#confval-autodoc_mock_imports"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autodoc_mock_imports</span></code></a> for more details.  It defaults to
 <a class="reference internal" href="autodoc.html#confval-autodoc_mock_imports"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autodoc_mock_imports</span></code></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">2.0 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 2.0.</span></p>
 </div>
 </dd></dl>
 
 <dl class="std confval">
 <dt class="sig sig-object std" id="confval-autosummary_imported_members">
-<span class="sig-name descname"><span class="pre">autosummary_imported_members</span></span><a class="headerlink" href="#confval-autosummary_imported_members" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">autosummary_imported_members</span></span><a class="headerlink" href="#confval-autosummary_imported_members" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean flag indicating whether to document classes and functions imported
 in modules. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <div class="versionadded">
-<p><span class="versionmodified added">2.1 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 2.1.</span></p>
 </div>
 </dd></dl>
 
 <dl class="std confval">
 <dt class="sig sig-object std" id="confval-autosummary_filename_map">
-<span class="sig-name descname"><span class="pre">autosummary_filename_map</span></span><a class="headerlink" href="#confval-autosummary_filename_map" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">autosummary_filename_map</span></span><a class="headerlink" href="#confval-autosummary_filename_map" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dict mapping object names to filenames. This is necessary to avoid
 filename conflicts where multiple objects have names that are
 indistinguishable when case is ignored, on file systems where filenames
 are case-insensitive.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.2 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 3.2.</span></p>
 </div>
 </dd></dl>
 
 </section>
 <section id="customizing-templates">
-<span id="autosummary-customizing-templates"></span><h2>Customizing templates<a class="headerlink" href="#customizing-templates" title="永久链接至标题">¶</a></h2>
+<span id="autosummary-customizing-templates"></span><h2>Customizing templates<a class="headerlink" href="#customizing-templates" title="Permalink to this headline">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">1.0 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
 <p>You can customize the stub page templates, in a similar way as the HTML Jinja
 templates, see <a class="reference internal" href="../../templating.html#templating"><span class="std std-ref">Templating</span></a>. (<a class="reference internal" href="../../extdev/appapi.html#sphinx.application.TemplateBridge" title="sphinx.application.TemplateBridge"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemplateBridge</span></code></a>
 is not supported.)</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>If you find yourself spending much time tailoring the stub templates, this
 may indicate that it’s a better idea to write custom narrative documentation
 instead.</p>
@@ -388,62 +387,62 @@ instead.</p>
 <p>The following variables available in the templates:</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="name">
-<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#name" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the documented object, excluding the module and class parts.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="objname">
-<span class="sig-name descname"><span class="pre">objname</span></span><a class="headerlink" href="#objname" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">objname</span></span><a class="headerlink" href="#objname" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the documented object, excluding the module parts.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="fullname">
-<span class="sig-name descname"><span class="pre">fullname</span></span><a class="headerlink" href="#fullname" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fullname</span></span><a class="headerlink" href="#fullname" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full name of the documented object, including module and class parts.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="module">
-<span class="sig-name descname"><span class="pre">module</span></span><a class="headerlink" href="#module" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">module</span></span><a class="headerlink" href="#module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the module the documented object belongs to.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="class">
-<span class="sig-name descname"><span class="pre">class</span></span><a class="headerlink" href="#class" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">class</span></span><a class="headerlink" href="#class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the class the documented object belongs to.  Only available for
 methods and attributes.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="underline">
-<span class="sig-name descname"><span class="pre">underline</span></span><a class="headerlink" href="#underline" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">underline</span></span><a class="headerlink" href="#underline" title="Permalink to this definition">¶</a></dt>
 <dd><p>A string containing <code class="docutils literal notranslate"><span class="pre">len(full_name)</span> <span class="pre">*</span> <span class="pre">'='</span></code>. Use the <code class="docutils literal notranslate"><span class="pre">underline</span></code> filter
 instead.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="members">
-<span class="sig-name descname"><span class="pre">members</span></span><a class="headerlink" href="#members" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">members</span></span><a class="headerlink" href="#members" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of all members of the module or class.  Only available
 for modules and classes.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="inherited_members">
-<span class="sig-name descname"><span class="pre">inherited_members</span></span><a class="headerlink" href="#inherited_members" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">inherited_members</span></span><a class="headerlink" href="#inherited_members" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of all inherited members of class.  Only available for
 classes.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">1.8.0 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 1.8.0.</span></p>
 </div>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="functions">
-<span class="sig-name descname"><span class="pre">functions</span></span><a class="headerlink" href="#functions" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">functions</span></span><a class="headerlink" href="#functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of “public” functions in the module.  Here, “public”
 here means that the name does not start with an underscore. Only available
 for modules.</p>
@@ -451,51 +450,51 @@ for modules.</p>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="classes">
-<span class="sig-name descname"><span class="pre">classes</span></span><a class="headerlink" href="#classes" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">classes</span></span><a class="headerlink" href="#classes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of “public” classes in the module.  Only available for
 modules.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="exceptions">
-<span class="sig-name descname"><span class="pre">exceptions</span></span><a class="headerlink" href="#exceptions" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">exceptions</span></span><a class="headerlink" href="#exceptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of “public” exceptions in the module.  Only available
 for modules.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="methods">
-<span class="sig-name descname"><span class="pre">methods</span></span><a class="headerlink" href="#methods" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">methods</span></span><a class="headerlink" href="#methods" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of “public” methods in the class.  Only available for
 classes.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="attributes">
-<span class="sig-name descname"><span class="pre">attributes</span></span><a class="headerlink" href="#attributes" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attributes</span></span><a class="headerlink" href="#attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of “public” attributes in the class/module.  Only
 available for classes and modules.</p>
 <blockquote>
 <div><div class="versionchanged">
-<p><span class="versionmodified changed">在 3.1 版更改: </span>Attributes of modules are supported.</p>
+<p><span class="versionmodified changed">Changed in version 3.1: </span>Attributes of modules are supported.</p>
 </div>
 </div></blockquote>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="modules">
-<span class="sig-name descname"><span class="pre">modules</span></span><a class="headerlink" href="#modules" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">modules</span></span><a class="headerlink" href="#modules" title="Permalink to this definition">¶</a></dt>
 <dd><p>List containing names of “public” modules in the package.  Only available for
 modules that are packages and the <code class="docutils literal notranslate"><span class="pre">recursive</span></code> option is on.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.1 新版功能.</span></p>
+<p><span class="versionmodified added">New in version 3.1.</span></p>
 </div>
 </dd></dl>
 
 <p>Additionally, the following filters are available</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="escape">
-<span class="sig-name descname"><span class="pre">escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escape" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Escape any special characters in the text to be used in formatting RST
 contexts. For instance, this prevents asterisks making things bold. This
 replaces the builtin Jinja <a class="reference external" href="https://jinja.palletsprojects.com/en/3.0.x/templates/#jinja-filters.escape">escape filter</a> that does html-escaping.</p>
@@ -510,7 +509,7 @@ replaces the builtin Jinja <a class="reference external" href="https://jinja.pal
 <p>For instance, <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">fullname</span> <span class="pre">|</span> <span class="pre">escape</span> <span class="pre">|</span> <span class="pre">underline</span> <span class="pre">}}</span></code> should be used to produce
 the title of a page.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>You can use the <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> directive in the stub pages.
 Stub pages are generated also based on these directives.</p>
 </div>
@@ -525,20 +524,20 @@ Stub pages are generated also based on these directives.</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="coverage.html" title="sphinx.ext.coverage – Collect doc coverage stats"
-             >下一页</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – Allow reference sections using its title"
-             >上一页</a> |</li>
+             >previous</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
@@ -548,7 +547,7 @@ Stub pages are generated also based on these directives.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

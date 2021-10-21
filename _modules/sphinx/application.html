@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,14 +13,13 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinx/application.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -74,29 +73,29 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.application</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -109,7 +108,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>sphinx.application 源代码</h1><div class="highlight"><pre>
+  <h1>Source code for sphinx.application</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinx.application</span>
 <span class="sd">    ~~~~~~~~~~~~~~~~~~</span>
@@ -235,7 +234,7 @@
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Sphinx"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx">[文档]</a><span class="k">class</span> <span class="nc">Sphinx</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx">[docs]</a><span class="k">class</span> <span class="nc">Sphinx</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;The main application class and extensibility interface.</span>
 
 <span class="sd">    :ivar srcdir: Directory containing source.</span>
@@ -494,7 +493,7 @@
 
     <span class="c1"># ---- general extensibility interface -------------------------------------</span>
 
-<div class="viewcode-block" id="Sphinx.setup_extension"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.setup_extension">[文档]</a>    <span class="k">def</span> <span class="nf">setup_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extname</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.setup_extension"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.setup_extension">[docs]</a>    <span class="k">def</span> <span class="nf">setup_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extname</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Import and setup a Sphinx extension module.</span>
 
 <span class="sd">        Load the extension given by the module *name*.  Use this if your</span>
@@ -504,7 +503,7 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[app] setting up extension: </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">extname</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extname</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.require_sphinx"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.require_sphinx">[文档]</a>    <span class="k">def</span> <span class="nf">require_sphinx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.require_sphinx"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.require_sphinx">[docs]</a>    <span class="k">def</span> <span class="nf">require_sphinx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Check the Sphinx version if requested.</span>
 
 <span class="sd">        Compare *version* with the version of the running Sphinx, and abort the</span>
@@ -518,7 +517,7 @@
             <span class="k">raise</span> <span class="n">VersionRequirementError</span><span class="p">(</span><span class="n">version</span><span class="p">)</span></div>
 
     <span class="c1"># event interface</span>
-<div class="viewcode-block" id="Sphinx.connect"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.connect">[文档]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.connect"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register *callback* to be called when *event* is emitted.</span>
 
 <span class="sd">        For details on available core events and the arguments of callback</span>
@@ -539,7 +538,7 @@
                      <span class="n">event</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">listener_id</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">listener_id</span></div>
 
-<div class="viewcode-block" id="Sphinx.disconnect"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.disconnect">[文档]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">listener_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.disconnect"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">listener_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Unregister callback by *listener_id*.</span>
 
 <span class="sd">        :param listener_id: A listener_id that :meth:`connect` returns</span>
@@ -547,7 +546,7 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[app] disconnecting event: [id=</span><span class="si">%s</span><span class="s1">]&#39;</span><span class="p">,</span> <span class="n">listener_id</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="n">listener_id</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.emit"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.emit">[文档]</a>    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.emit"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.emit">[docs]</a>    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
              <span class="n">allowed_exceptions</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="ne">Exception</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Emit *event* and pass *arguments* to the callback functions.</span>
 
@@ -564,7 +563,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">allowed_exceptions</span><span class="o">=</span><span class="n">allowed_exceptions</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.emit_firstresult"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.emit_firstresult">[文档]</a>    <span class="k">def</span> <span class="nf">emit_firstresult</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.emit_firstresult"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.emit_firstresult">[docs]</a>    <span class="k">def</span> <span class="nf">emit_firstresult</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
                          <span class="n">allowed_exceptions</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="ne">Exception</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Emit *event* and pass *arguments* to the callback functions.</span>
 
@@ -584,7 +583,7 @@
 
     <span class="c1"># registering addon parts</span>
 
-<div class="viewcode-block" id="Sphinx.add_builder"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_builder">[文档]</a>    <span class="k">def</span> <span class="nf">add_builder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s2">&quot;Builder&quot;</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_builder"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_builder">[docs]</a>    <span class="k">def</span> <span class="nf">add_builder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s2">&quot;Builder&quot;</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a new builder.</span>
 
 <span class="sd">        :param builder: A builder class</span>
@@ -597,7 +596,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_builder</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
     <span class="c1"># TODO(stephenfin): Describe &#39;types&#39; parameter</span>
-<div class="viewcode-block" id="Sphinx.add_config_value"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_config_value">[文档]</a>    <span class="k">def</span> <span class="nf">add_config_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">rebuild</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+<div class="viewcode-block" id="Sphinx.add_config_value"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_config_value">[docs]</a>    <span class="k">def</span> <span class="nf">add_config_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">rebuild</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
                          <span class="n">types</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a configuration value.</span>
 
@@ -636,7 +635,7 @@
             <span class="n">rebuild</span> <span class="o">=</span> <span class="s1">&#39;env&#39;</span> <span class="k">if</span> <span class="n">rebuild</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">default</span><span class="p">,</span> <span class="n">rebuild</span><span class="p">,</span> <span class="n">types</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_event"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_event">[文档]</a>    <span class="k">def</span> <span class="nf">add_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_event"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_event">[docs]</a>    <span class="k">def</span> <span class="nf">add_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register an event called *name*.</span>
 
 <span class="sd">        This is needed to be able to emit it.</span>
@@ -646,7 +645,7 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[app] adding event: </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.set_translator"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.set_translator">[文档]</a>    <span class="k">def</span> <span class="nf">set_translator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">translator_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">nodes</span><span class="o">.</span><span class="n">NodeVisitor</span><span class="p">],</span>
+<div class="viewcode-block" id="Sphinx.set_translator"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.set_translator">[docs]</a>    <span class="k">def</span> <span class="nf">set_translator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">translator_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">nodes</span><span class="o">.</span><span class="n">NodeVisitor</span><span class="p">],</span>
                        <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register or override a Docutils translator class.</span>
 
@@ -665,7 +664,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_translator</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">translator_class</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_node"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_node">[文档]</a>    <span class="k">def</span> <span class="nf">add_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.add_node"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_node">[docs]</a>    <span class="k">def</span> <span class="nf">add_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                  <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils node class.</span>
 
@@ -709,7 +708,7 @@
         <span class="n">docutils</span><span class="o">.</span><span class="n">register_node</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_translation_handlers</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_enumerable_node"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_enumerable_node">[文档]</a>    <span class="k">def</span> <span class="nf">add_enumerable_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">],</span> <span class="n">figtype</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.add_enumerable_node"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_enumerable_node">[docs]</a>    <span class="k">def</span> <span class="nf">add_enumerable_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">],</span> <span class="n">figtype</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                             <span class="n">title_getter</span><span class="p">:</span> <span class="n">TitleGetter</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                             <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils node class as a numfig target.</span>
@@ -738,7 +737,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_enumerable_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">figtype</span><span class="p">,</span> <span class="n">title_getter</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_directive"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive">[文档]</a>    <span class="k">def</span> <span class="nf">add_directive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Directive</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_directive"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive">[docs]</a>    <span class="k">def</span> <span class="nf">add_directive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Directive</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils directive.</span>
 
 <span class="sd">        :param name: The name of the directive</span>
@@ -786,7 +785,7 @@
 
         <span class="n">docutils</span><span class="o">.</span><span class="n">register_directive</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_role"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_role">[文档]</a>    <span class="k">def</span> <span class="nf">add_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">role</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_role"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_role">[docs]</a>    <span class="k">def</span> <span class="nf">add_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">role</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils role.</span>
 
 <span class="sd">        :param name: The name of role</span>
@@ -806,7 +805,7 @@
                            <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;app&#39;</span><span class="p">,</span> <span class="n">subtype</span><span class="o">=</span><span class="s1">&#39;add_role&#39;</span><span class="p">)</span>
         <span class="n">docutils</span><span class="o">.</span><span class="n">register_role</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">role</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_generic_role"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_generic_role">[文档]</a>    <span class="k">def</span> <span class="nf">add_generic_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodeclass</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_generic_role"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_generic_role">[docs]</a>    <span class="k">def</span> <span class="nf">add_generic_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nodeclass</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a generic Docutils role.</span>
 
 <span class="sd">        Register a Docutils role that does nothing but wrap its contents in the</span>
@@ -828,7 +827,7 @@
         <span class="n">role</span> <span class="o">=</span> <span class="n">roles</span><span class="o">.</span><span class="n">GenericRole</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">nodeclass</span><span class="p">)</span>
         <span class="n">docutils</span><span class="o">.</span><span class="n">register_role</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">role</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_domain">[文档]</a>    <span class="k">def</span> <span class="nf">add_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Domain</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_domain">[docs]</a>    <span class="k">def</span> <span class="nf">add_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Domain</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a domain.</span>
 
 <span class="sd">        :param domain: A domain class</span>
@@ -841,7 +840,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_directive_to_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive_to_domain">[文档]</a>    <span class="k">def</span> <span class="nf">add_directive_to_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.add_directive_to_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive_to_domain">[docs]</a>    <span class="k">def</span> <span class="nf">add_directive_to_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                 <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Directive</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils directive in a domain.</span>
 
@@ -860,7 +859,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_directive_to_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_role_to_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_role_to_domain">[文档]</a>    <span class="k">def</span> <span class="nf">add_role_to_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">role</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">RoleFunction</span><span class="p">,</span> <span class="n">XRefRole</span><span class="p">],</span>
+<div class="viewcode-block" id="Sphinx.add_role_to_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_role_to_domain">[docs]</a>    <span class="k">def</span> <span class="nf">add_role_to_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">role</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">RoleFunction</span><span class="p">,</span> <span class="n">XRefRole</span><span class="p">],</span>
                            <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils role in a domain.</span>
 
@@ -879,7 +878,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_role_to_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">role</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_index_to_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_index_to_domain">[文档]</a>    <span class="k">def</span> <span class="nf">add_index_to_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Index</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<div class="viewcode-block" id="Sphinx.add_index_to_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_index_to_domain">[docs]</a>    <span class="k">def</span> <span class="nf">add_index_to_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Index</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
                             <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a custom index for a domain.</span>
 
@@ -896,7 +895,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_index_to_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_object_type"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_object_type">[文档]</a>    <span class="k">def</span> <span class="nf">add_object_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directivename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rolename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">indextemplate</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.add_object_type"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_object_type">[docs]</a>    <span class="k">def</span> <span class="nf">add_object_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directivename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rolename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">indextemplate</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                         <span class="n">parse_node</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ref_nodeclass</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">TextElement</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                         <span class="n">objname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">doc_field_types</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
                         <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -963,7 +962,7 @@
                                       <span class="n">ref_nodeclass</span><span class="p">,</span> <span class="n">objname</span><span class="p">,</span> <span class="n">doc_field_types</span><span class="p">,</span>
                                       <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_crossref_type"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_crossref_type">[文档]</a>    <span class="k">def</span> <span class="nf">add_crossref_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directivename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rolename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">indextemplate</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.add_crossref_type"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_crossref_type">[docs]</a>    <span class="k">def</span> <span class="nf">add_crossref_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directivename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rolename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">indextemplate</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                           <span class="n">ref_nodeclass</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">TextElement</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">objname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
                           <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a new crossref object type.</span>
@@ -1002,7 +1001,7 @@
                                         <span class="n">indextemplate</span><span class="p">,</span> <span class="n">ref_nodeclass</span><span class="p">,</span> <span class="n">objname</span><span class="p">,</span>
                                         <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_transform"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_transform">[文档]</a>    <span class="k">def</span> <span class="nf">add_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transform</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Transform</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_transform"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_transform">[docs]</a>    <span class="k">def</span> <span class="nf">add_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transform</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Transform</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils transform to be applied after parsing.</span>
 
 <span class="sd">        Add the standard docutils :class:`Transform` subclass *transform* to</span>
@@ -1037,7 +1036,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>  <span class="c1"># NOQA</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="n">transform</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_post_transform"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_post_transform">[文档]</a>    <span class="k">def</span> <span class="nf">add_post_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transform</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Transform</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_post_transform"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_post_transform">[docs]</a>    <span class="k">def</span> <span class="nf">add_post_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transform</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Transform</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a Docutils transform to be applied before writing.</span>
 
 <span class="sd">        Add the standard docutils :class:`Transform` subclass *transform* to</span>
@@ -1048,7 +1047,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_post_transform</span><span class="p">(</span><span class="n">transform</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_js_file"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_js_file">[文档]</a>    <span class="k">def</span> <span class="nf">add_js_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_js_file"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_js_file">[docs]</a>    <span class="k">def</span> <span class="nf">add_js_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a JavaScript file to include in the HTML output.</span>
 
 <span class="sd">        Add *filename* to the list of JavaScript files that the default HTML</span>
@@ -1099,7 +1098,7 @@
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="p">,</span> <span class="s1">&#39;add_js_file&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">add_js_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="n">priority</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_css_file"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_css_file">[文档]</a>    <span class="k">def</span> <span class="nf">add_css_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_css_file"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_css_file">[docs]</a>    <span class="k">def</span> <span class="nf">add_css_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a stylesheet to include in the HTML output.</span>
 
 <span class="sd">        Add *filename* to the list of CSS files that the default HTML template</span>
@@ -1158,7 +1157,7 @@
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="p">,</span> <span class="s1">&#39;add_css_file&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">add_css_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="n">priority</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_latex_package"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_latex_package">[文档]</a>    <span class="k">def</span> <span class="nf">add_latex_package</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packagename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.add_latex_package"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_latex_package">[docs]</a>    <span class="k">def</span> <span class="nf">add_latex_package</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packagename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                           <span class="n">after_hyperref</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Register a package to include in the LaTeX source code.</span>
 
@@ -1181,7 +1180,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_latex_package</span><span class="p">(</span><span class="n">packagename</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">after_hyperref</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_lexer"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_lexer">[文档]</a>    <span class="k">def</span> <span class="nf">add_lexer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alias</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lexer</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Lexer</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_lexer"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_lexer">[docs]</a>    <span class="k">def</span> <span class="nf">add_lexer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alias</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lexer</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Lexer</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a new lexer for source code.</span>
 
 <span class="sd">        Use *lexer* to highlight code blocks with the given language *alias*.</span>
@@ -1194,7 +1193,7 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[app] adding lexer: </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">alias</span><span class="p">,</span> <span class="n">lexer</span><span class="p">))</span>
         <span class="n">lexer_classes</span><span class="p">[</span><span class="n">alias</span><span class="p">]</span> <span class="o">=</span> <span class="n">lexer</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_autodocumenter"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_autodocumenter">[文档]</a>    <span class="k">def</span> <span class="nf">add_autodocumenter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_autodocumenter"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_autodocumenter">[docs]</a>    <span class="k">def</span> <span class="nf">add_autodocumenter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a new documenter class for the autodoc extension.</span>
 
 <span class="sd">        Add *cls* as a new documenter class for the :mod:`sphinx.ext.autodoc`</span>
@@ -1217,7 +1216,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_documenter</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">objtype</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;auto&#39;</span> <span class="o">+</span> <span class="bp">cls</span><span class="o">.</span><span class="n">objtype</span><span class="p">,</span> <span class="n">AutodocDirective</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_autodoc_attrgetter"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_autodoc_attrgetter">[文档]</a>    <span class="k">def</span> <span class="nf">add_autodoc_attrgetter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span> <span class="n">getter</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Any</span><span class="p">]</span>
+<div class="viewcode-block" id="Sphinx.add_autodoc_attrgetter"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_autodoc_attrgetter">[docs]</a>    <span class="k">def</span> <span class="nf">add_autodoc_attrgetter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span> <span class="n">getter</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Any</span><span class="p">]</span>
                                <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a new ``getattr``-like function for the autodoc extension.</span>
 
@@ -1232,7 +1231,7 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[app] adding autodoc attrgetter: </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">getter</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_autodoc_attrgetter</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">getter</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_search_language"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_search_language">[文档]</a>    <span class="k">def</span> <span class="nf">add_search_language</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_search_language"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_search_language">[docs]</a>    <span class="k">def</span> <span class="nf">add_search_language</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a new language for the HTML search index.</span>
 
 <span class="sd">        Add *cls*, which must be a subclass of</span>
@@ -1248,7 +1247,7 @@
         <span class="k">assert</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">SearchLanguage</span><span class="p">)</span>
         <span class="n">languages</span><span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">lang</span><span class="p">]</span> <span class="o">=</span> <span class="bp">cls</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_source_suffix"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_source_suffix">[文档]</a>    <span class="k">def</span> <span class="nf">add_source_suffix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">suffix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">filetype</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_source_suffix"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_source_suffix">[docs]</a>    <span class="k">def</span> <span class="nf">add_source_suffix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">suffix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">filetype</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a suffix of source files.</span>
 
 <span class="sd">        Same as :confval:`source_suffix`.  The users can override this</span>
@@ -1261,7 +1260,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_source_suffix</span><span class="p">(</span><span class="n">suffix</span><span class="p">,</span> <span class="n">filetype</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_source_parser"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_source_parser">[文档]</a>    <span class="k">def</span> <span class="nf">add_source_parser</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Parser</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_source_parser"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_source_parser">[docs]</a>    <span class="k">def</span> <span class="nf">add_source_parser</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Parser</span><span class="p">],</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a parser class.</span>
 
 <span class="sd">        If *override* is True, the given *parser* is forcedly installed even if</span>
@@ -1276,7 +1275,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_source_parser</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_env_collector"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_env_collector">[文档]</a>    <span class="k">def</span> <span class="nf">add_env_collector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collector</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">EnvironmentCollector</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_env_collector"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_env_collector">[docs]</a>    <span class="k">def</span> <span class="nf">add_env_collector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collector</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">EnvironmentCollector</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register an environment collector class.</span>
 
 <span class="sd">        Refer to :ref:`collector-api`.</span>
@@ -1286,7 +1285,7 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[app] adding environment collector: </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">collector</span><span class="p">)</span>
         <span class="n">collector</span><span class="p">()</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_html_theme"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_html_theme">[文档]</a>    <span class="k">def</span> <span class="nf">add_html_theme</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">theme_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_html_theme"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_html_theme">[docs]</a>    <span class="k">def</span> <span class="nf">add_html_theme</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">theme_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a HTML Theme.</span>
 
 <span class="sd">        The *name* is a name of theme, and *theme_path* is a full path to the</span>
@@ -1297,7 +1296,7 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[app] adding HTML theme: </span><span class="si">%r</span><span class="s1">, </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">theme_path</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_html_theme</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">theme_path</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_html_math_renderer"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_html_math_renderer">[文档]</a>    <span class="k">def</span> <span class="nf">add_html_math_renderer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<div class="viewcode-block" id="Sphinx.add_html_math_renderer"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_html_math_renderer">[docs]</a>    <span class="k">def</span> <span class="nf">add_html_math_renderer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                <span class="n">inline_renderers</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                <span class="n">block_renderers</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a math renderer for HTML.</span>
@@ -1313,7 +1312,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_html_math_renderer</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">inline_renderers</span><span class="p">,</span> <span class="n">block_renderers</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.add_message_catalog"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_message_catalog">[文档]</a>    <span class="k">def</span> <span class="nf">add_message_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">locale_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.add_message_catalog"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_message_catalog">[docs]</a>    <span class="k">def</span> <span class="nf">add_message_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">locale_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Register a message catalog.</span>
 
 <span class="sd">        :param catalog: The name of the catalog</span>
@@ -1327,7 +1326,7 @@
         <span class="n">locale</span><span class="o">.</span><span class="n">init_console</span><span class="p">(</span><span class="n">locale_dir</span><span class="p">,</span> <span class="n">catalog</span><span class="p">)</span></div>
 
     <span class="c1"># ---- other methods -------------------------------------------------</span>
-<div class="viewcode-block" id="Sphinx.is_parallel_allowed"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.is_parallel_allowed">[文档]</a>    <span class="k">def</span> <span class="nf">is_parallel_allowed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="viewcode-block" id="Sphinx.is_parallel_allowed"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.is_parallel_allowed">[docs]</a>    <span class="k">def</span> <span class="nf">is_parallel_allowed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Check whether parallel processing is allowed or not.</span>
 
 <span class="sd">        :param typ: A type of processing; ``&#39;read&#39;`` or ``&#39;write&#39;``.</span>
@@ -1381,13 +1380,13 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">html_themes</span></div>
 
 
-<div class="viewcode-block" id="TemplateBridge"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge">[文档]</a><span class="k">class</span> <span class="nc">TemplateBridge</span><span class="p">:</span>
+<div class="viewcode-block" id="TemplateBridge"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge">[docs]</a><span class="k">class</span> <span class="nc">TemplateBridge</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This class defines the interface for a &quot;template bridge&quot;, that is, a class</span>
 <span class="sd">    that renders templates given a template name and a context.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TemplateBridge.init"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.init">[文档]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">:</span> <span class="s2">&quot;Builder&quot;</span><span class="p">,</span> <span class="n">theme</span><span class="p">:</span> <span class="n">Theme</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dirs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="TemplateBridge.init"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.init">[docs]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">:</span> <span class="s2">&quot;Builder&quot;</span><span class="p">,</span> <span class="n">theme</span><span class="p">:</span> <span class="n">Theme</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dirs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Called by the builder to initialize the template system.</span>
 
 <span class="sd">        *builder* is the builder object; you&#39;ll probably want to look at the</span>
@@ -1398,20 +1397,20 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;must be implemented in subclasses&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TemplateBridge.newest_template_mtime"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.newest_template_mtime">[文档]</a>    <span class="k">def</span> <span class="nf">newest_template_mtime</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="TemplateBridge.newest_template_mtime"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.newest_template_mtime">[docs]</a>    <span class="k">def</span> <span class="nf">newest_template_mtime</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Called by the builder to determine if output files are outdated</span>
 <span class="sd">        because of template changes.  Return the mtime of the newest template</span>
 <span class="sd">        file that was changed.  The default implementation returns ``0``.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="mi">0</span></div>
 
-<div class="viewcode-block" id="TemplateBridge.render"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.render">[文档]</a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="TemplateBridge.render"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.render">[docs]</a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Called by the builder to render a template given as a filename with</span>
 <span class="sd">        a specified context (a Python dictionary).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;must be implemented in subclasses&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TemplateBridge.render_string"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.render_string">[文档]</a>    <span class="k">def</span> <span class="nf">render_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="TemplateBridge.render_string"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.TemplateBridge.render_string">[docs]</a>    <span class="k">def</span> <span class="nf">render_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Called by the builder to render a template given as a string with a</span>
 <span class="sd">        specified context (a Python dictionary).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1425,23 +1424,23 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.application</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

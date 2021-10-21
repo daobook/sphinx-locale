@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,13 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/development/tutorials/todo.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Developing a “recipe” extension" href="recipe.html" />
     <link rel="prev" title="Developing a “Hello world” extension" href="helloworld.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -77,20 +76,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="recipe.html" title="Developing a “recipe” extension"
-             accesskey="N">下一页</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="helloworld.html" title="Developing a “Hello world” extension"
-             accesskey="P">上一页</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
@@ -101,7 +100,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../contents.html">目录</a></h3>
+  <h3><a href="../../contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Developing a “TODO” extension</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
@@ -113,25 +112,25 @@
 </li>
 </ul>
 
-  <h4>上一个主题</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="helloworld.html"
-                        title="上一章">Developing a “Hello world” extension</a></p>
-  <h4>下一个主题</h4>
+                        title="previous chapter">Developing a “Hello world” extension</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="recipe.html"
-                        title="下一章">Developing a “recipe” extension</a></p>
+                        title="next chapter">Developing a “recipe” extension</a></p>
   <div role="note" aria-label="source link">
-    <h3>本页</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="../../_sources/development/tutorials/todo.rst.txt"
-            rel="nofollow">显示源代码</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -145,7 +144,7 @@
           <div class="body" role="main">
             
   <section id="developing-a-todo-extension">
-<h1>Developing a “TODO” extension<a class="headerlink" href="#developing-a-todo-extension" title="永久链接至标题">¶</a></h1>
+<h1>Developing a “TODO” extension<a class="headerlink" href="#developing-a-todo-extension" title="Permalink to this headline">¶</a></h1>
 <p>The objective of this tutorial is to create a more comprehensive extension than
 that created in <a class="reference internal" href="helloworld.html"><span class="doc">Developing a “Hello world” extension</span></a>. Whereas that guide just covered writing a
 custom <a class="reference internal" href="../../glossary.html#term-directive"><span class="xref std std-term">directive</span></a>, this guide adds multiple directives, along with custom
@@ -154,9 +153,9 @@ cover a <code class="docutils literal notranslate"><span class="pre">todo</span>
 documentation, and to collect these in a central place. This is similar the
 <code class="docutils literal notranslate"><span class="pre">sphinxext.todo</span></code> extension distributed with Sphinx.</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>To understand the design of this extension, refer to
 <a class="reference internal" href="../../extdev/index.html#important-objects"><span class="std std-ref">Important objects</span></a> and <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">Build Phases</span></a>.</p>
 </div>
@@ -184,7 +183,7 @@ to merge intermediate results from parallel builds, and one for
 </ul>
 </section>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="永久链接至标题">¶</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>As with <a class="reference internal" href="helloworld.html"><span class="doc">Developing a “Hello world” extension</span></a>, we will not be distributing this plugin via PyPI so
 once again we need a Sphinx project to call this from. You can use an existing
 project or create a new one using <strong class="program">sphinx-quickstart</strong>.</p>
@@ -209,7 +208,7 @@ project. In our case, let’s do the following:</p>
 </div>
 </section>
 <section id="writing-the-extension">
-<h2>Writing the extension<a class="headerlink" href="#writing-the-extension" title="永久链接至标题">¶</a></h2>
+<h2>Writing the extension<a class="headerlink" href="#writing-the-extension" title="Permalink to this headline">¶</a></h2>
 <p>Open <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code> and paste the following code in it, all of which we will
 explain in detail shortly:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
@@ -375,12 +374,12 @@ docutils classes defined in <code class="xref py py-mod docutils literal notrans
 <code class="docutils literal notranslate"><span class="pre">Admonition</span></code> because it should be handled like a note or warning, <code class="docutils literal notranslate"><span class="pre">todolist</span></code>
 is just a “general” node.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>Many extensions will not have to create their own node classes and work fine
 with the nodes already provided by <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html">docutils</a> and <a class="reference internal" href="../../extdev/nodes.html#nodes"><span class="std std-ref">Sphinx</span></a>.</p>
 </div>
 <div class="admonition attention">
-<p class="admonition-title">注意</p>
+<p class="admonition-title">Attention</p>
 <p>It is important to know that while you can extend Sphinx without
 leaving your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, if you declare an inherited node right
 there, you’ll hit an unobvious <code class="xref py py-class docutils literal notranslate"><span class="pre">PickleError</span></code>. So if
@@ -617,7 +616,7 @@ with several arguments which are documented with the event.</p></li>
 <p>With this, our extension is complete.</p>
 </section>
 <section id="using-the-extension">
-<h2>Using the extension<a class="headerlink" href="#using-the-extension" title="永久链接至标题">¶</a></h2>
+<h2>Using the extension<a class="headerlink" href="#using-the-extension" title="Permalink to this headline">¶</a></h2>
 <p>As before, we need to enable the extension by declaring it in our
 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> file. There are two steps necessary here:</p>
 <ol class="arabic simple">
@@ -641,7 +640,7 @@ noted above, this defaults to <code class="docutils literal notranslate"><span c
 </div>
 <p>You can now use the extension throughout your project. For example:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">index.rst</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">index.rst</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Hello, world</span>
 <span class="gh">============</span>
 
@@ -656,7 +655,7 @@ Hello world. Below is the list of TODOs.
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">somefile.rst</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">somefile.rst</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">foo</span>
 <span class="gh">===</span>
 
@@ -667,7 +666,7 @@ Some intro text here...
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">someotherfile.rst</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">someotherfile.rst</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">bar</span>
 <span class="gh">===</span>
 
@@ -683,7 +682,7 @@ However, if we toggle this to true, we will see the output described
 previously.</p>
 </section>
 <section id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="永久链接至标题">¶</a></h2>
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
 <p>For more information, refer to the <a class="reference external" href="https://docutils.sourceforge.io/docs/">docutils</a> documentation and
 <a class="reference internal" href="../../extdev/index.html"><span class="doc">Developing extensions for Sphinx</span></a>.</p>
 </section>
@@ -697,20 +696,20 @@ previously.</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="recipe.html" title="Developing a “recipe” extension"
-             >下一页</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="helloworld.html" title="Developing a “Hello world” extension"
-             >上一页</a> |</li>
+             >previous</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
@@ -720,7 +719,7 @@ previously.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

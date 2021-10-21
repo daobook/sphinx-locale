@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,13 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/usage/advanced/websupport/searchadapters.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../../genindex.html" />
-    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Storage Backends" href="storagebackends.html" />
     <link rel="prev" title="The WebSupport Class" href="api.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -77,20 +76,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="storagebackends.html" title="Storage Backends"
-             accesskey="N">下一页</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="api.html" title="The WebSupport Class"
-             accesskey="P">上一页</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
@@ -101,7 +100,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../contents.html">目录</a></h3>
+  <h3><a href="../../../contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Search Adapters</a><ul>
 <li><a class="reference internal" href="#methods">Methods</a></li>
@@ -109,25 +108,25 @@
 </li>
 </ul>
 
-  <h4>上一个主题</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="api.html"
-                        title="上一章">The WebSupport Class</a></p>
-  <h4>下一个主题</h4>
+                        title="previous chapter">The WebSupport Class</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="storagebackends.html"
-                        title="下一章">Storage Backends</a></p>
+                        title="next chapter">Storage Backends</a></p>
   <div role="note" aria-label="source link">
-    <h3>本页</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="../../../_sources/usage/advanced/websupport/searchadapters.rst.txt"
-            rel="nofollow">显示源代码</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -141,7 +140,7 @@
           <div class="body" role="main">
             
   <section id="search-adapters">
-<span id="searchadapters"></span><h1>Search Adapters<a class="headerlink" href="#search-adapters" title="永久链接至标题">¶</a></h1>
+<span id="searchadapters"></span><h1>Search Adapters<a class="headerlink" href="#search-adapters" title="Permalink to this headline">¶</a></h1>
 <p>To create a custom search adapter you will need to subclass the
 <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch" title="sphinxcontrib.websupport.search.BaseSearch"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSearch</span></code></a> class.  Then create an instance of the new class and pass
 that as the <cite>search</cite> keyword argument when you create the <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a>
@@ -155,28 +154,28 @@ object:</p>
 documentation of the <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch" title="sphinxcontrib.websupport.search.BaseSearch"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSearch</span></code></a> class below.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib.websupport.search.</span></span><span class="sig-name descname"><span class="pre">BaseSearch</span></span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sphinxcontrib.websupport.search.</span></span><span class="sig-name descname"><span class="pre">BaseSearch</span></span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines an interface for search adapters.</p>
 </dd></dl>
 
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.6 版更改: </span>BaseSearch class is moved to sphinxcontrib.websupport.search from
+<p><span class="versionmodified changed">Changed in version 1.6: </span>BaseSearch class is moved to sphinxcontrib.websupport.search from
 sphinx.websupport.search.</p>
 </div>
 <section id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="永久链接至标题">¶</a></h2>
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <p>The following methods are defined in the BaseSearch class. Some methods do not
 need to be overridden, but some (<a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.add_document" title="sphinxcontrib.websupport.search.BaseSearch.add_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_document()</span></code></a> and
 <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.handle_query" title="sphinxcontrib.websupport.search.BaseSearch.handle_query"><code class="xref py py-meth docutils literal notranslate"><span class="pre">handle_query()</span></code></a>) must be overridden in your subclass. For a
 working example, look at the built-in adapter for whoosh.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch.init_indexing">
-<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">init_indexing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.init_indexing"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.init_indexing" title="永久链接至目标">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">init_indexing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">changed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.init_indexing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.init_indexing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by the builder to initialize the search indexer. <cite>changed</cite>
 is a list of pagenames that will be reindexed. You may want to remove
 these from the search index before indexing begins.</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>changed</strong> – a list of pagenames that will be re-indexed</p>
 </dd>
 </dl>
@@ -184,7 +183,7 @@ these from the search index before indexing begins.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch.finish_indexing">
-<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">finish_indexing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.finish_indexing"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.finish_indexing" title="永久链接至目标">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">finish_indexing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.finish_indexing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.finish_indexing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by the builder when writing has been completed. Use this
 to perform any finalization or cleanup actions after indexing is
 complete.</p>
@@ -192,13 +191,13 @@ complete.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch.feed">
-<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">feed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pagename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doctree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.feed"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.feed" title="永久链接至目标">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">feed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pagename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doctree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.feed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.feed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by the builder to add a doctree to the index. Converts the
 <cite>doctree</cite> to text and passes it to <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.add_document" title="sphinxcontrib.websupport.search.BaseSearch.add_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_document()</span></code></a>. You probably
 won’t want to override this unless you need access to the <cite>doctree</cite>.
 Override <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.add_document" title="sphinxcontrib.websupport.search.BaseSearch.add_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_document()</span></code></a> instead.</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pagename</strong> – the name of the page to be indexed</p></li>
 <li><p><strong>filename</strong> – the name of the original source file</p></li>
@@ -211,7 +210,7 @@ Override <a class="reference internal" href="#sphinxcontrib.websupport.search.Ba
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch.add_document">
-<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">add_document</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pagename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.add_document"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.add_document" title="永久链接至目标">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">add_document</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pagename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.add_document"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.add_document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.feed" title="sphinxcontrib.websupport.search.BaseSearch.feed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">feed()</span></code></a> to add a document to the search index.
 This method should should do everything necessary to add a single
 document to the search index.</p>
@@ -222,7 +221,7 @@ minus the extension. For example, if the source file is
 will need to be returned with search results when processing a
 query.</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pagename</strong> – the name of the page being indexed</p></li>
 <li><p><strong>filename</strong> – the name of the original source file</p></li>
@@ -235,14 +234,14 @@ query.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch.query">
-<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.query"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.query" title="永久链接至目标">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by the web support api to get search results. This method
 compiles the regular expression to be used when <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.extract_context" title="sphinxcontrib.websupport.search.BaseSearch.extract_context"><code class="xref py py-meth docutils literal notranslate"><span class="pre">extracting</span>
 <span class="pre">context</span></code></a>, then calls <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.handle_query" title="sphinxcontrib.websupport.search.BaseSearch.handle_query"><code class="xref py py-meth docutils literal notranslate"><span class="pre">handle_query()</span></code></a>.  You
 won’t want to override this unless you don’t want to use the included
 <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.extract_context" title="sphinxcontrib.websupport.search.BaseSearch.extract_context"><code class="xref py py-meth docutils literal notranslate"><span class="pre">extract_context()</span></code></a> method.  Override <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.handle_query" title="sphinxcontrib.websupport.search.BaseSearch.handle_query"><code class="xref py py-meth docutils literal notranslate"><span class="pre">handle_query()</span></code></a> instead.</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>q</strong> – the search query string.</p>
 </dd>
 </dl>
@@ -250,7 +249,7 @@ won’t want to override this unless you don’t want to use the included
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch.handle_query">
-<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">handle_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.handle_query"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.handle_query" title="永久链接至目标">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">handle_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.handle_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.handle_query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.query" title="sphinxcontrib.websupport.search.BaseSearch.query"><code class="xref py py-meth docutils literal notranslate"><span class="pre">query()</span></code></a> to retrieve search results for a search
 query <cite>q</cite>. This should return an iterable containing tuples of the
 following format:</p>
@@ -263,7 +262,7 @@ of the text surrounding the search query in the document.</p>
 <p>The <a class="reference internal" href="#sphinxcontrib.websupport.search.BaseSearch.extract_context" title="sphinxcontrib.websupport.search.BaseSearch.extract_context"><code class="xref py py-meth docutils literal notranslate"><span class="pre">extract_context()</span></code></a> method is provided as a simple way
 to create the <cite>context</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>q</strong> – the search query</p>
 </dd>
 </dl>
@@ -271,11 +270,11 @@ to create the <cite>context</cite>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinxcontrib.websupport.search.BaseSearch.extract_context">
-<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">extract_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">240</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.extract_context"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.extract_context" title="永久链接至目标">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">BaseSearch.</span></span><span class="sig-name descname"><span class="pre">extract_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">240</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/sphinxcontrib/websupport/search.html#BaseSearch.extract_context"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinxcontrib.websupport.search.BaseSearch.extract_context" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract the context for the search query from the document’s
 full <cite>text</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> – the full text of the document to create the context for</p></li>
 <li><p><strong>length</strong> – the length of the context snippet to return.</p></li>
@@ -295,20 +294,20 @@ full <cite>text</cite>.</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="storagebackends.html" title="Storage Backends"
-             >下一页</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="api.html" title="The WebSupport Class"
-             >上一页</a> |</li>
+             >previous</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
@@ -318,7 +317,7 @@ full <cite>text</cite>.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

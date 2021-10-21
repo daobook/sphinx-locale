@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/usage/markdown.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Configuration" href="configuration.html" />
     <link rel="prev" title="Domains" href="restructuredtext/domains.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -77,20 +76,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="configuration.html" title="Configuration"
-             accesskey="N">下一页</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="restructuredtext/domains.html" title="Domains"
-             accesskey="P">上一页</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -100,7 +99,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../contents.html">目录</a></h3>
+  <h3><a href="../contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Markdown</a><ul>
 <li><a class="reference internal" href="#configuration">Configuration</a></li>
@@ -108,25 +107,25 @@
 </li>
 </ul>
 
-  <h4>上一个主题</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="restructuredtext/domains.html"
-                        title="上一章">Domains</a></p>
-  <h4>下一个主题</h4>
+                        title="previous chapter">Domains</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="configuration.html"
-                        title="下一章">Configuration</a></p>
+                        title="next chapter">Configuration</a></p>
   <div role="note" aria-label="source link">
-    <h3>本页</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="../_sources/usage/markdown.rst.txt"
-            rel="nofollow">显示源代码</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -140,14 +139,14 @@
           <div class="body" role="main">
             
   <section id="markdown">
-<span id="id1"></span><h1>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> is a lightweight markup language with a simplistic plain text
 formatting syntax.  It exists in many syntactically different <em>flavors</em>.  To
 support Markdown-based documentation, Sphinx can use <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-Parser</a>.
 MyST-Parser is a Docutils bridge to <a class="reference external" href="https://github.com/executablebooks/markdown-it-py">markdown-it-py</a>, a Python package for
 parsing the <a class="reference external" href="https://commonmark.org/">CommonMark</a> Markdown flavor.</p>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>To configure your Sphinx project for Markdown support, proceed as follows:</p>
 <ol class="arabic">
 <li><p>Install the Markdown parser <em>MyST-Parser</em>:</p>
@@ -161,7 +160,7 @@ parsing the <a class="reference external" href="https://commonmark.org/">CommonM
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>MyST-Parser requires Sphinx 2.1 or newer.</p>
 </div>
 </li>
@@ -192,20 +191,20 @@ documentation</a>.</p></li>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="configuration.html" title="Configuration"
-             >下一页</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="restructuredtext/domains.html" title="Domains"
-             >上一页</a> |</li>
+             >previous</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -214,7 +213,7 @@ documentation</a>.</p></li>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

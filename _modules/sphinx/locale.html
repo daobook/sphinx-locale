@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,14 +13,13 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinx/locale.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -74,29 +73,29 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.locale</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -109,7 +108,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>sphinx.locale 源代码</h1><div class="highlight"><pre>
+  <h1>Source code for sphinx.locale</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinx.locale</span>
 <span class="sd">    ~~~~~~~~~~~~~</span>
@@ -218,7 +217,7 @@
 <span class="n">translators</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">NullTranslations</span><span class="p">]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">NullTranslations</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="init"><a class="viewcode-back" href="../../extdev/i18n.html#sphinx.locale.init">[文档]</a><span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="n">locale_dirs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span> <span class="n">language</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<div class="viewcode-block" id="init"><a class="viewcode-back" href="../../extdev/i18n.html#sphinx.locale.init">[docs]</a><span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="n">locale_dirs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span> <span class="n">language</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
          <span class="n">catalog</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sphinx&#39;</span><span class="p">,</span> <span class="n">namespace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;general&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NullTranslations</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Look for message catalogs in `locale_dirs` and *ensure* that there is at</span>
 <span class="sd">    least a NullTranslations catalog set in `translators`. If called multiple</span>
@@ -280,7 +279,7 @@
         <span class="k">pass</span>
 
 
-<div class="viewcode-block" id="init_console"><a class="viewcode-back" href="../../extdev/i18n.html#sphinx.locale.init_console">[文档]</a><span class="k">def</span> <span class="nf">init_console</span><span class="p">(</span><span class="n">locale_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">catalog</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NullTranslations</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+<div class="viewcode-block" id="init_console"><a class="viewcode-back" href="../../extdev/i18n.html#sphinx.locale.init_console">[docs]</a><span class="k">def</span> <span class="nf">init_console</span><span class="p">(</span><span class="n">locale_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">catalog</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NullTranslations</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Initialize locale for console.</span>
 
 <span class="sd">    .. versionadded:: 1.8</span>
@@ -311,7 +310,7 @@
     <span class="k">return</span> <span class="n">translator</span><span class="o">.</span><span class="n">gettext</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="get_translation"><a class="viewcode-back" href="../../extdev/i18n.html#sphinx.locale.get_translation">[文档]</a><span class="k">def</span> <span class="nf">get_translation</span><span class="p">(</span><span class="n">catalog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">namespace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;general&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<div class="viewcode-block" id="get_translation"><a class="viewcode-back" href="../../extdev/i18n.html#sphinx.locale.get_translation">[docs]</a><span class="k">def</span> <span class="nf">get_translation</span><span class="p">(</span><span class="n">catalog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">namespace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;general&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Get a translation function based on the *catalog* and *namespace*.</span>
 
 <span class="sd">    The extension can use this API to translate the messages on the</span>
@@ -387,23 +386,23 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.locale</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

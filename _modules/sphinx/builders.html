@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,14 +13,13 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinx/builders.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -74,29 +73,29 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.builders</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -109,7 +108,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>sphinx.builders 源代码</h1><div class="highlight"><pre>
+  <h1>Source code for sphinx.builders</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinx.builders</span>
 <span class="sd">    ~~~~~~~~~~~~~~~</span>
@@ -160,7 +159,7 @@
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Builder"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder">[文档]</a><span class="k">class</span> <span class="nc">Builder</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder">[docs]</a><span class="k">class</span> <span class="nc">Builder</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Builds target formats from the reST sources.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -240,7 +239,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">create_translator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
     <span class="c1"># helper methods</span>
-<div class="viewcode-block" id="Builder.init"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.init">[文档]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.init"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.init">[docs]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Load necessary templates and perform initialization.  The default</span>
 <span class="sd">        implementation does nothing.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -255,7 +254,7 @@
             <span class="kn">from</span> <span class="nn">sphinx.jinja2glue</span> <span class="kn">import</span> <span class="n">BuiltinTemplateLoader</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">templates</span> <span class="o">=</span> <span class="n">BuiltinTemplateLoader</span><span class="p">()</span>
 
-<div class="viewcode-block" id="Builder.get_target_uri"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.get_target_uri">[文档]</a>    <span class="k">def</span> <span class="nf">get_target_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.get_target_uri"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.get_target_uri">[docs]</a>    <span class="k">def</span> <span class="nf">get_target_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return the target URI for a document name.</span>
 
 <span class="sd">        *typ* can be used to qualify the link characteristic for individual</span>
@@ -263,7 +262,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="Builder.get_relative_uri"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.get_relative_uri">[文档]</a>    <span class="k">def</span> <span class="nf">get_relative_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.get_relative_uri"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.get_relative_uri">[docs]</a>    <span class="k">def</span> <span class="nf">get_relative_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">typ</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return a relative URI between two source filenames.</span>
 
 <span class="sd">        May raise environment.NoUri if there&#39;s no way to return a sensible URI.</span>
@@ -271,7 +270,7 @@
         <span class="k">return</span> <span class="n">relative_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_target_uri</span><span class="p">(</span><span class="n">from_</span><span class="p">),</span>
                             <span class="bp">self</span><span class="o">.</span><span class="n">get_target_uri</span><span class="p">(</span><span class="n">to</span><span class="p">,</span> <span class="n">typ</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Builder.get_outdated_docs"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.get_outdated_docs">[文档]</a>    <span class="k">def</span> <span class="nf">get_outdated_docs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<div class="viewcode-block" id="Builder.get_outdated_docs"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.get_outdated_docs">[docs]</a>    <span class="k">def</span> <span class="nf">get_outdated_docs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
         <span class="sd">&quot;&quot;&quot;Return an iterable of output files that are outdated, or a string</span>
 <span class="sd">        describing what an update build will build.</span>
 
@@ -364,11 +363,11 @@
 
     <span class="c1"># build methods</span>
 
-<div class="viewcode-block" id="Builder.build_all"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build_all">[文档]</a>    <span class="k">def</span> <span class="nf">build_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.build_all"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build_all">[docs]</a>    <span class="k">def</span> <span class="nf">build_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Build all source files.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">summary</span><span class="o">=</span><span class="n">__</span><span class="p">(</span><span class="s1">&#39;all source files&#39;</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Builder.build_specific"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build_specific">[文档]</a>    <span class="k">def</span> <span class="nf">build_specific</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filenames</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.build_specific"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build_specific">[docs]</a>    <span class="k">def</span> <span class="nf">build_specific</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filenames</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Only rebuild as much as needed for changes in the *filenames*.&quot;&quot;&quot;</span>
         <span class="c1"># bring the filenames to the canonical format, that is,</span>
         <span class="c1"># relative to the source directory and without source_suffix.</span>
@@ -395,7 +394,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">to_write</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;specific&#39;</span><span class="p">,</span>
                    <span class="n">summary</span><span class="o">=</span><span class="n">__</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> source files given on command line&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">to_write</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Builder.build_update"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build_update">[文档]</a>    <span class="k">def</span> <span class="nf">build_update</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.build_update"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build_update">[docs]</a>    <span class="k">def</span> <span class="nf">build_update</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Only rebuild what was changed or added since last build.&quot;&quot;&quot;</span>
         <span class="n">to_build</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_outdated_docs</span><span class="p">()</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">to_build</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -406,7 +405,7 @@
                        <span class="n">summary</span><span class="o">=</span><span class="n">__</span><span class="p">(</span><span class="s1">&#39;targets for </span><span class="si">%d</span><span class="s1"> source files that are out of date&#39;</span><span class="p">)</span> <span class="o">%</span>
                        <span class="nb">len</span><span class="p">(</span><span class="n">to_build</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Builder.build"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build">[文档]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docnames</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">summary</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;update&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># NOQA</span>
+<div class="viewcode-block" id="Builder.build"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docnames</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">summary</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;update&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># NOQA</span>
         <span class="sd">&quot;&quot;&quot;Main build method.</span>
 
 <span class="sd">        First updates the environment, and then calls :meth:`write`.</span>
@@ -683,11 +682,11 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">bold</span><span class="p">(</span><span class="n">__</span><span class="p">(</span><span class="s1">&#39;waiting for workers...&#39;</span><span class="p">)))</span>
         <span class="n">tasks</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 
-<div class="viewcode-block" id="Builder.prepare_writing"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.prepare_writing">[文档]</a>    <span class="k">def</span> <span class="nf">prepare_writing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docnames</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.prepare_writing"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.prepare_writing">[docs]</a>    <span class="k">def</span> <span class="nf">prepare_writing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docnames</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;A place where you can add logic before :meth:`write_doc` is run&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="Builder.write_doc"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.write_doc">[文档]</a>    <span class="k">def</span> <span class="nf">write_doc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">doctree</span><span class="p">:</span> <span class="n">nodes</span><span class="o">.</span><span class="n">document</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.write_doc"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.write_doc">[docs]</a>    <span class="k">def</span> <span class="nf">write_doc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">docname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">doctree</span><span class="p">:</span> <span class="n">nodes</span><span class="o">.</span><span class="n">document</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Where you actually write something to the filesystem.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
@@ -697,7 +696,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
-<div class="viewcode-block" id="Builder.finish"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.finish">[文档]</a>    <span class="k">def</span> <span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Builder.finish"><a class="viewcode-back" href="../../extdev/builderapi.html#sphinx.builders.Builder.finish">[docs]</a>    <span class="k">def</span> <span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Finish the building process.</span>
 
 <span class="sd">        The default implementation does nothing.</span>
@@ -735,23 +734,23 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.builders</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

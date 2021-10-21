@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/tutorial/narrative-documentation.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Describing code in Sphinx" href="describing-code.html" />
     <link rel="prev" title="More Sphinx customization" href="more-sphinx-customization.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -77,20 +76,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="describing-code.html" title="Describing code in Sphinx"
-             accesskey="N">下一页</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="more-sphinx-customization.html" title="More Sphinx customization"
-             accesskey="P">上一页</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -100,7 +99,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../contents.html">目录</a></h3>
+  <h3><a href="../contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Narrative documentation in Sphinx</a><ul>
 <li><a class="reference internal" href="#structuring-your-documentation-across-multiple-pages">Structuring your documentation across multiple pages</a></li>
@@ -109,25 +108,25 @@
 </li>
 </ul>
 
-  <h4>上一个主题</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="more-sphinx-customization.html"
-                        title="上一章">More Sphinx customization</a></p>
-  <h4>下一个主题</h4>
+                        title="previous chapter">More Sphinx customization</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="describing-code.html"
-                        title="下一章">Describing code in Sphinx</a></p>
+                        title="next chapter">Describing code in Sphinx</a></p>
   <div role="note" aria-label="source link">
-    <h3>本页</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="../_sources/tutorial/narrative-documentation.rst.txt"
-            rel="nofollow">显示源代码</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -141,9 +140,9 @@
           <div class="body" role="main">
             
   <section id="narrative-documentation-in-sphinx">
-<h1>Narrative documentation in Sphinx<a class="headerlink" href="#narrative-documentation-in-sphinx" title="永久链接至标题">¶</a></h1>
+<h1>Narrative documentation in Sphinx<a class="headerlink" href="#narrative-documentation-in-sphinx" title="Permalink to this headline">¶</a></h1>
 <section id="structuring-your-documentation-across-multiple-pages">
-<h2>Structuring your documentation across multiple pages<a class="headerlink" href="#structuring-your-documentation-across-multiple-pages" title="永久链接至标题">¶</a></h2>
+<h2>Structuring your documentation across multiple pages<a class="headerlink" href="#structuring-your-documentation-across-multiple-pages" title="Permalink to this headline">¶</a></h2>
 <p>The file <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> created by <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> is the <a class="reference internal" href="../glossary.html#term-root-document"><span class="xref std std-term">root
 document</span></a>, whose main function is to serve as a welcome page and to contain the
 root of the “table of contents tree” (or <em>toctree</em>).  Sphinx allows you to
@@ -152,7 +151,7 @@ grows.</p>
 <p>As an example, create a new file <code class="docutils literal notranslate"><span class="pre">docs/source/usage.rst</span></code> (next to
 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>) with these contents:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Usage</span>
 <span class="gh">=====</span>
 
@@ -178,7 +177,7 @@ be a <em>subsection</em> of “Usage”.</p>
 <p>To complete the process, add a <code class="docutils literal notranslate"><span class="pre">toctree</span></code> <a class="reference internal" href="../usage/restructuredtext/basics.html#rst-directives"><span class="std std-ref">directive</span></a> at
 the end of <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> including the document you just created, as follows:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">docs/source/index.rst</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">docs/source/index.rst</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Contents</span>
 <span class="gh">--------</span>
 
@@ -198,14 +197,14 @@ to the structure of your project, which so far looks like this:</p>
 that the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> gets rendered as a list of hyperlinks, and this allows you
 to navigate to the new page you just created.  Neat!</p>
 <div class="admonition warning">
-<p class="admonition-title">警告</p>
+<p class="admonition-title">Warning</p>
 <p>Documents outside a <em>toctree</em> will result in <code class="docutils literal notranslate"><span class="pre">WARNING:</span> <span class="pre">document</span> <span class="pre">isn't</span>
 <span class="pre">included</span> <span class="pre">in</span> <span class="pre">any</span> <span class="pre">toctree</span></code> messages during the build process, and will be
 unreachable for users.</p>
 </div>
 </section>
 <section id="adding-cross-references">
-<h2>Adding cross-references<a class="headerlink" href="#adding-cross-references" title="永久链接至标题">¶</a></h2>
+<h2>Adding cross-references<a class="headerlink" href="#adding-cross-references" title="Permalink to this headline">¶</a></h2>
 <p>One powerful feature of Sphinx is the ability to seamlessly add
 <a class="reference internal" href="../usage/restructuredtext/roles.html#xref-syntax"><span class="std std-ref">cross-references</span></a> to specific parts of the documentation:
 a document, a section, a figure, a code object, etc.  This tutorial is full of
@@ -213,7 +212,7 @@ them!</p>
 <p>To add a cross-reference, write this sentence right after the
 introduction paragraph in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">docs/source/index.rst</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">docs/source/index.rst</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Check out the <span class="na">:doc:</span><span class="nv">`usage`</span> section for further information.
 </pre></div>
 </div>
@@ -227,7 +226,7 @@ explicit <em>label</em> that acts as <a class="reference external" href="https:/
 <p>For example, to reference the “Installation” subsection, add a label right
 before the heading, as follows:</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id5" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">docs/source/usage.rst</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Usage</span>
 <span class="gh">=====</span>
 
@@ -242,7 +241,7 @@ before the heading, as follows:</p>
 </div>
 <p>And make the sentence you added in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> look like this:</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">docs/source/index.rst</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">docs/source/index.rst</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Check out the <span class="na">:doc:</span><span class="nv">`usage`</span> section for further information, including how to
 <span class="na">:ref:</span><span class="nv">`install &lt;installation&gt;`</span> the project.
 </pre></div>
@@ -268,20 +267,20 @@ Read on!</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="describing-code.html" title="Describing code in Sphinx"
-             >下一页</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="more-sphinx-customization.html" title="More Sphinx customization"
-             >上一页</a> |</li>
+             >previous</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -290,7 +289,7 @@ Read on!</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

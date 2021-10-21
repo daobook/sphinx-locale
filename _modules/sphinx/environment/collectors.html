@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,14 +13,13 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinx/environment/collectors.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../../genindex.html" />
-    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -74,18 +73,18 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../../index.html" >模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../environment.html" accesskey="U">sphinx.environment</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.environment.collectors</a></li> 
       </ul>
@@ -93,11 +92,11 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -110,7 +109,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>sphinx.environment.collectors 源代码</h1><div class="highlight"><pre>
+  <h1>Source code for sphinx.environment.collectors</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinx.environment.collectors</span>
 <span class="sd">    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
@@ -131,7 +130,7 @@
     <span class="kn">from</span> <span class="nn">sphinx.application</span> <span class="kn">import</span> <span class="n">Sphinx</span>
 
 
-<div class="viewcode-block" id="EnvironmentCollector"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector">[文档]</a><span class="k">class</span> <span class="nc">EnvironmentCollector</span><span class="p">:</span>
+<div class="viewcode-block" id="EnvironmentCollector"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector">[docs]</a><span class="k">class</span> <span class="nc">EnvironmentCollector</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;An EnvironmentCollector is a specific data collector from each document.</span>
 
 <span class="sd">    It gathers data and stores :py:class:`BuildEnvironment</span>
@@ -158,32 +157,32 @@
             <span class="n">app</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="n">listener_id</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">listener_ids</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="EnvironmentCollector.clear_doc"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.clear_doc">[文档]</a>    <span class="k">def</span> <span class="nf">clear_doc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">,</span> <span class="n">docname</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="EnvironmentCollector.clear_doc"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.clear_doc">[docs]</a>    <span class="k">def</span> <span class="nf">clear_doc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">,</span> <span class="n">docname</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Remove specified data of a document.</span>
 
 <span class="sd">        This method is called on the removal of the document.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="EnvironmentCollector.merge_other"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.merge_other">[文档]</a>    <span class="k">def</span> <span class="nf">merge_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">,</span>
+<div class="viewcode-block" id="EnvironmentCollector.merge_other"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.merge_other">[docs]</a>    <span class="k">def</span> <span class="nf">merge_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">,</span>
                     <span class="n">docnames</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">other</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Merge in specified data regarding docnames from a different `BuildEnvironment`</span>
 <span class="sd">        object which coming from a subprocess in parallel builds.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="EnvironmentCollector.process_doc"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.process_doc">[文档]</a>    <span class="k">def</span> <span class="nf">process_doc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">doctree</span><span class="p">:</span> <span class="n">nodes</span><span class="o">.</span><span class="n">document</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="EnvironmentCollector.process_doc"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.process_doc">[docs]</a>    <span class="k">def</span> <span class="nf">process_doc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">doctree</span><span class="p">:</span> <span class="n">nodes</span><span class="o">.</span><span class="n">document</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Process a document and gather specific data from it.</span>
 
 <span class="sd">        This method is called after the document is read.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="EnvironmentCollector.get_updated_docs"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.get_updated_docs">[文档]</a>    <span class="k">def</span> <span class="nf">get_updated_docs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<div class="viewcode-block" id="EnvironmentCollector.get_updated_docs"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.get_updated_docs">[docs]</a>    <span class="k">def</span> <span class="nf">get_updated_docs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Return a list of docnames to re-read.</span>
 
 <span class="sd">        This methods is called after reading the whole of documents (experimental).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[]</span></div>
 
-<div class="viewcode-block" id="EnvironmentCollector.get_outdated_docs"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs">[文档]</a>    <span class="k">def</span> <span class="nf">get_outdated_docs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">,</span>
+<div class="viewcode-block" id="EnvironmentCollector.get_outdated_docs"><a class="viewcode-back" href="../../../extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs">[docs]</a>    <span class="k">def</span> <span class="nf">get_outdated_docs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Sphinx&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">:</span> <span class="n">BuildEnvironment</span><span class="p">,</span>
                           <span class="n">added</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">changed</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">removed</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Return a list of docnames to re-read.</span>
 
@@ -199,24 +198,24 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../../index.html" >模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../environment.html" >sphinx.environment</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.environment.collectors</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

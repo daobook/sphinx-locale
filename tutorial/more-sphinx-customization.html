@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/tutorial/more-sphinx-customization.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Narrative documentation in Sphinx" href="narrative-documentation.html" />
     <link rel="prev" title="First steps to document your project using Sphinx" href="first-steps.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -77,20 +76,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="narrative-documentation.html" title="Narrative documentation in Sphinx"
-             accesskey="N">下一页</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="first-steps.html" title="First steps to document your project using Sphinx"
-             accesskey="P">上一页</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -100,7 +99,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../contents.html">目录</a></h3>
+  <h3><a href="../contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">More Sphinx customization</a><ul>
 <li><a class="reference internal" href="#enabling-a-built-in-extension">Enabling a built-in extension</a></li>
@@ -109,25 +108,25 @@
 </li>
 </ul>
 
-  <h4>上一个主题</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="first-steps.html"
-                        title="上一章">First steps to document your project using Sphinx</a></p>
-  <h4>下一个主题</h4>
+                        title="previous chapter">First steps to document your project using Sphinx</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="narrative-documentation.html"
-                        title="下一章">Narrative documentation in Sphinx</a></p>
+                        title="next chapter">Narrative documentation in Sphinx</a></p>
   <div role="note" aria-label="source link">
-    <h3>本页</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="../_sources/tutorial/more-sphinx-customization.rst.txt"
-            rel="nofollow">显示源代码</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -141,11 +140,11 @@
           <div class="body" role="main">
             
   <section id="more-sphinx-customization">
-<h1>More Sphinx customization<a class="headerlink" href="#more-sphinx-customization" title="永久链接至标题">¶</a></h1>
+<h1>More Sphinx customization<a class="headerlink" href="#more-sphinx-customization" title="Permalink to this headline">¶</a></h1>
 <p>There are two main ways to customize your documentation beyond what is possible
 with core Sphinx: extensions and themes.</p>
 <section id="enabling-a-built-in-extension">
-<h2>Enabling a built-in extension<a class="headerlink" href="#enabling-a-built-in-extension" title="永久链接至标题">¶</a></h2>
+<h2>Enabling a built-in extension<a class="headerlink" href="#enabling-a-built-in-extension" title="Permalink to this headline">¶</a></h2>
 <p>In addition to these configuration values, you can customize Sphinx even more
 by using <a class="reference internal" href="../usage/extensions/index.html"><span class="doc">extensions</span></a>.  Sphinx ships several
 <a class="reference internal" href="../usage/extensions/index.html#builtin-extensions"><span class="std std-ref">builtin ones</span></a>, and there are many more
@@ -154,7 +153,7 @@ by using <a class="reference internal" href="../usage/extensions/index.html"><sp
 locate the <code class="docutils literal notranslate"><span class="pre">extensions</span></code> list in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and add one element as
 follows:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">docs/source/conf.py</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">docs/source/conf.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
 <span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
 <span class="c1"># ones.</span>
@@ -176,7 +175,7 @@ durations report at the end of the console output, like this one:</p>
 </div>
 </section>
 <section id="using-a-third-party-html-theme">
-<h2>Using a third-party HTML theme<a class="headerlink" href="#using-a-third-party-html-theme" title="永久链接至标题">¶</a></h2>
+<h2>Using a third-party HTML theme<a class="headerlink" href="#using-a-third-party-html-theme" title="Permalink to this headline">¶</a></h2>
 <p>Themes, on the other hand, are a way to customize the appearance of your
 documentation.  Sphinx has several <a class="reference internal" href="../usage/theming.html#builtin-themes"><span class="std std-ref">builtin themes</span></a>, and
 there are also <a class="reference external" href="https://sphinx-themes.org/">third-party ones</a>.</p>
@@ -189,7 +188,7 @@ your Python virtual environment, like this:</p>
 <p>And then, locate the <code class="docutils literal notranslate"><span class="pre">html_theme</span></code> variable on your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and replace
 its value as follows:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">docs/source/conf.py</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">docs/source/conf.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
 <span class="c1"># a list of builtin themes.</span>
 <span class="c1">#</span>
@@ -202,7 +201,7 @@ appearance:</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/lumache-furo.png"><img alt="HTML documentation of Lumache with the Furo theme" src="../_images/lumache-furo.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-text">HTML documentation of Lumache with the Furo theme</span><a class="headerlink" href="#id3" title="永久链接至图片">¶</a></p>
+<p><span class="caption-text">HTML documentation of Lumache with the Furo theme</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>It is now time to <a class="reference internal" href="narrative-documentation.html"><span class="doc">expand the narrative documentation and split it into
@@ -218,20 +217,20 @@ several documents</span></a>.</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="narrative-documentation.html" title="Narrative documentation in Sphinx"
-             >下一页</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="first-steps.html" title="First steps to document your project using Sphinx"
-             >上一页</a> |</li>
+             >previous</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
@@ -240,7 +239,7 @@ several documents</span></a>.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

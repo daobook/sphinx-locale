@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,14 +13,13 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/_modules/sphinx/util/docutils.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../../genindex.html" />
-    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -74,29 +73,29 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.util.docutils</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -109,7 +108,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <h1>sphinx.util.docutils 源代码</h1><div class="highlight"><pre>
+  <h1>Source code for sphinx.util.docutils</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sphinx.util.docutils</span>
 <span class="sd">    ~~~~~~~~~~~~~~~~~~~~</span>
@@ -424,7 +423,7 @@
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="SphinxDirective"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective">[文档]</a><span class="k">class</span> <span class="nc">SphinxDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+<div class="viewcode-block" id="SphinxDirective"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective">[docs]</a><span class="k">class</span> <span class="nc">SphinxDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A base class for Sphinx directives.</span>
 
 <span class="sd">    This class provides helper methods for Sphinx directives.</span>
@@ -443,20 +442,20 @@
         <span class="sd">&quot;&quot;&quot;Reference to the :class:`.Config` object.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">config</span>
 
-<div class="viewcode-block" id="SphinxDirective.get_source_info"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective.get_source_info">[文档]</a>    <span class="k">def</span> <span class="nf">get_source_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<div class="viewcode-block" id="SphinxDirective.get_source_info"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective.get_source_info">[docs]</a>    <span class="k">def</span> <span class="nf">get_source_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Get source and line number.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_machine</span><span class="o">.</span><span class="n">get_source_and_line</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SphinxDirective.set_source_info"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective.set_source_info">[文档]</a>    <span class="k">def</span> <span class="nf">set_source_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="SphinxDirective.set_source_info"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective.set_source_info">[docs]</a>    <span class="k">def</span> <span class="nf">set_source_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Set source and line number to the node.&quot;&quot;&quot;</span>
         <span class="n">node</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_source_info</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SphinxDirective.get_location"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective.get_location">[文档]</a>    <span class="k">def</span> <span class="nf">get_location</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="SphinxDirective.get_location"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxDirective.get_location">[docs]</a>    <span class="k">def</span> <span class="nf">get_location</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Get current location info for logging.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_source_info</span><span class="p">())</span></div></div>
 
 
-<div class="viewcode-block" id="SphinxRole"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxRole">[文档]</a><span class="k">class</span> <span class="nc">SphinxRole</span><span class="p">:</span>
+<div class="viewcode-block" id="SphinxRole"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxRole">[docs]</a><span class="k">class</span> <span class="nc">SphinxRole</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A base class for Sphinx roles.</span>
 
 <span class="sd">    This class provides helper methods for Sphinx roles.</span>
@@ -517,12 +516,12 @@
     <span class="k">def</span> <span class="nf">set_source_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">node</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_source_info</span><span class="p">(</span><span class="n">lineno</span><span class="p">)</span>
 
-<div class="viewcode-block" id="SphinxRole.get_location"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxRole.get_location">[文档]</a>    <span class="k">def</span> <span class="nf">get_location</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="SphinxRole.get_location"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.SphinxRole.get_location">[docs]</a>    <span class="k">def</span> <span class="nf">get_location</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Get current location info for logging.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_source_info</span><span class="p">())</span></div></div>
 
 
-<div class="viewcode-block" id="ReferenceRole"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.ReferenceRole">[文档]</a><span class="k">class</span> <span class="nc">ReferenceRole</span><span class="p">(</span><span class="n">SphinxRole</span><span class="p">):</span>
+<div class="viewcode-block" id="ReferenceRole"><a class="viewcode-back" href="../../../extdev/utils.html#sphinx.util.docutils.ReferenceRole">[docs]</a><span class="k">class</span> <span class="nc">ReferenceRole</span><span class="p">(</span><span class="n">SphinxRole</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A base class for reference roles.</span>
 
 <span class="sd">    The reference roles can accept ``link title &lt;target&gt;`` style as a text for</span>
@@ -643,23 +642,23 @@
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li><a href="../../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../../index.html" >模块代码</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">sphinx.util.docutils</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="zh_CN">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -14,14 +14,13 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/translations.js"></script>
     <link rel="canonical" href="https://www.sphinx-doc.org/en/master/development/tutorials/autodoc_ext.html" />
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx documentation 中搜索"
+          title="Search within Sphinx documentation"
           href="../../_static/opensearch.xml"/>
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Configuring builders" href="../builders.html" />
     <link rel="prev" title="Developing a “recipe” extension" href="recipe.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -77,20 +76,20 @@
 </div>
 
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="../builders.html" title="Configuring builders"
-             accesskey="N">下一页</a> |</li>
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="recipe.html" title="Developing a “recipe” extension"
-             accesskey="P">上一页</a> |</li>
+             accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
@@ -101,7 +100,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../contents.html">目录</a></h3>
+  <h3><a href="../../contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Developing autodoc extension for IntEnum</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
@@ -112,25 +111,25 @@
 </li>
 </ul>
 
-  <h4>上一个主题</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="recipe.html"
-                        title="上一章">Developing a “recipe” extension</a></p>
-  <h4>下一个主题</h4>
+                        title="previous chapter">Developing a “recipe” extension</a></p>
+  <h4>Next topic</h4>
   <p class="topless"><a href="../builders.html"
-                        title="下一章">Configuring builders</a></p>
+                        title="next chapter">Configuring builders</a></p>
   <div role="note" aria-label="source link">
-    <h3>本页</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="../../_sources/development/tutorials/autodoc_ext.rst.txt"
-            rel="nofollow">显示源代码</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="转向" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
@@ -144,12 +143,12 @@
           <div class="body" role="main">
             
   <section id="developing-autodoc-extension-for-intenum">
-<span id="autodoc-ext-tutorial"></span><h1>Developing autodoc extension for IntEnum<a class="headerlink" href="#developing-autodoc-extension-for-intenum" title="永久链接至标题">¶</a></h1>
+<span id="autodoc-ext-tutorial"></span><h1>Developing autodoc extension for IntEnum<a class="headerlink" href="#developing-autodoc-extension-for-intenum" title="Permalink to this headline">¶</a></h1>
 <p>The objective of this tutorial is to create an extension that adds
 support for new type for autodoc. This autodoc extension will format
 the <code class="docutils literal notranslate"><span class="pre">IntEnum</span></code> class from Python standard library. (module <code class="docutils literal notranslate"><span class="pre">enum</span></code>)</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>We want the extension that will create auto-documentation for IntEnum.
 <code class="docutils literal notranslate"><span class="pre">IntEnum</span></code> is the integer enum class from standard library <code class="docutils literal notranslate"><span class="pre">enum</span></code> module.</p>
 <p>Currently this class has no special auto documentation behavior.</p>
@@ -163,7 +162,7 @@ cause the integers be printed in hexadecimal form.</p></li>
 </ul>
 </section>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="永久链接至标题">¶</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>We need the same setup as in <a class="reference internal" href="todo.html"><span class="doc">the previous extensions</span></a>. This time,
 we will be putting out extension in a file called <code class="file docutils literal notranslate"><span class="pre">autodoc_intenum.py</span></code>.
 The <code class="file docutils literal notranslate"><span class="pre">my_enums.py</span></code> will contain the sample enums we will document.</p>
@@ -178,7 +177,7 @@ The <code class="file docutils literal notranslate"><span class="pre">my_enums.p
 </div>
 </section>
 <section id="writing-the-extension">
-<h2>Writing the extension<a class="headerlink" href="#writing-the-extension" title="永久链接至标题">¶</a></h2>
+<h2>Writing the extension<a class="headerlink" href="#writing-the-extension" title="Permalink to this headline">¶</a></h2>
 <p>Start with <code class="docutils literal notranslate"><span class="pre">setup</span></code> function for the extension.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Sphinx</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="linenos">2</span>    <span class="n">app</span><span class="o">.</span><span class="n">setup_extension</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">)</span>  <span class="c1"># Require autodoc extension</span>
@@ -273,11 +272,11 @@ After calling the super method we generate lines for enum description.</p>
 </dl>
 </section>
 <section id="using-the-extension">
-<h2>Using the extension<a class="headerlink" href="#using-the-extension" title="永久链接至标题">¶</a></h2>
+<h2>Using the extension<a class="headerlink" href="#using-the-extension" title="Permalink to this headline">¶</a></h2>
 <p>You can now use the new autodoc directive to document any <code class="docutils literal notranslate"><span class="pre">IntEnum</span></code>.</p>
 <p>For example, you have the following <code class="docutils literal notranslate"><span class="pre">IntEnum</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">my_enums.py</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">my_enums.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Colors</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Colors enumerator&quot;&quot;&quot;</span>
     <span class="n">NONE</span> <span class="o">=</span> <span class="mi">0</span>
@@ -289,7 +288,7 @@ After calling the super method we generate lines for enum description.</p>
 </div>
 <p>This will be the documentation file with auto-documentation directive:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">index.rst</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">index.rst</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autointenum</span><span class="p">::</span> my_enums.Colors
 </pre></div>
 </div>
@@ -305,20 +304,20 @@ After calling the super method we generate lines for enum description.</p>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="总目录"
-             >索引</a></li>
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="../builders.html" title="Configuring builders"
-             >下一页</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="recipe.html" title="Developing a “recipe” extension"
-             >上一页</a> |</li>
+             >previous</a> |</li>
         <li><a href="../../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
@@ -328,7 +327,7 @@ After calling the super method we generate lines for enum description.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2021, Georg Brandl and the Sphinx team.
+        &#169; Copyright 2007-2021, Georg Brandl and the Sphinx team.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
     </div>
   </body>
