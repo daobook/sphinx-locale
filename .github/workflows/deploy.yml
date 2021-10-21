@@ -41,11 +41,10 @@ jobs:
       # 构建 Sphinx 文档
       - name: Build the book
         run: |
-          cp -rf locales/ draft/doc/locale
+          cp locales/ -rf draft/doc/locale/
           cd draft/doc
-          export SPHINXINTL_LANGUAGE=zh_CN
           make gettext
-          make html
+          make -e SPHINXOPTS="-Dlanguage='zh_CN'" html
 
       # 部署 HTML 到 gh-pages 分支
       - name: GitHub Pages action
