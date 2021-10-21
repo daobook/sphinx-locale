@@ -27,6 +27,8 @@ msgid ""
 "both Docutils and Sphinx. Docutils provides the basic reStructuredText "
 "syntax, while Sphinx extends this to support additional functionality."
 msgstr ""
+"reStructuredText（reST）是 Docutils 和 Sphinx 都使用的默认纯文本标记语言。"
+"Docutils 提供基本的 reStructuredText 语法，而 Sphinx 扩展了这个语法以支持额外的功能。"
 
 #: ../../usage/restructuredtext/index.rst:11
 msgid ""
@@ -34,4 +36,5 @@ msgid ""
 "authoritative reStructuredText reference, refer to the `docutils "
 "documentation`__."
 msgstr ""
-
+"下面的指南介绍了 reST 的最重要方面。对于权威的 reStructuredText 参考，"
+"请阅读 `Docutils 文档`__。"

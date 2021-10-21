@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../_templates/index.html:2
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: ../../_templates/index.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "欢迎"
 
 #: ../../_templates/index.html:7
 msgid "What users say:"
-msgstr ""
+msgstr "用户说什么："
 
 #: ../../_templates/index.html:8
 msgid ""
@@ -35,6 +35,9 @@ msgid ""
 "<b>want</b>\n"
 "      to write documentation!&#8220;"
 msgstr ""
+"&#8220;为一个伟大的工具喝彩，它实际上使程序员 "
+"<b>想要</b>\n"
+"      来写文档！&#8220;"
 
 #: ../../_templates/index.html:12
 msgid ""

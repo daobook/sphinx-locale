@@ -486,11 +486,10 @@ msgid ""
 "<https://www.gnu.org/software/gettext/manual/gettext.html#Introduction>`_"
 " for details on that software suite."
 msgstr ""
-"见`GNU gettext utilities"
+"见 `GNU gettext 实用工具 "
 "<https://www.gnu.org/software/gettext/manual/gettext.html#Introduction>`_"
-"了解该软件套件的详情。"
+" 了解该软件套件的详情。"
 
 #: ../../usage/advanced/intl.rst:324
 msgid "Because nobody expects the Spanish Inquisition!"
 msgstr "因为没有人期待西班牙宗教裁判所的出现！"
-
