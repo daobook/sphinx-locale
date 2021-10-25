@@ -1,5 +1,10 @@
 # Sphinx 中文
 
-[![GitHub issues](https://img.shields.io/github/issues/xinetzone/sphinx-locale)](https://github.com/xinetzone/sphinx-locale/issues) [![GitHub forks](https://img.shields.io/github/forks/xinetzone/sphinx-locale)](https://github.com/xinetzone/sphinx-locale/network) [![GitHub stars](https://img.shields.io/github/stars/xinetzone/sphinx-locale)](https://github.com/xinetzone/sphinx-locale/stargazers) [![GitHub license](https://img.shields.io/github/license/xinetzone/sphinx-locale)](https://github.com/xinetzone/sphinx-locale/blob/main/LICENSE)  ![repo size](https://img.shields.io/github/repo-size/xinetzone/sphinx-locale.svg) [![contributors](https://img.shields.io/github/contributors/xinetzone/sphinx-locale.svg)](https://github.com/xinetzone/sphinx-locale/graphs/contributors) [![watcher](https://img.shields.io/github/watchers/xinetzone/sphinx-locale.svg)](https://github.com/xinetzone/sphinx-locale/watchers) ![](https://github.com/xinetzone/sphinx-locale/actions/workflows/docs.yml/badge.svg)
+[![GitHub issues](https://img.shields.io/github/issues/sphinx-locales/sphinx-locale)](https://github.com/sphinx-locales/sphinx-locale/issues) [![GitHub forks](https://img.shields.io/github/forks/sphinx-locales/sphinx-locale)](https://github.com/sphinx-locales/sphinx-locale/network) [![GitHub stars](https://img.shields.io/github/stars/sphinx-locales/sphinx-locale)](https://github.com/sphinx-locales/sphinx-locale/stargazers) [![GitHub license](https://img.shields.io/github/license/sphinx-locales/sphinx-locale)](https://github.com/sphinx-locales/sphinx-locale/blob/main/LICENSE)  ![repo size](https://img.shields.io/github/repo-size/sphinx-locales/sphinx-locale.svg) [![contributors](https://img.shields.io/github/contributors/sphinx-locales/sphinx-locale.svg)](https://github.com/sphinx-locales/sphinx-locale/graphs/contributors) [![watcher](https://img.shields.io/github/watchers/sphinx-locales/sphinx-locale.svg)](https://github.com/sphinx-locales/sphinx-locale/watchers) ![](https://github.com/sphinx-locales/sphinx-locale/actions/workflows/docs.yml/badge.svg)
 
-使用方法见 [`sphinx-locale`](https://github.com/xinetzone/sphinx-locale) 的 `README`。
+从 [daobook/sphinx](https://github.com/daobook/sphinx) 定期更新。
+
+## 特点
+
+- 提供 Sphinx 中文文档。
+- 自动部署到 Github Pages.
