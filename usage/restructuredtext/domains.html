@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Domains &#8212; Sphinx documentation</title>
+    <title>域 &#8212; Sphinx documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -96,15 +96,15 @@
 
           <li class="nav-item nav-item-1"><a href="../index.html" >使用 Sphinx</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">reStructuredText</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Domains</a></li> 
+        <li class="nav-item nav-item-this"><a href="">域</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Domains</a><ul>
-<li><a class="reference internal" href="#basic-markup">Basic Markup</a><ul>
+<li><a class="reference internal" href="#">域</a><ul>
+<li><a class="reference internal" href="#basic-markup">基础标记</a><ul>
 <li><a class="reference internal" href="#cross-referencing-syntax">Cross-referencing syntax</a></li>
 </ul>
 </li>
@@ -190,34 +190,17 @@
           <div class="body" role="main">
             
   <section id="domains">
-<h1>Domains<a class="headerlink" href="#domains" title="永久链接至标题">¶</a></h1>
+<h1>域<a class="headerlink" href="#domains" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
-<p>Originally, Sphinx was conceived for a single project, the documentation of the
-Python language.  Shortly afterwards, it was made available for everyone as a
-documentation tool, but the documentation of Python modules remained deeply
-built in – the most fundamental directives, like <code class="docutils literal notranslate"><span class="pre">function</span></code>, were designed
-for Python objects.  Since Sphinx has become somewhat popular, interest
-developed in using it for many different purposes: C/C++ projects, JavaScript,
-or even reStructuredText markup (like in this documentation).</p>
-<p>While this was always possible, it is now much easier to easily support
-documentation of projects using different programming languages or even ones
-not supported by the main Sphinx distribution, by providing a <strong>domain</strong> for
-every such purpose.</p>
-<p>A domain is a collection of markup (reStructuredText <a class="reference internal" href="../../glossary.html#term-directive"><span class="xref std std-term">directive</span></a>s and
-<a class="reference internal" href="../../glossary.html#term-role"><span class="xref std std-term">role</span></a>s) to describe and link to <a class="reference internal" href="../../glossary.html#term-object"><span class="xref std std-term">object</span></a>s belonging together,
-e.g. elements of a programming language.  Directive and role names in a domain
-have names like <code class="docutils literal notranslate"><span class="pre">domain:name</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">py:function</span></code>.  Domains can also
-provide custom indices (like the Python Module Index).</p>
-<p>Having domains means that there are no naming problems when one set of
-documentation wants to refer to e.g. C++ and Python classes.  It also means
-that extensions that support the documentation of whole new languages are much
-easier to write.</p>
-<p>This section describes what the domains that are included with Sphinx provide.
-The domain API is documented as well, in the section <a class="reference internal" href="../../extdev/domainapi.html#domain-api"><span class="std std-ref">Domain API</span></a>.</p>
+<p>最初，Sphinx 是为一个单一的项目设想的，即 Python 语言的文档。不久之后，它作为一个文档工具提供给所有人，但 Python 模块的文档仍然深深地内置于其中–最基本的指令，如 <code class="docutils literal notranslate"><span class="pre">function</span></code>，是为 Python 对象设计的。由于 Sphinx 已经变得有些流行，人们对将其用于许多不同的目的产生了兴趣：C/C++ 项目，JavaScript，甚至是 reStructuredText 标记（比如这个文档）。</p>
+<p>虽然这一直是可能的，但现在通过为每一个这样的目的提供一个 <strong>域</strong>，可以更容易地支持使用不同编程语言的项目的文档，甚至是主要的 Sphinx 发行版不支持的项目。</p>
+<p>域是一个标记的集合（reStructuredText <a class="reference internal" href="../../glossary.html#term-directive"><span class="xref std std-term">指令</span></a> 和 <a class="reference internal" href="../../glossary.html#term-role"><span class="xref std std-term">角色</span></a>），用来描述和链接属于一起的 <a class="reference internal" href="../../glossary.html#term-object"><span class="xref std std-term">对象</span></a>，例如，编程语言的元素。域中的指令和角色名称有类似 <code class="docutils literal notranslate"><span class="pre">domain:name</span></code> 的名称，例如 <code class="docutils literal notranslate"><span class="pre">py:function</span></code>。域也可以提供自定义索引（如 Python 模块索引）。</p>
+<p>拥有域意味着当一组文档想要引用例如 C++ 和 Python 类时，不会出现命名问题。这也意味着支持整个新语言的文档的扩展更容易编写。</p>
+<p>本节描述了包括在 Sphinx 中的域所提供的东西。域的 API 也被记录在 <a class="reference internal" href="../../extdev/domainapi.html#domain-api"><span class="std std-ref">Domain API</span></a> 部分。</p>
 <section id="basic-markup">
-<span id="basic-domain-markup"></span><h2>Basic Markup<a class="headerlink" href="#basic-markup" title="永久链接至标题">¶</a></h2>
+<span id="basic-domain-markup"></span><h2>基础标记<a class="headerlink" href="#basic-markup" title="永久链接至标题">¶</a></h2>
 <p>Most domains provide a number of <em class="dfn">object description directives</em>, used to
 describe specific objects provided by modules.  Each directive requires one or
 more signatures to provide basic information about what is being described, and
@@ -1567,7 +1550,7 @@ is incrementable.</p></li>
 <h4>Options<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h4>
 <p>Some directives support options:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">:noindexentry:</span></code>, see <a class="reference internal" href="#basic-domain-markup"><span class="std std-ref">Basic Markup</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:noindexentry:</span></code>, see <a class="reference internal" href="#basic-domain-markup"><span class="std std-ref">基础标记</span></a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">:tparam-line-spec:</span></code>, for templated declarations.
 If specified, each template parameter will be rendered on a separate line.</p>
 <div class="versionadded">
@@ -2493,7 +2476,7 @@ domains. Also available are domains for <a class="reference external" href="http
 
           <li class="nav-item nav-item-1"><a href="../index.html" >使用 Sphinx</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >reStructuredText</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Domains</a></li> 
+        <li class="nav-item nav-item-this"><a href="">域</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

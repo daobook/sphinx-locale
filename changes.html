@@ -167,6 +167,7 @@ It may break existing styling.</p></li>
 <section id="deprecated">
 <h3>Deprecated<a class="headerlink" href="#deprecated" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.AttributeDocumenter._datadescriptor</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinx.writers.html.HTMLTranslator._fieldlist_row_index</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinx.writers.html.HTMLTranslator._table_row_index</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinx.writers.html5.HTML5Translator._fieldlist_row_index</span></code></p></li>
@@ -186,6 +187,11 @@ for <a class="reference internal" href="usage/restructuredtext/domains.html#dire
 <li><p>#9695: More CSS classes on Javascript domain descriptions</p></li>
 <li><p>#9683: Revert the removal of <code class="docutils literal notranslate"><span class="pre">add_stylesheet()</span></code> API.  It will be kept until
 the Sphinx-6.0 release</p></li>
+<li><p>#2068, add <a class="reference internal" href="usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes"><code class="xref std std-confval docutils literal notranslate"><span class="pre">intersphinx_disabled_reftypes</span></code></a> for disabling
+interphinx resolution of cross-references that do not have an explicit
+inventory specification. Specific types of cross-references can be disabled,
+e.g., <code class="docutils literal notranslate"><span class="pre">std:doc</span></code> or all cross-references in a specific domain,
+e.g., <code class="docutils literal notranslate"><span class="pre">std:*</span></code>.</p></li>
 </ul>
 </section>
 <section id="bugs-fixed">
@@ -202,6 +208,12 @@ its info-field-list contains <code class="docutils literal notranslate"><span cl
 <li><p>#9607: autodoc: Incorrect base class detection for the subclasses of the
 generic class</p></li>
 <li><p>#9755: autodoc: memory addresses are shown for aliases</p></li>
+<li><p>#9752: autodoc: Failed to detect type annotation for slots attribute</p></li>
+<li><p>#9756: autodoc: Crashed if classmethod does not have __func__ attribute</p></li>
+<li><p>#9757: autodoc: <a class="reference internal" href="usage/extensions/autodoc.html#confval-autodoc_inherit_docstrings"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autodoc_inherit_docstrings</span></code></a> does not effect to
+overriden classmethods</p></li>
+<li><p>#9781: autodoc: <a class="reference internal" href="usage/extensions/autodoc.html#confval-autodoc_preserve_defaults"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autodoc_preserve_defaults</span></code></a> does not support
+hexadecimal numeric</p></li>
 <li><p>#9630: autosummary: Failed to build summary table if <a class="reference internal" href="usage/configuration.html#confval-primary_domain"><code class="xref std std-confval docutils literal notranslate"><span class="pre">primary_domain</span></code></a>
 is not ‘py’</p></li>
 <li><p>#9670: html: Fix download file with special characters</p></li>
@@ -214,8 +226,15 @@ return all of them as result instead of just one.</p></li>
 <li><p>#9678: linkcheck: file extension was shown twice in warnings</p></li>
 <li><p>#9697: py domain: An index entry with parens was registered for <code class="docutils literal notranslate"><span class="pre">py:method</span></code>
 directive with <code class="docutils literal notranslate"><span class="pre">:property:</span></code> option</p></li>
+<li><p>#9775: py domain: Literal typehint was converted to a cross reference when
+<code class="xref std std-confval docutils literal notranslate"><span class="pre">autodoc_typehints='description'</span></code></p></li>
 <li><p>#9708: needs_extension failed to check double-digit version correctly</p></li>
 <li><p>#9688: Fix <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code`</span></code> does not recognize <code class="docutils literal notranslate"><span class="pre">:class:</span></code> option</p></li>
+<li><p>#9733: Fix for logging handler flushing warnings in the middle of the docs
+build</p></li>
+<li><p>#9656: Fix warnings without subtype being incorrectly suppressed</p></li>
+<li><p>Intersphinx, for unresolved references with an explicit inventory,
+e.g., <code class="docutils literal notranslate"><span class="pre">proj:myFunc</span></code>, leave the inventory prefix in the unresolved text.</p></li>
 </ul>
 </section>
 <section id="testing">
@@ -2869,7 +2888,7 @@ directory of the document being built instead of in the root directory of
 the documentation.</p></li>
 <li><p>#4460: extensions which stores any data to environment should return the
 version of its env data structure as metadata.  In detail, please see
-<a class="reference internal" href="extdev/index.html#ext-metadata"><span class="std std-ref">Extension metadata</span></a>.</p></li>
+<a class="reference internal" href="extdev/index.html#ext-metadata"><span class="std std-ref">插件元数据</span></a>.</p></li>
 <li><p>Sphinx expects source parser modules to have supported file formats as
 <code class="docutils literal notranslate"><span class="pre">Parser.supported</span></code> attribute</p></li>
 <li><p>The default value of <a class="reference internal" href="usage/configuration.html#confval-epub_author"><code class="xref std std-confval docutils literal notranslate"><span class="pre">epub_author</span></code></a> and <a class="reference internal" href="usage/configuration.html#confval-epub_publisher"><code class="xref std std-confval docutils literal notranslate"><span class="pre">epub_publisher</span></code></a> are

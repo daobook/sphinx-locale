@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Developing extensions overview &#8212; Sphinx documentation</title>
+    <title>开发插件的概述 &#8212; Sphinx documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -22,8 +22,8 @@
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Extension tutorials" href="tutorials/index.html" />
-    <link rel="prev" title="Extending Sphinx" href="index.html" />
+    <link rel="next" title="插件教程" href="tutorials/index.html" />
+    <link rel="prev" title="拓展 Sphinx" href="index.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -86,34 +86,34 @@
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="tutorials/index.html" title="Extension tutorials"
+          <a href="tutorials/index.html" title="插件教程"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Extending Sphinx"
+          <a href="index.html" title="拓展 Sphinx"
              accesskey="P">上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Extending Sphinx</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Developing extensions overview</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">拓展 Sphinx</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">开发插件的概述</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Developing extensions overview</a><ul>
-<li><a class="reference internal" href="#make-an-extension-depend-on-another-extension">Make an extension depend on another extension</a></li>
+<li><a class="reference internal" href="#">开发插件的概述</a><ul>
+<li><a class="reference internal" href="#make-an-extension-depend-on-another-extension">使一个插件依赖于另一个插件</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="index.html"
-                        title="上一章">Extending Sphinx</a></p>
+                        title="上一章">拓展 Sphinx</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="tutorials/index.html"
-                        title="下一章">Extension tutorials</a></p>
+                        title="下一章">插件教程</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -140,27 +140,20 @@
           <div class="body" role="main">
             
   <section id="developing-extensions-overview">
-<h1>Developing extensions overview<a class="headerlink" href="#developing-extensions-overview" title="永久链接至标题">¶</a></h1>
-<p>This page contains general information about developing Sphinx extensions.</p>
+<h1>开发插件的概述<a class="headerlink" href="#developing-extensions-overview" title="永久链接至标题">¶</a></h1>
+<p>本页包含关于开发 Sphinx 插件的一般信息。</p>
 <section id="make-an-extension-depend-on-another-extension">
-<h2>Make an extension depend on another extension<a class="headerlink" href="#make-an-extension-depend-on-another-extension" title="永久链接至标题">¶</a></h2>
-<p>Sometimes your extension depends on the functionality of another
-Sphinx extension. Most Sphinx extensions are activated in a
-project’s <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> file, but this is not available to you as an
-extension developer.</p>
-<p>To ensure that another extension is activated as a part of your own extension,
-use the <a class="reference internal" href="../extdev/appapi.html#sphinx.application.Sphinx.setup_extension" title="sphinx.application.Sphinx.setup_extension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.setup_extension()</span></code></a> method. This will
-activate another extension at run-time, ensuring that you have access to its
-functionality.</p>
-<p>For example, the following code activates the <code class="docutils literal notranslate"><span class="pre">recommonmark</span></code> extension:</p>
+<h2>使一个插件依赖于另一个插件<a class="headerlink" href="#make-an-extension-depend-on-another-extension" title="永久链接至标题">¶</a></h2>
+<p>有时你的插件依赖于另一个 Sphinx 插件的功能。大多数 Sphinx 插件是在项目的 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 文件中激活的，但作为插件的开发者，这是不可以的。</p>
+<p>为了确保另一个插件被激活为你自己插件的一部分，使用 <a class="reference internal" href="../extdev/appapi.html#sphinx.application.Sphinx.setup_extension" title="sphinx.application.Sphinx.setup_extension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.setup_extension()</span></code></a> 方法。这将在运行时激活另一个插件，确保你可以使用它的功能。</p>
+<p>例如，以下代码激活了 <code class="docutils literal notranslate"><span class="pre">recommonmark</span></code> 插件。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
     <span class="n">app</span><span class="o">.</span><span class="n">setup_extension</span><span class="p">(</span><span class="s2">&quot;recommonmark&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Since your extension will depend on another, make sure to include
-it as a part of your extension’s installation requirements.</p>
+<p>由于你的插件将依赖于另一个，请确保将其作为你的插件安装要求的一部分。</p>
 </div>
 </section>
 </section>
@@ -182,16 +175,16 @@ it as a part of your extension’s installation requirements.</p>
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="tutorials/index.html" title="Extension tutorials"
+          <a href="tutorials/index.html" title="插件教程"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Extending Sphinx"
+          <a href="index.html" title="拓展 Sphinx"
              >上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >Extending Sphinx</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Developing extensions overview</a></li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >拓展 Sphinx</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">开发插件的概述</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

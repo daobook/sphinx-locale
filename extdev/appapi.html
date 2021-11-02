@@ -23,7 +23,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="Project API" href="projectapi.html" />
-    <link rel="prev" title="Developing extensions for Sphinx" href="index.html" />
+    <link rel="prev" title="为 Sphinx 开发插件" href="index.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -89,12 +89,12 @@
           <a href="projectapi.html" title="Project API"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Developing extensions for Sphinx"
+          <a href="index.html" title="为 Sphinx 开发插件"
              accesskey="P">上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Developing extensions for Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为 Sphinx 开发插件</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Application API</a></li> 
       </ul>
     </div>
@@ -103,10 +103,10 @@
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Application API</a><ul>
-<li><a class="reference internal" href="#extension-setup">Extension setup</a></li>
+<li><a class="reference internal" href="#extension-setup">插件设置</a></li>
 <li><a class="reference internal" href="#emitting-events">Emitting events</a></li>
 <li><a class="reference internal" href="#sphinx-runtime-information">Sphinx runtime information</a></li>
-<li><a class="reference internal" href="#sphinx-core-events">Sphinx core events</a></li>
+<li><a class="reference internal" href="#sphinx-core-events">Sphinx 核心事件</a></li>
 <li><a class="reference internal" href="#checking-the-sphinx-version">Checking the Sphinx version</a></li>
 <li><a class="reference internal" href="#the-config-object">The Config object</a></li>
 <li><a class="reference internal" href="#the-template-bridge">The template bridge</a></li>
@@ -117,7 +117,7 @@
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="index.html"
-                        title="上一章">Developing extensions for Sphinx</a></p>
+                        title="上一章">为 Sphinx 开发插件</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="projectapi.html"
                         title="下一章">Project API</a></p>
@@ -148,38 +148,32 @@
             
   <section id="module-sphinx.application">
 <span id="application-api"></span><h1>Application API<a class="headerlink" href="#module-sphinx.application" title="永久链接至标题">¶</a></h1>
-<p>Each Sphinx extension is a Python module with at least a <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code>
-function.  This function is called at initialization time with one argument,
-the application object representing the Sphinx process.</p>
+<p>每个 Sphinx 插件是一个 Python 模块，至少有一个 <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code> 函数。这个函数在初始化时被调用，有一个参数，代表 Sphinx 进程的应用对象。</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sphinx.application.Sphinx">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sphinx.application.</span></span><span class="sig-name descname"><span class="pre">Sphinx</span></span><a class="reference internal" href="../_modules/sphinx/application.html#Sphinx"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinx.application.Sphinx" title="永久链接至目标">¶</a></dt>
-<dd><p>This application object has the public API described in the following.</p>
+<dd><p>该应用对象具有以下描述的公共 API。</p>
 </dd></dl>
 
 <section id="extension-setup">
-<h2>Extension setup<a class="headerlink" href="#extension-setup" title="永久链接至标题">¶</a></h2>
-<p>These methods are usually called in an extension’s <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function.</p>
-<p>Examples of using the Sphinx extension API can be seen in the <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext</span></code>
-package.</p>
+<h2>插件设置<a class="headerlink" href="#extension-setup" title="永久链接至标题">¶</a></h2>
+<p>这些方法通常在一个插件的 <code class="docutils literal notranslate"><span class="pre">setup()</span></code> 函数中调用。</p>
+<p>使用 Sphinx 插件 API 的例子可以在 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext</span></code> 包中看到。</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinx.application.Sphinx.setup_extension">
 <span class="sig-prename descclassname"><span class="pre">Sphinx.</span></span><span class="sig-name descname"><span class="pre">setup_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extname</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(在 Python v3.10)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/sphinx/application.html#Sphinx.setup_extension"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinx.application.Sphinx.setup_extension" title="永久链接至目标">¶</a></dt>
-<dd><p>Import and setup a Sphinx extension module.</p>
-<p>Load the extension given by the module <em>name</em>.  Use this if your
-extension needs the features provided by another extension.  No-op if
-called twice.</p>
+<dd><p>导入并设置一个 Sphinx 插件模块。</p>
+<p>加载由模块 <em>名称</em> 给出的插件。如果你的插件需要另一个插件提供的功能，请使用此功能。如果调用两次，则没有作用。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinx.application.Sphinx.require_sphinx">
 <span class="sig-prename descclassname"><span class="pre">Sphinx.</span></span><span class="sig-name descname"><span class="pre">require_sphinx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(在 Python v3.10)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/sphinx/application.html#Sphinx.require_sphinx"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinx.application.Sphinx.require_sphinx" title="永久链接至目标">¶</a></dt>
-<dd><p>Check the Sphinx version if requested.</p>
-<p>Compare <em>version</em> with the version of the running Sphinx, and abort the
-build when it is too old.</p>
+<dd><p>如果有要求，请检查 Sphinx 的版本。</p>
+<p>将 <em>version</em> 与运行中的 Sphinx 的版本进行比较，当它太旧时就中止构建。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>version</strong> – The required version in the form of <code class="docutils literal notranslate"><span class="pre">major.minor</span></code>.</p>
+<dd class="field-odd"><p><strong>version</strong> – 所需的版本，形式为 <code class="docutils literal notranslate"><span class="pre">major.minor</span></code>。</p>
 </dd>
 </dl>
 <div class="versionadded">
@@ -192,7 +186,7 @@ build when it is too old.</p>
 <span class="sig-prename descclassname"><span class="pre">Sphinx.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(在 Python v3.10)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(在 Python v3.10)"><span class="pre">int</span></a></span></span><a class="reference internal" href="../_modules/sphinx/application.html#Sphinx.connect"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#sphinx.application.Sphinx.connect" title="永久链接至目标">¶</a></dt>
 <dd><p>Register <em>callback</em> to be called when <em>event</em> is emitted.</p>
 <p>For details on available core events and the arguments of callback
-functions, please see <a class="reference internal" href="#events"><span class="std std-ref">Sphinx core events</span></a>.</p>
+functions, please see <a class="reference internal" href="#events"><span class="std std-ref">Sphinx 核心事件</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1115,7 +1109,7 @@ Sphinx events in extensions!</p>
 
 </section>
 <section id="sphinx-core-events">
-<span id="events"></span><h2>Sphinx core events<a class="headerlink" href="#sphinx-core-events" title="永久链接至标题">¶</a></h2>
+<span id="events"></span><h2>Sphinx 核心事件<a class="headerlink" href="#sphinx-core-events" title="永久链接至标题">¶</a></h2>
 <p>These events are known to the core.  The arguments shown are given to the
 registered event handlers.  Use <a class="reference internal" href="#sphinx.application.Sphinx.connect" title="sphinx.application.Sphinx.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.connect()</span></code></a> in an extension’s
 <code class="docutils literal notranslate"><span class="pre">setup</span></code> function (note that <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> can also have a <code class="docutils literal notranslate"><span class="pre">setup</span></code> function) to
@@ -1272,7 +1266,7 @@ it can either return <code class="docutils literal notranslate"><span class="pre
 or raise <code class="xref py py-class docutils literal notranslate"><span class="pre">NoUri</span></code> to prevent other handlers in trying and suppress
 a warning about this cross-reference being unresolved.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>env</strong> – The build environment (<code class="docutils literal notranslate"><span class="pre">app.builder.env</span></code>).</p></li>
 <li><p><strong>node</strong> – The <code class="xref py py-class docutils literal notranslate"><span class="pre">pending_xref</span></code> node to be resolved.  Its attributes
@@ -1563,12 +1557,12 @@ in subclasses.</p>
           <a href="projectapi.html" title="Project API"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Developing extensions for Sphinx"
+          <a href="index.html" title="为 Sphinx 开发插件"
              >上一页</a> |</li>
         <li><a href="../index.html">Sphinx home</a>&#160;|</li>
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >Developing extensions for Sphinx</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >为 Sphinx 开发插件</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Application API</a></li> 
       </ul>
     </div>

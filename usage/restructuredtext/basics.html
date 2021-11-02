@@ -266,7 +266,7 @@ This is a normal text paragraph again.
 </section>
 <section id="doctest-blocks">
 <span id="rst-doctest-blocks"></span><h2>Doctest 块<a class="headerlink" href="#doctest-blocks" title="永久链接至标题">¶</a></h2>
-<p>Doctest 块（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks">ref</a>）是将交互式的 Python 会话剪切粘贴到文档字符串中。它们不需要 <a class="reference internal" href="#rst-literal-blocks"><span class="std std-ref">literal blocks</span></a> 语法。doctest 块必须以空行结束，并且 不 以未使用的提示符结束</p>
+<p>Doctest 块（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks">ref</a>）是将交互式的 Python 会话剪切粘贴到文档字符串中。它们不需要 <a class="reference internal" href="#rst-literal-blocks"><span class="std std-ref">文字块</span></a> 语法。doctest 块必须以空行结束，并且不以未使用的提示符结束</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; 1 + 1
 2
 </pre></div>
@@ -296,7 +296,7 @@ True   True   True
 =====  =====  =======
 </pre></div>
 </div>
-<p>另外还支持两种语法: <em>CSV 表</em> 和 <em>列表</em>。它们使用显式标记块。参考 <a class="reference internal" href="directives.html#table-directives"><span class="std std-ref">Tables</span></a> 获取更多信息。</p>
+<p>另外还支持两种语法: <em>CSV 表</em> 和 <em>列表</em>。它们使用显式标记块。参考 <a class="reference internal" href="directives.html#table-directives"><span class="std std-ref">表格</span></a> 获取更多信息。</p>
 </section>
 <section id="hyperlinks">
 <h2>超链接<a class="headerlink" href="#hyperlinks" title="永久链接至标题">¶</a></h2>
@@ -381,7 +381,7 @@ True   True   True
 <p>指令 (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#directives">ref</a>) 是一个通用的显式标记块。与角色一起，它是 reST 的扩展机制之一，Sphinx 大量使用了它。</p>
 <p>Docutils 支持以下指令：</p>
 <ul>
-<li><p>警告：<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#attention">attention</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#caution">caution</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#danger">danger</a>,:dudir:<cite>error</cite>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#hint">hint</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#important">important</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#note">note</a>,:dudir:<cite>tip</cite>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#warning">warning</a> 以及泛型:dudir:<cite>admonition &lt;admonitions&gt;</cite>。（大多数主题仅限于 “note” 和 “warning”。）</p></li>
+<li><p>警告：<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#attention">attention</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#caution">caution</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#danger">danger</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#error">error</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#hint">hint</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#important">important</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#note">note</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#tip">tip</a>、<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#warning">warning</a> 以及泛型 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#admonitions">admonition</a>。（大多数主题仅限于 “note” 和 “warning”。）</p></li>
 <li><p>图片</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">image</a> （常见下面的 <a class="reference internal" href="#images">图片</a> ）</p></li>
@@ -441,7 +441,7 @@ True   True   True
    Return a line of text input from the user.
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">function</span></code> 是指令名称。这里给出了两个参数，第一行和第二行的其余部分，以及一个选项``module`` （如您所见，选项在参数后面的行中给出，并用冒号表示）。</p>
+<p><code class="docutils literal notranslate"><span class="pre">function</span></code> 是指令名称。这里给出了两个参数，第一行和第二行的其余部分，以及一个选项 <code class="docutils literal notranslate"><span class="pre">module</span></code> （如您所见，选项在参数后面的行中给出，并用冒号表示）。</p>
 <p>指令内容跟在一个空行之后，并相对于指令开始缩进。</p>
 <p>要小心，因为缩进不是一个固定的空格数，比如说三，，而是任何数字的空白。当固定的缩进方式在整个文档中使用时，这可能会令人吃惊。在整个文档中使用固定的缩进，这可能会对指令产生不同的影响对空白很敏感。比较：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span>
@@ -465,12 +465,12 @@ True   True   True
 </div>
 <p>在 Sphinx 中使用时，给定的文件名（此处为 <code class="docutils literal notranslate"><span class="pre">gnu.png</span></code>）必须是相对于源文件的，或者是绝对的，这意味着它们相对于顶级源目录。例如，文件 <code class="docutils literal notranslate"><span class="pre">sketch/spam.rst</span></code> 可以将图像 <code class="docutils literal notranslate"><span class="pre">images/spam.png</span></code> 引用为 <code class="docutils literal notranslate"><span class="pre">../images/spam.png</span></code> 或 <code class="docutils literal notranslate"><span class="pre">/images/spam.png</span></code>。</p>
 <p>Sphinx 会在构建时自动将图像文件复制到输出目录的子目录中（例如，HTML 输出的 <code class="docutils literal notranslate"><span class="pre">_static</span></code> 目录。）</p>
-<p>图像尺寸选项（ <code class="docutils literal notranslate"><span class="pre">width</span></code> 和 <code class="docutils literal notranslate"><span class="pre">height</span></code>）的解释如下：如果尺寸没有单位或单位是像素，则给定的尺寸仅适用于支持像素的输出通道”其他单位（如 <code class="docutils literal notranslate"><span class="pre">pt</span></code> 表示点）将用于 HTML 和 LaTeX 输出（后者将 <code class="docutils literal notranslate"><span class="pre">pt</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">bp</span></code>，因为这是 TeX 单位，这样 <code class="docutils literal notranslate"><span class="pre">72bp=1in</span></code>）。</p>
+<p>图像尺寸选项（ <code class="docutils literal notranslate"><span class="pre">width</span></code> 和 <code class="docutils literal notranslate"><span class="pre">height</span></code>）的解释如下：如果尺寸没有单位或单位是像素，则给定的尺寸仅适用于支持像素的输出通道。其他单位（如 <code class="docutils literal notranslate"><span class="pre">pt</span></code> 表示点）将用于 HTML 和 LaTeX 输出（后者将 <code class="docutils literal notranslate"><span class="pre">pt</span></code> 替换为 <code class="docutils literal notranslate"><span class="pre">bp</span></code>，因为这是 TeX 单位，这样 <code class="docutils literal notranslate"><span class="pre">72bp=1in</span></code>）。</p>
 <p>Sphinx 通过允许扩展名使用星号来扩展标准 docutils 行为</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> gnu.*
 </pre></div>
 </div>
-<p>Sphinx 然后搜索与提供的模式匹配的所有图像并确定它们的类型。然后每个构建器从这些候选图像中选择最佳图像。例如，如果给出了文件名 <code class="docutils literal notranslate"><span class="pre">gnu.*</span></code> 并且源代码树中存在两个文件 <code class="file docutils literal notranslate"><span class="pre">gnu.pdf</span></code> 和 <code class="file docutils literal notranslate"><span class="pre">gnu.png</span></code>，LaTeX 构建器会选择前者，而 HTML 构建器更喜欢后者。支持的图像类型和选择优先级在 <a class="reference internal" href="../builders/index.html"><span class="doc">Builders</span></a> 中定义。</p>
+<p>Sphinx 然后搜索与提供的模式匹配的所有图像并确定它们的类型。然后每个构建器从这些候选图像中选择最佳图像。例如，如果给出了文件名 <code class="docutils literal notranslate"><span class="pre">gnu.*</span></code> 并且源代码树中存在两个文件 <code class="file docutils literal notranslate"><span class="pre">gnu.pdf</span></code> 和 <code class="file docutils literal notranslate"><span class="pre">gnu.png</span></code>，LaTeX 构建器会选择前者，而 HTML 构建器更喜欢后者。支持的图像类型和选择优先级在 <a class="reference internal" href="../builders/index.html"><span class="doc">构建器</span></a> 中定义。</p>
 <p>请注意，图像文件名不应包含空格。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 0.4 版更改: </span>添加了对以星号结尾的文件名的支持。</p>
@@ -484,7 +484,7 @@ True   True   True
 </section>
 <section id="footnotes">
 <h2>脚注<a class="headerlink" href="#footnotes" title="永久链接至标题">¶</a></h2>
-<p>对于脚注（ <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes">ref</a>），使用 <code class="docutils literal notranslate"><span class="pre">[#name]_</span></code> 来标记脚注位置，并在文档底部的“Footnotes”标题之后添加脚注正文，像</p>
+<p>对于脚注（ <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes">ref</a>），使用 <code class="docutils literal notranslate"><span class="pre">[#name]_</span></code> 来标记脚注位置，并在文档底部的“脚注”标题之后添加脚注正文，像</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Lorem ipsum <span class="s">[#f1]_</span> dolor sit amet ... <span class="s">[#f2]_</span>
 
 <span class="p">..</span> <span class="ow">rubric</span><span class="p">::</span> Footnotes
@@ -497,7 +497,7 @@ True   True   True
 </section>
 <section id="citations">
 <h2>引文<a class="headerlink" href="#citations" title="永久链接至标题">¶</a></h2>
-<p>支持标准 reST 引用（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations">ref</a>），其附加功能是 “global” ，即所有引用都可以从所有文件引用。像这样使用它们</p>
+<p>支持标准 reST 引用（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations">ref</a>），其附加功能是 “全局” ，即所有引用都可以从所有文件引用。像这样使用它们</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Lorem ipsum <span class="s">[Ref]_</span> dolor sit amet.
 
 <span class="p">..</span> <span class="nt">[Ref]</span> Book or article reference, URL or whatever.
@@ -516,7 +516,7 @@ True   True   True
              <span class="nc">:alt:</span> Warning!
 </pre></div>
 </div>
-<p>阅读 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions">reST reference for substitutions</a> 了解细节。</p>
+<p>阅读 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions">reST 替换的引用</a> 了解细节。</p>
 <p id="index-0">如果您想对所有文档使用某些替换，请将它们放入 <a class="reference internal" href="../configuration.html#confval-rst_prolog"><code class="xref std std-confval docutils literal notranslate"><span class="pre">rst_prolog</span></code></a> 或 <a class="reference internal" href="../configuration.html#confval-rst_epilog"><code class="xref std std-confval docutils literal notranslate"><span class="pre">rst_epilog</span></code></a> 或将它们放入一个单独的文件中，并将其包含在您想要使用它们的所有文档中，使用 <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">include</span></code> 指令。（一定要给 include 文件一个不同于其他源文件的文件扩展名，以避免 Sphinx 发现它是一个独立的文档。）</p>
 <p>Sphinx 定义了一些默认替换，参见 <a class="reference internal" href="roles.html#default-substitutions"><span class="std std-ref">替换</span></a>。</p>
 </section>
@@ -548,7 +548,7 @@ True   True   True
 <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Sphinx, documentation, builder&quot;</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>此外，Sphinx 会将元指令中指定的关键字添加到搜索索引中。因此，元元素的 <code class="docutils literal notranslate"><span class="pre">lang</span></code> 属性被考虑。例如，指令</p>
+<p>此外，Sphinx 会将元指令中指定的关键字添加到搜索索引中。因此，meta 元素的 <code class="docutils literal notranslate"><span class="pre">lang</span></code> 属性被考虑。例如，指令</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">meta</span><span class="p">::</span>
    <span class="nc">:keywords:</span> backup
    <span class="nc">:keywords lang=en:</span> pleasefindthiskey pleasefindthiskeytoo
@@ -557,7 +557,7 @@ True   True   True
 </div>
 <p>将以下单词添加到具有不同语言配置的构建的搜索索引中：</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pleasefindthiskey</span></code>, <code class="docutils literal notranslate"><span class="pre">pleasefindthiskeytoo</span></code> 到 <em>English</em> 构建；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pleasefindthiskey</span></code>、<code class="docutils literal notranslate"><span class="pre">pleasefindthiskeytoo</span></code> 到 <em>English</em> 构建；</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bittediesenkeyfinden</span></code> 到 <em>German</em> 构建；</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backup</span></code> 以所有语言构建。</p></li>
 </ul>

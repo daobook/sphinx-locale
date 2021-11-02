@@ -113,8 +113,8 @@
 <li><a class="reference internal" href="#glossary">术语</a></li>
 <li><a class="reference internal" href="#meta-information-markup">元信息标记</a></li>
 <li><a class="reference internal" href="#index-generating-markup">索引生成标记</a></li>
-<li><a class="reference internal" href="#including-content-based-on-tags">Including content based on tags</a></li>
-<li><a class="reference internal" href="#tables">Tables</a></li>
+<li><a class="reference internal" href="#including-content-based-on-tags">包含基于标记的内容</a></li>
+<li><a class="reference internal" href="#tables">表格</a></li>
 <li><a class="reference internal" href="#math">Math</a></li>
 <li><a class="reference internal" href="#grammar-production-displays">Grammar production displays</a></li>
 </ul>
@@ -154,28 +154,28 @@
             
   <section id="directives">
 <h1>指令<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h1>
-<p><a class="reference internal" href="basics.html#rst-directives"><span class="std std-ref">如前所述</span></a>，指令是显式标记的通用块。虽然 Docutils 提供了许多指令,但 Sphinx 提供了更多指令, 并使用指令作为主要的扩展机制之一。</p>
-<p>请参阅 <a class="reference internal" href="domains.html"><span class="doc">Domains</span></a> 了解域添加的角色。</p>
+<p><a class="reference internal" href="basics.html#rst-directives"><span class="std std-ref">正如之前讨论的</span></a>，指令是一个通用的显式标记块。虽然 Docutils 提供了一些指令，但 Sphinx 提供了更多的指令，并使用指令作为主要的插件机制之一。</p>
+<p>请参阅 <a class="reference internal" href="domains.html"><span class="doc">域</span></a> 了解域添加的角色。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>有关 Docutils 提供的指令的概述, 请参阅 <a class="reference internal" href="basics.html#rst-directives"><span class="std std-ref">reStructuredText 入门</span></a>。</p>
+<p>有关 Docutils 提供的指令的概述，请参阅 <a class="reference internal" href="basics.html#rst-directives"><span class="std std-ref">reStructuredText 入门</span></a>。</p>
 </div>
 <section id="table-of-contents">
 <span id="toctree-directive"></span><h2>目录<a class="headerlink" href="#table-of-contents" title="永久链接至标题">¶</a></h2>
-<p id="index-0">由于 reST 没有连接多个文档或将文档拆分为多个输出文件的工具,因此 Sphinx 使用自定义指令来添加文档所包含的单个文件之间的关系,以及目录。<code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令是中心元素。</p>
+<p id="index-0">由于 reST 没有设施将几个文件相互连接，或将文件分割成多个输出文件，Sphinx 使用一个自定义指令来添加文件所组成的单个文件之间的关系，以及目录。<code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令是核心元素。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p>可以使用 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#include">include</a> 指令将一个文件简单地”包含”在另一个文件中。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>要为当前文件（<cite>.rst</cite> 文件）创建目录，请使用标准的 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents">目录指令</a>。</p>
+<p>要为当前文件（.rst文件）创建目录，请使用标准的 reST <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents">contents 指令</a>。</p>
 </div>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-toctree">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">toctree::</span></span><a class="headerlink" href="#directive-toctree" title="永久链接至目标">¶</a></dt>
-<dd><p>该指令使用指令 body 中给出的文档的各个 TOC（包括“子 TOC 树”）在当前位置插入一个“TOC 树”。相对文档名称（不以斜杠开头）与指令所在的文档相关, 绝对名称相对于源目录。可以给出数字 <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> 选项以指示树的深度；默认情况下, 包括所有级别。<a class="footnote-reference brackets" href="#id6" id="id1">1</a></p>
-<p>“TOC 树”的表示在每种输出格式中都发生了变化。 输出多个文件（例如 HTML）的构建器将其视为超链接的集合。另一方面，输出单个文件（例如 LaTeX、手册页等）的构建器将其替换为 TOC 树上的文档内容。</p>
+<dd><p>这条指令在当前位置插入一个 “TOC 树”，使用指令 body 中给出的各个文件的 TOC（包括 “子 TOC 树”）。相对文档名称（不以斜杠开头）与指令所在的文档相关，绝对名称相对于源目录。可以给出数字 <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> 选项以指示树的深度；默认情况下，包括所有级别。<a class="footnote-reference brackets" href="#id6" id="id1">1</a></p>
+<p>“TOC 树” 的表示方法在每种输出格式中都有变化。输出多个文件（如 HTML）的构建器将其视为超链接的集合。另一方面，输出单个文件（如 LaTeX、man page 等）的构建器将其替换为 TOC 树上的文件内容。</p>
 <p>考虑这个例子（取自 Python docs 的库引用索引）</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:maxdepth:</span> 2
@@ -189,11 +189,11 @@
 </div>
 <p>这完成了两件事：</p>
 <ul class="simple">
-<li><p>插入所有这些文档的目录, 最大深度为2, 表示一个嵌套标题。这些文件中的 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令也被考虑在内。</p></li>
-<li><p>Sphinx 知道文档 <code class="docutils literal notranslate"><span class="pre">intro</span></code>，<code class="docutils literal notranslate"><span class="pre">strings</span></code> 等的相对顺序, 并且它知道它们是所显示文档的子项, 即库索引。根据这些信息, 它会生成 “next chapter”，“previous chapter” 和 “parent chapter” 链接。</p></li>
+<li><p>插入所有这些文档的目录，最大深度为2，表示一个嵌套标题。这些文件中的 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令也被考虑在内。</p></li>
+<li><p>Sphinx 知道文档 <code class="docutils literal notranslate"><span class="pre">intro</span></code>，<code class="docutils literal notranslate"><span class="pre">strings</span></code> 等的相对顺序，并且它知道它们是所显示文档的子项，即库索引。根据这些信息，它会生成 “next chapter”，“previous chapter” 和 “parent chapter” 链接。</p></li>
 </ul>
-<p><strong>Entries</strong></p>
-<p>第一个 <a class="reference internal" href="#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> 中的文档标题将自动从引用文档的标题中读取。如果这不是您想要的, 您可以使用与 reST 超链接类似的语法指定显式标题和目标（和 Sphinx 的 <a class="reference internal" href="roles.html#xref-syntax"><span class="std std-ref">cross-referencing syntax</span></a>）。这看起来像</p>
+<p>栏目简介</p>
+<p>第一个 <a class="reference internal" href="#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> 中的文档标题将自动从引用文档的标题中读取。如果这不是您想要的，您可以使用与 reST 超链接类似的语法指定显式标题和目标（和 Sphinx 的 <a class="reference internal" href="roles.html#xref-syntax"><span class="std std-ref">交叉引用语法</span></a>）。这看起来像</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
 
    intro
@@ -201,10 +201,10 @@
    datatypes
 </pre></div>
 </div>
-<p>上面的第二行将链接到 <code class="docutils literal notranslate"><span class="pre">strings</span></code> 文档, 但是将使用标题 “All about strings” 而不是 <code class="docutils literal notranslate"><span class="pre">strings</span></code> 文档的标题。</p>
+<p>上面的第二行将链接到 <code class="docutils literal notranslate"><span class="pre">strings</span></code> 文档，但是将使用标题 “All about strings” 而不是 <code class="docutils literal notranslate"><span class="pre">strings</span></code>。</p>
 <p>您还可以通过提供 HTTP URL 而不是文档名称来添加外部链接。</p>
 <p><strong>章节编号</strong></p>
-<p>如果你想在HTML输出中有节号, 请给 <strong>toplevel</strong> toctree 一个 <code class="docutils literal notranslate"><span class="pre">numbered</span></code> 选项。例如</p>
+<p>如果你想在 HTML 输出中有节号，请给 <strong>顶层</strong> toctree 一个 <code class="docutils literal notranslate"><span class="pre">numbered</span></code> 选项。例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:numbered:</span>
 
@@ -213,7 +213,7 @@
 </pre></div>
 </div>
 <p>编号然后从 <code class="docutils literal notranslate"><span class="pre">foo</span></code> 的标题开始。子 toctrees 是自动编号的（不要给那些 <code class="docutils literal notranslate"><span class="pre">numbered</span></code> 标志）。</p>
-<p>通过将深度作为 <code class="docutils literal notranslate"><span class="pre">numbered</span></code> 的数字参数, 也可以编号到特定深度。</p>
+<p>通过将深度作为 <code class="docutils literal notranslate"><span class="pre">numbered</span></code> 的数字参数，也可以编号到特定深度。</p>
 <p>其他选项</p>
 <p>你可以使用 <code class="docutils literal notranslate"><span class="pre">caption</span></code> 选项提供一个 toctree 标题，你可以使用 <code class="docutils literal notranslate"><span class="pre">name</span></code> 选项来提供可以通过使用引用的隐式目标名 <a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a></p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
@@ -223,7 +223,7 @@
    foo
 </pre></div>
 </div>
-<p>如果只想显示树中文档的标题, 而不是同一级别的其他标题, 则可以使用 <code class="docutils literal notranslate"><span class="pre">titlesonly</span></code> 选项</p>
+<p>如果只想显示树中文档的标题，而不是同一级别的其他标题，则可以使用 <code class="docutils literal notranslate"><span class="pre">titlesonly</span></code> 选项</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:titlesonly:</span>
 
@@ -231,7 +231,7 @@
    bar
 </pre></div>
 </div>
-<p>你可以在 toctree 指令中使用 “globbing”，给出 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 标志选项。然后将所有条目与可用文档列表进行匹配, 并按字母顺序将匹配项插入到列表中。例:</p>
+<p>你可以在 toctree 指令中使用 “globbing”，给出 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 标志选项。然后将所有条目与可用文档列表进行匹配，并按字母顺序将匹配项插入到列表中。例:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:glob:</span>
 
@@ -240,9 +240,9 @@
    *
 </pre></div>
 </div>
-<p>这首先包括所有名称以 <code class="docutils literal notranslate"><span class="pre">intro</span></code> 开头的文件, 然后是 <code class="docutils literal notranslate"><span class="pre">recipe</span></code> 文件夹中的所有文件, 然后是所有剩余的文件（当然包含该指令的文件除外）。<a class="footnote-reference brackets" href="#id7" id="id2">2</a></p>
-<p>特殊条目名称 <code class="docutils literal notranslate"><span class="pre">self</span></code> 代表包含toctree指令的文档。如果要从 toctree 生成”站点地图”, 这非常有用。</p>
-<p>您可以使用 <code class="docutils literal notranslate"><span class="pre">reversed</span></code> 标志选项来反转列表中条目的顺序。当使用 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 标志选项来反转文件的顺序时, 这非常有用。例</p>
+<p>这首先包括所有名称以 <code class="docutils literal notranslate"><span class="pre">intro</span></code> 开头的文件，然后是 <code class="docutils literal notranslate"><span class="pre">recipe</span></code> 文件夹中的所有文件，然后是所有剩余的文件（当然包含该指令的文件除外）。<a class="footnote-reference brackets" href="#id7" id="id2">2</a></p>
+<p>特殊条目名称 <code class="docutils literal notranslate"><span class="pre">self</span></code> 代表包含toctree指令的文档。如果要从 toctree 生成”站点地图”，这非常有用。</p>
+<p>您可以使用 <code class="docutils literal notranslate"><span class="pre">reversed</span></code> 标志选项来反转列表中条目的顺序。当使用 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 标志选项来反转文件的顺序时，这非常有用。例</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:glob:</span>
    <span class="nc">:reversed:</span>
@@ -258,7 +258,7 @@
    doc_2
 </pre></div>
 </div>
-<p>这仍将通知 Sphinx 文档层次结构, 但不会在指令的位置插入文档中的链接——如果您打算自己，以不同的样式或 HTML 侧边栏插入这些链接, 这是有意义的。</p>
+<p>这仍将通知 Sphinx 文档层次结构，但不会在指令的位置插入文档中的链接——如果您打算自己，以不同的样式或 HTML 侧边栏插入这些链接，这是有意义的。</p>
 <p>如果您只想拥有一个顶级 toctree 并隐藏所有其他较低级别的 toctree，则可以将 <code class="docutils literal notranslate"><span class="pre">includehidden</span></code> 选项添加到顶级 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 条目</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:includehidden:</span>
@@ -268,9 +268,9 @@
 </pre></div>
 </div>
 <p>然后可以通过 <code class="docutils literal notranslate"><span class="pre">hidden</span></code> 选项消除所有其他 toctree 条目。</p>
-<p>最后，<a class="reference internal" href="../../glossary.html#term-source-directory"><span class="xref std std-term">源目录</span></a> （或子目录）中的所有文档必须出现在某些 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令中；如果 Sphinx 找到未包含的文件, 它将发出警告, 因为这意味着无法通过标准导航访问此文件。</p>
+<p>最后，<a class="reference internal" href="../../glossary.html#term-source-directory"><span class="xref std std-term">源目录</span></a> （或子目录）中的所有文档必须出现在某些 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令中；如果 Sphinx 找到未包含的文件，它将发出警告，因为这意味着无法通过标准导航访问此文件。</p>
 <p>使用 <a class="reference internal" href="../configuration.html#confval-exclude_patterns"><code class="xref std std-confval docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a> 可以完全排除文档或目录。使用 <a class="reference internal" href="field-lists.html#metadata"><span class="std std-ref">“orphan” 元数据</span></a> 来构建文档，但通知 Sphinx 它是无法通过 toctree 访问的。</p>
-<p>“根文件” （由 <a class="reference internal" href="../configuration.html#confval-root_doc"><code class="xref std std-confval docutils literal notranslate"><span class="pre">root_doc</span></code></a> 选择）是 TOC 树层次结构的 “root”。如果你没有给出 <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> 选项, 它可以用作文档的主页面, 也可以用作 “完整的目录”。</p>
+<p>“根文件” （由 <a class="reference internal" href="../configuration.html#confval-root_doc"><code class="xref std std-confval docutils literal notranslate"><span class="pre">root_doc</span></code></a> 选择）是 TOC 树层次结构的 “root”。如果你没有给出 <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> 选项，它可以用作文档的主页面，也可以用作 “完整的目录”。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 0.3 版更改: </span>添加了 “globbing” 选项。</p>
 </div>
@@ -297,20 +297,20 @@
 <p>特殊文档名称（以及为它们生成的页面）是：</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">genindex</span></code>, <code class="docutils literal notranslate"><span class="pre">modindex</span></code>, <code class="docutils literal notranslate"><span class="pre">search</span></code></p>
-<p>它们分别用于通用索引, Python 模块索引和搜索页面。</p>
-<p>通用索引用模块中的项填充, 所有索引生成 <a class="reference internal" href="domains.html#basic-domain-markup"><span class="std std-ref">object descriptions</span></a>，以及来自 <a class="reference internal" href="#directive-index" title="index directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a> 指令。</p>
+<p>它们分别用于通用索引，Python 模块索引和搜索页面。</p>
+<p>通用索引用模块中的项填充，所有索引生成 <a class="reference internal" href="domains.html#basic-domain-markup"><span class="std std-ref">object descriptions</span></a>，以及来自 <a class="reference internal" href="#directive-index" title="index directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a> 指令。</p>
 <p>Python 模块索引包含一个条目 <a class="reference internal" href="domains.html#directive-py-module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a> 指令。</p>
-<p>搜索页面包含一个表单, 该表单使用生成的 JSON 搜索索引和 JavaScript 对搜索词的生成文档进行全文搜索；它应该适用于支持现代 JavaScript 的每个主流浏览器。</p>
+<p>搜索页面包含一个表单，该表单使用生成的 JSON 搜索索引和 JavaScript 对搜索词的生成文档进行全文搜索；它应该适用于支持现代 JavaScript 的每个主流浏览器。</p>
 </li>
 <li><p>以 <code class="docutils literal notranslate"><span class="pre">_</span></code> 开头的每个名字</p>
-<p>虽然 Sphinx 目前只使用了很少这样的名称, 但您不应该创建包含此类名称的文档或包含文档的目录。（使用 <code class="docutils literal notranslate"><span class="pre">_</span></code> 作为自定义模板目录的前缀是可以的。）</p>
+<p>虽然 Sphinx 目前只使用了很少这样的名称，但您不应该创建包含此类名称的文档或包含文档的目录。（使用 <code class="docutils literal notranslate"><span class="pre">_</span></code> 作为自定义模板目录的前缀是可以的。）</p>
 </li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>小心文件名中的异常字符。某些格式可能会以意外的方式解释这些字符：</p>
 <ul class="simple">
-<li><p>对于基于 HTML 的格式, 不要使用冒号 <code class="docutils literal notranslate"><span class="pre">:</span></code>。与其他部分的链接可能无效。</p></li>
+<li><p>对于基于 HTML 的格式，不要使用冒号 <code class="docutils literal notranslate"><span class="pre">:</span></code>。与其他部分的链接可能无效。</p></li>
 <li><p>不要使用加号 <code class="docutils literal notranslate"><span class="pre">+</span></code> 作为 ePub 格式。可能找不到某些资源。</p></li>
 </ul>
 </div>
@@ -318,11 +318,11 @@
 </section>
 <section id="paragraph-level-markup">
 <h2>段落级标记<a class="headerlink" href="#paragraph-level-markup" title="永久链接至标题">¶</a></h2>
-<p id="index-1">这些指令创建短段落, 可以在内部信息单元和普通文本中使用。</p>
+<p id="index-1">这些指令创建短段落，可以在内部信息单元和普通文本中使用。</p>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-note">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">note::</span></span><a class="headerlink" href="#directive-note" title="永久链接至目标">¶</a></dt>
-<dd><p>关于 API 的一个特别重要的信息, 用户在使用该注释所涉及的任何 API 时应该注意这些信息。指令的内容应以完整的句子写成, 并包括所有适当的标点符号。</p>
+<dd><p>关于 API 的一个特别重要的信息，用户在使用该注释所涉及的任何 API 时应该注意这些信息。指令的内容应以完整的句子写成，并包括所有适当的标点符号。</p>
 <p>例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
 
@@ -334,26 +334,26 @@
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-warning">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">warning::</span></span><a class="headerlink" href="#directive-warning" title="永久链接至目标">¶</a></dt>
-<dd><p>关于 API 的一些重要信息, 用户在使用警告所涉及的任何API时都应该非常清楚。指令的内容应以完整的句子写成, 并包括所有适当的标点符号。这不同于 <a class="reference internal" href="#directive-note" title="note directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">note</span></code></a>，因为建议使用 <a class="reference internal" href="#directive-note" title="note directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">note</span></code></a> 以获取有关安全性的信息。</p>
+<dd><p>关于 API 的一些重要信息，用户在使用警告所涉及的任何API时都应该非常清楚。指令的内容应以完整的句子写成，并包括所有适当的标点符号。这不同于 <a class="reference internal" href="#directive-note" title="note directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">note</span></code></a>，因为建议使用 <a class="reference internal" href="#directive-note" title="note directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">note</span></code></a> 以获取有关安全性的信息。</p>
 </dd></dl>
 
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-versionadded">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">versionadded::</span></span><span class="sig-prename descclassname"> <span class="pre">version</span></span><a class="headerlink" href="#directive-versionadded" title="永久链接至目标">¶</a></dt>
-<dd><p>该指令记录了将所描述的功能添加到库或 C API 的项目版本。当这适用于整个模块时, 应该在任何散文之前将其放置在模块部分的顶部。</p>
+<dd><p>该指令记录了将所描述的功能添加到库或 C API 的项目版本。当这适用于整个模块时，应该在任何散文之前将其放置在模块部分的顶部。</p>
 <p>第一个参数必须给定，是有关的版本；你可以添加第二个参数，包括对变更的简要解释。</p>
 <p>例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">versionadded</span><span class="p">::</span> 2.5
    The <span class="ge">*spam*</span> parameter.
 </pre></div>
 </div>
-<p>请注意, 指令头和说明之间必须没有空行；这是为了使这些块在标记中在视觉上连续。</p>
+<p>请注意，指令头和说明之间必须没有空行；这是为了使这些块在标记中在视觉上连续。</p>
 </dd></dl>
 
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-versionchanged">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">versionchanged::</span></span><span class="sig-prename descclassname"> <span class="pre">version</span></span><a class="headerlink" href="#directive-versionchanged" title="永久链接至目标">¶</a></dt>
-<dd><p>类似于 <a class="reference internal" href="#directive-versionadded" title="versionadded directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">versionadded</span></code></a>，但以某种方式描述命名特征中的更改时间和内容（新参数, 更改的副作用等）。</p>
+<dd><p>类似于 <a class="reference internal" href="#directive-versionadded" title="versionadded directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">versionadded</span></code></a>，但以某种方式描述命名特征中的更改时间和内容（新参数，更改的副作用等）。</p>
 </dd></dl>
 
 <dl class="rst directive">
@@ -370,7 +370,7 @@
 <dt class="sig sig-object rst" id="directive-seealso">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">seealso::</span></span><a class="headerlink" href="#directive-seealso" title="永久链接至目标">¶</a></dt>
 <dd><p>许多部分包括对模块文档或外部文档的引用列表。这些列表使用 <a class="reference internal" href="#directive-seealso" title="seealso directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">seealso</span></code></a> 指令创建。</p>
-<p><a class="reference internal" href="#directive-seealso" title="seealso directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">seealso</span></code></a> 指令通常放在任何子部分之前的部分中。对于 HTML 输出, 它显示为从文本的主流中框出来。</p>
+<p><a class="reference internal" href="#directive-seealso" title="seealso directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">seealso</span></code></a> 指令通常放在任何子部分之前的部分中。对于 HTML 输出，它显示为从文本的主流中框出来。</p>
 <p>以下内容 <a class="reference internal" href="#directive-seealso" title="seealso directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">seealso</span></code></a> 指令应该是 reST 定义列表。例</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">seealso</span><span class="p">::</span>
 
@@ -393,10 +393,10 @@
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-rubric">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">rubric::</span></span><span class="sig-prename descclassname"> <span class="pre">title</span></span><a class="headerlink" href="#directive-rubric" title="永久链接至目标">¶</a></dt>
-<dd><p>该指令创建一个段落标题, 不用于创建目录节点。</p>
+<dd><p>该指令创建一个段落标题，不用于创建目录节点。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>如果标题的 <em>title</em> 是 “脚注”（或所选语言的等价物），则 LaTeX 编写器会忽略此标题, 因为假定它仅包含脚注定义, 因此会创建一个空标题。</p>
+<p>如果标题的 <em>title</em> 是 “脚注”（或所选语言的等价物），则 LaTeX 编写器会忽略此标题，因为假定它仅包含脚注定义，因此会创建一个空标题。</p>
 </div>
 </dd></dl>
 
@@ -416,7 +416,7 @@
 <dt class="sig sig-object rst" id="directive-hlist">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">hlist::</span></span><a class="headerlink" href="#directive-hlist" title="永久链接至目标">¶</a></dt>
 <dd><p>该指令必须包含项目符号列表。它会通过水平分布多个项目或减少项目间距来将其转换为更紧凑的列表，具体取决于构建器。</p>
-<p>对于支持水平分布的构建器, 有一个 <code class="docutils literal notranslate"><span class="pre">columns</span></code> 选项, 用于指定列数；它默认为 2。示例</p>
+<p>对于支持水平分布的构建器，有一个 <code class="docutils literal notranslate"><span class="pre">columns</span></code> 选项，用于指定列数；它默认为 2。示例</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">hlist</span><span class="p">::</span>
    <span class="nc">:columns:</span> 3
 
@@ -442,21 +442,21 @@
 <li><p>使用 <a class="reference internal" href="#directive-code-block" title="code-block directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code-block</span></code></a> 指令</p></li>
 <li><p>并使用 <a class="reference internal" href="#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令。</p></li>
 </ul>
-<p>Doctest 块只能用于显示交互式 Python 会话, 而其余三个可用于其他语言。在这三个文件中, 当整个文档或至少大部分文档使用具有相同语法的代码块并且应该以相同的方式设置样式时, 文字块是有用的。另一方面, 当你想要对每个块的样式进行更精细的控制, 或者当你有一个包含使用多种不同语法的代码块的文档时, 第一个 <a class="reference internal" href="#directive-code-block" title="code-block directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code-block</span></code></a> 指令更有意义。最后, <a class="reference internal" href="#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令对于在文档中包含整个代码文件非常有用。</p>
-<p>在所有情况下, 语法高亮由 <a class="reference external" href="https://pygments.org">Pygments</a> 提供。使用文字块时，使用源文件中的任何 [<a class="reference internal" href="#directive-highlight" title="highlight directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">highlight</span></code></a> 指令进行配置。当遇到 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令时, 它会被使用, 直到遇到下一个 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令。如果文件中没有 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令, 则使用全局突出显示语言。这默认为 <code class="docutils literal notranslate"><span class="pre">python</span></code>，但可以使用 <a class="reference internal" href="../configuration.html#confval-highlight_language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">highlight_language</span></code></a> 配置值进行配置。支持以下值：</p>
+<p>Doctest 块只能用于显示交互式 Python 会话，而其余三个可用于其他语言。在这三个文件中，当整个文档或至少大部分文档使用具有相同语法的代码块并且应该以相同的方式设置样式时，文字块是有用的。另一方面，当你想要对每个块的样式进行更精细的控制，或者当你有一个包含使用多种不同语法的代码块的文档时，第一个 <a class="reference internal" href="#directive-code-block" title="code-block directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code-block</span></code></a> 指令更有意义。最后，<a class="reference internal" href="#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令对于在文档中包含整个代码文件非常有用。</p>
+<p>在所有情况下，语法高亮由 <a class="reference external" href="https://pygments.org">Pygments</a> 提供。使用文字块时，使用源文件中的任何 [<a class="reference internal" href="#directive-highlight" title="highlight directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">highlight</span></code></a> 指令进行配置。当遇到 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令时，它会被使用，直到遇到下一个 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令。如果文件中没有 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令，则使用全局突出显示语言。这默认为 <code class="docutils literal notranslate"><span class="pre">python</span></code>，但可以使用 <a class="reference internal" href="../configuration.html#confval-highlight_language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">highlight_language</span></code></a> 配置值进行配置。支持以下值：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">none</span></code> （没有突出显示）</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> （类似于 <code class="docutils literal notranslate"><span class="pre">python3</span></code> 但是回退到 <code class="docutils literal notranslate"><span class="pre">none</span></code> 没有警告突出显示失败；默认情况下 <a class="reference internal" href="../configuration.html#confval-highlight_language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">highlight_language</span></code></a> 未设置）</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guess</span></code> （让 Pygments 根据内容猜测词法分析器, 只适用于某些识别良好的语言)）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guess</span></code> （让 Pygments 根据内容猜测词法分析器，只适用于某些识别良好的语言)）</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rest</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></li>
-<li><p>… 以及其他 <a class="reference external" href="https://pygments.org/docs/lexers">lexer alias that Pygments supports</a></p></li>
+<li><p>… 以及其他 <a class="reference external" href="https://pygments.org/docs/lexers">Pygments 支持的 lexer 别名</a></p></li>
 </ul>
-<p>如果使用所选语言突出显示失败（即 Pygments 发出 “错误” 标记）, 则不会以任何方式突出显示该块。</p>
+<p>如果使用所选语言突出显示失败（即 Pygments 发出 “错误” 标记），则不会以任何方式突出显示该块。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>支持的词法分类别名列表与 Pygment 版本相关联。如果要确保一致突出显示, 则应修复 Pygments 的版本。</p>
+<p>支持的词法分类别名列表与 Pygment 版本相关联。如果要确保一致突出显示，则应修复 Pygments 的版本。</p>
 </div>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-highlight">
@@ -499,7 +499,7 @@
    Some Ruby code.
 </pre></div>
 </div>
-<p>该指令的别名 <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">sourcecode</span></code> 也可以。该指令将语言名称作为参数。它可以是 Pygments 支持的任何词法分析别名。如果没有给出, 将使用  <a class="reference internal" href="#directive-highlight" title="highlight directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">highlight</span></code></a> 指令的设置。如果没有设置, 将使用 <a class="reference internal" href="../configuration.html#confval-highlight_language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">highlight_language</span></code></a>。</p>
+<p>该指令的别名 <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">sourcecode</span></code> 也可以。该指令将语言名称作为参数。它可以是 <a class="reference external" href="https://pygments.org/docs/lexers/">Pygments 支持的任何词法分析别名</a> 。如果没有给出，将使用  <a class="reference internal" href="#directive-highlight" title="highlight directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">highlight</span></code></a> 指令的设置。如果没有设置，将使用 <a class="reference internal" href="../configuration.html#confval-highlight_language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">highlight_language</span></code></a>。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 2.0 版更改: </span><code class="docutils literal notranslate"><span class="pre">language</span></code> 参数变成可选。</p>
 </div>
@@ -534,7 +534,7 @@
 <dl class="rst directive:option">
 <dt class="sig sig-object rst" id="directive-option-code-block-emphasize-lines">
 <span id="directive:option-code-block-emphasize-lines"></span><span class="sig-name descname"><span class="pre">:emphasize-lines:</span></span><em class="property"> <span class="pre">line</span> <span class="pre">numbers</span></em><em class="property"> <span class="pre">(comma</span> <span class="pre">separated</span> <span class="pre">numbers)</span></em><a class="headerlink" href="#directive-option-code-block-emphasize-lines" title="永久链接至目标">¶</a></dt>
-<dd><p>Emphasize particular lines of the code block:</p>
+<dd><p>强调代码块中的特定行</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
    <span class="nc">:emphasize-lines:</span> 3,5
 
@@ -549,14 +549,14 @@
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.6.6 版更改: </span>LaTeX supports the <code class="docutils literal notranslate"><span class="pre">emphasize-lines</span></code> option.</p>
+<p><span class="versionmodified changed">在 1.6.6 版更改: </span>LaTeX 支持 <code class="docutils literal notranslate"><span class="pre">emphasize-lines</span></code> 选项。</p>
 </div>
 </dd></dl>
 
 <dl class="rst directive:option">
 <dt class="sig sig-object rst" id="directive-option-code-block-caption">
 <span id="directive:option-code-block-caption"></span><span class="sig-name descname"><span class="pre">:caption:</span></span><em class="property"> <span class="pre">caption</span> <span class="pre">of</span> <span class="pre">code</span> <span class="pre">block</span></em><em class="property"> <span class="pre">(text)</span></em><a class="headerlink" href="#directive-option-code-block-caption" title="永久链接至目标">¶</a></dt>
-<dd><p>Set a caption to the code block.</p>
+<dd><p>为代码块设置一个标题。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
@@ -565,8 +565,7 @@
 <dl class="rst directive:option">
 <dt class="sig sig-object rst" id="directive-option-code-block-name">
 <span id="directive:option-code-block-name"></span><span class="sig-name descname"><span class="pre">:name:</span></span><em class="property"> <span class="pre">a</span> <span class="pre">label</span> <span class="pre">for</span> <span class="pre">hyperlink</span></em><em class="property"> <span class="pre">(text)</span></em><a class="headerlink" href="#directive-option-code-block-name" title="永久链接至目标">¶</a></dt>
-<dd><p>Define implicit target name that can be referenced by using
-<a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a>.  For example:</p>
+<dd><p>定义隐含的目标名称，可以通过使用 <a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a> 进行引用。例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
    <span class="nc">:caption:</span> this.py
    <span class="nc">:name:</span> this-py
@@ -574,17 +573,11 @@
    print &#39;Explicit is better than implicit.&#39;
 </pre></div>
 </div>
-<p>In order to cross-reference a code-block using either the
-<a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a> or the <a class="reference internal" href="roles.html#role-numref" title="numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code></a> role, it is necessary
-that both <strong>name</strong> and <strong>caption</strong> be defined. The
-argument of <strong>name</strong> can then be given to <a class="reference internal" href="roles.html#role-numref" title="numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code></a>
-to generate the cross-reference. Example:</p>
+<p>为了使用 <a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a> 或 <a class="reference internal" href="roles.html#role-numref" title="numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code></a> 角色来交叉引用一个代码块，有必要同时定义 <strong>name</strong> 和 <strong>caption</strong>。然后 <strong>name</strong> 的参数可以交给 <a class="reference internal" href="roles.html#role-numref" title="numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code></a> 来生成交叉引用。例如 ::”</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="na">:numref:</span><span class="nv">`this-py`</span> for an example.
 </pre></div>
 </div>
-<p>When using <a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a>, it is possible to generate a cross-reference
-with only <strong>name</strong> defined, provided an explicit title is
-given. Example:</p>
+<p>当使用 <a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a> 时，有可能生成一个只定义了 <strong>name</strong> 的交叉引用，只要给出一个明确的标题。例如 ::”</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="na">:ref:</span><span class="nv">`this code snippet &lt;this-py&gt;`</span> for an example.
 </pre></div>
 </div>
@@ -596,9 +589,7 @@ given. Example:</p>
 <dl class="rst directive:option">
 <dt class="sig sig-object rst" id="directive-option-code-block-dedent">
 <span id="directive:option-code-block-dedent"></span><span class="sig-name descname"><span class="pre">:dedent:</span></span><em class="property"> <span class="pre">number</span></em><em class="property"> <span class="pre">(number</span> <span class="pre">or</span> <span class="pre">no</span> <span class="pre">value)</span></em><a class="headerlink" href="#directive-option-code-block-dedent" title="永久链接至目标">¶</a></dt>
-<dd><p>Strip indentation characters from the code block.  When number given,
-leading N characters are removed.  When no argument given, leading spaces
-are removed via <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.dedent" title="(在 Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">textwrap.dedent()</span></code></a>.  For example:</p>
+<dd><p>从代码块中剥离缩进字符。当给出数字时，前面的 N 个字符被删除。当没有给出参数时，通过 <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.dedent" title="(在 Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">textwrap.dedent()</span></code></a> 删除前面的空格。例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> ruby
    <span class="nc">:dedent:</span> 4
 
@@ -609,7 +600,7 @@ are removed via <a class="reference external" href="https://docs.python.org/3/li
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版更改: </span>Support automatic dedent.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>支持自动缩进。</p>
 </div>
 </dd></dl>
 
@@ -627,74 +618,42 @@ are removed via <a class="reference external" href="https://docs.python.org/3/li
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-literalinclude">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">literalinclude::</span></span><span class="sig-prename descclassname"> <span class="pre">filename</span></span><a class="headerlink" href="#directive-literalinclude" title="永久链接至目标">¶</a></dt>
-<dd><p>Longer displays of verbatim text may be included by storing the example text
-in an external file containing only plain text.  The file may be included
-using the <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> directive. <a class="footnote-reference brackets" href="#id8" id="id4">3</a> For example, to include the
-Python source file <code class="file docutils literal notranslate"><span class="pre">example.py</span></code>, use:</p>
+<dd><p>较长的逐字文本显示可以通过将示例文本存储在一个只包含纯文本的外部文件中来包含。该文件可以使用 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> 指令来包含。<a class="footnote-reference brackets" href="#id8" id="id4">3</a> 例如，要包括 Python 源文件 <code class="file docutils literal notranslate"><span class="pre">example.py</span></code>，使用</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> example.py
 </pre></div>
 </div>
-<p>The file name is usually relative to the current file’s path.  However, if
-it is absolute (starting with <code class="docutils literal notranslate"><span class="pre">/</span></code>), it is relative to the top source
-directory.</p>
+<p>文件名通常是相对于当前文件的路径。然而，如果它是绝对的（以 <code class="docutils literal notranslate"><span class="pre">/</span></code> 开头），它是相对于最高源目录的。</p>
 <p>其他选项</p>
-<p>Like <a class="reference internal" href="#directive-code-block" title="code-block directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code-block</span></code></a>, the directive supports the <code class="docutils literal notranslate"><span class="pre">linenos</span></code> flag
-option to switch on line numbers, the <code class="docutils literal notranslate"><span class="pre">lineno-start</span></code> option to select the
-first line number, the <code class="docutils literal notranslate"><span class="pre">emphasize-lines</span></code> option to emphasize particular
-lines, the <code class="docutils literal notranslate"><span class="pre">name</span></code> option to provide an implicit target name, the
-<code class="docutils literal notranslate"><span class="pre">dedent</span></code> option to strip indentation characters for the code block, and a
-<code class="docutils literal notranslate"><span class="pre">language</span></code> option to select a language different from the current file’s
-standard language. In addition, it supports the <code class="docutils literal notranslate"><span class="pre">caption</span></code> option; however,
-this can be provided with no argument to use the filename as the caption.
-Example with options:</p>
+<p>与 <a class="reference internal" href="#directive-code-block" title="code-block directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code-block</span></code></a> 一样，该指令支持 <code class="docutils literal notranslate"><span class="pre">linenos</span></code> 标志选项以切换到行号，<code class="docutils literal notranslate"><span class="pre">lineno-start</span></code> 选项以选择第一行号，<code class="docutils literal notranslate"><span class="pre">emphasize-lines</span></code> 选项以强调特定行，<code class="docutils literal notranslate"><span class="pre">name</span></code> 选项以提供隐含的目标名称，<code class="docutils literal notranslate"><span class="pre">dedent</span></code> 选项以剥离代码块的缩进字符，以及 <code class="docutils literal notranslate"><span class="pre">language</span></code> 选项以选择不同于当前文件的标准语言。此外，它还支持 <code class="docutils literal notranslate"><span class="pre">caption</span></code> 选项；但是，可以不提供参数，使用文件名作为标题。带有选项的例子</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> example.rb
    <span class="nc">:language:</span> ruby
    <span class="nc">:emphasize-lines:</span> 12,15-18
    <span class="nc">:linenos:</span>
 </pre></div>
 </div>
-<p>Tabs in the input are expanded if you give a <code class="docutils literal notranslate"><span class="pre">tab-width</span></code> option with the
-desired tab width.</p>
-<p>Include files are assumed to be encoded in the <a class="reference internal" href="../configuration.html#confval-source_encoding"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_encoding</span></code></a>.
-If the file has a different encoding, you can specify it with the
-<code class="docutils literal notranslate"><span class="pre">encoding</span></code> option:</p>
+<p>如果你给出一个 <code class="docutils literal notranslate"><span class="pre">tab-width</span></code> 选项，并给出所需的标记宽度，那么输入中的标记将被展开。</p>
+<p>包含文件被假定为以 <a class="reference internal" href="../configuration.html#confval-source_encoding"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_encoding</span></code></a> 的方式编码。如果文件有不同的编码，你可以用 <code class="docutils literal notranslate"><span class="pre">encoding</span></code> 选项来指定它</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> example.py
    <span class="nc">:encoding:</span> latin-1
 </pre></div>
 </div>
-<p>The directive also supports including only parts of the file.  If it is a
-Python module, you can select a class, function or method to include using
-the <code class="docutils literal notranslate"><span class="pre">pyobject</span></code> option:</p>
+<p>该指令还支持只包括文件的一部分。如果它是一个 Python 模块，你可以使用 <code class="docutils literal notranslate"><span class="pre">pyobject</span></code> 选项选择要包括的类、函数或方法</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> example.py
    <span class="nc">:pyobject:</span> Timer.start
 </pre></div>
 </div>
-<p>This would only include the code lines belonging to the <code class="docutils literal notranslate"><span class="pre">start()</span></code> method
-in the <code class="docutils literal notranslate"><span class="pre">Timer</span></code> class within the file.</p>
-<p>Alternately, you can specify exactly which lines to include by giving a
-<code class="docutils literal notranslate"><span class="pre">lines</span></code> option:</p>
+<p>这将只包括文件中属于 <code class="docutils literal notranslate"><span class="pre">Timer</span></code> 类中 <code class="docutils literal notranslate"><span class="pre">start()</span></code> 方法的代码行。</p>
+<p>另外，你可以通过给一个 <code class="docutils literal notranslate"><span class="pre">lines</span></code> 选项来准确指定要包括哪些行</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> example.py
    <span class="nc">:lines:</span> 1,3,5-10,20-
 </pre></div>
 </div>
-<p>This includes the lines 1, 3, 5 to 10 and lines 20 to the last line.</p>
-<p>Another way to control which part of the file is included is to use the
-<code class="docutils literal notranslate"><span class="pre">start-after</span></code> and <code class="docutils literal notranslate"><span class="pre">end-before</span></code> options (or only one of them).  If
-<code class="docutils literal notranslate"><span class="pre">start-after</span></code> is given as a string option, only lines that follow the
-first line containing that string are included.  If <code class="docutils literal notranslate"><span class="pre">end-before</span></code> is given
-as a string option, only lines that precede the first lines containing that
-string are included. The <code class="docutils literal notranslate"><span class="pre">start-at</span></code> and <code class="docutils literal notranslate"><span class="pre">end-at</span></code> options behave in a
-similar way, but the lines containing the matched string are included.</p>
-<p><code class="docutils literal notranslate"><span class="pre">start-after</span></code>/<code class="docutils literal notranslate"><span class="pre">start-at</span></code> and <code class="docutils literal notranslate"><span class="pre">end-before</span></code>/<code class="docutils literal notranslate"><span class="pre">end-at</span></code> can have same string.
-<code class="docutils literal notranslate"><span class="pre">start-after</span></code>/<code class="docutils literal notranslate"><span class="pre">start-at</span></code> filter lines before the line that contains
-option string (<code class="docutils literal notranslate"><span class="pre">start-at</span></code> will keep the line). Then <code class="docutils literal notranslate"><span class="pre">end-before</span></code>/<code class="docutils literal notranslate"><span class="pre">end-at</span></code>
-filter lines after the line that contains option string (<code class="docutils literal notranslate"><span class="pre">end-at</span></code> will keep
-the line and <code class="docutils literal notranslate"><span class="pre">end-before</span></code> skip the first line).</p>
+<p>这包括第 1、3、5 至 10 行和第 20 至最后一行。</p>
+<p>另一种控制文件的哪一部分被包含的方法是使用 <code class="docutils literal notranslate"><span class="pre">start-after</span></code> 和 <code class="docutils literal notranslate"><span class="pre">end-before</span></code> 选项（或只使用其中一个）。如果 <code class="docutils literal notranslate"><span class="pre">start-after</span></code> 是一个字符串选项，只有包含该字符串的第一行之后的行被包括在内。如果 <code class="docutils literal notranslate"><span class="pre">end-before</span></code> 是一个字符串选项，则只包括包含该字符串的第一行之前的行。<code class="docutils literal notranslate"><span class="pre">start-at</span></code> 和 <code class="docutils literal notranslate"><span class="pre">end-at</span></code> 选项的行为类似，但包含匹配的字符串的行被包括在内。</p>
+<p><code class="docutils literal notranslate"><span class="pre">start-after</span></code>/<code class="docutils literal notranslate"><span class="pre">start-at</span></code> 和 <code class="docutils literal notranslate"><span class="pre">end-before</span></code>/<code class="docutils literal notranslate"><span class="pre">end-at</span></code> 可以有同一个字符串。<code class="docutils literal notranslate"><span class="pre">start-after</span></code>/<code class="docutils literal notranslate"><span class="pre">start-at</span></code> 过滤包含选项字符串的行之前的行（<code class="docutils literal notranslate"><span class="pre">start-at</span></code> 将保留该行）。然后 <code class="docutils literal notranslate"><span class="pre">end-before</span></code>/<code class="docutils literal notranslate"><span class="pre">end-at</span></code> 过滤包含选项字符串的行之后的行（<code class="docutils literal notranslate"><span class="pre">end-at</span></code> 将保留该行，<code class="docutils literal notranslate"><span class="pre">end-before</span></code> 跳过第一行）”</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>If you want to select only <code class="docutils literal notranslate"><span class="pre">[second-section]</span></code> of ini file like the
-following, you can use <code class="docutils literal notranslate"><span class="pre">:start-at:</span> <span class="pre">[second-section]</span></code> and
-<code class="docutils literal notranslate"><span class="pre">:end-before:</span> <span class="pre">[third-section]</span></code>:</p>
+<p>如果你想只选择 ini 文件的 <code class="docutils literal notranslate"><span class="pre">[second-section]</span></code>，像下面这样，你可以使用 <code class="docutils literal notranslate"><span class="pre">:start-at:</span> <span class="pre">[second-section]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">:end-before:</span> <span class="pre">[third-section]</span></code> ：</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[first-section]</span>
 
 <span class="na">var_in_first</span><span class="o">=</span><span class="s">true</span>
@@ -708,9 +667,7 @@ following, you can use <code class="docutils literal notranslate"><span class="p
 <span class="na">var_in_third</span><span class="o">=</span><span class="s">true</span>
 </pre></div>
 </div>
-<p>Useful cases of these option is working with tag comments.
-<code class="docutils literal notranslate"><span class="pre">:start-after:</span> <span class="pre">[initialized]</span></code> and <code class="docutils literal notranslate"><span class="pre">:end-before:</span> <span class="pre">[initialized]</span></code> options
-keep lines between comments:</p>
+<p>这些选项的有用情况是与标记注释一起工作。<code class="docutils literal notranslate"><span class="pre">:start-after:</span> <span class="pre">[initialized]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">:end-before:</span> <span class="pre">[initialized]</span></code> 选项在注释之间保留行数：</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="c1"># [initialize]</span>
     <span class="n">app</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s2">&quot;:8000&quot;</span><span class="p">)</span>
@@ -718,47 +675,39 @@ keep lines between comments:</p>
 </pre></div>
 </div>
 </div>
-<p>When lines have been selected in any of the ways described above, the line
-numbers in <code class="docutils literal notranslate"><span class="pre">emphasize-lines</span></code> refer to those selected lines, counted
-consecutively starting at <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
-<p>When specifying particular parts of a file to display, it can be useful to
-display the original line numbers. This can be done using the
-<code class="docutils literal notranslate"><span class="pre">lineno-match</span></code> option, which is however allowed only when the selection
-consists of contiguous lines.</p>
-<p>You can prepend and/or append a line to the included code, using the
-<code class="docutils literal notranslate"><span class="pre">prepend</span></code> and <code class="docutils literal notranslate"><span class="pre">append</span></code> option, respectively.  This is useful e.g. for
-highlighting PHP code that doesn’t include the <code class="docutils literal notranslate"><span class="pre">&lt;?php</span></code>/<code class="docutils literal notranslate"><span class="pre">?&gt;</span></code> markers.</p>
-<p>If you want to show the diff of the code, you can specify the old file by
-giving a <code class="docutils literal notranslate"><span class="pre">diff</span></code> option:</p>
+<p>当以上述任何一种方式选择行时，<code class="docutils literal notranslate"><span class="pre">emphasize-lines</span></code> 中的行号是指这些被选中的行，从 <code class="docutils literal notranslate"><span class="pre">1</span></code> 开始连续计算。</p>
+<p>当指定要显示文件的特定部分时，显示原始行号可能是有用的。这可以通过 <code class="docutils literal notranslate"><span class="pre">lineno-match</span></code> 选项来实现，但只有当选择由连续的行组成时才允许。</p>
+<p>你可以分别使用 <code class="docutils literal notranslate"><span class="pre">prepend</span></code> 和 <code class="docutils literal notranslate"><span class="pre">append</span></code> 选项，在包含的代码中预置和/或附加一行。例如，这对突出显示不包括 <code class="docutils literal notranslate"><span class="pre">&lt;?php</span></code>/<code class="docutils literal notranslate"><span class="pre">?&gt;</span></code> 标记的 PHP 代码很有用。</p>
+<p>如果你想显示代码的差异，你可以通过给一个 <code class="docutils literal notranslate"><span class="pre">diff</span></code> 选项来指定旧文件</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> example.py
    <span class="nc">:diff:</span> example.py.orig
 </pre></div>
 </div>
-<p>这显示了 <code class="docutils literal notranslate"><span class="pre">example.py</span></code> 和 <code class="docutils literal notranslate"><span class="pre">example.py.orig</span></code> 之间的差异, 统一的 diff 格式。</p>
-<p>A <code class="docutils literal notranslate"><span class="pre">force</span></code> option can ignore minor errors on highlighting.</p>
+<p>这显示了 <code class="docutils literal notranslate"><span class="pre">example.py</span></code> 和 <code class="docutils literal notranslate"><span class="pre">example.py.orig</span></code> 之间的差异，统一的 diff 格式。</p>
+<p><code class="docutils literal notranslate"><span class="pre">force</span></code> 选项可以忽略高亮显示的小错误。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 0.4.3 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">encoding</span></code> 选项。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.6 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">pyobject</span></code>, <code class="docutils literal notranslate"><span class="pre">lines</span></code>, <code class="docutils literal notranslate"><span class="pre">start-after</span></code> 和 <code class="docutils literal notranslate"><span class="pre">end-before</span></code> 选项, 以及对绝对文件名的支持。</p>
+<p><span class="versionmodified changed">在 0.6 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">pyobject</span></code>，<code class="docutils literal notranslate"><span class="pre">lines</span></code>，<code class="docutils literal notranslate"><span class="pre">start-after</span></code> 和 <code class="docutils literal notranslate"><span class="pre">end-before</span></code> 选项，以及对绝对文件名的支持。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.0 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">prepend</span></code>, <code class="docutils literal notranslate"><span class="pre">append</span></code> 和 <code class="docutils literal notranslate"><span class="pre">tab-width</span></code> 选项。</p>
+<p><span class="versionmodified changed">在 1.0 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">prepend</span></code>，<code class="docutils literal notranslate"><span class="pre">append</span></code> 和 <code class="docutils literal notranslate"><span class="pre">tab-width</span></code> 选项。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.3 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">diff</span></code>, <code class="docutils literal notranslate"><span class="pre">lineno-match</span></code>, <code class="docutils literal notranslate"><span class="pre">caption</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code> 和 <code class="docutils literal notranslate"><span class="pre">dedent</span></code> 选项。</p>
+<p><span class="versionmodified changed">在 1.3 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">diff</span></code>，<code class="docutils literal notranslate"><span class="pre">lineno-match</span></code>，<code class="docutils literal notranslate"><span class="pre">caption</span></code>，<code class="docutils literal notranslate"><span class="pre">name</span></code> 和 <code class="docutils literal notranslate"><span class="pre">dedent</span></code> 选项。</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 1.5 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">start-at</span></code> 和 <code class="docutils literal notranslate"><span class="pre">end-at</span></code> 选项。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.6 版更改: </span>使用 <code class="docutils literal notranslate"><span class="pre">start-after</span></code> 和 <code class="docutils literal notranslate"><span class="pre">lines</span></code> 时, 第一行按照 <code class="docutils literal notranslate"><span class="pre">start-after</span></code> 被认为是 <code class="docutils literal notranslate"><span class="pre">lines</span></code> 的行号 <code class="docutils literal notranslate"><span class="pre">1</span></code> 。</p>
+<p><span class="versionmodified changed">在 1.6 版更改: </span>使用 <code class="docutils literal notranslate"><span class="pre">start-after</span></code> 和 <code class="docutils literal notranslate"><span class="pre">lines</span></code> 时，第一行按照 <code class="docutils literal notranslate"><span class="pre">start-after</span></code> 被认为是 <code class="docutils literal notranslate"><span class="pre">lines</span></code> 的行号 <code class="docutils literal notranslate"><span class="pre">1</span></code> 。</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 2.1 版更改: </span>添加 <code class="docutils literal notranslate"><span class="pre">force</span></code> 选项。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版更改: </span>Support automatic dedent.</p>
+<p><span class="versionmodified changed">在 3.5 版更改: </span>支持自动缩进。</p>
 </div>
 </dd></dl>
 
@@ -768,7 +717,7 @@ giving a <code class="docutils literal notranslate"><span class="pre">diff</span
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-glossary">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">glossary::</span></span><a class="headerlink" href="#directive-glossary" title="永久链接至目标">¶</a></dt>
-<dd><p>该指令必须包含带有术语和定义的 reST 定义列表标记。然后, 这些定义可以引用 <a class="reference internal" href="roles.html#role-term" title="term role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">term</span></code></a> 角色。例:</p>
+<dd><p>该指令必须包含带有术语和定义的 reST 定义列表标记。然后，这些定义可以引用 <a class="reference internal" href="roles.html#role-term" title="term role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">term</span></code></a> 角色。例:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
 
    environment
@@ -782,7 +731,7 @@ giving a <code class="docutils literal notranslate"><span class="pre">diff</span
       source files for one Sphinx project.
 </pre></div>
 </div>
-<p>与常规定义列表相比, 每个条目允许 <em>multiple</em> 术语, 并且允许使用内联标记。您可以链接到所有条款。例如</p>
+<p>与常规定义列表相比，每个条目允许 <em>multiple</em> 术语，并且允许使用内联标记。您可以链接到所有条款。例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
 
    term 1
@@ -790,9 +739,8 @@ giving a <code class="docutils literal notranslate"><span class="pre">diff</span
       Definition of both terms.
 </pre></div>
 </div>
-<p>(When the glossary is sorted, the first term determines the sort order.)</p>
-<p>If you want to specify “grouping key” for general index entries, you can put
-a “key” as “term : key”. For example:</p>
+<p>（当词汇表被排序时，第一个术语决定了排序顺序。）</p>
+<p>如果你想为一般的索引条目指定 “分组键”，你可以把一个 “key” 作为 “term : key”。例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
 
    term 1 : A
@@ -800,21 +748,16 @@ a “key” as “term : key”. For example:</p>
       Definition of both terms.
 </pre></div>
 </div>
-<p>Note that “key” is used for grouping key as is.
-The “key” isn’t normalized; key “A” and “a” become different groups.
-The whole characters in “key” is used instead of a first character; it is
-used for “Combining Character Sequence” and “Surrogate Pairs” grouping key.</p>
-<p>In i18n situation, you can specify “localized term : key” even if original
-text only have “term” part. In this case, translated “localized term” will be
-categorized in “key” group.</p>
+<p>注意 “key” 是用来分组键的，就像现在一样。“key”没有被规范化，键 “A” 和 “a” 成为不同的组。“key” 中的整个字符被用来代替第一个字符；它被用于 “合并字符序列” 和 “代理配对” 分组键。</p>
+<p>在 i18n 的情况下，你可以指定 “localized term : key” 即使原文只有 “term” 部分。在这种情况下，翻译的 “localized term” 将被归入 “key” 组。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">0.6 新版功能: </span>您现在可以为 glossary 指令提供一个 <code class="docutils literal notranslate"><span class="pre">:sorted:</span></code> 标志, 该标志将按字母顺序自动对条目进行排序。</p>
+<p><span class="versionmodified added">0.6 新版功能: </span>您现在可以为 glossary 指令提供一个 <code class="docutils literal notranslate"><span class="pre">:sorted:</span></code> 标志，该标志将按字母顺序自动对条目进行排序。</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 1.1 版更改: </span>现在支持多个术语和内联标记。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.4 版更改: </span>词汇表术语的索引键应视为 <em>experimental</em>。</p>
+<p><span class="versionmodified changed">在 1.4 版更改: </span>词汇表术语的索引键应视为 <em>实验性</em>。</p>
 </div>
 </dd></dl>
 
@@ -824,28 +767,28 @@ categorized in “key” group.</p>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-sectionauthor">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">sectionauthor::</span></span><span class="sig-prename descclassname"> <span class="pre">name</span> <span class="pre">&lt;email&gt;</span></span><a class="headerlink" href="#directive-sectionauthor" title="永久链接至目标">¶</a></dt>
-<dd><p>标识当前部分的作者。该论点应包括作者的姓名, 以便它可用于演示文稿和电子邮件地址。地址的域名部分应为小写。例</p>
+<dd><p>标识当前部分的作者。该论点应包括作者的姓名，以便它可用于演示文稿和电子邮件地址。地址的域名部分应为小写。例</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">sectionauthor</span><span class="p">::</span> Guido van Rossum &lt;guido@python.org&gt;
 </pre></div>
 </div>
-<p>默认情况下, 此标记不会以任何方式反映在输出中(它有助于跟踪贡献), 但您可以将配置值 <a class="reference internal" href="../configuration.html#confval-show_authors"><code class="xref std std-confval docutils literal notranslate"><span class="pre">show_authors</span></code></a> 设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 以使它们生成一个段落输出。</p>
+<p>默认情况下，此标记不会以任何方式反映在输出中(它有助于跟踪贡献)，但您可以将配置值 <a class="reference internal" href="../configuration.html#confval-show_authors"><code class="xref std std-confval docutils literal notranslate"><span class="pre">show_authors</span></code></a> 设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 以使它们生成一个段落输出。</p>
 </dd></dl>
 
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-codeauthor">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">codeauthor::</span></span><span class="sig-prename descclassname"> <span class="pre">name</span> <span class="pre">&lt;email&gt;</span></span><a class="headerlink" href="#directive-codeauthor" title="永久链接至目标">¶</a></dt>
-<dd><p><a class="reference internal" href="#directive-codeauthor" title="codeauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">codeauthor</span></code></a> 指令, 可以多次出现, 命名所描述代码的作者, 就像 <a class="reference internal" href="#directive-sectionauthor" title="sectionauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">sectionauthor</span></code></a> 命名一篇文档的作者。如果 <a class="reference internal" href="../configuration.html#confval-show_authors"><code class="xref std std-confval docutils literal notranslate"><span class="pre">show_authors</span></code></a> 配置值为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，它也只产生输出。</p>
+<dd><p><a class="reference internal" href="#directive-codeauthor" title="codeauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">codeauthor</span></code></a> 指令，可以多次出现，命名所描述代码的作者，就像 <a class="reference internal" href="#directive-sectionauthor" title="sectionauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">sectionauthor</span></code></a> 命名一篇文档的作者。如果 <a class="reference internal" href="../configuration.html#confval-show_authors"><code class="xref std std-confval docutils literal notranslate"><span class="pre">show_authors</span></code></a> 配置值为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，它也只产生输出。</p>
 </dd></dl>
 
 </section>
 <section id="index-generating-markup">
 <h2>索引生成标记<a class="headerlink" href="#index-generating-markup" title="永久链接至标题">¶</a></h2>
-<p>Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条目,如 <a class="reference internal" href="domains.html"><span class="doc">Domains</span></a> 中所述。</p>
-<p>但是, 还有明确的标记可用, 以使索引更加全面, 并在文档中启用索引条目, 其中信息不主要包含在信息单元中, 例如语言参考。</p>
+<p>Sphinx 自动从所有对象描述（如函数，类或属性）创建索引条目,如 <a class="reference internal" href="domains.html"><span class="doc">域</span></a> 中所述。</p>
+<p>但是，还有明确的标记可用，以使索引更加全面，并在文档中启用索引条目，其中信息不主要包含在信息单元中，例如语言参考。</p>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-index">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">index::</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;entries&gt;</span></span><a class="headerlink" href="#directive-index" title="永久链接至目标">¶</a></dt>
-<dd><p>该指令包含一个或多个索引条目。每个条目由一个类型和一个值组成, 用冒号分隔。</p>
+<dd><p>该指令包含一个或多个索引条目。每个条目由一个类型和一个值组成，用冒号分隔。</p>
 <p>例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span>
    single: execution; context
@@ -859,26 +802,24 @@ categorized in “key” group.</p>
 <span class="cp">...</span>
 </pre></div>
 </div>
-<p>该指令包含五个条目, 这些条目将转换为生成的索引中的条目, 该条目链接到索引语句的确切位置（或者, 如果是脱机介质, 则是相应的页码）。</p>
-<p>Since index directives generate cross-reference targets at their location in
-the source, it makes sense to put them <em>before</em> the thing they refer to –
-e.g. a heading, as in the example above.</p>
+<p>该指令包含五个条目，这些条目将转换为生成的索引中的条目，该条目链接到索引语句的确切位置（或者，如果是脱机介质，则是相应的页码）。</p>
+<p>由于 index 指令在它们在源文件中的位置产生交叉引用的目标，所以把它们放在它们所指的东西之前是有意义的–例如标题，如上面的例子。</p>
 <p>可能的条目类型是：</p>
 <dl class="simple">
 <dt>single</dt><dd><p>创建单个索引条目。可以通过用分号分隔子条目文本来创建子条目（下面也使用此符号来描述创建的条目）。</p>
 </dd>
-<dt>pair</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pair:</span> <span class="pre">loop;</span> <span class="pre">statement</span></code> 是一个创建两个索引条目的快捷方式, 即 <code class="docutils literal notranslate"><span class="pre">loop;</span> <span class="pre">statement</span></code> 和 <code class="docutils literal notranslate"><span class="pre">statement;</span> <span class="pre">loop</span></code>。</p>
+<dt>pair</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pair:</span> <span class="pre">loop;</span> <span class="pre">statement</span></code> 是一个创建两个索引条目的快捷方式，即 <code class="docutils literal notranslate"><span class="pre">loop;</span> <span class="pre">statement</span></code> 和 <code class="docutils literal notranslate"><span class="pre">statement;</span> <span class="pre">loop</span></code>。</p>
 </dd>
-<dt>triple</dt><dd><p>同样, <code class="docutils literal notranslate"><span class="pre">triple:</span> <span class="pre">module;</span> <span class="pre">search;</span> <span class="pre">path</span></code> 是一个创建三个索引条目的快捷方式, 它们是 <code class="docutils literal notranslate"><span class="pre">module;</span> <span class="pre">search</span> <span class="pre">path</span></code>，<code class="docutils literal notranslate"><span class="pre">search;</span> <span class="pre">path,</span> <span class="pre">module</span></code> 和 <code class="docutils literal notranslate"><span class="pre">path;</span> <span class="pre">module</span> <span class="pre">search</span></code>。</p>
+<dt>triple</dt><dd><p>同样，<code class="docutils literal notranslate"><span class="pre">triple:</span> <span class="pre">module;</span> <span class="pre">search;</span> <span class="pre">path</span></code> 是一个创建三个索引条目的快捷方式，它们是 <code class="docutils literal notranslate"><span class="pre">module;</span> <span class="pre">search</span> <span class="pre">path</span></code>，<code class="docutils literal notranslate"><span class="pre">search;</span> <span class="pre">path，module</span></code> 和 <code class="docutils literal notranslate"><span class="pre">path;</span> <span class="pre">module</span> <span class="pre">search</span></code>。</p>
 </dd>
-<dt>see</dt><dd><p><code class="docutils literal notranslate"><span class="pre">see:</span> <span class="pre">entry;</span> <span class="pre">other</span></code> 创建一个索引条目, 从 <code class="docutils literal notranslate"><span class="pre">entry</span></code> 引用到 <code class="docutils literal notranslate"><span class="pre">other</span></code>。</p>
+<dt>see</dt><dd><p><code class="docutils literal notranslate"><span class="pre">see:</span> <span class="pre">entry;</span> <span class="pre">other</span></code> 创建一个索引条目，从 <code class="docutils literal notranslate"><span class="pre">entry</span></code> 引用到 <code class="docutils literal notranslate"><span class="pre">other</span></code>。</p>
 </dd>
 <dt>seealso</dt><dd><p>就像 <code class="docutils literal notranslate"><span class="pre">see</span></code>，但是插入 “see also” 而不是 “see”。</p>
 </dd>
-<dt>module, keyword, operator, object, exception, statement, builtin</dt><dd><p>这些都创建了两个索引条目。例如, <code class="docutils literal notranslate"><span class="pre">module:hashlib</span></code> 创建条目 <code class="docutils literal notranslate"><span class="pre">module;</span> <span class="pre">hashlib</span></code> 和 <code class="docutils literal notranslate"><span class="pre">hashlib;</span> <span class="pre">module</span></code> 。（这些是特定于 Python 的, 因此已弃用。）</p>
+<dt>module, keyword, operator, object, exception, statement, builtin</dt><dd><p>这些都创建了两个索引条目。例如，<code class="docutils literal notranslate"><span class="pre">module:hashlib</span></code> 创建条目 <code class="docutils literal notranslate"><span class="pre">module;</span> <span class="pre">hashlib</span></code> 和 <code class="docutils literal notranslate"><span class="pre">hashlib;</span> <span class="pre">module</span></code> 。（这些是特定于 Python 的，因此已弃用。）</p>
 </dd>
 </dl>
-<p>您可以通过在前面添加感叹号来标记 “main” 索引条目。生成的索引中强调了对 “main” 条目的引用。例如, 如果两个页面包含</p>
+<p>您可以通过在前面添加感叹号来标记 “main” 索引条目。生成的索引中强调了对 “main” 条目的引用。例如，如果两个页面包含</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span> Python
 </pre></div>
 </div>
@@ -887,20 +828,19 @@ e.g. a heading, as in the example above.</p>
 </pre></div>
 </div>
 <p>然后在三个反向链接中强调后一页面的反向链接。</p>
-<p>对于仅包含 “single” 条目的索引指令, 有一种简写符号</p>
+<p>对于仅包含 “single” 条目的索引指令，有一种简写符号</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span> BNF, grammar, syntax, notation
 </pre></div>
 </div>
 <p>这将创建四个索引条目。</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.1 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">see</span></code> 和 <code class="docutils literal notranslate"><span class="pre">seealso</span></code> 类型, 以及标记主条目。</p>
+<p><span class="versionmodified changed">在 1.1 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">see</span></code> 和 <code class="docutils literal notranslate"><span class="pre">seealso</span></code> 类型，以及标记主条目。</p>
 </div>
 <p class="rubric">选项</p>
 <dl class="rst directive:option">
 <dt class="sig sig-object rst" id="directive-option-index-name">
 <span id="directive:option-index-name"></span><span class="sig-name descname"><span class="pre">:name:</span></span><em class="property"> <span class="pre">a</span> <span class="pre">label</span> <span class="pre">for</span> <span class="pre">hyperlink</span></em><em class="property"> <span class="pre">(text)</span></em><a class="headerlink" href="#directive-option-index-name" title="永久链接至目标">¶</a></dt>
-<dd><p>Define implicit target name that can be referenced by using
-<a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a>.  For example:</p>
+<dd><p>定义隐含的目标名称，可以通过使用 <a class="reference internal" href="roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a> 进行引用。例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span> Python
    <span class="nc">:name:</span> py-index
 </pre></div>
@@ -915,14 +855,8 @@ e.g. a heading, as in the example above.</p>
 <dl class="rst role">
 <dt class="sig sig-object rst" id="role-index">
 <span class="sig-name descname"><span class="pre">:index:</span></span><a class="headerlink" href="#role-index" title="永久链接至目标">¶</a></dt>
-<dd><p>While the <a class="reference internal" href="#directive-index" title="index directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a> directive is a block-level markup and links to the
-beginning of the next paragraph, there is also a corresponding role that sets
-the link target directly where it is used.</p>
-<p>The content of the role can be a simple phrase, which is then kept in the
-text and used as an index entry.  It can also be a combination of text and
-index entry, styled like with explicit targets of cross-references.  In that
-case, the “target” part can be a full entry as described for the directive
-above.  For example:</p>
+<dd><p>虽然 <a class="reference internal" href="#directive-index" title="index directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">index</span></code></a> 指令是一个块级标记，并链接到下一段的开头，但也有一个相应的角色，直接在使用它的地方设置链接 target。</p>
+<p>角色的内容可以是一个简单的短语，然后保留在文本中并作为索引条目使用。它也可以是文本和 index 条目的组合，风格像有明确的交叉引用的目标。 在这种情况下，“target” 部分可以是一个完整的条目，就像上面描述的上面的指令。例如</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is a normal reST <span class="na">:index:</span><span class="nv">`paragraph`</span> that contains several
 <span class="na">:index:</span><span class="nv">`index entries &lt;pair: index; entry&gt;`</span>.
 </pre></div>
@@ -934,67 +868,46 @@ above.  For example:</p>
 
 </section>
 <section id="including-content-based-on-tags">
-<span id="tags"></span><h2>Including content based on tags<a class="headerlink" href="#including-content-based-on-tags" title="永久链接至标题">¶</a></h2>
+<span id="tags"></span><h2>包含基于标记的内容<a class="headerlink" href="#including-content-based-on-tags" title="永久链接至标题">¶</a></h2>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-only">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">only::</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;expression&gt;</span></span><a class="headerlink" href="#directive-only" title="永久链接至目标">¶</a></dt>
-<dd><p>Include the content of the directive only if the <em>expression</em> is true.  The
-expression should consist of tags, like this:</p>
+<dd><p>只有当 <em>表达式</em> 为真时，才包括指令的内容。 表达式应该由标记组成，像这样</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">only</span><span class="p">::</span> html and draft
 </pre></div>
 </div>
-<p>Undefined tags are false, defined tags (via the <code class="docutils literal notranslate"><span class="pre">-t</span></code> command-line option or
-within <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>, see <a class="reference internal" href="../configuration.html#conf-tags"><span class="std std-ref">here</span></a>) are true.  Boolean
-expressions, also using parentheses (like <code class="docutils literal notranslate"><span class="pre">html</span> <span class="pre">and</span> <span class="pre">(latex</span> <span class="pre">or</span> <span class="pre">draft)</span></code>) are
-supported.</p>
-<p>The <em>format</em> and the <em>name</em> of the current builder (<code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">latex</span></code> or
-<code class="docutils literal notranslate"><span class="pre">text</span></code>) are always set as a tag <a class="footnote-reference brackets" href="#id9" id="id5">4</a>.  To make the distinction between
-format and name explicit, they are also added with the prefix <code class="docutils literal notranslate"><span class="pre">format_</span></code> and
-<code class="docutils literal notranslate"><span class="pre">builder_</span></code>, e.g. the epub builder defines the tags  <code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">epub</span></code>,
-<code class="docutils literal notranslate"><span class="pre">format_html</span></code> and <code class="docutils literal notranslate"><span class="pre">builder_epub</span></code>.</p>
-<p>These standard tags are set <em>after</em> the configuration file is read, so they
-are not available there.</p>
-<p>All tags must follow the standard Python identifier syntax as set out in
-the <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">Identifiers and keywords</a>
-documentation.  That is, a tag expression may only consist of tags that
-conform to the syntax of Python variables.  In ASCII, this consists of the
-uppercase and lowercase letters <code class="docutils literal notranslate"><span class="pre">A</span></code> through <code class="docutils literal notranslate"><span class="pre">Z</span></code>, the underscore <code class="docutils literal notranslate"><span class="pre">_</span></code>
-and, except for the first character, the digits <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
+<p>未定义的标记是 false，定义的标记（通过 <code class="docutils literal notranslate"><span class="pre">-t</span></code> 命令行选项或在 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 内，见 <a class="reference internal" href="../configuration.html#conf-tags"><span class="std std-ref">这里</span></a> ）是真的。支持布尔表达式，也使用圆括号（如 <code class="docutils literal notranslate"><span class="pre">html</span> <span class="pre">和（latex</span> <span class="pre">或</span> <span class="pre">draft）</span></code>）。</p>
+<p>当前构建器的 <em>format</em> 和 <em>name</em> （<code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">latex</span></code> 或 <code class="docutils literal notranslate"><span class="pre">text</span></code>）总是被设置为标记 <a class="footnote-reference brackets" href="#id9" id="id5">4</a>。为了明确区分格式和名称，它们还被添加了前缀 <code class="docutils literal notranslate"><span class="pre">format_</span></code> 和 <code class="docutils literal notranslate"><span class="pre">builder_</span></code>，例如，epub 构建器定义了标记 <code class="docutils literal notranslate"><span class="pre">html</span></code>、 <code class="docutils literal notranslate"><span class="pre">epub</span></code>、 <code class="docutils literal notranslate"><span class="pre">format_html</span></code> 和 <code class="docutils literal notranslate"><span class="pre">builder_epub</span></code>。</p>
+<p>这些标准标记是在读取配置文件之后设置的，所以它们在那里是不可用的。</p>
+<p>所有的标记必须遵循标准的 Python 标识符语法，如 <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">标识符和关键字</a> 文档中规定的。也就是说，一个标记表达式只能由符合 Python 变量语法的标记组成。在 ASCII 中，这包括大写和小写字母 <code class="docutils literal notranslate"><span class="pre">A</span></code> 到 <code class="docutils literal notranslate"><span class="pre">Z</span></code>，下划线 <code class="docutils literal notranslate"><span class="pre">_</span></code>，以及除第一个字符外的数字 <code class="docutils literal notranslate"><span class="pre">0</span></code> 到 <code class="docutils literal notranslate"><span class="pre">9</span></code>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.2 版更改: </span>Added the name of the builder and the prefixes.</p>
+<p><span class="versionmodified changed">在 1.2 版更改: </span>添加了构建器的名字和前缀。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>This directive is designed to control only content of document.  It could
-not control sections, labels and so on.</p>
+<p>该指令旨在仅控制文件的内容。它不能控制章节、标签等。</p>
 </div>
 </dd></dl>
 
 </section>
 <section id="tables">
-<span id="table-directives"></span><h2>Tables<a class="headerlink" href="#tables" title="永久链接至标题">¶</a></h2>
-<p>Use <a class="reference internal" href="basics.html#rst-tables"><span class="std std-ref">reStructuredText tables</span></a>, i.e. either</p>
+<span id="table-directives"></span><h2>表格<a class="headerlink" href="#tables" title="永久链接至标题">¶</a></h2>
+<p>使用 <a class="reference internal" href="basics.html#rst-tables"><span class="std std-ref">reStructuredText tables</span></a>，即要么是</p>
 <ul class="simple">
-<li><p>grid table syntax (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables">ref</a>),</p></li>
-<li><p>simple table syntax (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables">ref</a>),</p></li>
-<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table">csv-table</a> syntax,</p></li>
-<li><p>or <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table">list-table</a> syntax.</p></li>
+<li><p>grid 表语法（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables">ref</a>），</p></li>
+<li><p>简单表的语法（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables">ref</a>），</p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table">csv-table</a> 语法</p></li>
+<li><p>或者 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table">list-table</a> 语法</p></li>
 </ul>
-<p>The <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table">table</a> directive serves as optional wrapper of the <em>grid</em> and
-<em>simple</em> syntaxes.</p>
-<p>They work fine in HTML output, however there are some gotchas when using tables
-in LaTeX: the column width is hard to determine correctly automatically.  For
-this reason, the following directive exists:</p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table">table</a> 指令作为 <em>grid</em> 和 <em>simple</em> 语法的可选包装。</p>
+<p>它们在 HTML 输出中运行良好，然而在 LaTeX 中使用表格时有一些麻烦：列宽很难自动正确确定。由于这个原因，存在以下指令：</p>
 <dl class="rst directive">
 <dt class="sig sig-object rst" id="directive-tabularcolumns">
 <span class="sig-name descname"><span class="pre">..</span> <span class="pre">tabularcolumns::</span></span><span class="sig-prename descclassname"> <span class="pre">column</span> <span class="pre">spec</span></span><a class="headerlink" href="#directive-tabularcolumns" title="永久链接至目标">¶</a></dt>
-<dd><p>This directive gives a “column spec” for the next table occurring in the
-source file.  The spec is the second argument to the LaTeX <code class="docutils literal notranslate"><span class="pre">tabulary</span></code>
-package’s environment (which Sphinx uses to translate tables).  It can have
-values like</p>
+<dd><p>这个指令为源文件中出现的下一个表提供了一个 “column spec”。spec 是 LaTeX <code class="docutils literal notranslate"><span class="pre">tabulary</span></code> 包环境的第二个参数（Sphinx 用它来翻译表格）。它的值可以是:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>|l|l|l|
 </pre></div>
 </div>

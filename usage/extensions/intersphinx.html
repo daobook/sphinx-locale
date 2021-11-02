@@ -275,6 +275,35 @@ seconds.</p>
 </div>
 </dd></dl>
 
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-intersphinx_disabled_reftypes">
+<span class="sig-name descname"><span class="pre">intersphinx_disabled_reftypes</span></span><a class="headerlink" href="#confval-intersphinx_disabled_reftypes" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">4.3 新版功能.</span></p>
+</div>
+<p>A list of strings being either:</p>
+<ul class="simple">
+<li><p>the name of a specific reference type in a domain,
+e.g., <code class="docutils literal notranslate"><span class="pre">std:doc</span></code>, <code class="docutils literal notranslate"><span class="pre">py:func</span></code>, or <code class="docutils literal notranslate"><span class="pre">cpp:class</span></code>,</p></li>
+<li><p>the name of a domain, and a wildcard, e.g.,
+<code class="docutils literal notranslate"><span class="pre">std:*</span></code>, <code class="docutils literal notranslate"><span class="pre">py:*</span></code>, or <code class="docutils literal notranslate"><span class="pre">cpp:*</span></code>, or</p></li>
+<li><p>simply a wildcard <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p></li>
+</ul>
+<p>The default value is an empty list.</p>
+<p>When a cross-reference without an explicit inventory specification is being
+resolved by intersphinx, skip resolution if it matches one of the
+specifications in this list.</p>
+<p>For example, with <code class="docutils literal notranslate"><span class="pre">intersphinx_disabled_reftypes</span> <span class="pre">=</span> <span class="pre">['std:doc']</span></code>
+a cross-reference <code class="docutils literal notranslate"><span class="pre">:doc:`installation`</span></code> will not be attempted to be
+resolved by intersphinx, but <code class="docutils literal notranslate"><span class="pre">:doc:`otherbook:installation`</span></code> will be
+attempted to be resolved in the inventory named <code class="docutils literal notranslate"><span class="pre">otherbook</span></code> in
+<a class="reference internal" href="#confval-intersphinx_mapping"><code class="xref std std-confval docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a>.
+At the same time, all cross-references generated in, e.g., Python,
+declarations will still be attempted to be resolved by intersphinx.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">*</span></code> is in the list of domains, then no references without an explicit
+inventory will be resolved by intersphinx.</p>
+</dd></dl>
+
 </section>
 <section id="showing-all-links-of-an-intersphinx-mapping-file">
 <h2>Showing all links of an Intersphinx mapping file<a class="headerlink" href="#showing-all-links-of-an-intersphinx-mapping-file" title="永久链接至标题">¶</a></h2>
