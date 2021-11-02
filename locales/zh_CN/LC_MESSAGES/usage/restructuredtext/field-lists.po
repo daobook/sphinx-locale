@@ -65,7 +65,6 @@ msgid ""
 "*docinfo* as normal and will be displayed in the output."
 msgstr "出现在文档标题之后的字段列表将作为正常的 docinfo 的一部分，并将在输出中显示。"
 
-
 #: ../../usage/restructuredtext/field-lists.rst:38
 msgid "Special metadata fields"
 msgstr "特殊元数据字段"

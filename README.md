@@ -7,4 +7,4 @@
 ## 特点
 
 - 提供 Sphinx 中文文档。
-- 自动部署到 Github Pages.
+- 自动部署到 Github Pages。

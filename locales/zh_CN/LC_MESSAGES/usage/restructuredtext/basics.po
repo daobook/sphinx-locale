@@ -254,8 +254,8 @@ msgid ""
 msgstr ""
 "Doctest 块（:duref:`ref <doctest-blocks>`）是将"
 "交互式的 Python 会话剪切粘贴到文档字符串中。"
-"它们不需要 :ref:`literal blocks <rst-literal-blocks>` 语法。"
-"doctest 块必须以空行结束，并且 不 以未使用的提示符结束 ::"
+"它们不需要 :ref:`文字块 <rst-literal-blocks>` 语法。"
+"doctest 块必须以空行结束，并且不以未使用的提示符结束 ::"
 
 #: ../../usage/restructuredtext/basics.rst:170
 msgid "Tables"
@@ -515,10 +515,11 @@ msgid ""
 "<admonitions>`.  (Most themes style only \"note\" and \"warning\" "
 "specially.)"
 msgstr ""
-"警告：:dudir:`attention`, :dudir:`caution`, :dudir:`danger`,"
-":dudir:`error`, :dudir:`hint`, :dudir:`important`, :dudir:`note`,"
-":dudir:`tip`, :dudir:`warning` 以及泛型"
-":dudir:`admonition <admonitions>`。（大多数主题仅限于 \"note\" 和 \"warning\"。）"
+"警告：:dudir:`attention`、:dudir:`caution`、:dudir:`danger`、"
+":dudir:`error`、:dudir:`hint`、:dudir:`important`、:dudir:`note`、"
+":dudir:`tip`、:dudir:`warning` 以及泛型 "
+":dudir:`admonition <admonitions>`。"
+"（大多数主题仅限于 \"note\" 和 \"warning\"。）"
 
 #: ../../usage/restructuredtext/basics.rst:342
 msgid "Images:"
@@ -675,8 +676,8 @@ msgid ""
 "following the arguments and indicated by the colons).  Options must be "
 "indented to the same level as the directive content."
 msgstr ""
-"``function`` 是指令名称。这里给出了两个参数，第一行和第二行的其余部分，以及一个选项"
-"``module`` （如您所见，选项在参数后面的行中给出，并用冒号表示）。"
+"``function`` 是指令名称。这里给出了两个参数，第一行和第二行的其余部分，"
+"以及一个选项 ``module`` （如您所见，选项在参数后面的行中给出，并用冒号表示）。"
 
 #: ../../usage/restructuredtext/basics.rst:412
 msgid ""
@@ -750,7 +751,7 @@ msgid ""
 "``72bp=1in``)."
 msgstr ""
 "图像尺寸选项（ ``width`` 和 ``height``）的解释如下：如果"
-"尺寸没有单位或单位是像素，则给定的尺寸仅适用于支持像素的输出通道"。
+"尺寸没有单位或单位是像素，则给定的尺寸仅适用于支持像素的输出通道。"
 "其他单位（如 ``pt`` 表示点）将用于 HTML 和 LaTeX 输出"
 "（后者将 ``pt`` 替换为 ``bp``，因为这是 TeX 单位，这样 ``72bp=1in``）。"
 
@@ -805,7 +806,7 @@ msgid ""
 "document after a \"Footnotes\" rubric heading, like so::"
 msgstr ""
 "对于脚注（ :duref:`ref <footnotes>`），使用 ``[#name]_`` 来"
-"标记脚注位置，并在文档底部的“Footnotes”标题之后添加脚注正文，像 ::"
+"标记脚注位置，并在文档底部的“脚注”标题之后添加脚注正文，像 ::"
 
 #: ../../usage/restructuredtext/basics.rst:498
 msgid ""
@@ -825,7 +826,7 @@ msgid ""
 "be referenced from all files.  Use them like so::"
 msgstr ""
 "支持标准 reST 引用（:duref:`ref <citations>`），其"
-"附加功能是 “global” ，即所有引用都可以从所有文件引用。像这样使用它们 ::"
+"附加功能是 “全局” ，即所有引用都可以从所有文件引用。像这样使用它们 ::"
 
 #: ../../usage/restructuredtext/basics.rst:513
 msgid ""
@@ -856,7 +857,7 @@ msgid ""
 "See the :duref:`reST reference for substitutions <substitution-"
 "definitions>` for details."
 msgstr ""
-"阅读 :duref:`reST reference for substitutions <substitution-definitions>` 了解细节。"
+"阅读 :duref:`reST 替换的引用 <substitution-definitions>` 了解细节。"
 
 #: ../../usage/restructuredtext/basics.rst:536
 msgid ""
@@ -918,7 +919,7 @@ msgid ""
 "the search index.  Thereby, the ``lang`` attribute of the meta element is"
 " considered.  For example, the directive::"
 msgstr ""
-"此外，Sphinx 会将元指令中指定的关键字添加到搜索索引中。因此，元元素的 ``lang`` 属性被考虑。"
+"此外，Sphinx 会将元指令中指定的关键字添加到搜索索引中。因此，meta 元素的 ``lang`` 属性被考虑。"
 "例如，指令 ::"
 
 #: ../../usage/restructuredtext/basics.rst:593
@@ -929,7 +930,7 @@ msgstr "将以下单词添加到具有不同语言配置的构建的搜索索引
 
 #: ../../usage/restructuredtext/basics.rst:596
 msgid "``pleasefindthiskey``, ``pleasefindthiskeytoo`` to *English* builds;"
-msgstr "``pleasefindthiskey``, ``pleasefindthiskeytoo`` 到 *English* 构建；"
+msgstr "``pleasefindthiskey``、``pleasefindthiskeytoo`` 到 *English* 构建；"
 
 #: ../../usage/restructuredtext/basics.rst:597
 msgid "``bittediesenkeyfinden`` to *German* builds;"

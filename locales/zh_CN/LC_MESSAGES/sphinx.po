@@ -47,6 +47,9 @@ msgid ""
 "    documentation, written by Georg Brandl and licensed under the BSD "
 "license."
 msgstr ""
+"\n"
+"Sphinx 是在 BSD 许可证下由 Georg Brandl 编写，用于创建智能而"
+"美丽文档的工具。"
 
 #: ../../_templates/index.html:15
 msgid ""
@@ -57,12 +60,19 @@ msgid ""
 "\n"
 "    Sphinx!  The following features should be highlighted:"
 msgstr ""
+"它最初是为 <a href=\"https://docs.python.org/\">"
+"Python 文档</a> 而创建，并且它有很好的设施"
+"来记录一系列语言的软件项目。"
+"当然，这个网站也是使用 Sphinx 从 reStructuredText 源创建的！" 
+"应该强调以下特点："
 
 #: ../../_templates/index.html:22
 msgid ""
 "<b>Output formats:</b> HTML (including Windows HTML Help), LaTeX (for\n"
 "      printable PDF versions), ePub, Texinfo, manual pages, plain text"
 msgstr ""
+"<b>输出格式：</b> HTML（包括 Windows HTML 帮助）、"
+"LaTeX（用于可打印的 PDF 版本）、ePub、Texinfo、手册页、纯文本"
 
 #: ../../_templates/index.html:24
 msgid ""

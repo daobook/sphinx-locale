@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-10-23 20:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:5
 msgid "Domains"
-msgstr ""
+msgstr "域"
 
 #: ../../usage/restructuredtext/domains.rst:9
 msgid ""
@@ -32,6 +32,12 @@ msgid ""
 "purposes: C/C++ projects, JavaScript, or even reStructuredText markup "
 "(like in this documentation)."
 msgstr ""
+"最初，Sphinx 是为一个单一的项目设想的，即 Python 语言的文档。"
+"不久之后，它作为一个文档工具提供给所有人，"
+"但 Python 模块的文档仍然深深地内置于其中--最基本的指令，"
+"如 ``function``，是为 Python 对象设计的。由于 Sphinx 已经变得有些流行，"
+"人们对将其用于许多不同的目的产生了兴趣："
+"C/C++ 项目，JavaScript，甚至是 reStructuredText 标记（比如这个文档）。"
 
 #: ../../usage/restructuredtext/domains.rst:17
 msgid ""
@@ -40,6 +46,8 @@ msgid ""
 "ones not supported by the main Sphinx distribution, by providing a "
 "**domain** for every such purpose."
 msgstr ""
+"虽然这一直是可能的，但现在通过为每一个这样的目的提供一个 **域**，"
+"可以更容易地支持使用不同编程语言的项目的文档，甚至是主要的 Sphinx 发行版不支持的项目。"
 
 #: ../../usage/restructuredtext/domains.rst:22
 msgid ""
@@ -50,6 +58,10 @@ msgid ""
 "``py:function``.  Domains can also provide custom indices (like the "
 "Python Module Index)."
 msgstr ""
+"域是一个标记的集合（reStructuredText :term:`指令` 和 :term:`角色`），"
+"用来描述和链接属于一起的 :term:`对象`，例如，编程语言的元素。"
+"域中的指令和角色名称有类似 ``domain:name`` 的名称，"
+"例如 ``py:function``。域也可以提供自定义索引（如 Python 模块索引）。"
 
 #: ../../usage/restructuredtext/domains.rst:28
 msgid ""
@@ -58,6 +70,8 @@ msgid ""
 "means that extensions that support the documentation of whole new "
 "languages are much easier to write."
 msgstr ""
+"拥有域意味着当一组文档想要引用例如 C++ 和 Python 类时，不会出现命名问题。"
+"这也意味着支持整个新语言的文档的扩展更容易编写。"
 
 #: ../../usage/restructuredtext/domains.rst:33
 msgid ""
@@ -65,10 +79,12 @@ msgid ""
 "provide. The domain API is documented as well, in the section :ref"
 ":`domain-api`."
 msgstr ""
+"本节描述了包括在 Sphinx 中的域所提供的东西。"
+"域的 API 也被记录在 :ref:`domain-api` 部分。"
 
 #: ../../usage/restructuredtext/domains.rst:40
 msgid "Basic Markup"
-msgstr ""
+msgstr "基础标记"
 
 #: ../../usage/restructuredtext/domains.rst:42
 msgid ""
@@ -530,7 +546,7 @@ msgid "Send a message to a recipient"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "参数"
+msgid "Parameters"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:538
@@ -550,7 +566,7 @@ msgid "The priority of the message, can be a number 1-5"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "返回"
+msgid "Returns"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:543
@@ -558,11 +574,11 @@ msgid "the message id"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "返回类型"
+msgid "Return type"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "引发"
+msgid "Raises"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:545
@@ -1752,6 +1768,10 @@ msgstr ""
 msgid "This is rendered as:"
 msgstr ""
 
+#: ../../usage/restructuredtext/domains.rst
+msgid "Arguments"
+msgstr ""
+
 #: ../../usage/restructuredtext/domains.rst:1809
 msgid "An URI to the location of the resource."
 msgstr ""
@@ -1767,7 +1787,7 @@ msgid ""
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "抛出"
+msgid "Throws"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1814
@@ -1883,4 +1903,19 @@ msgid ""
 "MATLAB_, PHP_, and Ruby_ domains. Also available are domains for "
 "`Chapel`_, `Common Lisp`_, dqn_, Go_, Jinja_, Operation_, and Scala_."
 msgstr ""
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid "返回"
+#~ msgstr ""
+
+#~ msgid "返回类型"
+#~ msgstr ""
+
+#~ msgid "引发"
+#~ msgstr ""
+
+#~ msgid "抛出"
+#~ msgstr ""
 

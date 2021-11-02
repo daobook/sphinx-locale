@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-11-02 09:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -214,11 +214,59 @@ msgid ""
 "seconds."
 msgstr ""
 
-#: ../../usage/extensions/intersphinx.rst:153
+#: ../../usage/extensions/intersphinx.rst:155
+msgid "A list of strings being either:"
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:157
+msgid ""
+"the name of a specific reference type in a domain, e.g., ``std:doc``, "
+"``py:func``, or ``cpp:class``,"
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:159
+msgid ""
+"the name of a domain, and a wildcard, e.g., ``std:*``, ``py:*``, or "
+"``cpp:*``, or"
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:161
+msgid "simply a wildcard ``*``."
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:163
+msgid "The default value is an empty list."
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:165
+msgid ""
+"When a cross-reference without an explicit inventory specification is "
+"being resolved by intersphinx, skip resolution if it matches one of the "
+"specifications in this list."
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:169
+msgid ""
+"For example, with ``intersphinx_disabled_reftypes = ['std:doc']`` a "
+"cross-reference ``:doc:`installation``` will not be attempted to be "
+"resolved by intersphinx, but ``:doc:`otherbook:installation``` will be "
+"attempted to be resolved in the inventory named ``otherbook`` in "
+":confval:`intersphinx_mapping`. At the same time, all cross-references "
+"generated in, e.g., Python, declarations will still be attempted to be "
+"resolved by intersphinx."
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:177
+msgid ""
+"If ``*`` is in the list of domains, then no references without an "
+"explicit inventory will be resolved by intersphinx."
+msgstr ""
+
+#: ../../usage/extensions/intersphinx.rst:182
 msgid "Showing all links of an Intersphinx mapping file"
 msgstr ""
 
-#: ../../usage/extensions/intersphinx.rst:155
+#: ../../usage/extensions/intersphinx.rst:184
 msgid ""
 "To show all Intersphinx links and their targets of an Intersphinx mapping"
 " file, run ``python -msphinx.ext.intersphinx url-or-path``.  This is "
@@ -227,15 +275,15 @@ msgid ""
 "mapping of the Python 3 documentation::"
 msgstr ""
 
-#: ../../usage/extensions/intersphinx.rst:164
+#: ../../usage/extensions/intersphinx.rst:193
 msgid "Using Intersphinx with inventory file under Basic Authorization"
 msgstr ""
 
-#: ../../usage/extensions/intersphinx.rst:166
+#: ../../usage/extensions/intersphinx.rst:195
 msgid "Intersphinx supports Basic Authorization like this::"
 msgstr ""
 
-#: ../../usage/extensions/intersphinx.rst:171
+#: ../../usage/extensions/intersphinx.rst:200
 msgid ""
 "The user and password will be stripped from the URL when generating the "
 "links."

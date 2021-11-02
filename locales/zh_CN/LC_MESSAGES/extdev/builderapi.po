@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-10-23 20:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Builder API"
 msgstr ""
 
 #: ../../extdev/builderapi.rst:6
-msgid "待处理"
+msgid "Todo"
 msgstr ""
 
 #: ../../extdev/builderapi.rst:6
@@ -160,4 +160,7 @@ msgstr ""
 #: ../../extdev/builderapi.rst:46
 msgid "An :class:`.EventManager` object."
 msgstr ""
+
+#~ msgid "待处理"
+#~ msgstr ""
 

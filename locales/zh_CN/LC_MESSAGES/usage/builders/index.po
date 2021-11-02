@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-10-23 20:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:5
 msgid "Builders"
-msgstr ""
+msgstr "构建器"
 
 #: ../../usage/builders/index.rst:10
 msgid ""
@@ -682,7 +682,7 @@ msgid ""
 msgstr ""
 
 #: ../../usage/builders/index.rst:566
-msgid "待处理"
+msgid "Todo"
 msgstr ""
 
 #: ../../usage/builders/index.rst:566
@@ -694,4 +694,7 @@ msgid ""
 "Unlike the other pickle files this pickle file requires that the "
 "``sphinx`` package is available on unpickling."
 msgstr ""
+
+#~ msgid "待处理"
+#~ msgstr ""
 

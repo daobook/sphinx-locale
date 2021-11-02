@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-10-23 20:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 
 #: ../../usage/extensions/coverage.rst:14
-msgid "待处理"
+msgid "Todo"
 msgstr ""
 
 #: ../../usage/extensions/coverage.rst:14
@@ -73,4 +73,7 @@ msgid ""
 "Print objects that are missing to standard output also. ``False`` by "
 "default."
 msgstr ""
+
+#~ msgid "待处理"
+#~ msgstr ""
 

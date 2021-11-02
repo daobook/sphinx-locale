@@ -23,7 +23,7 @@ msgstr "Sphinx 文档目录"
 
 #: ../../contents.rst:27
 msgid "Indices and tables"
-msgstr "索引和目录"
+msgstr "索引和表格"
 
 #: ../../contents.rst:31
 msgid ":ref:`genindex`"

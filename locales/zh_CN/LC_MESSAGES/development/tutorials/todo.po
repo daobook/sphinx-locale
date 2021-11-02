@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:2
 msgid "Developing a \"TODO\" extension"
-msgstr ""
+msgstr "开发一个 “TODO” 插件"
 
 #: ../../development/tutorials/todo.rst:4
 msgid ""
@@ -32,20 +32,26 @@ msgid ""
 "collect these in a central place. This is similar the ``sphinxext.todo`` "
 "extension distributed with Sphinx."
 msgstr ""
+"本教程的目的是创建一个比 :doc:`helloworld` 中创建的更全面的插件。"
+"那个指南只是涵盖了编写一个自定义的 :term:`指令`，而本指南增加了多个指令，"
+"以及自定义节点、额外的配置值和自定义事件处理程序。"
+"为此，我们将介绍 ``todo`` 插件，它可以在文档中加入 todo 项，"
+"并将其收集在一个中心位置。这与 Sphinx 的 ``sphinxext.todo`` 插件类似。"
 
 #: ../../development/tutorials/todo.rst:14
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: ../../development/tutorials/todo.rst:17
 msgid ""
 "To understand the design of this extension, refer to :ref:`important-"
 "objects` and :ref:`build-phases`."
 msgstr ""
+"要了解这个插件的设计，请参考 :ref:`important-objects` 和 :ref:`build-phases`。"
 
 #: ../../development/tutorials/todo.rst:20
 msgid "We want the extension to add the following to Sphinx:"
-msgstr ""
+msgstr "我们希望这个插件能给 Sphinx 增加以下内容:"
 
 #: ../../development/tutorials/todo.rst:22
 msgid ""
@@ -53,20 +59,24 @@ msgid ""
 "\"TODO\" and only shown in the output if a new config value is set. Todo "
 "entries should not be in the output by default."
 msgstr ""
+"一个 ``todo`` 指令，包含一些标有 “TODO” 的内容，"
+"只有在设置了新的配置值后才会在输出中显示。"
+"默认情况下，Todo 条目不应该出现在输出中。"
 
 #: ../../development/tutorials/todo.rst:26
 msgid ""
 "A ``todolist`` directive that creates a list of all todo entries "
 "throughout the documentation."
 msgstr ""
+"一个 ``todolist`` 指令，创建了整个文档中所有 todo 条目的列表。"
 
 #: ../../development/tutorials/todo.rst:29
 msgid "For that, we will need to add the following elements to Sphinx:"
-msgstr ""
+msgstr "为此，我们需要向 Sphinx 添加以下元素："
 
 #: ../../development/tutorials/todo.rst:31
 msgid "New directives, called ``todo`` and ``todolist``."
-msgstr ""
+msgstr "新指令，称为 ``todo`` 和 ``todolist``。"
 
 #: ../../development/tutorials/todo.rst:33
 msgid ""
@@ -75,6 +85,8 @@ msgid ""
 " new directives only produced some content representable by existing "
 "nodes."
 msgstr ""
+"新建文档树节点来代表这些指令，传统上也称为 ``todo`` 和 ``todolist``。"
+"如果新指令只产生一些可由现有节点表示的内容，我们就不需要新的节点。"
 
 #: ../../development/tutorials/todo.rst:37
 msgid ""
@@ -82,6 +94,8 @@ msgid ""
 "start with the extension name, in order to stay unique) that controls "
 "whether todo entries make it into the output."
 msgstr ""
+"一个新的配置值 ``todo_include_todos`` "
+"（配置值的名字应该以扩展名开始，以便保持唯一），控制 todo 条目是否进入输出。"
 
 #: ../../development/tutorials/todo.rst:41
 msgid ""
@@ -90,10 +104,14 @@ msgid ""
 "merge intermediate results from parallel builds, and one for :event:`env-"
 "purge-doc` (the reason for that will be covered later)."
 msgstr ""
+"新的事件处理程序：一个用于 "
+":event:`doctree-resolved` 事件，以替换 todo 和 todolist 节点，"
+"一个用于 :event:`env-merge-info`，以合并并行构建的中间结果，"
+"一个用于 :event:`env-purge-doc` （其原因将在后面介绍）。"
 
 #: ../../development/tutorials/todo.rst:48
 msgid "Prerequisites"
-msgstr ""
+msgstr "前提条件"
 
 #: ../../development/tutorials/todo.rst:50
 msgid ""
@@ -102,6 +120,9 @@ msgid ""
 "use an existing project or create a new one using :program:`sphinx-"
 "quickstart`."
 msgstr ""
+"和 :doc:`helloworld` 一样，我们不会通过 PyPI 发布这个插件，"
+"所以我们再次需要一个 Sphinx 项目来调用它。"
+"你可以使用现有的项目或使用 :program:`sphinx-quickstart` 创建一个新项目。"
 
 #: ../../development/tutorials/todo.rst:54
 msgid ""
@@ -109,28 +130,31 @@ msgid ""
 "(:file:`build`) folders. Your extension file could be in any folder of "
 "your project. In our case, let's do the following:"
 msgstr ""
+"我们假设你在使用独立的源文件（:file:`source`）和构建文件（:file:`build`）文件夹。"
+"你的扩展文件可以在你项目的任何文件夹中。在我们的例子中，让我们做以下事情："
 
 #: ../../development/tutorials/todo.rst:58
 msgid "Create an :file:`_ext` folder in :file:`source`"
-msgstr ""
+msgstr "在 :file:`source` 中创建一个 :file:`_ext` 文件夹"
 
 #: ../../development/tutorials/todo.rst:59
 msgid "Create a new Python file in the :file:`_ext` folder called :file:`todo.py`"
-msgstr ""
+msgstr "在 :file:`_ext` 文件夹下创建一个新的 Python 文件，名为 :file:`todo.py`。"
 
 #: ../../development/tutorials/todo.rst:61
 msgid "Here is an example of the folder structure you might obtain:"
-msgstr ""
+msgstr "下面是一个你可能获得的文件夹结构的例子："
 
 #: ../../development/tutorials/todo.rst:77
 msgid "Writing the extension"
-msgstr ""
+msgstr "编写插件"
 
 #: ../../development/tutorials/todo.rst:79
 msgid ""
 "Open :file:`todo.py` and paste the following code in it, all of which we "
 "will explain in detail shortly:"
 msgstr ""
+"打开 :file:`todo.py`，并在其中粘贴以下代码，所有这些我们很快会详细解释："
 
 #: ../../development/tutorials/todo.rst:86
 msgid ""
@@ -138,14 +162,16 @@ msgid ""
 ":doc:`helloworld`, however, we will will look at each piece step-by-step "
 "to explain what's happening."
 msgstr ""
+"这比 :doc:`helloworld` 中详细介绍的扩展要广泛得多，"
+"然而，我们将逐步查看每一块，解释发生了什么。"
 
 #: ../../development/tutorials/todo.rst:91
 msgid "The node classes"
-msgstr ""
+msgstr "节点类"
 
 #: ../../development/tutorials/todo.rst:92
 msgid "Let's start with the node classes:"
-msgstr ""
+msgstr "让我们从节点类开始："
 
 #: ../../development/tutorials/todo.rst:99
 msgid ""
@@ -154,6 +180,9 @@ msgid ""
 "inherits from ``Admonition`` because it should be handled like a note or "
 "warning, ``todolist`` is just a \"general\" node."
 msgstr ""
+"节点类通常不需要做任何事情，除了继承 :mod:`docutils.nodes` 中定义的标准 docutils 类。"
+"``todo`` 继承自 ``Admonition``，因为它应该像注释或警告一样被处理，"
+"``todolist`` 只是一个 “通用” 节点。"
 
 #: ../../development/tutorials/todo.rst:106
 msgid ""
@@ -162,6 +191,9 @@ msgid ""
 "<https://docutils.sourceforge.io/docs/ref/doctree.html>`__ and "
 ":ref:`Sphinx <nodes>`."
 msgstr ""
+"许多扩展将不必创建他们自己的节点类，"
+"并与已经由 `docutils <https://docutils.sourceforge.io/docs/ref/doctree.html>`__ "
+"和 :ref:`Sphinx <nodes>` 提供的节点顺利工作。"
 
 #: ../../development/tutorials/todo.rst:113
 msgid ""
@@ -171,10 +203,13 @@ msgid ""
 "please make sure that you put inherited nodes into a separate Python "
 "module."
 msgstr ""
+"需要知道的是，虽然你可以在不离开 ``conf.py`` 的情况下扩展 Sphinx，"
+"但如果你在那里声明一个继承的节点，你会遇到一个不明显的 :py:class:`PickleError`。"
+"所以如果出了问题，请确保你把继承的节点放到一个单独的 Python 模块中。"
 
 #: ../../development/tutorials/todo.rst:119
 msgid "For more details, see:"
-msgstr ""
+msgstr "更多细节见："
 
 #: ../../development/tutorials/todo.rst:121
 msgid "https://github.com/sphinx-doc/sphinx/issues/6751"
@@ -190,7 +225,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:126
 msgid "The directive classes"
-msgstr ""
+msgstr "指令类"
 
 #: ../../development/tutorials/todo.rst:127
 msgid ""

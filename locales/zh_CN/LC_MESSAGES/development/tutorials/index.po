@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../development/tutorials/index.rst:9
 msgid "Directive tutorials"
-msgstr ""
+msgstr "指导性教程"
 
 #: ../../development/tutorials/index.rst:4
 msgid "Extension tutorials"
-msgstr ""
+msgstr "插件教程"
 
 #: ../../development/tutorials/index.rst:6
 msgid ""
 "Refer to the following tutorials to get started with extension "
 "development."
 msgstr ""
-
+"参考以下教程，开始进行插件开发。"

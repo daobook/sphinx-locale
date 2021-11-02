@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-10-23 20:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,7 +147,7 @@ msgid "The index classes"
 msgstr ""
 
 #: ../../development/tutorials/recipe.rst:101
-msgid "待处理"
+msgid "Todo"
 msgstr ""
 
 #: ../../development/tutorials/recipe.rst:101
@@ -278,4 +278,7 @@ msgid ""
 "For more information, refer to the `docutils`_ documentation and "
 ":doc:`/extdev/index`."
 msgstr ""
+
+#~ msgid "待处理"
+#~ msgstr ""
 

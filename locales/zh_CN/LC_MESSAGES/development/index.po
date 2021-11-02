@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../development/index.rst:19
 msgid "Theming"
-msgstr ""
+msgstr "主题化"
 
 #: ../../development/index.rst:3
 msgid "Extending Sphinx"
-msgstr ""
+msgstr "拓展 Sphinx"
 
 #: ../../development/index.rst:5
 msgid ""
@@ -34,4 +34,7 @@ msgid ""
 "existing extensions, refer to :doc:`/usage/index`. For a more detailed "
 "discussion of the extension interface see :doc:`/extdev/index`."
 msgstr ""
-
+"本指南旨在为那些希望为 Sphinx 开发自己的插件的人提供一个快速介绍。"
+"Sphinx 拥有显著的可扩展性，包括能够钩住构建过程中的几乎每个点。"
+"如果你只是想用现有的插件来使用 Sphinx，请参考 :doc:`/usage/index`。"
+"关于插件接口的更详细的讨论见 :doc:`/extdev/index`。"

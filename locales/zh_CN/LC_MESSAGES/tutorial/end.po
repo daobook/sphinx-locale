@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../tutorial/end.rst:2
 msgid "Where to go from here"
-msgstr ""
+msgstr "今后的发展方向"
 
 #: ../../tutorial/end.rst:4
 msgid ""
@@ -27,4 +27,5 @@ msgid ""
 "project with Sphinx.  To continue learning more about Sphinx, check out "
 "the :ref:`rest of the documentation <contents>`."
 msgstr ""
-
+"这个教程涵盖了用 Sphinx 创建一个文档项目的最初步骤。"
+"要继续学习更多关于 Sphinx 的知识，请查看 :ref:`文档剩余部分 <contents>`。"

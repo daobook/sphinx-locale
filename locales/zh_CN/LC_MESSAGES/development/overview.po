@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../development/overview.rst:2
 msgid "Developing extensions overview"
-msgstr ""
+msgstr "开发插件的概述"
 
 #: ../../development/overview.rst:4
 msgid "This page contains general information about developing Sphinx extensions."
-msgstr ""
+msgstr "本页包含关于开发 Sphinx 插件的一般信息。"
 
 #: ../../development/overview.rst:7
 msgid "Make an extension depend on another extension"
-msgstr ""
+msgstr "使一个插件依赖于另一个插件"
 
 #: ../../development/overview.rst:9
 msgid ""
@@ -36,6 +36,9 @@ msgid ""
 ":file:`conf.py` file, but this is not available to you as an extension "
 "developer."
 msgstr ""
+"有时你的插件依赖于另一个 Sphinx 插件的功能。"
+"大多数 Sphinx 插件是在项目的 :file:`conf.py` 文件中激活的，"
+"但作为插件的开发者，这是不可以的。"
 
 #: ../../development/overview.rst:17
 msgid ""
@@ -44,14 +47,17 @@ msgid ""
 "activate another extension at run-time, ensuring that you have access to "
 "its functionality."
 msgstr ""
+"为了确保另一个插件被激活为你自己插件的一部分，"
+"使用 :meth:`Sphinx.setup_extension` 方法。"
+"这将在运行时激活另一个插件，确保你可以使用它的功能。"
 
 #: ../../development/overview.rst:22
 msgid "For example, the following code activates the ``recommonmark`` extension:"
-msgstr ""
+msgstr "例如，以下代码激活了 ``recommonmark`` 插件。"
 
 #: ../../development/overview.rst:31
 msgid ""
 "Since your extension will depend on another, make sure to include it as a"
 " part of your extension's installation requirements."
 msgstr ""
-
+"由于你的插件将依赖于另一个，请确保将其作为你的插件安装要求的一部分。"

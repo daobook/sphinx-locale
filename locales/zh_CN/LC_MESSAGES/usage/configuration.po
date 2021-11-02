@@ -8,18 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-10-28 08:45+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../usage/configuration.rst:7
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: ../../usage/configuration.rst:12
 msgid ""
@@ -28,6 +28,9 @@ msgid ""
 " configuration file\" and contains (almost) all configuration needed to "
 "customize Sphinx input and output behavior."
 msgstr ""
+":term:`配置目录` 必须包含一个名为 :file:`conf.py` 的文件。"
+"这个文件（包含 Python 代码）被称为 “build "
+"配置文件”，包含（几乎）所有自定义 Sphinx 输入和输出行为所需的配置。"
 
 #: ../../usage/configuration.rst:17
 msgid ""
@@ -35,6 +38,9 @@ msgid ""
 "directory to adjust `Docutils`_ configuration if not otherwise overridden"
 " or set by Sphinx."
 msgstr ""
+"一个可选的文件 `docutils.conf`_ 可以被添加到配置目录中，"
+"以调整 `Docutils`_ 配置，如果没有被 Sphinx "
+"覆盖或设置的话。"
 
 #: ../../usage/configuration.rst:24
 msgid ""
@@ -44,16 +50,20 @@ msgid ""
 "code. Sphinx then reads simple names from the file's namespace as its "
 "configuration."
 msgstr ""
+"配置文件在构建时作为 Python 代码执行（使用 "
+":func:`importlib.import_module`，并且当前目录设置为其包含目录），"
+"因此可以执行任意复杂的代码。然后 Sphinx "
+"从文件的命名空间中读取简单的名称作为其配置。"
 
 #: ../../usage/configuration.rst:29
 msgid "Important points to note:"
-msgstr ""
+msgstr "需要注意的重要事项："
 
 #: ../../usage/configuration.rst:31
 msgid ""
 "If not otherwise documented, values must be strings, and their default is"
 " the empty string."
-msgstr ""
+msgstr "如果没有其他文件规定，值必须是字符串，其默认值是空字符串。"
 
 #: ../../usage/configuration.rst:34
 msgid ""
@@ -62,18 +72,22 @@ msgid ""
 "``\"sphinx.builders.Builder\"`` means the ``Builder`` class in the "
 "``sphinx.builders`` module."
 msgstr ""
+"术语 “完全限定名”（fully-qualified name）指的是一个字符串，"
+"它命名了一个模块中可导入的 Python 对象；例如，FQN "
+"``\"sphinx.builders.Builder\"`` 意味着 ``sphinx.builders`` 模块中的 ``Builder`` "
+"类。"
 
 #: ../../usage/configuration.rst:39
 msgid ""
 "Remember that document names use ``/`` as the path separator and don't "
 "contain the file name extension."
-msgstr ""
+msgstr "记住，文件名使用 ``/`` 作为路径分隔符，不包含文件名的扩展名。"
 
 #: ../../usage/configuration.rst:42
 msgid ""
 "Since :file:`conf.py` is read as a Python file, the usual rules apply for"
 " encodings and Unicode support."
-msgstr ""
+msgstr "由于 :file:`conf.py` 是作为一个 Python 文件被读取的，通常的规则适用于编码和 Unicode 支持。"
 
 #: ../../usage/configuration.rst:45
 msgid ""
@@ -83,6 +97,9 @@ msgid ""
 "Modules are removed automatically, so you don't need to ``del`` your "
 "imports after use."
 msgstr ""
+"config 命名空间的内容是腌制的（这样 Sphinx 可以在配置改变时发现），"
+"所以它可能不包含不可腌制的值--如果合适的话用 ``del`` "
+"从命名空间中删除它们。模块会自动删除，所以你不需要在使用后 ``del`` 你的导入。"
 
 #: ../../usage/configuration.rst:52
 msgid ""
@@ -94,26 +111,34 @@ msgid ""
 "``tags.has('tag')``. Note that the current builder tag is not available "
 "in ``conf.py``, as it is created *after* the builder is initialized."
 msgstr ""
+"在配置文件中，有一个名为 ``tags`` 的特殊对象可用。"
+"它可以用来查询和改变标签（见 :ref:`tags`）。"
+"使用 ``tags.has('tag')``  来查询，"
+"``tags.add('tag')`` 和 ``tags.remove('tag')`` 来改变。"
+"只有通过 ``-t`` 命令行选项或 ``tags.add('tag')`` 设置的标签"
+"可以使用 ``tags.has('tag')`` 进行查询。"
+"注意，当前的构建器标签在 ``conf.py`` 中是不可用的，"
+"因为它是在构建器被初始化之后创建的。""
 
 #: ../../usage/configuration.rst:62
 msgid "Project information"
-msgstr ""
+msgstr "项目信息"
 
 #: ../../usage/configuration.rst:66
 msgid "The documented project's name."
-msgstr ""
+msgstr "记录的项目名称。"
 
 #: ../../usage/configuration.rst:70
 msgid "The author name(s) of the document.  The default value is ``'unknown'``."
-msgstr ""
+msgstr "该文档的作者姓名。默认值是 ``'unknown'``。"
 
 #: ../../usage/configuration.rst:74
 msgid "A copyright statement in the style ``'2008, Author Name'``."
-msgstr ""
+msgstr "风格为 ``'2008, Author Name'`` 的版权声明。"
 
 #: ../../usage/configuration.rst:78
 msgid "An alias of :confval:`copyright`."
-msgstr ""
+msgstr ":confval:`copyright` 的别名。"
 
 #: ../../usage/configuration.rst:84
 msgid ""
@@ -121,6 +146,8 @@ msgid ""
 "For example, for the Python documentation, this may be something like "
 "``2.6``."
 msgstr ""
+"项目的主版本，用来替代 ``|version|``。"
+"例如，对于 Python 文档，这可能是 ``2.6`` 之类的。"
 
 #: ../../usage/configuration.rst:89
 msgid ""
@@ -128,16 +155,20 @@ msgid ""
 "e.g. in the HTML templates.  For example, for the Python documentation, "
 "this may be something like ``2.6.0rc1``."
 msgstr ""
+"项目的完整版本，用来替代 ``|release|``，例如在 HTML 模板中。"
+"例如，对于 Python 文档，这可能是 ``2.6.0rc1``。"
 
 #: ../../usage/configuration.rst:93
 msgid ""
 "If you don't need the separation provided between :confval:`version` and "
 ":confval:`release`, just set them both to the same value."
 msgstr ""
+"如果你不需要在 :confval:`version` 和 :confval:`release` 之间提供分离，"
+"只需将它们都设置为相同的值。"
 
 #: ../../usage/configuration.rst:98
 msgid "General configuration"
-msgstr ""
+msgstr "通用配置"
 
 #: ../../usage/configuration.rst:102
 msgid ""
@@ -145,6 +176,8 @@ msgid ""
 "<extensions/index>`. These can be extensions coming with Sphinx (named "
 "``sphinx.ext.*``) or custom ones."
 msgstr ""
+"一个字符串的列表，是 :doc:`插件 <extensions/index>` 的模块名称。"
+"这些可以是 Sphinx 自带的扩展（命名为 ``sphinx.ext.*``）或自定义的。"
 
 #: ../../usage/configuration.rst:106
 msgid ""
@@ -153,25 +186,29 @@ msgid ""
 "paths. If your extension path is relative to the :term:`configuration "
 "directory`, use :func:`os.path.abspath` like so::"
 msgstr ""
+"注意，如果你的插件在另一个目录中，你可以在 conf 文件中扩展 :data:`sys.path` -- "
+"但要确保你使用绝对路径。如果你的扩展路径是相对于 :term:`配置目录`，"
+"请使用 :func:`os.path.abspath`，像这样 ::"
 
 #: ../../usage/configuration.rst:117
 msgid ""
 "That way, you can load an extension called ``extname`` from the "
 "subdirectory ``sphinxext``."
-msgstr ""
+msgstr "这样，你就可以从 ``sphinxext`` 子目录中加载一个名为 ``extname`` 的扩展。"
 
 #: ../../usage/configuration.rst:120
 msgid ""
 "The configuration file itself can be an extension; for that, you only "
 "need to provide a :func:`setup` function in it."
-msgstr ""
+msgstr "配置文件本身可以是一个插件；为此，你只需要在其中提供一个 :func:`setup` 函数。"
 
 #: ../../usage/configuration.rst:125
 msgid ""
 "The file extensions of source files.  Sphinx considers the files with "
 "this suffix as sources.  The value can be a dictionary mapping file "
 "extensions to file types.  For example::"
-msgstr ""
+msgstr "源文件的文件扩展名。"
+"Sphinx 认为有这个后缀的文件是源文件。这个值可以是一个映射文件扩展名和文件类型的字典。例如 ::"
 
 #: ../../usage/configuration.rst:135
 msgid ""
@@ -179,38 +216,42 @@ msgid ""
 "can add a new file type using source parser extensions.  Please read a "
 "document of the extension to know which file type the extension supports."
 msgstr ""
+"默认情况下，Sphinx 只支持 ``'restructuredtext'`` "
+"文件类型。你可以使用源解析器插件添加一个新的文件类型。"
+"请阅读插件的文档，了解插件支持的文件类型。"
 
 #: ../../usage/configuration.rst:139
 msgid ""
 "The value may also be a list of file extensions: then Sphinx will "
 "consider that they all map to the ``'restructuredtext'`` file type."
-msgstr ""
+msgstr "这个值也可以是一个文件扩展名的列表："
+"那么 Sphinx 会认为它们都映射到 ``'restructuredtext'`` 文件类型"
 
 #: ../../usage/configuration.rst:142
 msgid "Default is ``{'.rst': 'restructuredtext'}``."
-msgstr ""
+msgstr "默认是 ``{'.rst': 'restructuredtext'}``。"
 
 #: ../../usage/configuration.rst:144
 msgid "file extensions have to start with a dot (e.g. ``.rst``)."
-msgstr ""
+msgstr "文件扩展名必须以点开始（例如 ``.rst``）。"
 
 #: ../../usage/configuration.rst:146
 msgid "Can now be a list of extensions."
-msgstr ""
+msgstr "现在可以是一个 插件 列表。"
 
 #: ../../usage/configuration.rst:149
 msgid "Support file type mapping"
-msgstr ""
+msgstr "支持文件类型映射"
 
 #: ../../usage/configuration.rst:154
 msgid ""
 "The encoding of all reST source files.  The recommended encoding, and the"
 " default value, is ``'utf-8-sig'``."
-msgstr ""
+msgstr "所有 reST 源文件的编码。推荐的编码，也是默认值，是 ``'utf-8-sig'``"
 
 #: ../../usage/configuration.rst:157
 msgid "Previously, Sphinx accepted only UTF-8 encoded sources."
-msgstr ""
+msgstr "以前，Sphinx 只接受 UTF-8 编码的来源。"
 
 #: ../../usage/configuration.rst:162
 msgid ""
@@ -221,44 +262,51 @@ msgid ""
 "Files with a suffix that is not in the dictionary will be parsed with the"
 " default reStructuredText parser."
 msgstr ""
+"如果给定，一个不同来源的解析器类的字典就足够了。"
+"键是后缀，值可以是一个类，也可以是一个字符串，给出一个解析器类的全称名称。"
+"解析器类可以是 ``docutils.parsers.Parser`` 或 :class:`sphinx.parsers.Parser``。"
+"后缀不在字典中的文件将用默认的 reStructuredText 解析器进行解析。"
 
 #: ../../usage/configuration.rst:169 ../../usage/configuration.rst:1457
 msgid "For example::"
-msgstr ""
+msgstr "例如 ::"
 
 #: ../../usage/configuration.rst:175
 msgid ""
 "Refer to :doc:`/usage/markdown` for more information on using Markdown "
 "with Sphinx."
-msgstr ""
+msgstr "参考 :doc:`/usage/markdown`，了解更多关于在 Sphinx 中使用 Markdown 的信息。"
 
 #: ../../usage/configuration.rst:180
 msgid ""
 "Now Sphinx provides an API :meth:`.Sphinx.add_source_parser` to register "
 "a source parser.  Please use it instead."
 msgstr ""
+"现在 Sphinx 提供了一个API :meth:`.Sphinx.add_source_parser` 来注册一个源解析器。"
+"请用它来代替。"
 
 #: ../../usage/configuration.rst:186
 msgid "Same as :confval:`root_doc`."
-msgstr ""
+msgstr "与 :confval:`root_doc` 相同。"
 
 #: ../../usage/configuration.rst:188
 msgid "Renamed ``master_doc`` to ``root_doc``."
-msgstr ""
+msgstr "将 ``master_doc`` 重命名为 ``root_doc``。"
 
 #: ../../usage/configuration.rst:193
 msgid ""
 "The document name of the \"root\" document, that is, the document that "
 "contains the root :rst:dir:`toctree` directive.  Default is ``'index'``."
 msgstr ""
+"“根” 文件的文件名，即包含根 :rst:dir:`toctree` 指令的文件。默认为 ``'index'``。"
 
 #: ../../usage/configuration.rst:196
 msgid "The default is changed to ``'index'`` from ``'contents'``."
-msgstr ""
+msgstr "默认值从 ``'contents'`` 改为 ``'index'``。"
 
 #: ../../usage/configuration.rst:198
 msgid "Renamed ``root_doc`` from ``master_doc``."
-msgstr ""
+msgstr "从 ``root_doc`` 重命名为 ``master_doc``。"
 
 #: ../../usage/configuration.rst:203
 msgid ""
@@ -267,49 +315,58 @@ msgid ""
 "relative to the source directory, using slashes as directory separators "
 "on all platforms."
 msgstr ""
+"在寻找源文件时应排除的 glob-style 模式的列表。[1]_ "
+"它们与相对于源文件目录的源文件名相匹配，在所有平台上使用斜线作为目录分隔符。"
 
 #: ../../usage/configuration.rst:208
 msgid "Example patterns:"
-msgstr ""
+msgstr "模式的示例："
 
 #: ../../usage/configuration.rst:210
 msgid ""
 "``'library/xml.rst'`` -- ignores the ``library/xml.rst`` file (replaces "
 "entry in :confval:`unused_docs`)"
 msgstr ""
+"``'library/xml.rst'`` -- 忽略 ``library/xml.rst`` 文件（替换 "
+":confval:`unused_docs` 中的条目）"
 
 #: ../../usage/configuration.rst:212
 msgid "``'library/xml'`` -- ignores the ``library/xml`` directory"
 msgstr ""
+"``'library/xml'`` -- 忽略 ``library/xml`` 目录"
 
 #: ../../usage/configuration.rst:213
 msgid ""
 "``'library/xml*'`` -- ignores all files and directories starting with "
 "``library/xml``"
 msgstr ""
+"``'library/xml*'`` -- 忽略所有以 ``library/xml`` 开头的文件和目录"
 
 #: ../../usage/configuration.rst:215
 msgid "``'**/.svn'`` -- ignores all ``.svn`` directories"
-msgstr ""
+msgstr "``'**/.svn'`` -- 忽略全部的 ``.svn`` 目录"
 
 #: ../../usage/configuration.rst:217
 msgid ""
 ":confval:`exclude_patterns` is also consulted when looking for static "
 "files in :confval:`html_static_path` and :confval:`html_extra_path`."
 msgstr ""
+":confval:`exclude_patterns` 在寻找 :confval:`html_static_path` 和 "
+":confval:`html_extra_path` 中的静态文件时也被参考。"
 
 #: ../../usage/configuration.rst:224
 msgid ""
 "A list of paths that contain extra templates (or templates that overwrite"
 " builtin/theme-specific templates).  Relative paths are taken as relative"
 " to the configuration directory."
-msgstr ""
+msgstr "包含额外模板（或覆盖内置/特定主题模板的模板）的路径列表。"
+"相对路径被认为是相对于配置目录的。"
 
 #: ../../usage/configuration.rst:228
 msgid ""
 "As these files are not meant to be built, they are automatically added to"
 " :confval:`exclude_patterns`."
-msgstr ""
+msgstr "由于这些文件不是为了被构建，它们被自动添加到 :confval:`exclude_patterns` 中。"
 
 #: ../../usage/configuration.rst:234
 msgid ""
@@ -319,6 +376,10 @@ msgid ""
 "output of other builders (currently the changes builder).  (Note that the"
 " template bridge must be made theme-aware if HTML themes are to be used.)"
 msgstr ""
+"一个字符串，包含一个可调用（或简单的类）的全限定名称，它返回一个 "
+":class:`~sphinx.application.TemplateBridge` 的实例。"
+"这个实例然后被用来渲染 HTML 文档，可能还有其他构建器的输出（目前是变化构建器）。"
+" (注意，如果要使用 HTML 主题，模板桥必须具有主题感知功能。)"
 
 #: ../../usage/configuration.rst:244
 msgid ""
@@ -327,6 +388,9 @@ msgid ""
 "that should be available in every file (another being "
 ":confval:`rst_prolog`).  An example::"
 msgstr ""
+"一串 reStructuredText，它将被包含在每个被读取的源文件的末尾。"
+"这是一个可以添加替换的地方，应该在每个文件中都有（另一个是 "
+":confval:`rst_prolog`）。一个例子："
 
 #: ../../usage/configuration.rst:259
 msgid ""
@@ -335,6 +399,9 @@ msgid ""
 "substitutions that should be available in every file (another being "
 ":confval:`rst_epilog`).  An example::"
 msgstr ""
+"一个 reStructuredText 的字符串，它将被包含在每个被读取的源文件的开头。"
+"这是一个可以添加替换的地方，应该在每个文件中都有（另一个是"
+" :confval:`rst_epilog`）。一个例子："
 
 #: ../../usage/configuration.rst:275
 msgid ""
@@ -346,6 +413,12 @@ msgid ""
 " default domain is C, Python functions will be named \"Python function\","
 " not just \"function\")."
 msgstr ""
+"默认的 :doc:`域 </usage/restructuredtext/domains>` "
+"的名称。也可以是``None``，以停用默认域。默认是 ``'py'``。"
+"那些在其他域中的对象（无论域名是明确给出的，还是由 :rst:dir"
+":`default-domain` 指令选择的），在命名时都会明确预留域名"
+"（例如，当默认域是 C 时，Python 函数将被命名为 “Python"
+" function”，而不仅仅是 “function”）。"
 
 #: ../../usage/configuration.rst:288
 msgid ""
@@ -355,12 +428,15 @@ msgid ""
 "function \"filter\".  The default is ``None``, which doesn't reassign the"
 " default role."
 msgstr ""
+"一个 reST 角色的名字（内置的或 Sphinx 扩展的），作为默认的角色，也就是说，对于标示为 ```like this``` "
+"的文本。这可以设置为 ``'py:obj'`` 以使 ```filter``` 成为 Python 函数 “filter” 的交叉引用。默认的是 "
+"``None``，它不会重新分配默认的角色。"
 
 #: ../../usage/configuration.rst:293
 msgid ""
 "The default role can always be set within individual documents using the "
 "standard reST :rst:dir:`default-role` directive."
-msgstr ""
+msgstr "默认角色总是可以使用标准的 reST :rst:dir:`default-role` 指令在单个文件中设置。"
 
 #: ../../usage/configuration.rst:300
 msgid ""
@@ -368,18 +444,20 @@ msgid ""
 "documents.  Regardless of this setting, warnings are always written to "
 "the standard error stream when ``sphinx-build`` is run."
 msgstr ""
+"如果为真，在建立的文件中把警告保留为 “系统消息” 段落。"
+"不管这个设置如何，当 ``sphinx-build`` 运行时，警告总是被写入标准错误流。"
 
 #: ../../usage/configuration.rst:304
 msgid "The default is ``False``, the pre-0.5 behavior was to always keep them."
-msgstr ""
+msgstr "默认为 ``False``，0.5 之前的行为是一直保留它们。"
 
 #: ../../usage/configuration.rst:310
 msgid "A list of warning types to suppress arbitrary warning messages."
-msgstr ""
+msgstr "一个警告类型的列表，用于抑制任意的警告信息。"
 
 #: ../../usage/configuration.rst:312
 msgid "Sphinx supports following warning types:"
-msgstr ""
+msgstr "Sphinx 支持以下警告类型："
 
 #: ../../usage/configuration.rst:314
 msgid "``app.add_node``"
@@ -471,31 +549,31 @@ msgstr ""
 
 #: ../../usage/configuration.rst:337
 msgid "You can choose from these types."
-msgstr ""
+msgstr "你可以从这些类型中选择。"
 
 #: ../../usage/configuration.rst:339
 msgid "Now, this option should be considered *experimental*."
-msgstr ""
+msgstr "现在，这个选项应该被认为是 *实验性的*。"
 
 #: ../../usage/configuration.rst:345
 msgid "Added ``misc.highlighting_failure``"
-msgstr ""
+msgstr "添加 ``misc.highlighting_failure``。"
 
 #: ../../usage/configuration.rst:349
 msgid "Added ``epub.unknown_project_files``"
-msgstr ""
+msgstr "添加 ``epub.unknown_project_files``"
 
 #: ../../usage/configuration.rst:353
 msgid "Added ``ref.footnote``"
-msgstr ""
+msgstr "添加 ``ref.footnote``"
 
 #: ../../usage/configuration.rst:357
 msgid "Added ``autosectionlabel.*``"
-msgstr ""
+msgstr "添加 ``autosectionlabel.*``"
 
 #: ../../usage/configuration.rst:361
 msgid "Added ``epub.duplicated_toc_entry``"
-msgstr ""
+msgstr "添加 ``epub.duplicated_toc_entry``"
 
 #: ../../usage/configuration.rst:365
 msgid ""
@@ -503,10 +581,12 @@ msgid ""
 "compare it with its version and refuse to build if it is too old.  "
 "Default is no requirement."
 msgstr ""
+"如果设置为一个 ``major.minor`` 的版本字符串，如 ``'1.1'``，Sphinx "
+"将与它的版本进行比较，如果它太旧，就拒绝构建。默认是没有要求。"
 
 #: ../../usage/configuration.rst:371
 msgid "also accepts micro version string"
-msgstr ""
+msgstr "也接受微型版本的字符串"
 
 #: ../../usage/configuration.rst:376
 msgid ""
@@ -516,12 +596,17 @@ msgid ""
 "the form ``major.minor``.  Requirements do not have to be specified for "
 "all extensions, only for those you want to check."
 msgstr ""
+"这个值可以是一个字典，指定 :confval:`extensions` 中的扩展的版本要求，"
+"例如 ``needs_extensions = {'sphinxcontrib.something': '1.5'}``。"
+"版本字符串应该是 “major.minor” 的形式。"
+"不需要为所有扩展指定要求，只需要为那些你想检查的扩展指定。"
 
 #: ../../usage/configuration.rst:382
 msgid ""
 "This requires that the extension specifies its version to Sphinx (see "
 ":ref:`dev-extensions` for how to do that)."
 msgstr ""
+"这需要扩展向 Sphinx 指定它的版本（如何做到这一点，见 :ref:`dev-extensions`）。"
 
 #: ../../usage/configuration.rst:389
 msgid ""
@@ -530,28 +615,31 @@ msgid ""
 ":literal:`:manpage:`man(1)`` role will link to "
 "<https://manpages.debian.org/man(1)>. The patterns available are:"
 msgstr ""
+"一个用于交叉引用 :rst:role:`manpage` 角色的 URL。如果这个定义为 "
+"``https://manpages.debian.org/{path}``，那么 :literal:`:manpage:`man(1)`` "
+"角色将链接到 <https://manpages.debian.org/man(1)>。可用的模式有："
 
 #: ../../usage/configuration.rst:394
 msgid "``page`` - the manual page (``man``)"
-msgstr ""
+msgstr "``page`` - 手册页面（``man``）"
 
 #: ../../usage/configuration.rst:395
 msgid "``section`` - the manual section (``1``)"
-msgstr ""
+msgstr "章节 - 手册章节（``1``）"
 
 #: ../../usage/configuration.rst:396
 msgid "``path`` - the original manual page and section specified (``man(1)``)"
-msgstr ""
+msgstr "``path`` - 原有手册中指定的页面和章节（``man(1)``）"
 
 #: ../../usage/configuration.rst:398
 msgid "This also supports manpages specified as ``man.1``."
-msgstr ""
+msgstr "这也支持指定为 ``man.1`` 的手册页。"
 
 #: ../../usage/configuration.rst:400
 msgid ""
 "This currently affects only HTML writers but could be expanded in the "
 "future."
-msgstr ""
+msgstr "目前这只影响到 HTML 写作者，但将来可能会扩大。"
 
 #: ../../usage/configuration.rst:407
 msgid ""
@@ -559,6 +647,9 @@ msgid ""
 "be found.  Default is ``False``.  You can activate this mode temporarily "
 "using the :option:`-n <sphinx-build -n>` command-line switch."
 msgstr ""
+"如果是真的，Sphinx 会对 *所有* 找不到目标的引用发出警告。"
+"默认是 ``False``。你可以用 :option:`-n <sphinx-build -n>` "
+"命令行开关暂时激活这个模式。"
 
 #: ../../usage/configuration.rst:415
 msgid ""
@@ -567,6 +658,9 @@ msgid ""
 "``type`` should include the domain name if present.  Example entries "
 "would be ``('py:func', 'int')`` or ``('envvar', 'LD_LIBRARY_PATH')``."
 msgstr ""
+"一个 ``(type, target)`` 元组的列表（默认为空），在 “nitpicky mode” "
+"下生成警告的时候应该被忽略。请注意，``type`` 如果存在，应该包括域名。"
+"例子是 ``('py:func', 'int')`` 或 ``('envvar', 'LD_LIBRARY_PATH')``。"
 
 #: ../../usage/configuration.rst:424
 msgid ""
@@ -575,6 +669,9 @@ msgid ""
 "Note, that the regular expression must match the whole string (as if the "
 "``^`` and ``$`` markers were inserted)."
 msgstr ""
+":confval:`nitpick_ignore` 的扩展版本，它将 ``type`` 和 ``target`` "
+"字符串解释为正则表达式。"
+"注意，正则表达式必须匹配整个字符串（就像插入了 ``^`` 和 ``$`` 标记）。"
 
 #: ../../usage/configuration.rst:429
 msgid ""
@@ -583,6 +680,9 @@ msgid ""
 "``'bar.B'`` in them, such as ``('py:const', "
 "'foo_package.bar.BAZ_VALUE')`` or ``('py:class', 'food.bar.Barman')``."
 msgstr ""
+"例如，``(r'py:.*', r'foo.*bar\\.B.*')`` 将忽略所有以 ``'foo'`` 开头且有 ``'bar.B'`` 的 "
+"python 实体的挑剔警告，例如``('py:const', 'foo_package.bar.BAZ_VALUE')`` 或 "
+"``('py:class', 'food.bar.Barman')``。"
 
 #: ../../usage/configuration.rst:438
 msgid ""
@@ -590,6 +690,9 @@ msgid ""
 "they have a caption.  The :rst:role:`numref` role is enabled. Obeyed so "
 "far only by HTML and LaTeX builders. Default is ``False``."
 msgstr ""
+"如果是 true，数字、表格和代码块如果有标题就会自动编号。"
+":rst:role:`numref` 角色被启用。"
+"到目前为止，只被 HTML 和 LaTeX 生成器所服从。默认是 ``False``。"
 
 #: ../../usage/configuration.rst:444
 msgid ""
@@ -791,7 +894,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:613 ../../usage/configuration.rst:1058
 #: ../../usage/configuration.rst:1081 ../../usage/configuration.rst:1234
-#: ../../usage/configuration.rst:1257 ../../usage/configuration.rst:2649
+#: ../../usage/configuration.rst:1257 ../../usage/configuration.rst:2647
 msgid "Example::"
 msgstr ""
 
@@ -3435,57 +3538,57 @@ msgstr ""
 msgid "A regular expression that matches a URI."
 msgstr ""
 
-#: ../../usage/configuration.rst:2643
+#: ../../usage/configuration.rst:2641
 msgid "*auth_info*"
 msgstr ""
 
 #: ../../usage/configuration.rst:2639
 msgid ""
 "Authentication information to use for that URI. The value can be anything"
-" that is understood by the ``requests`` library (see `requests "
-"Authentication <requests-auth>`_ for details)."
+" that is understood by the ``requests`` library (see :ref:`requests "
+"Authentication <requests:authentication>` for details)."
 msgstr ""
 
-#: ../../usage/configuration.rst:2645
+#: ../../usage/configuration.rst:2643
 msgid ""
 "The ``linkcheck`` builder will use the first matching ``auth_info`` value"
 " it can find in the :confval:`linkcheck_auth` list, so values earlier in "
 "the list have higher priority."
 msgstr ""
 
-#: ../../usage/configuration.rst:2660
+#: ../../usage/configuration.rst:2658
 msgid ""
 "The ``linkcheck`` builder may issue a large number of requests to the "
 "same site over a short period of time. This setting controls the builder "
 "behavior when servers indicate that requests are rate-limited."
 msgstr ""
 
-#: ../../usage/configuration.rst:2664
+#: ../../usage/configuration.rst:2662
 msgid ""
 "If a server indicates when to retry (using the `Retry-After`_ header), "
 "``linkcheck`` always follows the server indication."
 msgstr ""
 
-#: ../../usage/configuration.rst:2667
+#: ../../usage/configuration.rst:2665
 msgid ""
 "Otherwise, ``linkcheck`` waits for a minute before to retry and keeps "
 "doubling the wait time between attempts until it succeeds or exceeds the "
 "``linkcheck_rate_limit_timeout``. By default, the timeout is 5 minutes."
 msgstr ""
 
-#: ../../usage/configuration.rst:2677
+#: ../../usage/configuration.rst:2675
 msgid "Options for the XML builder"
 msgstr ""
 
-#: ../../usage/configuration.rst:2681
+#: ../../usage/configuration.rst:2679
 msgid "If true, pretty-print the XML.  Default is ``True``."
 msgstr ""
 
-#: ../../usage/configuration.rst:2687
+#: ../../usage/configuration.rst:2685
 msgid "Footnotes"
 msgstr ""
 
-#: ../../usage/configuration.rst:2688
+#: ../../usage/configuration.rst:2686
 msgid ""
 "A note on available globbing syntax: you can use the standard shell "
 "constructs ``*``, ``?``, ``[...]`` and ``[!...]`` with the feature that "
@@ -3493,18 +3596,18 @@ msgid ""
 " any sequence of characters *including* slashes."
 msgstr ""
 
-#: ../../usage/configuration.rst:2697
+#: ../../usage/configuration.rst:2695
 msgid "Options for the C domain"
 msgstr ""
 
-#: ../../usage/configuration.rst:2701 ../../usage/configuration.rst:2757
+#: ../../usage/configuration.rst:2699 ../../usage/configuration.rst:2755
 msgid ""
 "A list of strings that the parser additionally should accept as "
 "attributes. This can for example be used when attributes have been "
 "``#define`` d for portability."
 msgstr ""
 
-#: ../../usage/configuration.rst:2709 ../../usage/configuration.rst:2765
+#: ../../usage/configuration.rst:2707 ../../usage/configuration.rst:2763
 msgid ""
 "A list of strings that the parser additionally should accept as "
 "attributes with one argument.  That is, if ``my_align_as`` is in the "
@@ -3514,54 +3617,54 @@ msgid ""
 "portability."
 msgstr ""
 
-#: ../../usage/configuration.rst:2719
+#: ../../usage/configuration.rst:2717
 msgid ""
 "A list of identifiers to be recognized as keywords by the C parser. It "
 "defaults to ``['alignas', 'alignof', 'bool', 'complex', 'imaginary', "
 "'noreturn', 'static_assert', 'thread_local']``."
 msgstr ""
 
-#: ../../usage/configuration.rst:2727
+#: ../../usage/configuration.rst:2725
 msgid ""
 "A boolean (default ``False``) controlling whether to parse and try to "
 "convert pre-v3 style type directives and type roles."
 msgstr ""
 
-#: ../../usage/configuration.rst:2731 ../../usage/configuration.rst:2740
+#: ../../usage/configuration.rst:2729 ../../usage/configuration.rst:2738
 msgid "Use the directives and roles added in v3."
 msgstr ""
 
-#: ../../usage/configuration.rst:2736
+#: ../../usage/configuration.rst:2734
 msgid ""
 "A boolean (default ``True``) controlling whether to warn when a pre-v3 "
 "style type directive/role is parsed and converted."
 msgstr ""
 
-#: ../../usage/configuration.rst:2746
+#: ../../usage/configuration.rst:2744
 msgid "Options for the C++ domain"
 msgstr ""
 
-#: ../../usage/configuration.rst:2750
+#: ../../usage/configuration.rst:2748
 msgid ""
 "A list of prefixes that will be ignored when sorting C++ objects in the "
 "global index.  For example ``['awesome_lib::']``."
 msgstr ""
 
-#: ../../usage/configuration.rst:2774
+#: ../../usage/configuration.rst:2772
 msgid "Options for the Python domain"
 msgstr ""
 
-#: ../../usage/configuration.rst:2778
+#: ../../usage/configuration.rst:2776
 msgid ""
 "If true, suppress the module name of the python reference if it can be "
 "resolved.  The default is ``False``."
 msgstr ""
 
-#: ../../usage/configuration.rst:2783
+#: ../../usage/configuration.rst:2781
 msgid "This configuration is still in experimental"
 msgstr ""
 
-#: ../../usage/configuration.rst:2786
+#: ../../usage/configuration.rst:2784
 msgid "Example of configuration file"
 msgstr ""
 

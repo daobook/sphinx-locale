@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 19:07+0800\n"
+"POT-Creation-Date: 2021-10-27 12:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: ../../usage/advanced/websupport/storagebackends.rst:6
 msgid "Storage Backends"
@@ -66,7 +66,7 @@ msgstr ""
 #: sphinxcontrib.websupport.storage.StorageBackend.get_data
 #: sphinxcontrib.websupport.storage.StorageBackend.process_vote
 #: sphinxcontrib.websupport.storage.StorageBackend.update_username
-msgid "参数"
+msgid "Parameters"
 msgstr ""
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_node:3
@@ -205,4 +205,135 @@ msgstr ""
 #: of sphinxcontrib.websupport.storage.StorageBackend.accept_comment:4
 msgid "The id of the comment being accepted."
 msgstr ""
+
+#~ msgid "参数"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Called immediately before the build "
+#~ "process begins. Use this to prepare "
+#~ "the StorageBackend for the addition of"
+#~ " nodes."
+#~ msgstr ""
+
+#~ msgid "Add a node to the StorageBackend."
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "a unique id for the comment."
+#~ msgstr ""
+
+#~ msgid "the name of the document the node belongs to."
+#~ msgstr ""
+
+#~ msgid "the source files name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Called after a build has completed. "
+#~ "Use this to finalize the addition "
+#~ "of nodes if needed."
+#~ msgstr ""
+
+#~ msgid "Called when a comment is being added."
+#~ msgstr ""
+
+#~ msgid "the text of the comment"
+#~ msgstr ""
+
+#~ msgid "whether the comment should be displayed"
+#~ msgstr ""
+
+#~ msgid "the name of the user adding the comment"
+#~ msgstr ""
+
+#~ msgid "a date object with the time the comment was added"
+#~ msgstr ""
+
+#~ msgid "the text of the proposal the user made"
+#~ msgstr ""
+
+#~ msgid "the id of the node that the comment is being added to"
+#~ msgstr ""
+
+#~ msgid "the id of the comment's parent comment."
+#~ msgstr ""
+
+#~ msgid "whether the user adding the comment is a moderator"
+#~ msgstr ""
+
+#~ msgid "Delete a comment."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Raises "
+#~ ":class:`~sphinxcontrib.websupport.errors.UserNotAuthorizedError` "
+#~ "if moderator is False and `username` "
+#~ "doesn't match the username on the "
+#~ "comment."
+#~ msgstr ""
+
+#~ msgid "The id of the comment being deleted."
+#~ msgstr ""
+
+#~ msgid "The username of the user requesting the deletion."
+#~ msgstr ""
+
+#~ msgid "Whether the user is a moderator."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Called to retrieve all data for a"
+#~ " node. This should return a dict "
+#~ "with two keys, *source* and *comments*"
+#~ " as described by "
+#~ ":class:`~sphinxcontrib.websupport.WebSupport`'s "
+#~ ":meth:`~sphinxcontrib.websupport.WebSupport.get_data` method."
+#~ msgstr ""
+
+#~ msgid "The id of the node to get data for."
+#~ msgstr ""
+
+#~ msgid "The name of the user requesting the data."
+#~ msgstr ""
+
+#~ msgid "Whether the requestor is a moderator."
+#~ msgstr ""
+
+#~ msgid "Process a vote that is being cast. `value` will be either -1, 0, or 1."
+#~ msgstr ""
+
+#~ msgid "The id of the comment being voted on."
+#~ msgstr ""
+
+#~ msgid "The username of the user casting the vote."
+#~ msgstr ""
+
+#~ msgid "The value of the vote being cast."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a user is allowed to change "
+#~ "their username this method should be "
+#~ "called so that there is not "
+#~ "stagnate data in the storage system."
+#~ msgstr ""
+
+#~ msgid "The username being changed."
+#~ msgstr ""
+
+#~ msgid "What the username is being changed to."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Called when a moderator accepts a "
+#~ "comment. After the method is called "
+#~ "the comment should be displayed to "
+#~ "all users."
+#~ msgstr ""
+
+#~ msgid "The id of the comment being accepted."
+#~ msgstr ""
 
