@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/index.rst:3
 msgid "Extensions"
-msgstr ""
+msgstr "插件"
 
 #: ../../usage/extensions/index.rst:5
 msgid ""
@@ -27,6 +27,8 @@ msgid ""
 "Sphinx allows adding \"extensions\" to the build process, each of which "
 "can modify almost any aspect of document processing."
 msgstr ""
+"由于许多项目在文档中需要特殊功能，Sphinx 允许在构建过程中添加 “插件”，"
+"每个插件都可以修改文件处理的几乎任何方面。"
 
 #: ../../usage/extensions/index.rst:9
 msgid ""
@@ -34,20 +36,23 @@ msgid ""
 "documentation on writing your own extension, refer to :ref:`dev-"
 "extensions`."
 msgstr ""
+"本章描述了与 Sphinx 捆绑的插件。"
+"关于编写你自己的插件的 API 文档，请参考 :ref:`dev-extensions`。"
 
 #: ../../usage/extensions/index.rst:16
 msgid "Built-in extensions"
-msgstr ""
+msgstr "内置插件"
 
 #: ../../usage/extensions/index.rst:18
 msgid ""
 "These extensions are built in and can be activated by respective entries "
 "in the :confval:`extensions` configuration value:"
 msgstr ""
+"这些插件是内置的，可以通过 :confval:`extensions` 配置值中的各自条目激活："
 
 #: ../../usage/extensions/index.rst:46
 msgid "Third-party extensions"
-msgstr ""
+msgstr "三方插件"
 
 #: ../../usage/extensions/index.rst:48
 msgid ""
@@ -60,10 +65,17 @@ msgid ""
 " Sphinx :: Extension`__ and `Framework :: Sphinx :: Theme`__ trove "
 "classifiers for Sphinx extensions and themes, respectively."
 msgstr ""
+"你可以在 `sphinx-contrib`__ 组织中找到几个由用户贡献的插件。"
+"如果你想把你的插件加入这个组织，"
+"只需按照 `github-administration`__ 项目中提供的说明即可。"
+"这是可选的，有几个插件托管在其他地方。"
+"`awesome-sphinxdoc`__ 项目包含一个精心策划的 Sphinx 软件包列表，"
+"许多软件包使用  `Framework :: Sphinx :: Extension`__  "
+"和 `Framework :: Sphinx :: Theme`__  的分类器，分别用于 Sphinx 的插件和主题。"
 
 #: ../../usage/extensions/index.rst:64
 msgid "Where to put your own extensions?"
-msgstr ""
+msgstr "在哪里放自己的插件？"
 
 #: ../../usage/extensions/index.rst:66
 msgid ""
@@ -73,10 +85,14 @@ msgid ""
 " ``foo.py`` lies in the ``exts`` subdirectory of the project root, put "
 "into :file:`conf.py`::"
 msgstr ""
+"项目本地的插件应该放在项目的目录结构中。"
+"相应地设置 Python 的模块搜索路径，``sys.path``，以便 Sphinx 能找到它们。"
+"例如，如果你的插件 ``foo.py`` 位于项目根目录下的 ``exts`` 子目录中，"
+"就放到 :file:`conf.py` ::"
 
 #: ../../usage/extensions/index.rst:77
 msgid ""
 "You can also install extensions anywhere else on ``sys.path``, e.g. in "
 "the ``site-packages`` directory."
 msgstr ""
-
+"你也可以在 ``sys.path`` 上的其他地方安装插件，例如在 ``site-packages`` 目录下。"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:17+0800\n"
+"POT-Creation-Date: 2021-11-07 00:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,10 +98,6 @@ msgid ""
 msgstr "通过这一改变，你会注意到你的 HTML 文档现在有了新的外观："
 
 #: ../../tutorial/more-sphinx-customization.rst:75
-msgid "使用 Furo 主题的 Lumache 的 HTML 文档"
-msgstr ""
-
-#: ../../tutorial/more-sphinx-customization.rst:75
 msgid "HTML documentation of Lumache with the Furo theme"
 msgstr "使用 Furo 主题的 Lumache 的 HTML 文档"
 
@@ -110,4 +106,7 @@ msgid ""
 "It is now time to :doc:`expand the narrative documentation and split it "
 "into several documents </tutorial/narrative-documentation>`."
 msgstr "现在是时候 :doc:`扩大叙述性文档，并将其分成几个文件 </tutorial/narrative-documentation>`。"
+
+#~ msgid "使用 Furo 主题的 Lumache 的 HTML 文档"
+#~ msgstr ""
 

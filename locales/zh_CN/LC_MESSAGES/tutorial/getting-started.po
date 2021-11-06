@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:17+0800\n"
+"POT-Creation-Date: 2021-11-07 00:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,10 +170,6 @@ msgid ""
 msgstr "最后，在浏览器中打开 ``docs/build/html/index.html``。你应该看到像这样的东西："
 
 #: ../../tutorial/getting-started.rst:117
-msgid "刷新创建的 Lumache 文件"
-msgstr ""
-
-#: ../../tutorial/getting-started.rst:117
 msgid "Freshly created documentation of Lumache"
 msgstr "刷新创建的 Lumache 文件"
 
@@ -184,4 +180,7 @@ msgid ""
 msgstr ""
 "我们走吧! 你用 Sphinx 创建了你的第一个 HTML 文档。现在你可以开始 :doc:`定制它 </tutorial/first-"
 "steps>`。"
+
+#~ msgid "刷新创建的 Lumache 文件"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 4.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:17+0800\n"
+"POT-Creation-Date: 2021-11-07 00:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,10 +171,6 @@ msgstr ""
 "``generated/lumache.rst``，包含模块成员的摘要，在这种情况下是一个函数和一个异常。"
 
 #: ../../tutorial/automatic-doc-generation.rst:155
-msgid "由 autosummary 创建的摘要页面"
-msgstr ""
-
-#: ../../tutorial/automatic-doc-generation.rst:155
 msgid "Summary page created by autosummary"
 msgstr "由 autosummary 创建的摘要页面"
 
@@ -194,3 +190,7 @@ msgid ""
 msgstr ""
 "生成的文件是基于 `Jinja2 模板 <https://jinja2docs.readthedocs.io/>`_，该模板 :ref:`可以定制"
 " <autosummary-customizing-templates>`，但这不属于本教程的范围。"
+
+#~ msgid "由 autosummary 创建的摘要页面"
+#~ msgstr ""
+
