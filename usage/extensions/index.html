@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Extensions &#8212; Sphinx documentation</title>
+    <title>插件 &#8212; Sphinx documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -95,17 +95,17 @@
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">使用 Sphinx</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Extensions</a></li> 
+        <li class="nav-item nav-item-this"><a href="">插件</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Extensions</a><ul>
-<li><a class="reference internal" href="#built-in-extensions">Built-in extensions</a></li>
-<li><a class="reference internal" href="#third-party-extensions">Third-party extensions</a><ul>
-<li><a class="reference internal" href="#where-to-put-your-own-extensions">Where to put your own extensions?</a></li>
+<li><a class="reference internal" href="#">插件</a><ul>
+<li><a class="reference internal" href="#built-in-extensions">内置插件</a></li>
+<li><a class="reference internal" href="#third-party-extensions">三方插件</a><ul>
+<li><a class="reference internal" href="#where-to-put-your-own-extensions">在哪里放自己的插件？</a></li>
 </ul>
 </li>
 </ul>
@@ -144,16 +144,12 @@
           <div class="body" role="main">
             
   <section id="extensions">
-<h1>Extensions<a class="headerlink" href="#extensions" title="永久链接至标题">¶</a></h1>
-<p>Since many projects will need special features in their documentation, Sphinx
-allows adding “extensions” to the build process, each of which can modify
-almost any aspect of document processing.</p>
-<p>This chapter describes the extensions bundled with Sphinx.  For the API
-documentation on writing your own extension, refer to <a class="reference internal" href="../../extdev/index.html#dev-extensions"><span class="std std-ref">为 Sphinx 开发插件</span></a>.</p>
+<h1>插件<a class="headerlink" href="#extensions" title="永久链接至标题">¶</a></h1>
+<p>由于许多项目在文档中需要特殊功能，Sphinx 允许在构建过程中添加 “插件”，每个插件都可以修改文件处理的几乎任何方面。</p>
+<p>本章描述了与 Sphinx 捆绑的插件。关于编写你自己的插件的 API 文档，请参考 <a class="reference internal" href="../../extdev/index.html#dev-extensions"><span class="std std-ref">为 Sphinx 开发插件</span></a>。</p>
 <section id="built-in-extensions">
-<span id="builtin-extensions"></span><h2>Built-in extensions<a class="headerlink" href="#built-in-extensions" title="永久链接至标题">¶</a></h2>
-<p>These extensions are built in and can be activated by respective entries in the
-<a class="reference internal" href="../configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> configuration value:</p>
+<span id="builtin-extensions"></span><h2>内置插件<a class="headerlink" href="#built-in-extensions" title="永久链接至标题">¶</a></h2>
+<p>这些插件是内置的，可以通过 <a class="reference internal" href="../configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置值中的各自条目激活：</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="autodoc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> – Include documentation from docstrings</a><ul>
@@ -234,21 +230,11 @@ documentation on writing your own extension, refer to <a class="reference intern
 </div>
 </section>
 <section id="third-party-extensions">
-<span id="id1"></span><h2>Third-party extensions<a class="headerlink" href="#third-party-extensions" title="永久链接至标题">¶</a></h2>
-<p>You can find several extensions contributed by users in the <a class="reference external" href="https://github.com/sphinx-contrib/">sphinx-contrib</a>
-organization. If you wish to include your extension in this organization,
-simply follow the instructions provided in the <a class="reference external" href="https://github.com/sphinx-contrib/github-administration">github-administration</a>
-project. This is optional and there are several extensions hosted elsewhere.
-The <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">awesome-sphinxdoc</a> project contains a curated list of Sphinx packages,
-and many packages use the <a class="reference external" href="https://pypi.org/search/?c=Framework+%3A%3A+Sphinx+%3A%3A+Extension">Framework :: Sphinx :: Extension</a> and
-<a class="reference external" href="https://pypi.org/search/?c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">Framework :: Sphinx :: Theme</a> trove classifiers for Sphinx extensions and
-themes, respectively.</p>
+<span id="id1"></span><h2>三方插件<a class="headerlink" href="#third-party-extensions" title="永久链接至标题">¶</a></h2>
+<p>你可以在 <a class="reference external" href="https://github.com/sphinx-contrib/">sphinx-contrib</a> 组织中找到几个由用户贡献的插件。如果你想把你的插件加入这个组织，只需按照 <a class="reference external" href="https://github.com/sphinx-contrib/github-administration">github-administration</a> 项目中提供的说明即可。这是可选的，有几个插件托管在其他地方。<a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">awesome-sphinxdoc</a> 项目包含一个精心策划的 Sphinx 软件包列表，许多软件包使用  <a class="reference external" href="https://pypi.org/search/?c=Framework+%3A%3A+Sphinx+%3A%3A+Extension">Framework :: Sphinx :: Extension</a>  和 <a class="reference external" href="https://pypi.org/search/?c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">Framework :: Sphinx :: Theme</a>  的分类器，分别用于 Sphinx 的插件和主题。</p>
 <section id="where-to-put-your-own-extensions">
-<h3>Where to put your own extensions?<a class="headerlink" href="#where-to-put-your-own-extensions" title="永久链接至标题">¶</a></h3>
-<p>Extensions local to a project should be put within the project’s directory
-structure.  Set Python’s module search path, <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>, accordingly so that
-Sphinx can find them.  For example, if your extension <code class="docutils literal notranslate"><span class="pre">foo.py</span></code> lies in the
-<code class="docutils literal notranslate"><span class="pre">exts</span></code> subdirectory of the project root, put into <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<h3>在哪里放自己的插件？<a class="headerlink" href="#where-to-put-your-own-extensions" title="永久链接至标题">¶</a></h3>
+<p>项目本地的插件应该放在项目的目录结构中。相应地设置 Python 的模块搜索路径，<code class="docutils literal notranslate"><span class="pre">sys.path</span></code>，以便 Sphinx 能找到它们。例如，如果你的插件 <code class="docutils literal notranslate"><span class="pre">foo.py</span></code> 位于项目根目录下的 <code class="docutils literal notranslate"><span class="pre">exts</span></code> 子目录中，就放到 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
 
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;exts&#39;</span><span class="p">))</span>
@@ -256,8 +242,7 @@ Sphinx can find them.  For example, if your extension <code class="docutils lite
 <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>You can also install extensions anywhere else on <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>, e.g. in the
-<code class="docutils literal notranslate"><span class="pre">site-packages</span></code> directory.</p>
+<p>你也可以在 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> 上的其他地方安装插件，例如在 <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> 目录下。</p>
 </section>
 </section>
 </section>
@@ -288,7 +273,7 @@ Sphinx can find them.  For example, if your extension <code class="docutils lite
         <li><a href="../../contents.html">Documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >使用 Sphinx</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Extensions</a></li> 
+        <li class="nav-item nav-item-this"><a href="">插件</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
