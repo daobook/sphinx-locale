@@ -362,22 +362,15 @@
 </ul>
 </div>
 <p class="rubric">指令类</p>
-<p>A directive class is a class deriving usually from
-<a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code></a>. The directive interface is also
-covered in detail in the <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">docutils documentation</a>; the important thing is that
-the class should have attributes that configure the allowed markup, and a
-<code class="docutils literal notranslate"><span class="pre">run</span></code> method that returns a list of nodes.</p>
-<p>Looking first at the <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> directive:</p>
+<p>指令类是一个通常从 <a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code></a> 派生出来的类。指令接口在 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">docutils 文档</a> 中也有详细介绍；重要的是，该类应该有配置允许标记的属性，以及一个返回节点列表的 <code class="docutils literal notranslate"><span class="pre">run</span></code> 方法。</p>
+<p>首先看一下 <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> 指令。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">class</span> <span class="nc">TodolistDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">4</span>        <span class="k">return</span> <span class="p">[</span><span class="n">todolist</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)]</span>
 </pre></div>
 </div>
-<p>It’s very simple, creating and returning an instance of our <code class="docutils literal notranslate"><span class="pre">todolist</span></code> node
-class.  The <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> directive itself has neither content nor
-arguments that need to be handled. That brings us to the <code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code>
-directive:</p>
+<p>这很简单，创建并返回我们的 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 节点类的实例。<code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> 指令本身既没有内容也没有需要处理的参数。这给我们带来了 <code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code> 指令：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">TodoDirective</span><span class="p">(</span><span class="n">SphinxDirective</span><span class="p">):</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>    <span class="c1"># this enables content in the directive</span>
@@ -404,31 +397,10 @@ directive:</p>
 <span class="linenos">24</span>        <span class="k">return</span> <span class="p">[</span><span class="n">targetnode</span><span class="p">,</span> <span class="n">todo_node</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Several important things are covered here. First, as you can see, we’re now
-subclassing the <a class="reference internal" href="../../extdev/utils.html#sphinx.util.docutils.SphinxDirective" title="sphinx.util.docutils.SphinxDirective"><code class="xref py py-class docutils literal notranslate"><span class="pre">SphinxDirective</span></code></a> helper class
-instead of the usual <a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">Directive</span></code></a> class. This
-gives us access to the <a class="reference internal" href="../../extdev/index.html#important-objects"><span class="std std-ref">build environment instance</span></a>
-using the <code class="docutils literal notranslate"><span class="pre">self.env</span></code> property. Without this, we’d have to use the rather
-convoluted <code class="docutils literal notranslate"><span class="pre">self.state.document.settings.env</span></code>. Then, to act as a link target
-(from <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code>), the <code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code> directive needs to return a
-target node in addition to the <code class="docutils literal notranslate"><span class="pre">todo</span></code> node.  The target ID (in HTML, this will
-be the anchor name) is generated by using <code class="docutils literal notranslate"><span class="pre">env.new_serialno</span></code> which returns a
-new unique integer on each call and therefore leads to unique target names. The
-target node is instantiated without any text (the first two arguments).</p>
-<p>On creating admonition node, the content body of the directive are parsed using
-<code class="docutils literal notranslate"><span class="pre">self.state.nested_parse</span></code>.  The first argument gives the content body, and
-the second one gives content offset.  The third argument gives the parent node
-of parsed result, in our case the <code class="docutils literal notranslate"><span class="pre">todo</span></code> node. Following this, the <code class="docutils literal notranslate"><span class="pre">todo</span></code>
-node is added to the environment.  This is needed to be able to create a list of
-all todo entries throughout the documentation, in the place where the author
-puts a <code class="docutils literal notranslate"><span class="pre">todolist</span></code> directive.  For this case, the environment attribute
-<code class="docutils literal notranslate"><span class="pre">todo_all_todos</span></code> is used (again, the name should be unique, so it is prefixed
-by the extension name).  It does not exist when a new environment is created, so
-the directive must check and create it if necessary.  Various information about
-the todo entry’s location are stored along with a copy of the node.</p>
-<p>In the last line, the nodes that should be put into the doctree are returned:
-the target node and the admonition node.</p>
-<p>The node structure that the directive returns looks like this:</p>
+<p>这里涵盖了几件重要的事情。首先，正如你所看到的，我们现在把 <a class="reference internal" href="../../extdev/utils.html#sphinx.util.docutils.SphinxDirective" title="sphinx.util.docutils.SphinxDirective"><code class="xref py py-class docutils literal notranslate"><span class="pre">SphinxDirective</span></code></a> 辅助类，而不是通常的 <a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">Directive</span></code></a> 类进行子类化。这让我们可以使用 <code class="docutils literal notranslate"><span class="pre">self.env</span></code> 属性访问 <a class="reference internal" href="../../extdev/index.html#important-objects"><span class="std std-ref">build environment 实例</span></a>。如果没有这个，我们将不得不使用相当复杂的 <code class="docutils literal notranslate"><span class="pre">self.state.document.settings.env</span></code>。然后，为了充当链接目标（来自 <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> ），<code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code> 指令需要在 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 节点之外返回一个目标节点。目标 ID（在 HTML 中，这将是锚的名称）是通过使用 <code class="docutils literal notranslate"><span class="pre">env.new_serialno</span></code> 来生成的，它在每次调用时都会返回一个新的唯一的整数，因此导致了唯一的目标名称。目标节点被实例化，没有任何文本（前两个参数）”</p>
+<p>在创建告诫节点时，指令的内容体使用 <code class="docutils literal notranslate"><span class="pre">self.state.nested_parse</span></code> 进行解析。第一个参数给出内容主体，第二个参数给出内容偏移。第三个参数给出解析结果的父节点，在我们的例子中是 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 节点。之后，“todo” 节点被添加到环境中。这是需要的，以便能够在作者放置 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 指令的地方，创建整个文档中所有 todo 条目的列表。在这种情况下，环境属性 <code class="docutils literal notranslate"><span class="pre">todo_all_todos</span></code> 被使用（同样，这个名字应该是唯一的，所以它以扩展名为前缀）。 当一个新环境被创建时，它并不存在，所以指令必须检查并在必要时创建它。关于 todo 条目的位置的各种信息与节点的副本一起被存储。</p>
+<p>在最后一行，应该被放入 doctree 中的节点被返回：目标节点和训诫节点。</p>
+<p>该指令返回的节点结构看起来像这样</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--------------------+</span>
 <span class="o">|</span> <span class="n">target</span> <span class="n">node</span>        <span class="o">|</span>
 <span class="o">+--------------------+</span>
@@ -444,7 +416,7 @@ the target node and the admonition node.</p>
      <span class="o">+--------------------+</span>
 </pre></div>
 </div>
-<p class="rubric">The event handlers</p>
+<p class="rubric">事件处理者</p>
 <p>Event handlers are one of Sphinx’s most powerful features, providing a way to
 do hook into any part of the documentation process. There are many events
 provided by Sphinx itself, as detailed in <a class="reference internal" href="../../extdev/appapi.html#events"><span class="std std-ref">the API guide</span></a>, and

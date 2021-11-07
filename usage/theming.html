@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>HTML Theming &#8212; Sphinx documentation</title>
+    <title>HTML 主题化 &#8212; Sphinx documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -95,19 +95,19 @@
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">使用 Sphinx</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">HTML Theming</a></li> 
+        <li class="nav-item nav-item-this"><a href="">HTML 主题化</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">HTML Theming</a><ul>
-<li><a class="reference internal" href="#builders">Builders</a></li>
-<li><a class="reference internal" href="#themes">Themes</a><ul>
-<li><a class="reference internal" href="#using-a-theme">Using a theme</a></li>
-<li><a class="reference internal" href="#builtin-themes">Builtin themes</a></li>
-<li><a class="reference internal" href="#third-party-themes">Third Party Themes</a></li>
+<li><a class="reference internal" href="#">HTML 主题化</a><ul>
+<li><a class="reference internal" href="#builders">构建器</a></li>
+<li><a class="reference internal" href="#themes">主题</a><ul>
+<li><a class="reference internal" href="#using-a-theme">使用主题</a></li>
+<li><a class="reference internal" href="#builtin-themes">内置主题</a></li>
+<li><a class="reference internal" href="#third-party-themes">三方主题</a></li>
 </ul>
 </li>
 </ul>
@@ -146,89 +146,64 @@
           <div class="body" role="main">
             
   <section id="html-theming">
-<span id="html-themes"></span><h1>HTML Theming<a class="headerlink" href="#html-theming" title="永久链接至标题">¶</a></h1>
-<p>Sphinx provides a number of builders for HTML and HTML-based formats.</p>
+<span id="html-themes"></span><h1>HTML 主题化<a class="headerlink" href="#html-theming" title="永久链接至标题">¶</a></h1>
+<p>Sphinx 为 HTML 和基于 HTML 的格式提供了许多构建器。</p>
 <section id="builders">
-<h2>Builders<a class="headerlink" href="#builders" title="永久链接至标题">¶</a></h2>
+<h2>构建器<a class="headerlink" href="#builders" title="永久链接至标题">¶</a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">待处理</p>
-<p>Populate when the ‘builders’ document is split up.</p>
+<p>当 “构建器” 文档被拆分时进行填充。</p>
 </div>
 </section>
 <section id="themes">
-<h2>Themes<a class="headerlink" href="#themes" title="永久链接至标题">¶</a></h2>
+<h2>主题<a class="headerlink" href="#themes" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>This section provides information about using pre-existing HTML themes. If
-you wish to create your own theme, refer to
-<a class="reference internal" href="../development/theming.html"><span class="doc">HTML theme development</span></a>.</p>
+<p>本节提供关于使用预先存在的 HTML 主题的信息。如果你想创建你自己的主题，请参考 <a class="reference internal" href="../development/theming.html"><span class="doc">HTML 主题开发</span></a>。</p>
 </div>
-<p>Sphinx supports changing the appearance of its HTML output via <em>themes</em>.  A
-theme is a collection of HTML templates, stylesheet(s) and other static files.
-Additionally, it has a configuration file which specifies from which theme to
-inherit, which highlighting style to use, and what options exist for customizing
-the theme’s look and feel.</p>
-<p>Themes are meant to be project-unaware, so they can be used for different
-projects without change.</p>
+<p>Sphinx 支持通过 <em>主题</em> 改变其 HTML 输出的外观。一个主题是一个 HTML 模板、样式表和其他静态文件的集合。此外，它有一个配置文件，指定从哪个主题继承，使用哪种突出的风格，以及有哪些选项可以定制主题的外观和感觉。</p>
+<p>主题是为了不受项目影响，所以它们可以用于不同的项目而不需要改变。</p>
 <section id="using-a-theme">
-<h3>Using a theme<a class="headerlink" href="#using-a-theme" title="永久链接至标题">¶</a></h3>
-<p>Using a <a class="reference internal" href="#builtin-themes"><span class="std std-ref">theme provided with Sphinx</span></a> is easy. Since these
-do not need to be installed, you only need to set the <a class="reference internal" href="configuration.html#confval-html_theme"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme</span></code></a>
-config value. For example, to enable the <code class="docutils literal notranslate"><span class="pre">classic</span></code> theme, add the following
-to <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<h3>使用主题<a class="headerlink" href="#using-a-theme" title="永久链接至标题">¶</a></h3>
+<p>使用 <a class="reference internal" href="#builtin-themes"><span class="std std-ref">Sphinx 提供的</span></a> 很容易。因为这些不需要安装，你只需要设置 <a class="reference internal" href="configuration.html#confval-html_theme"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme</span></code></a> 配置值。例如，要启用 <code class="docutils literal notranslate"><span class="pre">classic</span></code> 主题，请在 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 中添加以下内容</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;classic&quot;</span>
 </pre></div>
 </div>
-<p>You can also set theme-specific options using the <a class="reference internal" href="configuration.html#confval-html_theme_options"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_options</span></code></a>
-config value.  These options are generally used to change the look and feel of
-the theme. For example, to place the sidebar on the right side and a black
-background for the relation bar (the bar with the navigation links at the
-page’s top and bottom), add the following <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<p>你也可以使用 <a class="reference internal" href="configuration.html#confval-html_theme_options"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> 配置值来设置特定主题的选项。这些选项通常用于改变主题的外观和感觉。例如，要把侧边栏放在右边，关系栏（页面顶部和底部的导航链接栏）用黑色背景，请添加如下 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;rightsidebar&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="s2">&quot;relbarbgcolor&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If the theme does not come with Sphinx, it can be in two static forms or as a
-Python package. For the static forms, either a directory (containing
-<code class="file docutils literal notranslate"><span class="pre">theme.conf</span></code> and other needed files), or a zip file with the same
-contents is supported. The directory or zipfile must be put where Sphinx can
-find it; for this there is the config value <a class="reference internal" href="configuration.html#confval-html_theme_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_path</span></code></a>. This
-can be a list of directories, relative to the directory containing
-<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>, that can contain theme directories or zip files.  For example,
-if you have a theme in the file <code class="file docutils literal notranslate"><span class="pre">blue.zip</span></code>, you can put it right in the
-directory containing <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> and use this configuration:</p>
+<p>如果主题没有附带 Sphinx，它可以以两种静态形式或 Python 包的形式出现。对于静态形式，可以是一个目录（包含 <code class="file docutils literal notranslate"><span class="pre">theme.conf</span></code> 和其他需要的文件），也可以是一个具有相同内容的 zip 文件。这个目录或 zip 文件必须放在 Sphinx 能找到的地方；为此有一个配置值 <a class="reference internal" href="configuration.html#confval-html_theme_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_path</span></code></a>。这可以是一个目录列表，相对于包含 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 的目录，它可以包含主题目录或 zip 文件。例如，如果你有一个主题文件 <code class="file docutils literal notranslate"><span class="pre">blue.zip</span></code>，你可以把它直接放在包含 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 的目录中，并使用这个配置</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
 <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The third form is a Python package.  If a theme you want to use is distributed
-as a Python package, you can use it after installing</p>
+<p>第三种形式是一个 Python 包。如果你想使用的主题是作为 Python 包分发的，你可以在安装后使用它</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># installing theme package</span>
 $ pip install sphinxjp.themes.dotted
 </pre></div>
 </div>
-<p>Once installed, this can be used in the same manner as a directory or
-zipfile-based theme:</p>
+<p>一旦安装，就可以用与目录或基于 zip 文件的主题相同的方式使用</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;dotted&quot;</span>
 </pre></div>
 </div>
-<p>For more information on the design of themes, including information about
-writing your own themes, refer to <a class="reference internal" href="../development/theming.html"><span class="doc">HTML theme development</span></a>.</p>
+<p>关于主题设计的更多信息，包括关于编写你自己的主题的信息，请参考 <a class="reference internal" href="../development/theming.html"><span class="doc">HTML 主题开发</span></a>。</p>
 </section>
 <section id="builtin-themes">
-<span id="id2"></span><h3>Builtin themes<a class="headerlink" href="#builtin-themes" title="永久链接至标题">¶</a></h3>
+<span id="id2"></span><h3>内置主题<a class="headerlink" href="#builtin-themes" title="永久链接至标题">¶</a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Theme overview</strong></p></td>
+<tr class="row-odd"><td><p>主题概览</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p><img alt="alabaster" src="../_images/alabaster.png" /></p>
@@ -457,13 +432,9 @@ available, however it will emit a notice that it is an alias for the new
 </div>
 </section>
 <section id="third-party-themes">
-<h3>Third Party Themes<a class="headerlink" href="#third-party-themes" title="永久链接至标题">¶</a></h3>
-<p>There are many third-party themes available for Sphinx. Some of these are for
-general use, while others are specific to an individual project.</p>
-<p><a class="reference external" href="https://sphinx-themes.org/">sphinx-themes.org</a> is a gallery that showcases various themes for Sphinx,
-with demo documentation rendered under each theme. Themes can also be found
-on <a class="reference external" href="https://pypi.org/search/?q=&amp;o=&amp;c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">PyPI</a> (using the classifier <code class="docutils literal notranslate"><span class="pre">Framework</span> <span class="pre">::</span> <span class="pre">Sphinx</span> <span class="pre">::</span> <span class="pre">Theme</span></code>), <a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=sphinx+theme">GitHub</a>
-and <a class="reference external" href="https://gitlab.com/explore?name=sphinx+theme">GitLab</a>.</p>
+<h3>三方主题<a class="headerlink" href="#third-party-themes" title="永久链接至标题">¶</a></h3>
+<p>有许多第三方主题可用于 Sphinx。其中一些是通用的，而另一些是针对个别项目的。</p>
+<p><a class="reference external" href="https://sphinx-themes.org/">sphinx-themes.org</a> 是一个画廊，展示了 Sphinx 的各种主题，每个主题下都有演示文档呈现。主题也可以在 <a class="reference external" href="https://pypi.org/search/?q=&amp;o=&amp;c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">PyPI</a> （使用分类器 <code class="docutils literal notranslate"><span class="pre">Framework</span> <span class="pre">::</span> <span class="pre">Sphinx</span> <span class="pre">::</span> <span class="pre">Theme</span></code>）、<a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=sphinx+theme">GitHub</a> 和 <a class="reference external" href="https://gitlab.com/explore?name=sphinx+theme">GitLab</a> 找到。</p>
 </section>
 </section>
 </section>
@@ -494,7 +465,7 @@ and <a class="reference external" href="https://gitlab.com/explore?name=sphinx+t
         <li><a href="../contents.html">Documentation</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >使用 Sphinx</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">HTML Theming</a></li> 
+        <li class="nav-item nav-item-this"><a href="">HTML 主题化</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

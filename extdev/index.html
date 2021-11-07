@@ -148,7 +148,7 @@
 <ul class="simple">
 <li><p>增加新的 <a class="reference internal" href="../glossary.html#term-builder"><span class="xref std std-term">构建器</span></a>，以支持新的输出格式或对解析后的文件的操作。</p></li>
 <li><p>使用 <a class="reference internal" href="markupapi.html"><span class="doc">Docutils markup API</span></a> 扩展标记，注册自定义的 reStructuredText 角色和指令。</p></li>
-<li><p>在整个构建过程中的战略位置添加自定义代码到所谓的（“钩子点”），允许你注册一个钩子并运行专门的代码。例如，请参阅 <a class="reference internal" href="appapi.html#events"><span class="std std-ref">Sphinx 核心事件</span></a>。</p></li>
+<li><p>在整个构建过程中的战略位置添加自定义代码到所谓的 “钩子点”，允许你注册一个钩子并运行专门的代码。例如，请参阅 <a class="reference internal" href="appapi.html#events"><span class="std std-ref">Sphinx 核心事件</span></a>。</p></li>
 </ul>
 <p>一个插件只是一个带有 <code class="docutils literal notranslate"><span class="pre">setup()</span></code> 函数的 Python 模块。用户通过将插件的模块名称（或一个子模块）放在他们的 <a class="reference internal" href="../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置值中来激活插件。</p>
 <p>当 <strong class="program">sphinx-build</strong> 被执行时，Sphinx 会尝试导入每个被列出的模块，并执行 <cite>yourmodule.setup(app)</cite>。这个函数用来准备插件（比如执行 Python 代码），链接 Sphinx 在构建过程中使用的资源（比如 CSS 或 HTML 文件），并通知 Sphinx 插件提供的一切（比如指令或角色定义）。<code class="docutils literal notranslate"><span class="pre">app</span></code> 参数是 <a class="reference internal" href="appapi.html#sphinx.application.Sphinx" title="sphinx.application.Sphinx"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sphinx</span></code></a> 的一个实例，让你控制 Sphinx 构建的大部分方面。</p>
@@ -182,7 +182,7 @@
 <p>为了理解插件机制，至关重要的一点是 Sphinx 项目的构建方式：这分几个阶段进行。</p>
 <p><strong>阶段 0：初始化</strong></p>
 <blockquote>
-<div><p>在这个阶段，几乎没有发生我们感兴趣的事情。源目录被搜索为源文件，扩展名被初始化。如果存在一个存储的构建环境，它将被加载，否则将创建一个新的环境。</p>
+<div><p>在这个阶段，几乎没有发生我们感兴趣的事情。源目录被搜索为源文件，插件被初始化。如果存在一个存储的构建环境，它将被加载，否则将创建一个新的环境。</p>
 </div></blockquote>
 <p><strong>阶段 1：阅读</strong></p>
 <blockquote>
@@ -191,11 +191,11 @@
 <p>在阅读过程中，构建环境会更新所有已读文件的元数据和交叉参考数据，如标签、标题的名称、描述的 Python 对象和索引条目。这以后将被用来替换临时节点。</p>
 <p>解析后的 doctree 存储在磁盘上，因为不可能在内存中容纳所有的 doctree。</p>
 </div></blockquote>
-<p>阶段 2：一致性检查</p>
+<p><strong>阶段 2：一致性检查</strong></p>
 <blockquote>
 <div><p>做了一些检查，以确保建成的文件中没有意外。</p>
 </div></blockquote>
-<p><strong>解决问题</strong></p>
+<p><strong>阶段 3：解决问题</strong></p>
 <blockquote>
 <div><p>现在，所有现有文件的元数据和交叉引用数据都是已知的，所有的临时节点都被可以使用称为变换的组件转换为输出的节点所取代。例如，为存在的对象参考创建链接，为不存在的对象创建简单的 literal 节点。</p>
 </div></blockquote>
